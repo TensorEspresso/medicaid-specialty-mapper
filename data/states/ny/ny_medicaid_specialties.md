@@ -47,8 +47,8 @@ NY Medicaid managed care uses a comprehensive provider network framework defined
 |-----------|-------------|-----------------|-------------------------------|---------------------------|
 | Family Practice | 1, 3 | 50 | 1,500 | 2,500-4,070 |
 | General Practice | 1, 3 | 776 | 1,500 | 2,500-4,070 |
-| Internal Medicine | 1, 3 | 60 | 1,500 | 2,500-4,070 |
-| Pediatrics | 1, 3 | 150, 050, 060, 066, 776 (Secd Spec=303) | 1,500 | 8,320-10,400 |
+| Internal Medicine | 1, 3 | 60 | 1,500 | 3,550 |
+| Pediatrics | 1, 3 | 150, 050, 060, 066, 776 (Secd Spec=303) | 1,500 | 6,600-8,250 |
 | HIV Specialist PCP | 3 | 303 | 350 | N/A |
 | General Dentist | 2 | 800, 815 | 2,000 | N/A |
 
@@ -61,7 +61,7 @@ NY Medicaid managed care uses a comprehensive provider network framework defined
 | Doula | 2 | 755 | N/A |
 | Gynecology | 2, 3 | 905 | 1,500 |
 | Nurse Midwife/Certified Midwife | 2, 3 | 782 | 1,500 |
-| Obstetrics & Gynecology (OB-GYN) | 2, 3 | 89 | 1,500/6,600-8,250 (Medicaid/HARP) |
+| Obstetrics & Gynecology (OB-GYN) | 2, 3 | 89 | N/A | N/A | 1,500 (Medicaid) / 8,320-10,400 (HARP) |
 
 ## Specialist Care Providers
 
@@ -87,8 +87,8 @@ NY Medicaid managed care uses a comprehensive provider network framework defined
 | Otolaryngology | 2, 3 | 120 | 3.2 | 31,210 |
 | Palliative Care | 2, 3 | 826 | N/A | N/A |
 | Pediatric Surgery | 1, 2, 11, 12 | 153 | N/A | N/A |
-| Physical Med & Rehabilitation | 2, 3 | 170 | 1.3 | 78,020 |
-| Plastic Surgery | 2, 3 | 160 | 1.1 | 92,470 |
+| Physical Med & Rehabilitation | 2, 3 | 160 | 1.3 | 78,020 |
+| Plastic Surgery | 2, 3 | 170 | 1.1 | 92,470 |
 | Pulmonary Medicine | 2, 3 | 68 | N/A | N/A |
 | Rheumatology | 2, 3 | 69 | N/A | N/A |
 | Thoracic Surgery | 2, 3 | 220, 651 | N/A | N/A |
