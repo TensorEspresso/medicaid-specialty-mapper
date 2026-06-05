@@ -1,0 +1,131 @@
+tier,category,specialty,designation_type,specialty_code,provider_count_requirement,travel_time_requirement,enrollees_per_provider,source
+Primary Care,Primary Care,Family Practice,"1, 3",50,3 per county,"30 min public transit (metro) / 30 mi / 30 min (non-metro)",1500 (Medicaid) / 2500-4070 (HARP),MCO Guidelines Att 3
+Primary Care,Primary Care,General Practice,"1, 3",776,3 per county,"30 min public transit (metro) / 30 mi / 30 min (non-metro)",1500 (Medicaid) / 2500-4070 (HARP),MCO Guidelines Att 3
+Primary Care,Primary Care,Internal Medicine,"1, 3",60,3 per county,"30 min public transit (metro) / 30 mi / 30 min (non-metro)",1500 (Medicaid) / 2500-4070 (HARP),MCO Guidelines Att 3
+Primary Care,Primary Care,Pediatrics,"1, 3","150, 050, 060, 066, 776",3 per county,"30 min public transit (metro) / 30 mi / 30 min (non-metro)",1500 (Medicaid) / 8320-10400 (HARP),MCO Guidelines Att 3
+Primary Care,Primary Care,HIV Specialist PCP,3,303,3 per county (HIV SNP),"30 min public transit (metro) / 30 mi / 30 min (non-metro)",350 (HIV SNP),MCO Guidelines Att 3
+Primary Care,Primary Care,General Dentist,2,"800, 815",N/A,"30 min public transit (metro) / 30 mi / 30 min (non-metro)",2000,MCO Guidelines Att 3
+OB/GYN,Obstetrics/Gynecology,Doula,2,755,N/A,N/A,N/A,PNDS Table 1
+OB/GYN,Obstetrics/Gynecology,Gynecology,"2, 3",905,N/A,N/A,1500,MCO Guidelines Att 3
+OB/GYN,Obstetrics/Gynecology,Nurse Midwife/Certified Midwife,"2, 3",782,N/A,N/A,1500,MCO Guidelines Att 3
+OB/GYN,Obstetrics/Gynecology,Obstetrics & Gynecology (OB-GYN),"2, 3",089,N/A,N/A,"1500 (Medicaid) / 6600-8250 (HARP)",MCO Guidelines Att 3
+Specialist,Specialist,Allergy & Immunology,"2, 3",30,N/A,N/A,121780 pop/pract,MCO Guidelines Att 3
+Specialist,Specialist,Chiropractic,"2, 3",162,N/A,N/A,N/A,PNDS Table 1
+Specialist,Specialist,Colon Rectal Surgery,"2, 3",30,N/A,N/A,N/A,PNDS Table 1
+Specialist,Specialist,Cardiology,"2, 3",10,N/A,N/A,32210 pop/pract,MCO Guidelines Att 3
+Specialist,Specialist,Dermatology,"2, 3",40,N/A,N/A,35420 pop/pract,MCO Guidelines Att 3
+Specialist,Specialist,Endocrinology & Metabolism,"2, 3","063, 516",N/A,N/A,121780 pop/pract,MCO Guidelines Att 3
+Specialist,Specialist,Family Planning,"2, 3",906,N/A,N/A,N/A,PNDS Table 1
+Specialist,Specialist,Gastroenterology,"2, 3",64,N/A,N/A,38410 pop/pract,MCO Guidelines Att 3
+Specialist,Specialist,General Surgery,"2, 3",210,N/A,N/A,N/A,PNDS Table 1
+Specialist,Specialist,Geriatrics,"2, 3","620, 621",N/A,N/A,N/A,PNDS Table 1
+Specialist,Specialist,Neonatal Perinatal Medicine,"2, 3",155,N/A,N/A,192040 pop/pract,MCO Guidelines Att 3
+Specialist,Specialist,Nephrology,"2, 3",67,N/A,N/A,90780 pop/pract,MCO Guidelines Att 3
+Specialist,Specialist,Neurology,"2, 3",70,N/A,N/A,94210 pop/pract,MCO Guidelines Att 3
+Specialist,Specialist,Neurosurgery,"2, 3",194,N/A,N/A,N/A,PNDS Table 1
+Specialist,Specialist,Oncology & Hematology,"2, 3","137, 241",N/A,N/A,27740 pop/pract,MCO Guidelines Att 3
+Specialist,Specialist,Ophthalmology,"2, 3",100,N/A,N/A,21520 pop/pract,MCO Guidelines Att 3
+Specialist,Specialist,Optometry,2,"714, 716",N/A,N/A,N/A,PNDS Table 1
+Specialist,Specialist,Orthopedics,"2, 3",110,N/A,N/A,16530 pop/pract,MCO Guidelines Att 3
+Specialist,Specialist,Otolaryngology,"2, 3",120,N/A,N/A,31210 pop/pract,MCO Guidelines Att 3
+Specialist,Specialist,Palliative Care,"2, 3",826,N/A,N/A,N/A,PNDS Table 1
+Specialist,Specialist,Pediatric Surgery,"1, 2, 11, 12",156,N/A,N/A,N/A,PNDS Table 1
+Specialist,Specialist,Physical Med & Rehabilitation,"2, 3",159,N/A,N/A,78020 pop/pract,MCO Guidelines Att 3
+Specialist,Specialist,Plastic Surgery,"2, 3",165,N/A,N/A,92470 pop/pract,MCO Guidelines Att 3
+Specialist,Specialist,Podiatry,9,778,N/A,N/A,N/A,PNDS Table 1
+Specialist,Specialist,Pulmonary Medicine,"2, 3",68,N/A,N/A,N/A,PNDS Table 1
+Specialist,Specialist,Rheumatology,"2, 3",69,N/A,N/A,N/A,PNDS Table 1
+Specialist,Specialist,Thoracic Surgery,"2, 3","220, 651",N/A,N/A,N/A,PNDS Table 1
+Specialist,Specialist,Urology,"2, 3",230,N/A,N/A,N/A,PNDS Table 1
+Behavioral Health,Behavioral Health,Behavior Analysis,"2, 3",28,N/A,N/A,N/A,PNDS Table 1
+Behavioral Health,Behavioral Health,Buprenorphine Prescribers,"2, 3",28,All authorized in service area,N/A,N/A,PNDS Table 1 + MCO Guidelines
+Behavioral Health,Behavioral Health,Behavioral Health Providers,"2, 3",750,N/A,N/A,N/A,PNDS Table 1
+Behavioral Health,Behavioral Health,Licensed Social Work,4,781,N/A,N/A,N/A,PNDS Table 1
+Behavioral Health,Behavioral Health,Child Psychiatry,2,191,N/A,N/A,N/A,PNDS Table 1
+Behavioral Health,Behavioral Health,Clinical Psychology,2,"192, 195, 780",N/A,N/A,N/A,PNDS Table 1
+Behavioral Health,Behavioral Health,Psychiatry,"2, 3","192, 195",N/A,N/A,6494 pop/pract,MCO Guidelines Att 3
+Behavioral Health,Behavioral Health,Outpatient Mental Health Clinic,N/A,N/A,50% of licensed or min 2 per county/region,N/A,N/A,MCO Guidelines Att 4
+Behavioral Health,Behavioral Health,OMH State-Operated Clinic,N/A,N/A,All in county/region,N/A,N/A,MCO Guidelines Att 4
+Behavioral Health,Behavioral Health,PROS/IPRT/Continuing Day Treatment,N/A,N/A,50% of sites or min 2 per county/region,N/A,N/A,MCO Guidelines Att 4
+Behavioral Health,Behavioral Health,Assertive Community Treatment (ACT),N/A,N/A,2 per county (urban) / 2 per region (rural),N/A,N/A,MCO Guidelines Att 4
+Behavioral Health,Behavioral Health,Partial Hospitalization,N/A,N/A,2 per county (urban) / 2 per region (rural),N/A,N/A,MCO Guidelines Att 4
+Behavioral Health,Behavioral Health,Inpatient Psychiatric Services,N/A,N/A,2 per county (urban) / 2 per region (rural),N/A,N/A,MCO Guidelines Att 4
+Behavioral Health,Behavioral Health,CPEP and 9.39 ERs,N/A,N/A,2 per county/region (as available),N/A,N/A,MCO Guidelines Att 4
+Behavioral Health,Behavioral Health,Inpatient Chemical Dependency (ASA),N/A,N/A,2 per county (urban) / 2 per region (rural),N/A,N/A,MCO Guidelines Att 4
+Behavioral Health,Behavioral Health,Medically Managed Detox,N/A,N/A,2 per county (urban) / 2 per region (rural),N/A,N/A,MCO Guidelines Att 4
+Behavioral Health,Behavioral Health,Outpatient Chemical Dependency,N/A,N/A,50% of licensed or min 2 per county,N/A,N/A,MCO Guidelines Att 4
+Behavioral Health,Behavioral Health,Opioid Treatment Program,N/A,N/A,All programs in county/region,N/A,N/A,MCO Guidelines Att 4
+Behavioral Health,Behavioral Health,Residential Substance Abuse Treatment,N/A,N/A,2 per county (urban) / 2 per region (rural),N/A,N/A,MCO Guidelines Att 4
+Crossover,Crossover,Anesthesiology,"2, 3",20,N/A,N/A,N/A,PNDS Table 1
+Crossover,Crossover,Audiology,2,640,N/A,N/A,N/A,PNDS Table 1
+Crossover,Crossover,Infectious Disease,"2, 3",66,N/A,N/A,110960 pop/pract,MCO Guidelines Att 3
+Crossover,Crossover,Licensed Social Work & Home-Based Medical Social Services,4,781,N/A,N/A,N/A,PNDS Table 1
+Crossover,Crossover,Nutrition,2,909,N/A,N/A,N/A,PNDS Table 1
+Crossover,Crossover,Pathology,"2, 3","135, 138, 142, 146",N/A,N/A,18490 pop/pract,MCO Guidelines Att 3
+Crossover,Crossover,Radiology,"2, 3","200, 244",N/A,N/A,N/A,PNDS Table 1
+Crossover,Crossover,Therapy: Physical,2,300,N/A,N/A,N/A,PNDS Table 1
+Crossover,Crossover,Therapy: Occupational,2,301,N/A,N/A,N/A,PNDS Table 1
+Crossover,Crossover,Therapy: Speech,2,302,N/A,N/A,N/A,PNDS Table 1
+Crossover,Crossover,Therapy: Respiratory,2,674,N/A,N/A,N/A,PNDS Table 1
+Crossover,Crossover,Early Intervention: Physical Therapist,2,325,N/A,N/A,N/A,PNDS Table 1
+Crossover,Crossover,Early Intervention: Occupational Therapist,2,325,N/A,N/A,N/A,PNDS Table 1
+Crossover,Crossover,Early Intervention: Speech Therapist,2,325,N/A,N/A,N/A,PNDS Table 1
+Crossover,Crossover,Early Intervention: Behavior Analysis,2,325,N/A,N/A,N/A,PNDS Table 1
+Dental,Dental,General Dentistry,2,"800, 815",N/A,N/A,2000,PNDS Table 1
+Dental,Dental,Oral Surgery,2,808,N/A,N/A,N/A,PNDS Table 1
+Dental,Dental,Orthodontics,2,801,N/A,N/A,N/A,PNDS Table 1
+Dental,Dental,Pedodontics,2,804,N/A,N/A,N/A,PNDS Table 1
+Facility,Facility,Hospital,N/A,N/A,"3 (metro) / 2 (mid-size) / 1 (other) per county",30 mi / 30 min,N/A,MCO Guidelines Att 1
+Facility,Facility,Pharmacy (24-hour),N/A,N/A,1 within 30 min from residence,30 min,N/A,MCO Guidelines Att 4
+Facility,Facility,Nursing Home (Non-Specialty),N/A,N/A,"8-3 per county (by group)",N/A,N/A,MCO Guidelines Att 4
+Facility,Facility,Nursing Home: AIDS,N/A,N/A,2 per county (where available),N/A,N/A,MCO Guidelines Att 4
+Facility,Facility,Nursing Home: Behavioral Intervention,N/A,N/A,2 per county (where available),N/A,N/A,MCO Guidelines Att 4
+Facility,Facility,Nursing Home: Vent,N/A,N/A,2 per county (where available),N/A,N/A,MCO Guidelines Att 4
+Facility,Facility,Nursing Home: Pediatric,N/A,N/A,2 per county (where available),N/A,N/A,MCO Guidelines Att 4
+Facility,Facility,Nursing Home: Pediatric Vent,N/A,N/A,2 per county (where available),N/A,N/A,MCO Guidelines Att 4
+Facility,Facility,Nursing Home: TBI,N/A,N/A,2 per county (where available),N/A,N/A,MCO Guidelines Att 4
+Facility,Facility,Designated AIDS Center,N/A,"011, 321",1 per county (where available),N/A,N/A,MCO Guidelines Att 4
+Facility,Facility,Assisted Living Program,N/A,666,N/A,N/A,N/A,PNDS Table 2
+Facility,Facility,Assisted Living Service,N/A,614,N/A,N/A,N/A,PNDS Table 2
+Facility,Facility,Certified Home Health (HHA),N/A,665,N/A,N/A,N/A,PNDS Table 2
+Facility,Facility,Certified Home Health: Home Based PT,N/A,300,N/A,N/A,N/A,PNDS Table 2
+Facility,Facility,Certified Home Health: Home Based OT,N/A,301,N/A,N/A,N/A,PNDS Table 2
+Facility,Facility,Certified Home Health: Home Based Speech,N/A,302,N/A,N/A,N/A,PNDS Table 2
+Facility,Facility,Home Health Care PCA (HHA-PCA),N/A,"665, 668",N/A,N/A,N/A,PNDS Table 2
+LTSS,Long Term Services and Supports,Consumer Directed Personal Assistance (CDPC),N/A,N/A,2 per county statewide,N/A,N/A,MCO Guidelines Att 4
+LTSS,Long Term Services and Supports,Adult Day Health Care,N/A,N/A,"3 (NYC metro) / 2 (rest of state) per county",N/A,N/A,MCO Guidelines Att 4
+HCBS,Home and Community Based Services,Community Psychiatric Support and Treatment (CPST),N/A,N/A,2 per county (urban) / 2 per region (rural),N/A,N/A,MCO Guidelines Att 4
+HCBS,Home and Community Based Services,Psychosocial Rehabilitation (PSR),N/A,N/A,2 per county (urban) / 2 per region (rural),N/A,N/A,MCO Guidelines Att 4
+HCBS,Home and Community Based Services,Empowerment Services (Peer Supports),N/A,N/A,2 per county (urban) / 2 per region (rural),N/A,N/A,MCO Guidelines Att 4
+HCBS,Home and Community Based Services,Family Support and Training,N/A,N/A,2 per county (urban) / 2 per region (rural),N/A,N/A,MCO Guidelines Att 4
+HCBS,Home and Community Based Services,Habilitation,N/A,N/A,2 per county (urban) / 2 per region (rural),N/A,N/A,MCO Guidelines Att 4
+HCBS,Home and Community Based Services,Intensive Crisis Respite,N/A,N/A,2 per county (urban) / 2 per region (rural),N/A,N/A,MCO Guidelines Att 4
+HCBS,Home and Community Based Services,Short Term Crisis Respite,N/A,N/A,2 per county (urban) / 2 per region (rural),N/A,N/A,MCO Guidelines Att 4
+HCBS,Home and Community Based Services,Education Support Services,N/A,N/A,2 per county (urban) / 2 per region (rural),N/A,N/A,MCO Guidelines Att 4
+HCBS,Home and Community Based Services,Pre-vocational Services,N/A,N/A,2 per county (urban) / 2 per region (rural),N/A,N/A,MCO Guidelines Att 4
+HCBS,Home and Community Based Services,Intensive Supported Employment (ISE),N/A,N/A,2 per county (urban) / 2 per region (rural),N/A,N/A,MCO Guidelines Att 4
+HCBS,Home and Community Based Services,Ongoing Supported Employment (OSE),N/A,N/A,2 per county (urban) / 2 per region (rural),N/A,N/A,MCO Guidelines Att 4
+HCBS,Home and Community Based Services,Transitional Employment,N/A,N/A,2 per county (urban) / 2 per region (rural),N/A,N/A,MCO Guidelines Att 4
+HCBS,Children's HCBS,Caregiver/Family Advocacy and Support Services,N/A,037,N/A,N/A,N/A,PNDS Table 2
+HCBS,Children's HCBS,Community Habilitation,N/A,038,N/A,N/A,N/A,PNDS Table 2
+HCBS,Children's HCBS,Community Self Advocacy Training and Support,N/A,039,N/A,N/A,N/A,PNDS Table 2
+HCBS,Children's HCBS,Crisis Respite,N/A,044,N/A,N/A,N/A,PNDS Table 2
+HCBS,Children's HCBS,Day Habilitation,N/A,045,N/A,N/A,N/A,PNDS Table 2
+HCBS,Children's HCBS,Palliative Care: Counseling and Support,N/A,"046, 672, 673",N/A,N/A,N/A,PNDS Table 2
+HCBS,Children's HCBS,Palliative Care: Expressive Therapy,N/A,047,N/A,N/A,N/A,PNDS Table 2
+HCBS,Children's HCBS,Palliative Care: Massage Therapy,N/A,048,N/A,N/A,N/A,PNDS Table 2
+HCBS,Children's HCBS,Palliative Care: Pain and Symptom Management,N/A,049,N/A,N/A,N/A,PNDS Table 2
+HCBS,Children's HCBS,Planned Respite,N/A,051,N/A,N/A,N/A,PNDS Table 2
+HCBS,Children's HCBS,Pre-Vocational,N/A,052,N/A,N/A,N/A,PNDS Table 2
+HCBS,Children's HCBS,Supported Employment,N/A,053,N/A,N/A,N/A,PNDS Table 2
+HCBS,Children's Community Psychiatric Support and Treatment,N/A,022,N/A,N/A,N/A,PNDS Table 2
+HCBS,Children's Crisis Intervention,N/A,023,N/A,N/A,N/A,PNDS Table 2
+HCBS,Children's Family Peer Support Services,N/A,036,N/A,N/A,N/A,PNDS Table 2
+CFCO,Community First Choice Option,Assistive Technology,N/A,N/A,2 per county (urban) / 2 per region (rural),N/A,N/A,MCO Guidelines Att 4
+CFCO,Community First Choice Option,Home-Delivered Meals,N/A,N/A,2 per county (urban) / 2 per region (rural),N/A,N/A,MCO Guidelines Att 4
+CFCO,Community First Choice Option,Skill Acquisition Maintenance and Enhancement (SAME),N/A,N/A,2 per county (urban) / 2 per region (rural),N/A,N/A,MCO Guidelines Att 4
+Hemophilia,Hemophilia,Hemophilia Treatment Centers,N/A,N/A,1 per county (urban) / 1 per region (rural),N/A,N/A,MCO Guidelines Att 4
+Hemophilia,Hemophilia,Other Clotting Factor Pharmacies,N/A,N/A,1 per county (urban) / 1 per region (rural),N/A,N/A,MCO Guidelines Att 4
+Ancillary,Ancillary Services,Adult Day Health Care,N/A,664,N/A,N/A,N/A,PNDS Table 2
+Ancillary,Ancillary Services,Assertive Community Treatment,N/A,N/A,N/A,N/A,N/A,PNDS Table 2
+Ancillary,Ancillary Services,Assistive Technology Agency,N/A,817,N/A,N/A,N/A,PNDS Table 2

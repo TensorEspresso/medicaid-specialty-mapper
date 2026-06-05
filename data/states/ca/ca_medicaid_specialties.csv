@@ -1,0 +1,32 @@
+tier,category,specialty,provider_count_requirement,travel_time_requirement,timely_access,source
+Primary Care,Primary Care,Adult Primary Care,,,10 miles or 30 minutes,Within 10 business days,APL21-006 Att A Table 1
+Primary Care,Primary Care,Pediatric Primary Care,,,10 miles or 30 minutes,Within 10 business days,APL21-006 Att A Table 1
+Primary Care,Primary Care,OB/GYN Primary Care,,,10 miles or 30 minutes,Within 10 business days,APL21-006 Att A Table 1
+Facility,Facility,Hospital,,,15 miles or 30 minutes,Not Applicable,APL21-006 Att A Table 1
+Facility,Facility,Dental Services,,,10 miles or 30 minutes,,healthlaw.org (separate managed care delivery system)
+Facility,Facility,Pharmacy Services,,,15 miles or 30 minutes,,APL21-006 Att A Table 1
+Specialist,Specialist,Cardiology/Interventional Cardiology,,Dense: 15mi/30min | Medium: 30mi/60min | Small: 45mi/75min | Rural: 60mi/90min,Within 15 business days,APL21-006 Att A Table 2
+Specialist,Specialist,Nephrology,,Dense: 15mi/30min | Medium: 30mi/60min | Small: 45mi/75min | Rural: 60mi/90min,Within 15 business days,APL21-006 Att A Table 2
+Specialist,Specialist,Dermatology,,Dense: 15mi/30min | Medium: 30mi/60min | Small: 45mi/75min | Rural: 60mi/90min,Within 15 business days,APL21-006 Att A Table 2
+Specialist,Specialist,Neurology,,Dense: 15mi/30min | Medium: 30mi/60min | Small: 45mi/75min | Rural: 60mi/90min,Within 15 business days,APL21-006 Att A Table 2
+Specialist,Specialist,Endocrinology,,Dense: 15mi/30min | Medium: 30mi/60min | Small: 45mi/75min | Rural: 60mi/90min,Within 15 business days,APL21-006 Att A Table 2
+Specialist,Specialist,Ophthalmology,,Dense: 15mi/30min | Medium: 30mi/60min | Small: 45mi/75min | Rural: 60mi/90min,Within 15 business days,APL21-006 Att A Table 2
+Specialist,Specialist,ENT/Otolaryngology,,Dense: 15mi/30min | Medium: 30mi/60min | Small: 45mi/75min | Rural: 60mi/90min,Within 15 business days,APL21-006 Att A Table 2
+Specialist,Specialist,Orthopedic Surgery,,Dense: 15mi/30min | Medium: 30mi/60min | Small: 45mi/75min | Rural: 60mi/90min,Within 15 business days,APL21-006 Att A Table 2
+Specialist,Specialist,Gastroenterology,,Dense: 15mi/30min | Medium: 30mi/60min | Small: 45mi/75min | Rural: 60mi/90min,Within 15 business days,APL21-006 Att A Table 2
+Specialist,Specialist,Physical Medicine and Rehabilitation,,Dense: 15mi/30min | Medium: 30mi/60min | Small: 45mi/75min | Rural: 60mi/90min,Within 15 business days,APL21-006 Att A Table 2
+Specialist,Specialist,General Surgery,,Dense: 15mi/30min | Medium: 30mi/60min | Small: 45mi/75min | Rural: 60mi/90min,Within 15 business days,APL21-006 Att A Table 2
+Specialist,Specialist,Psychiatry,,Dense: 15mi/30min | Medium: 30mi/60min | Small: 45mi/75min | Rural: 60mi/90min,Within 15 business days,APL21-006 Att A Table 2
+Specialist,Specialist,Hematology,,Dense: 15mi/30min | Medium: 30mi/60min | Small: 45mi/75min | Rural: 60mi/90min,Within 15 business days,APL21-006 Att A Table 2
+Specialist,Specialist,Oncology,,Dense: 15mi/30min | Medium: 30mi/60min | Small: 45mi/75min | Rural: 60mi/90min,Within 15 business days,APL21-006 Att A Table 2
+Specialist,Specialist,Pulmonology,,Dense: 15mi/30min | Medium: 30mi/60min | Small: 45mi/75min | Rural: 60mi/90min,Within 15 business days,APL21-006 Att A Table 2
+Specialist,Specialist,HIV/AIDS Specialists/Infectious Diseases,,Dense: 15mi/30min | Medium: 30mi/60min | Small: 45mi/75min | Rural: 60mi/90min,Within 15 business days,APL21-006 Att A Table 2
+Specialist,Specialist,Obstetrics and Gynecological Specialty Care,,Dense: 15mi/30min | Medium: 30mi/60min | Small: 45mi/75min | Rural: 60mi/90min,Within 15 business days,APL21-006 Att A Table 1 + healthlaw.org
+Behavioral Health,Behavioral Health,Outpatient Mental Health Services (non-psychiatry),,Dense: 15mi/30min | Medium: 30mi/60min | Small: 45mi/75min | Rural: 60mi/90min,Within 10 business days,APL21-006 Att A Table 1
+Behavioral Health,Behavioral Health,Substance Use Disorder Services,,Dense: 15mi/30min | Medium: 30mi/60min | Small: 45mi/75min | Rural: 60mi/90min,Within 10 business days,healthlaw.org (grouped with mental health)
+Behavioral Health,Behavioral Health,Opioid Treatment Programs,,Dense: 15mi/30min | Medium: 30mi/60min | Small: 45mi/75min | Rural: 60mi/90min,Within 10 business days,healthlaw.org (grouped with MH/SUD)
+Ancillary,Ancillary Services,Physical Therapy,,,Not Applicable,Network Certification Checklist
+Ancillary,Ancillary Services,Mammography,,,Not Applicable,Network Certification Checklist
+Ancillary,Ancillary Services,MRI,,,Not Applicable,Network Certification Checklist
+LTSS,Long Term Services and Supports,Skilled Nursing Facilities (SNF),,,Within 15 business days,APL21-006 Att A Table 1
+LTSS,Long Term Services and Supports,Intermediate Care Facilities (ICF),,,Within 15 business days,APL21-006 Att A Table 1
