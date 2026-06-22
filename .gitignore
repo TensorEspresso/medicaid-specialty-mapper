@@ -30,3 +30,9 @@ Thumbs.db
 # Temporary files
 *.tmp
 *.bak
+
+# Business / GTM documents (confidential)
+docs/mapper-product.md
+docs/startup-advice-validated.md
+docs/pricing-research.md
+reports/

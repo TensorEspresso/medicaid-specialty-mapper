@@ -10,8 +10,6 @@ Two complementary components:
 
 **2. State Medicaid Reference (Data)** — Verified state-by-state Medicaid specialty category definitions mapped to NUCC taxonomy. 11 states completed with source documentation.
 
-Together: the mapper handles the "messy input" problem; the state reference handles the "which specialty counts where" problem.
-
 ## Problem
 
 Provider specialty data is messy and inconsistent:
@@ -49,33 +47,19 @@ Provider specialty data is messy and inconsistent:
 
 Full tracking: [State Data Collection Tracker](docs/state-data-collection-tracker.md)
 
-## Target Customers
-
-- Health plans (commercial, Medicare Advantage, Medicaid managed care)
-- TPAs (Third Party Administrators)
-- Provider data management vendors
-- Multi-state Medicaid MCOs
-- Credentialing/enrollment vendors
-
-## Key Differentiator
-
-**Local inference** — No data leaves the client's network. No API costs. Deterministic latency. HIPAA-compliant by design.
-
 ## Structure
 
 ```
 medicaid-specialty-mapper/
 ├── README.md              # This file
 ├── AGENTS.md              # AI agent operational guidelines
-├── demo/                  # Interactive web demo for prospects
+├── demo/                  # Interactive web demo
 │   ├── main.py            # FastAPI backend
 │   ├── static/index.html  # Single-page frontend
 │   └── requirements.txt
 ├── docs/
 │   ├── state-data-collection-tracker.md
-│   ├── research-methodology.md
-│   ├── mapper-product.md
-│   └── pricing-research.md
+│   └── research-methodology.md
 ├── data/
 │   ├── nucc/              # NUCC taxonomy v25.1 (884 codes)
 │   └── states/            # Per-state directories
@@ -84,7 +68,6 @@ medicaid-specialty-mapper/
 │           ├── *_medicaid_specialties.csv
 │           ├── *_taxonomy_crosswalk.csv
 │           └── sources/   # Raw evidence (PDFs)
-├── reports/               # Demo outputs
 └── scripts/               # Build and automation scripts
 ```
 
@@ -96,12 +79,8 @@ medicaid-specialty-mapper/
 
 ## Next Steps
 
-- [ ] Test with Defacto sample data (100-200 providers)
-- [ ] Prepare before/after demo for Defacto founders
-- [ ] Reach out to Defacto founders
 - [ ] Add 5 more states (priority: WA, MA, CO, NV, NJ)
 - [ ] Complete NY and TX crosswalks
-- [ ] Check Quest employment agreement for conflict-of-interest clauses
 
 ## References
 
