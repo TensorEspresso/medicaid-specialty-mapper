@@ -36,3 +36,9 @@ docs/mapper-product.md
 docs/startup-advice-validated.md
 docs/pricing-research.md
 reports/
+
+# Source evidence (large binaries — keep locally, not in repo)
+data/states/*/sources/*.pdf
+data/states/*/sources/*.xls
+data/states/*/sources/*.xlsx
+data/states/*/sources/*.zip
