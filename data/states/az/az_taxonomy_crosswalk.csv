@@ -1,0 +1,9 @@
+program,specialty,internal_code,nucc_code,nucc_classification,nucc_specialization,nucc_definition,match_confidence
+MCO,PCP Adult,050,207Q00000X,Family Medicine,,Family Medicine,best-effort
+MCO,PCP Adult,060,207R00000X,Internal Medicine,,Internal Medicine,best-effort
+MCO,PCP Pediatric,150,208000000X,Pediatrics,,Pediatrics,best-effort
+MCO,OB/GYN,089,207R00000X,Obstetrics & Gynecology,,Obstetrics & Gynecology,best-effort
+MCO,Adult Cardiology,062,207RC0000X,Cardiovascular Disease,,Cardiovascular Disease,best-effort
+MCO,Pediatric Cardiology,151,2080P0202X,Cardiovascular Disease,Pediatric Cardiology,Pediatric Cardiology,best-effort
+MCO,Pharmacy,03,101200000X,Pharmacist,,Pharmacist,best-effort
+MCO,Dentist Pediatric,800,122300000X,Dentistry,Pediatric Dentistry,Pediatric Dentistry,best-effort

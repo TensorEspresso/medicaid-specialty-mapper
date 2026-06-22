@@ -1,0 +1,36 @@
+{
+  "program_name": "Medi-Cal",
+  "agency": "DHCS (Department of Health Care Services)",
+  "sources": [
+    {
+      "name": "APL 21-006 Attachment A",
+      "file": "ca_apl21-006AttA.pdf",
+      "description": "Network Adequacy Standards — time/distance tables, county sizes, core specialists"
+    },
+    {
+      "name": "APL 21-006 Attachment B",
+      "file": "ca_apl21-006AttB.pdf",
+      "description": "Annual Network Certification Instruction Manual"
+    },
+    {
+      "name": "APL 19-002",
+      "file": "ca_apl19-002.pdf",
+      "description": "Network Certification Requirements & mandatory providers"
+    },
+    {
+      "name": "Network Certification Checklist",
+      "file": "ca_network_certification.pdf",
+      "description": "274 file submission instructions, provider type codes"
+    },
+    {
+      "name": "Taxonomy Crosswalk (ArcGIS)",
+      "file": "ca_taxonomy_crosswalk.xls",
+      "description": "DHCS-published taxonomy crosswalk (863 records)"
+    }
+  ],
+  "crosswalk_origin": "official",
+  "crosswalk_rows": 863,
+  "specialty_count": 31,
+  "verification_status": "verified",
+  "notes": "Official DHCS taxonomy crosswalk available via ArcGIS (networks-gis.dhcs.ca.gov). 16 core specialists defined in APL21-006 Table 2."
+}

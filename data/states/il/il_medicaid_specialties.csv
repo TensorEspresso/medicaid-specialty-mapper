@@ -1,0 +1,43 @@
+tier,category,specialty,designation_type,specialty_code,provider_count_requirement,travel_time_requirement,enrollees_per_provider,source
+1,Specialty,,Standard,103T00000X,,,,IL Billing
+1,Specialty,,Standard,1041C0700X,,,,IL Billing
+1,Specialty,Chiropractor,Standard,111N00000X,,,,IL Billing
+1,Specialty,Dentist,Standard,122300000X,,,,IL Billing
+1,Specialty,"Surgery, Oral and Maxillofacial",Standard,1223X0400X,,,,IL Billing
+1,Specialty,Registered Nurse,Standard,163W00000X,,,,IL Billing
+1,Specialty,Licensed Practical Nurse,Standard,164W00000X,,,,IL Billing
+1,Specialty,Anesthesiology,Standard,207L00000X,,,,IL Billing
+1,Specialty,"Anesthesiology, Addiction Med",Standard,207LA0401X,,,,IL Billing
+1,Specialty,"Anesthesiology, Critical Care",Standard,207LC0200X,,,,IL Billing
+1,Specialty,"Anesthesiology, Pain Medicine",Standard,207LP2900X,,,,IL Billing
+1,Specialty,Family Practice,Standard,207Q00000X,,,,IL Billing
+1,Specialty,Ophthalmology,Standard,207W00000X,,,,IL Billing
+1,Specialty,"Podiatrist, General Practice",Standard,213EG0000X,,,,IL Billing
+1,Specialty,Physical Therapist,Standard,225100000X,,,,IL Billing
+1,Specialty,Rehabilitation Counselor,Standard,225C00000X,,,,IL Billing
+1,Specialty,Occupational Therapist,Standard,225X00000X,,,,IL Billing
+1,Specialty,Audiologist,Standard,231H00000X,,,,IL Billing
+1,Specialty,Speech-Language Pathologist,Standard,235Z00000X,,,,IL Billing
+1,Specialty,Clinic/Center,Standard,261Q00000X,,,,IL Billing
+1,Specialty,Health Department,Standard,261QH0100X,,,,IL Billing
+1,Specialty,Mental Health Clinic/Center,Standard,261QM0801X,,,,IL Billing
+1,Specialty,Magnetic Resonance Imaging,Standard,261QM1200X,,,,IL Billing
+1,Specialty,Methadone,Standard,261QM2800X,,,,IL Billing
+1,Specialty,Primary Care Clinic,Standard,261QP2300X,,,,IL Billing
+1,Specialty,Radiology,Standard,261QR0200X,,,,IL Billing
+1,Specialty,Mammography,Standard,261QR0206X,,,,IL Billing
+1,Specialty,Mobile Mammography,Standard,261QR0207X,,,,IL Billing
+1,Specialty,Mobile Radiology,Standard,261QR0208X,,,,IL Billing
+1,Specialty,Rural Health Clinic,Standard,261QR1300X,,,,IL Billing
+1,Specialty,Student Health Center,Standard,261QS1000X,,,,IL Billing
+1,Specialty,,Standard,261QS1200X,,,,IL Billing
+1,"Inpatient Services, General",Gen. Acute Cr. Hosp,Standard,282N00000X,,,,IL Billing
+1,Specialty,Gen. Acute Cr. Hosp,Standard,282N0000X,,,,IL Billing
+1,"Inpatient Services, General",Gen. Acute Cr. Hosp - Children,Standard,282NC2000X,,,,IL Billing
+1,Specialty,Supplier,Standard,330000000X,,,,IL Billing
+1,Specialty,Ambulance,Standard,341600000X,,,,IL Billing
+1,Specialty,Secured Medical Transport Van,Standard,343800000X,,,,IL Billing
+1,Specialty,Taxi,Standard,344600000X,,,,IL Billing
+1,Specialty,Nurse Practitioner,Standard,363L00000X,,,,IL Billing
+1,Specialty,"Nurse Anesthetist, Certified Registered",Standard,367500000X,,,,IL Billing
+1,Specialty,"Midwife, Certified",Standard,367A00000X,,,,IL Billing

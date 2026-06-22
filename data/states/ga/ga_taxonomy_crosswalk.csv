@@ -1,0 +1,61 @@
+ga_specialty,ga_category,nucc_code,nucc_grouping,nucc_classification,nucc_specialization,nucc_display_name,match_confidence
+PCPs (Primary Care Physicians),Primary Care,207Q00000X,Allopathic & Osteopathic Physicians,Family Medicine,,Family Medicine Physician,best-effort
+PCPs (Primary Care Physicians),Primary Care,207R00000X,Allopathic & Osteopathic Physicians,Internal Medicine,,Internal Medicine Physician,best-effort
+PCPs (Primary Care Physicians),Primary Care,208000000X,Allopathic & Osteopathic Physicians,Pediatrics,,Pediatrics Physician,best-effort
+PCPs (Primary Care Physicians),Primary Care,363A00000X,Physician Assistants & Advanced Practice Nursing Providers,Physician Assistant,,Physician Assistant,best-effort
+PCPs (Primary Care Physicians),Primary Care,363L00000X,Physician Assistants & Advanced Practice Nursing Providers,Nurse Practitioner,,Nurse Practitioner,best-effort
+Pediatricians,Primary Care,208000000X,Allopathic & Osteopathic Physicians,Pediatrics,,Pediatrics Physician,best-effort
+Adult Allergy/Immunology,Adult Medical Specialties,207K00000X,Allopathic & Osteopathic Physicians,Allergy & Immunology,,Allergy & Immunology Physician,best-effort
+Adult Cardiology,Adult Medical Specialties,207RC0000X,Allopathic & Osteopathic Physicians,Internal Medicine,Cardiovascular Disease,Cardiology Physician,best-effort
+Adult Dermatology,Adult Medical Specialties,207N00000X,Allopathic & Osteopathic Physicians,Dermatology,,Dermatology Physician,best-effort
+Adult Endocrinology,Adult Medical Specialties,207RE0101X,Allopathic & Osteopathic Physicians,Internal Medicine,"Endocrinology, Diabetes & Metabolism",Endocrinology Physician,best-effort
+Adult ENT (Otolaryngology),Adult Medical Specialties,207Y00000X,Allopathic & Osteopathic Physicians,Otolaryngology,,Otolaryngology Physician,best-effort
+Adult Gastroenterology,Adult Medical Specialties,207RG0100X,Allopathic & Osteopathic Physicians,Internal Medicine,Gastroenterology,Gastroenterology Physician,best-effort
+Adult General Surgery,Adult Medical Specialties,208600000X,Allopathic & Osteopathic Physicians,Surgery,,General Surgery Physician,best-effort
+Adult Hematology/Oncology,Adult Medical Specialties,207RH0003X,Allopathic & Osteopathic Physicians,Internal Medicine,Hematology & Oncology,Hematology/Oncology Physician,best-effort
+Adult Infectious Disease,Adult Medical Specialties,207RI0200X,Allopathic & Osteopathic Physicians,Internal Medicine,Infectious Disease,Infectious Disease Physician,best-effort
+Adult Nephrology,Adult Medical Specialties,207RN0300X,Allopathic & Osteopathic Physicians,Internal Medicine,Nephrology,Nephrology Physician,best-effort
+Adult Neurology,Adult Medical Specialties,2084N0400X,Allopathic & Osteopathic Physicians,Psychiatry & Neurology,Neurology,Neurology Physician,best-effort
+Adult Ophthalmology,Adult Medical Specialties,207W00000X,Allopathic & Osteopathic Physicians,Ophthalmology,,Ophthalmology Physician,best-effort
+Adult Optometry,Adult Medical Specialties,152W00000X,Eye and Vision Services Providers,Optometrist,,Optometrist,best-effort
+Adult Orthopedics,Adult Medical Specialties,207X00000X,Allopathic & Osteopathic Physicians,Orthopaedic Surgery,,Orthopaedic Surgery Physician,best-effort
+Adult Rheumatology,Adult Medical Specialties,207RR0500X,Allopathic & Osteopathic Physicians,Internal Medicine,Rheumatology,Rheumatology Physician,best-effort
+Adult Urology,Adult Medical Specialties,208800000X,Allopathic & Osteopathic Physicians,Urology,,Urology Physician,best-effort
+Adult Vascular Surgery,Adult Medical Specialties,2086S0129X,Allopathic & Osteopathic Physicians,Surgery,Vascular Surgery,Vascular Surgery Physician,best-effort
+Pediatric Allergy/Immunology,Pediatric Medical Specialties,2080P0201X,Allopathic & Osteopathic Physicians,Pediatrics,Pediatric Allergy/Immunology,Pediatric Allergy/Immunology Physician,best-effort
+Pediatric Cardiology,Pediatric Medical Specialties,2080P0202X,Allopathic & Osteopathic Physicians,Pediatrics,Pediatric Cardiology,Pediatric Cardiology Physician,best-effort
+Pediatric Dermatology,Pediatric Medical Specialties,207NP0225X,Allopathic & Osteopathic Physicians,Dermatology,Pediatric Dermatology,Pediatric Dermatology Physician,best-effort
+Pediatric Endocrinology,Pediatric Medical Specialties,2080P0205X,Allopathic & Osteopathic Physicians,Pediatrics,Pediatric Endocrinology,Pediatric Endocrinology Physician,best-effort
+Pediatric ENT,Pediatric Medical Specialties,207YP0228X,Allopathic & Osteopathic Physicians,Otolaryngology,Pediatric Otolaryngology,Pediatric Otolaryngology Physician,best-effort
+Pediatric Gastroenterology,Pediatric Medical Specialties,2080P0206X,Allopathic & Osteopathic Physicians,Pediatrics,Pediatric Gastroenterology,Pediatric Gastroenterology Physician,best-effort
+Pediatric General Surgery,Pediatric Medical Specialties,208600000X,Allopathic & Osteopathic Physicians,Surgery,,General Surgery Physician (Pediatric),best-effort
+Pediatric Hematology/Oncology,Pediatric Medical Specialties,2080P0207X,Allopathic & Osteopathic Physicians,Pediatrics,Pediatric Hematology-Oncology,Pediatric Hematology/Oncology Physician,best-effort
+Pediatric Infectious Disease,Pediatric Medical Specialties,2080P0208X,Allopathic & Osteopathic Physicians,Pediatrics,Pediatric Infectious Diseases,Pediatric Infectious Disease Physician,best-effort
+Pediatric Nephrology,Pediatric Medical Specialties,2080P0210X,Allopathic & Osteopathic Physicians,Pediatrics,Pediatric Nephrology,Pediatric Nephrology Physician,best-effort
+Pediatric Neurology,Pediatric Medical Specialties,2084N0402X,Allopathic & Osteopathic Physicians,Psychiatry & Neurology,Neurology with Special Qualifications in Child Neurology,Pediatric Neurology Physician,best-effort
+Pediatric Ophthalmology,Pediatric Medical Specialties,207WX0110X,Allopathic & Osteopathic Physicians,Ophthalmology,Pediatric Ophthalmology and Strabismus Specialist,Pediatric Ophthalmology Physician,best-effort
+Pediatric Optometry,Pediatric Medical Specialties,152W00000X,Eye and Vision Services Providers,Optometrist,,Pediatric Optometrist,best-effort
+Pediatric Orthopedics,Pediatric Medical Specialties,207XP3100X,Allopathic & Osteopathic Physicians,Orthopaedic Surgery,Pediatric Orthopaedic Surgery,Pediatric Orthopaedic Surgery Physician,best-effort
+Pediatric Rheumatology,Pediatric Medical Specialties,2080P0216X,Allopathic & Osteopathic Physicians,Pediatrics,Pediatric Rheumatology,Pediatric Rheumatology Physician,best-effort
+Pediatric Urology,Pediatric Medical Specialties,2088P0231X,Allopathic & Osteopathic Physicians,Urology,Pediatric Urology,Pediatric Urology Physician,best-effort
+Pediatric Vascular Surgery,Pediatric Medical Specialties,2086S0129X,Allopathic & Osteopathic Physicians,Surgery,Vascular Surgery,Pediatric Vascular Surgery Physician,best-effort
+Obstetrics/Gynecology,Obstetrics/Gynecology,207V00000X,Allopathic & Osteopathic Physicians,Obstetrics & Gynecology,,Obstetrics/Gynecology Physician,best-effort
+Behavioral Health Providers,Behavioral Health,101Y00000X,Behavioral Health & Social Service Providers,Counselor,,Counselor,best-effort
+Behavioral Health Facilities,Behavioral Health,323P00000X,Residential Treatment Facilities,Psychiatric Residential Treatment Facility,,Psychiatric Residential Treatment Facility,best-effort
+Community Service Boards,Behavioral Health,251S00000X,Agencies,Community/Behavioral Health,,Community/Behavioral Health Agency,best-effort
+Psychiatric Residential Treatment Facilities (PRTFs),Behavioral Health,323P00000X,Residential Treatment Facilities,Psychiatric Residential Treatment Facility,,Psychiatric Residential Treatment Facility,best-effort
+Psychologists,Behavioral Health,103TC0700X,Behavioral Health & Social Service Providers,Psychologist,Clinical,Clinical Psychologist,best-effort
+Psychiatrists,Behavioral Health,2084P0800X,Allopathic & Osteopathic Physicians,Psychiatry & Neurology,Psychiatry,Psychiatry Physician,best-effort
+ASD (Autism Spectrum Disorder) Treatment Providers,Behavioral Health,101YP2500X,Behavioral Health & Social Service Providers,Counselor,Professional,ASD Treatment Provider,best-effort
+Narcotic Treatment Programs,Behavioral Health,324500000X,Residential Treatment Facilities,Substance Abuse Rehabilitation Facility,,Substance Abuse Rehabilitation Facility,best-effort
+Licensed Counselors and Social Workers,Behavioral Health,104100000X,Behavioral Health & Social Service Providers,Social Worker,,Social Worker,best-effort
+General Dental Providers,Dental,122300000X,Dental Providers,Dentist,,Dentist,best-effort
+Dental Subspecialty Providers,Dental,1223X0400X,Dental Providers,Dentist,Orthodontics and Dentofacial Orthopedics,Orthodontist,best-effort
+Dental Subspecialty Providers,Dental,1223E0200X,Dental Providers,Dentist,Endodontics,Endodontist,best-effort
+Dental Subspecialty Providers,Dental,1223P0300X,Dental Providers,Dentist,Periodontics,Periodontist,best-effort
+Dental Subspecialty Providers,Dental,1223P0700X,Dental Providers,Dentist,Prosthodontics,Prosthodontist,best-effort
+Dialysis,Other Services/Dialysis,163WH0500X,Nursing Service Providers,Registered Nurse,Hemodialysis,Hemodialysis Provider,best-effort
+DME (Durable Medical Equipment),Other Services/DME,332B00000X,Suppliers,Durable Medical Equipment,,Durable Medical Equipment Supplier,best-effort
+RHCs and FQHCs,Other Services/FQHC,251F00000X,Agencies,Home Infusion,,RHCs and FQHCs,best-effort
+Home Health and Infusion Services,Other Services/Home Health,163WH0200X,Nursing Service Providers,Registered Nurse,Home Health,Home Health Provider,best-effort
+Hospitals,Other Services/Hospitals,282N00000X,Agencies,Hospital,,Hospital,best-effort

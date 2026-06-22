@@ -1,0 +1,21 @@
+{
+  "program_name": "Medicaid Managed Care (MCO)",
+  "agency": "NY DOH (Department of Health)",
+  "sources": [
+    {
+      "name": "Guidelines for MCO Service Delivery Networks v3.0",
+      "file": "ny_mco_guidelines.pdf",
+      "description": "Network adequacy standards with specialist caseload ratios"
+    },
+    {
+      "name": "PNDS Data Dictionary v8.0",
+      "file": "ny_pnds_dictionary.pdf",
+      "description": "Provider Network Data System — provider specialty codes (Tables 1 & 2)"
+    }
+  ],
+  "crosswalk_origin": "missing",
+  "crosswalk_rows": 0,
+  "specialty_count": 133,
+  "verification_status": "verified",
+  "notes": "No official NY-to-NUCC crosswalk published. PNDS uses NY-specific specialty codes. 10 program types (Medicaid, CHP, HARP, HIV SNP, MAP, MLTC, PACE, FIDA, NYSOH, Commercial). 9 RPC regions."
+}

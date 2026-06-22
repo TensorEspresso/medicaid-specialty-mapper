@@ -1,0 +1,31 @@
+{
+  "program_name": "HealthChoice Illinois (HCIL)",
+  "agency": "HFS (Department of Healthcare and Family Services)",
+  "sources": [
+    {
+      "name": "MCPAR CY24",
+      "file": "il_mcpar_cy24.pdf",
+      "description": "Managed Care Performance Assessment Report (194 pages)"
+    },
+    {
+      "name": "EQRO Report 2022-2023",
+      "file": "il_eqro_2022_2023.pdf",
+      "description": "External Quality Review Organization report (622 pages)"
+    },
+    {
+      "name": "HFS2243i Enrollment Form",
+      "file": "il_hfs2243i.pdf",
+      "description": "Provider enrollment form with Provider Type/Category tables"
+    },
+    {
+      "name": "837P/837I Taxonomy Tables",
+      "file": "il_837p_taxonomy.pdf",
+      "description": "COS-to-Taxonomy crosswalks for claims processing (74 codes total)"
+    }
+  ],
+  "crosswalk_origin": "partial-official",
+  "crosswalk_rows": 26,
+  "specialty_count": 42,
+  "verification_status": "verified",
+  "notes": "Illinois uses 9 broad categories — 'Specialist' is a single catch-all. No granular specialty taxonomy for network adequacy. COS-to-Taxonomy crosswalks are for billing/enrollment only."
+}

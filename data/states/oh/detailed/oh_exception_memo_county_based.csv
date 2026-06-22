@@ -1,0 +1,29 @@
+state,program,specialty,geographic_type,max_time_minutes,max_distance_miles,source,notes
+OH,MCO,Community Behavioral Health Providers (CBHP) / Outpatient Clinical Behavioral Health,Large Metro,10,,https://medicaid.ohio.gov/providers/managed-care/exception-memo-jan2025,Exception Memo Appendix B Table B.1 - time only, distance blank
+OH,MCO,Community Behavioral Health Providers (CBHP) / Outpatient Clinical Behavioral Health,Metro,5,,https://medicaid.ohio.gov/providers/managed-care/exception-memo-jan2025,Exception Memo Appendix B Table B.1 - time only, distance blank
+OH,MCO,Community Behavioral Health Providers (CBHP) / Outpatient Clinical Behavioral Health,Micro,15,,https://medicaid.ohio.gov/providers/managed-care/exception-memo-jan2025,Exception Memo Appendix B Table B.1 - time only, distance blank
+OH,MCO,Community Behavioral Health Providers (CBHP) / Outpatient Clinical Behavioral Health,Rural,30,,https://medicaid.ohio.gov/providers/managed-care/exception-memo-jan2025,Exception Memo Appendix B Table B.1 - time only, distance blank
+OH,MCO,Dental / Adult Dental,Large Metro,20,10,https://medicaid.ohio.gov/providers/managed-care/exception-memo-jan2025,Exception Memo Appendix B Table B.1
+OH,MCO,Dental / Adult Dental,Metro,30,20,https://medicaid.ohio.gov/providers/managed-care/exception-memo-jan2025,Exception Memo Appendix B Table B.1
+OH,MCO,Dental / Adult Dental,Micro,50,35,https://medicaid.ohio.gov/providers/managed-care/exception-memo-jan2025,Exception Memo Appendix B Table B.1
+OH,MCO,Dental / Adult Dental,Rural,75,60,https://medicaid.ohio.gov/providers/managed-care/exception-memo-jan2025,Exception Memo Appendix B Table B.1
+OH,MCO,Hospital,Large Metro,20,10,https://medicaid.ohio.gov/providers/managed-care/exception-memo-jan2025,Exception Memo Appendix B Table B.1
+OH,MCO,Hospital,Metro,45,30,https://medicaid.ohio.gov/providers/managed-care/exception-memo-jan2025,Exception Memo Appendix B Table B.1
+OH,MCO,Hospital,Micro,80,60,https://medicaid.ohio.gov/providers/managed-care/exception-memo-jan2025,Exception Memo Appendix B Table B.1
+OH,MCO,Hospital,Rural,85,70,https://medicaid.ohio.gov/providers/managed-care/exception-memo-jan2025,Exception Memo Appendix B Table B.1
+OH,MCO,Inpatient Psychiatric Hospitals / Inpatient or Residential Behavioral Health Facility Services,Large Metro,,30,https://medicaid.ohio.gov/providers/managed-care/exception-memo-jan2025,Exception Memo Appendix B Table B.1 - distance only, time blank
+OH,MCO,Inpatient Psychiatric Hospitals / Inpatient or Residential Behavioral Health Facility Services,Metro,,15,https://medicaid.ohio.gov/providers/managed-care/exception-memo-jan2025,Exception Memo Appendix B Table B.1 - distance only, time blank
+OH,MCO,Inpatient Psychiatric Hospitals / Inpatient or Residential Behavioral Health Facility Services,Micro,,70,https://medicaid.ohio.gov/providers/managed-care/exception-memo-jan2025,Exception Memo Appendix B Table B.1 - distance only, time blank
+OH,MCO,Inpatient Psychiatric Hospitals / Inpatient or Residential Behavioral Health Facility Services,Rural,,90,https://medicaid.ohio.gov/providers/managed-care/exception-memo-jan2025,Exception Memo Appendix B Table B.1 - distance only, time blank
+OH,MCO,Medication Assisted Treatment (MAT) / SUD – Outpatient,Large Metro,20,10,https://medicaid.ohio.gov/providers/managed-care/exception-memo-jan2025,Exception Memo Appendix B Table B.1
+OH,MCO,Medication Assisted Treatment (MAT) / SUD – Outpatient,Metro,30,20,https://medicaid.ohio.gov/providers/managed-care/exception-memo-jan2025,Exception Memo Appendix B Table B.1
+OH,MCO,Medication Assisted Treatment (MAT) / SUD – Outpatient,Micro,50,35,https://medicaid.ohio.gov/providers/managed-care/exception-memo-jan2025,Exception Memo Appendix B Table B.1
+OH,MCO,Medication Assisted Treatment (MAT) / SUD – Outpatient,Rural,75,60,https://medicaid.ohio.gov/providers/managed-care/exception-memo-jan2025,Exception Memo Appendix B Table B.1
+OH,MCO,Nursing Facilities / Skilled Nursing Facilities,Large Metro,20,10,https://medicaid.ohio.gov/providers/managed-care/exception-memo-jan2025,Exception Memo Appendix B Table B.1
+OH,MCO,Nursing Facilities / Skilled Nursing Facilities,Metro,45,30,https://medicaid.ohio.gov/providers/managed-care/exception-memo-jan2025,Exception Memo Appendix B Table B.1
+OH,MCO,Nursing Facilities / Skilled Nursing Facilities,Micro,80,60,https://medicaid.ohio.gov/providers/managed-care/exception-memo-jan2025,Exception Memo Appendix B Table B.1
+OH,MCO,Nursing Facilities / Skilled Nursing Facilities,Rural,75,60,https://medicaid.ohio.gov/providers/managed-care/exception-memo-jan2025,Exception Memo Appendix B Table B.1
+OH,MCO,Vision / Ophthalmology,Large Metro,20,10,https://medicaid.ohio.gov/providers/managed-care/exception-memo-jan2025,Exception Memo Appendix B Table B.1
+OH,MCO,Vision / Ophthalmology,Metro,30,20,https://medicaid.ohio.gov/providers/managed-care/exception-memo-jan2025,Exception Memo Appendix B Table B.1
+OH,MCO,Vision / Ophthalmology,Micro,50,35,https://medicaid.ohio.gov/providers/managed-care/exception-memo-jan2025,Exception Memo Appendix B Table B.1
+OH,MCO,Vision / Ophthalmology,Rural,75,60,https://medicaid.ohio.gov/providers/managed-care/exception-memo-jan2025,Exception Memo Appendix B Table B.1

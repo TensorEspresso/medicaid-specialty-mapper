@@ -1,0 +1,2337 @@
+Michigan Network Adequacy Guidance
+
+Updated 3.26
+
+Contents
+1. Overview .................................................................................................................. 3
+2. Authority ................................................................................................................... 3
+2.1.
+
+Federal ............................................................................................................. 3
+
+2.2.
+
+State ................................................................................................................. 3
+
+3. Service Area ............................................................................................................. 3
+4. Commercial Medical Network Requirements & Standards ....................................... 4
+4.1.
+
+DIFS’ Additional Provider Specialties & Measurement Criteria ......................... 4
+
+4.2.
+
+Time &/or Distance Standards .......................................................................... 5
+
+4.3.
+
+Time & Distance Standards - Individual Provider Specialty Types for Medical Networks
+5
+
+4.4.
+
+Time & Distance Standards - Facility Specialty Types for Medical Networks .... 7
+
+4.5.
+
+Appointment Wait Time Standards ................................................................... 8
+
+4.5.1
+
+Appointment Wait Time Standards .............................................................. 8
+
+4.6.
+
+Provider Directory ............................................................................................. 8
+
+4.7.
+
+Tiered Networks................................................................................................ 8
+
+4.8.
+
+Essential Community Providers ........................................................................ 9
+
+4.9.
+
+Required Templates & Supporting Documentation ........................................... 9
+
+4.9.1
+
+Medical On and/or Off Marketplace Plan Networks ..................................... 9
+
+4.9.2
+
+Medical Off Marketplace Only Plan Networks ............................................. 9
+
+4.9.3
+
+Service Area Expansions (Large Group HMOs & AFDS) .......................... 10
+
+4.10. Detail of Templates & Supporting Documentation .......................................... 10
+5. Evaluation Factors .................................................................................................. 12
+6. SADP Network Requirements & Standards............................................................ 13
+6.1.
+
+Time & Distance Standards for SADP Networks ............................................ 14
+
+6.2.
+
+Essential Community Providers ...................................................................... 14
+
+6.2.1
+
+Detail of SADP Templates & Documentation ............................................ 14
+
+7. Medicaid Service Area Expansions ........................................................................ 15
+8. Medicare Advantage Service Area Expansions ...................................................... 16
+9. Appendix ................................................................................................................ 17
+9.1.
+
+Specialty Types & Codes ................................................................................ 17
+
+9.1.1
+
+Individual Provider Specialty Types & Codes ............................................ 17
+
+9.1.2
+
+Facility Specialty Types & Codes .............................................................. 18
+
+9.2.
+
+Michigan County Designations ....................................................................... 19
+
+9.3.
+
+State & Federal Resources ............................................................................. 20
+
+Michigan Network Adequacy Guidance
+
+ii
+
+1. Overview
+The Michigan Insurance Code (Code) and the Patient Protection and Affordable Care Act (ACA) set
+requirements and standards for health care provider networks of health and dental insurers, health
+maintenance organizations (HMOs), and alternative financing and delivery systems (AFDS) (issuers).
+Issuers include medical plans seeking health insurance marketplace/exchange (marketplace)
+certification known as qualified health plans (QHPs1), ACA-compliant medical plans, and stand-alone
+dental plans (SADPs) seeking on- and/or off-marketplace certification.
+The Michigan Department of Insurance and Financial Services (DIFS) publishes this guidance to
+document its healthcare provider network adequacy standards and requirements for issuers, within its
+regulatory jurisdiction, offering health plans utilizing provider networks in Michigan.
+DIFS uses the National Association of Insurance Commissioners’ (NAIC’s) System for Electronic
+Rates and Forms Filing (SERFF).
+
+2. Authority
+All issuers are responsible for complying with applicable state and federal requirements, including any
+not listed. Certain requirements may apply only to network plans intended to be sold on-marketplace.
+
+2.1. Federal
+➢ 45 CFR Parts 146, 147, 155, 156
+➢ 42 U.S.C. § 300gg-1, et seq.; § 18001, et seq.
+➢ 29 U.S.C § 1185a
+
+2.2. State
+Michigan Insurance Code
+➢ MCL 500.116
+➢ MCL 500.3428, 3476
+➢ MCL 500.3501, 3509, 3513, 3528, 3529, 3530, 3531
+Nonprofit Health Care Corporation Reform Act
+➢ MCL 550.1501c
+
+3. Service Area
+“Service area” means:
+• A defined geographical area in which covered health services are generally available and
+readily accessible to enrollees and where health maintenance organizations may market their
+contracts (MCL 500.3501(h)), and
+• That term as defined in section 3501 unless the context requires otherwise (MCL 500.116).
+Michigan has 83 counties designated as either: Large Metro, Metro, Micro, Rural, and Counties with
+Extreme Access Considerations (CEAC). See Appendix 9.2 Michigan County Designations and
+CMS’ current year Health Service Delivery Reference File.
+Partial counties may be included in service areas of medical network plans and not SADPs.
+
+1 The ACA defines a QHP as an insurance plan that is certified by the Health Insurance Marketplace/Exchange, provides
+
+essential health benefits, follows established limits on cost-sharing, and meets other requirements outlined in the
+application process.
+Michigan Network Adequacy Guidance
+
+3
+
+Issuers must receive DIFS’ approval before marketing network products/plans in Michigan or
+changing an approved service area.
+
+4. Commercial Medical Network Requirements & Standards
+Issuer networks must:
+➢ Meet DIFS’ measurement criteria for additional provider specialties as set forth below.
+➢ Meet CMS’ Medicare Advantage (MA):
+o Time and distance standards and underlying 90 percent access requirement. See 2023
+Final Letter to Issuers in the Federally-facilitated Exchanges (PY23 Final Letter) and
+QHP Population Sample File (based on U.S. Census data for marketplace-eligible
+enrollees).
+➢ Have a sufficient number and type of providers to ensure covered benefits are available and
+accessible to enrollees without unreasonable delay, including those:
+o Specializing in mental health and substance use disorder services, and
+o Offering Essential Health Benefits (EHBs)
+➢ Provide health care and services promptly and appropriately, ensuring continuity and
+acceptable quality of health care
+➢ Provide emergency health services in the service area (approved by DIFS) that are available
+and accessible to enrollees 24 hours/day and 7 days/week
+➢ Reasonably provide for enrollees to obtain emergency health services in and out of the
+designated service area
+➢ Maintain reasonable proximity of providers to the business or residence of enrollees and
+accessibility for persons with disabilities and/or limited English proficiency
+➢ Include providers of telehealth
+➢ Include Essential Community Providers (ECPs) and comply with CMS’ ECP standards (45
+CFR 156.235) (QHPs & SADPs)
+If the number and/or type of participating providers in an issuer’s network is insufficient to provide a
+covered benefit, issuer must ensure enrollee obtains the covered benefit at no greater cost than if
+obtained from in-network provider(s).
+
+4.1. DIFS’ Additional Provider Specialties & Measurement Criteria
+Provider Specialty
+Anesthesiology
+Outpatient Dialysis
+DME
+Home Health
+Home Infusion
+Hospice
+Laboratory
+Midwife
+Optometry
+Pathology
+
+Measurement Criteria
+Max 30-min travel time standard regardless county designation
+Max 30-min travel time standard regardless county designation
+Max 30-min travel time standard regardless county designation
+Max 30-min travel time standard regardless county designation
+Max 30-min travel time standard regardless county designation
+Max 30-min travel time standard regardless county designation
+Max 30-min travel time standard regardless county designation
+Max 30-min travel time standard regardless county designation
+Max 30-min travel time standard regardless county designation
+Max 30-min travel time standard regardless county designation
+
+Oral & Maxillofacial Surgery
+
+See 6.1 Time & Distance Standards for SADP Networks
+
+Ambulance [Land Transportation only]
+
+None; DIFS collects for information only at this time
+
+Pharmacy
+
+Max 30-min travel time standard regardless county designation
+Michigan Network Adequacy Guidance
+
+4
+
+4.2. Time &/or Distance Standards
+In addition to the criteria in the table above, DIFS applies CMS’ Medicare Advantage network adequacy time and distance standards
+and underlying 90 percent access requirement to networks submitted in Service Area Expansion filings (in addition to networks
+submitted in individual and small group medical and SADP plan management binders). See tables below and QHP Population Sample
+File.
+To count towards meeting the time and distance standards, individual and facility providers listed on the below tables must be
+appropriately licensed, accredited, or certified to practice in their state, as applicable, and must have in-person services available.
+
+4.3. Time & Distance Standards - Individual Provider Specialty Types for Medical Networks
+Maximum Time and Distance Standardsa
+Individual Provider Specialty Types
+
+Large Metro
+County
+
+Metro County
+
+Micro County
+
+Rural County
+
+Counties with Extreme
+Access Considerations
+(CEAC)
+
+Time
+
+Distance
+
+Time
+
+Distance
+
+Time
+
+Distance
+
+Time
+
+Distance
+
+Time
+
+Distance
+
+Allergy and Immunology
+
+30
+
+15
+
+45
+
+30
+
+80
+
+60
+
+90
+
+75
+
+125
+
+110
+
+Cardiology
+
+20
+
+10
+
+30
+
+20
+
+50
+
+35
+
+75
+
+60
+
+95
+
+85
+
+Cardiothoracic Surgery
+
+30
+
+15
+
+60
+
+40
+
+100
+
+75
+
+110
+
+90
+
+145
+
+130
+
+Chiropractor
+
+30
+
+15
+
+45
+
+30
+
+80
+
+60
+
+90
+
+75
+
+125
+
+110
+
+Dental
+
+30
+
+15
+
+45
+
+30
+
+80
+
+60
+
+90
+
+75
+
+125
+
+110
+
+Dermatology
+
+20
+
+10
+
+45
+
+30
+
+60
+
+45
+
+75
+
+60
+
+110
+
+100
+
+Emergency Medicine
+
+20
+
+10
+
+45
+
+30
+
+80
+
+60
+
+75
+
+60
+
+110
+
+100
+
+Endocrinology
+
+30
+
+15
+
+60
+
+40
+
+100
+
+75
+
+110
+
+90
+
+145
+
+130
+
+ENT/Otolaryngology
+
+30
+
+15
+
+45
+
+30
+
+80
+
+60
+
+90
+
+75
+
+125
+
+110
+
+Gastroenterology
+
+20
+
+10
+
+45
+
+30
+
+60
+
+45
+
+75
+
+60
+
+110
+
+100
+
+General Surgery
+
+20
+
+10
+
+30
+
+20
+
+50
+
+35
+
+75
+
+60
+
+95
+
+85
+
+Gynecology, OB/GYN
+
+10
+
+5
+
+15
+
+10
+
+30
+
+20
+
+40
+
+30
+
+70
+
+60
+
+Infectious Diseases
+
+30
+
+15
+
+60
+
+40
+
+100
+
+75
+
+110
+
+90
+
+145
+
+130
+
+Nephrology
+
+30
+
+15
+
+45
+
+30
+
+80
+
+60
+
+90
+
+75
+
+125
+
+110
+
+Neurology
+
+20
+
+10
+
+45
+
+30
+
+60
+
+45
+
+75
+
+60
+
+110
+
+100
+
+Neurosurgery
+
+30
+
+15
+
+60
+
+40
+
+100
+
+75
+
+110
+
+90
+
+145
+
+130
+
+Occupational Therapy
+
+20
+
+10
+
+45
+
+30
+
+80
+
+60
+
+75
+
+60
+
+110
+
+100
+
+Oncology–Medical, Surgical
+
+20
+
+10
+
+45
+
+30
+
+60
+
+45
+
+75
+
+60
+
+110
+
+100
+
+Michigan Network Adequacy Guidance
+
+5
+
+Maximum Time and Distance Standardsa
+Individual Provider Specialty Types
+
+Large Metro
+County
+
+Metro County
+
+Micro County
+
+Rural County
+
+Counties with Extreme
+Access Considerations
+(CEAC)
+
+Time
+
+Distance
+
+Time
+
+Distance
+
+Time
+
+Distance
+
+Time
+
+Distance
+
+Time
+
+Distance
+
+Oncology–Radiation
+
+30
+
+15
+
+60
+
+40
+
+100
+
+75
+
+110
+
+90
+
+145
+
+130
+
+Ophthalmology
+
+20
+
+10
+
+30
+
+20
+
+50
+
+35
+
+75
+
+60
+
+95
+
+85
+
+Orthopedic Surgery
+
+20
+
+10
+
+30
+
+20
+
+50
+
+35
+
+75
+
+60
+
+95
+
+85
+
+Outpatient Clinical Behavioral Health
+(licensed, accredited, or certified
+professionals)
+
+10
+
+5
+
+15
+
+10
+
+30
+
+20
+
+40
+
+30
+
+70
+
+60
+
+Physical Medicine and Rehabilitation
+
+30
+
+15
+
+45
+
+30
+
+80
+
+60
+
+90
+
+75
+
+125
+
+110
+
+Physical Therapy
+
+20
+
+10
+
+45
+
+30
+
+80
+
+60
+
+75
+
+60
+
+110
+
+100
+
+Plastic Surgery
+
+30
+
+15
+
+60
+
+40
+
+100
+
+75
+
+110
+
+90
+
+145
+
+130
+
+Podiatry
+
+20
+
+10
+
+45
+
+30
+
+60
+
+45
+
+75
+
+60
+
+110
+
+100
+
+Primary Care–Adult
+
+10
+
+5
+
+15
+
+10
+
+30
+
+20
+
+40
+
+30
+
+70
+
+60
+
+Primary Care–Pediatric
+
+10
+
+5
+
+15
+
+10
+
+30
+
+20
+
+40
+
+30
+
+70
+
+60
+
+Psychiatry
+
+20
+
+10
+
+45
+
+30
+
+60
+
+45
+
+75
+
+60
+
+110
+
+100
+
+Pulmonology
+
+20
+
+10
+
+45
+
+30
+
+60
+
+45
+
+75
+
+60
+
+110
+
+100
+
+Rheumatology
+
+30
+
+15
+
+60
+
+40
+
+100
+
+75
+
+110
+
+90
+
+145
+
+130
+
+Speech Therapy
+
+20
+
+10
+
+45
+
+30
+
+80
+
+60
+
+75
+
+60
+
+110
+
+100
+
+Urology
+
+20
+
+10
+
+45
+
+30
+
+60
+
+45
+
+75
+
+60
+
+110
+
+100
+
+Vascular Surgery
+
+30
+
+15
+
+60
+
+40
+
+100
+
+75
+
+110
+
+90
+
+145
+
+130
+
+a
+
+Time standard is measured in minutes. Distance standard is measured in miles.
+
+Michigan Network Adequacy Guidance
+
+6
+
+4.4. Time & Distance Standards - Facility Specialty Types for Medical Networks
+Maximum Time and Distance Standardsa
+Facility Specialty Type
+
+a
+
+Counties with Extreme
+Access Considerations
+(CEAC)
+
+Large Metro County
+
+Metro County
+
+Micro County
+
+Rural County
+
+Time
+
+Distance
+
+Time
+
+Distance
+
+Time
+
+Distance
+
+Time
+
+Distance
+
+Time
+
+Distance
+
+Acute Inpatient Hospitals (must
+have Emergency services
+available 24/7)
+
+20
+
+10
+
+45
+
+30
+
+80
+
+60
+
+75
+
+60
+
+110
+
+100
+
+Cardiac Catheterization Services
+
+30
+
+15
+
+60
+
+40
+
+160
+
+120
+
+145
+
+120
+
+155
+
+140
+
+Cardiac Surgery Program
+
+30
+
+15
+
+60
+
+40
+
+160
+
+120
+
+145
+
+120
+
+155
+
+140
+
+Critical Care Services–Intensive
+Care Units (ICU)
+
+20
+
+10
+
+45
+
+30
+
+160
+
+120
+
+145
+
+120
+
+155
+
+140
+
+Diagnostic Radiology (freestanding; hospital outpatient;
+ambulatory health facilities with
+Diagnostic Radiology)
+
+20
+
+10
+
+45
+
+30
+
+80
+
+60
+
+75
+
+60
+
+110
+
+100
+
+Inpatient or Residential
+Behavioral Health Facility
+Services
+
+30
+
+15
+
+70
+
+45
+
+100
+
+75
+
+90
+
+75
+
+155
+
+140
+
+Mammography
+
+20
+
+10
+
+45
+
+30
+
+80
+
+60
+
+75
+
+60
+
+110
+
+100
+
+Outpatient Infusion/
+Chemotherapy
+
+20
+
+10
+
+45
+
+30
+
+80
+
+60
+
+75
+
+60
+
+110
+
+100
+
+Skilled Nursing Facilities
+
+20
+
+10
+
+45
+
+30
+
+80
+
+60
+
+75
+
+60
+
+95
+
+85
+
+Surgical Services (outpatient or
+ASC)
+
+20
+
+10
+
+45
+
+30
+
+80
+
+60
+
+75
+
+60
+
+110
+
+100
+
+Urgent Care
+
+20
+
+10
+
+45
+
+30
+
+80
+
+60
+
+75
+
+60
+
+110
+
+100
+
+Time standard is measured in minutes. Distance standard is measured in miles.
+
+Michigan Network Adequacy Guidance
+
+7
+
+4.5. Appointment Wait Time Standards
+DIFS adopted CMS’ appointment wait time standards for QHP issuer networks. See table below.
+4.5.1 Appointment Wait Time Standards
+Provider/Facility Specialty Type
+Appointments Must Be Available Within
+Behavioral Health
+10 business days
+Primary Care (Routine)
+15 business days
+Specialty Care (Non-Urgent)
+30 business days
+(Sources PY23 Final Letter.& Appointment Wait Time FAQs)
+
+4.6. Provider Directory
+Issuers must publish online updated, accurate, and complete provider directories potential enrollees
+can access by a clearly identifiable link/URL or tab without creating an account, entering a policy
+number, or otherwise navigating the site, including:
++ Whether provider accepts new patients
++ Provider specialty
++ Location(s)
++ Contact information
++ Any accommodations for individuals with limited English proficiency and/or disabilities
++ Clearly identifiable plan(s) and provider network(s) associated with each provider
++ Hospitals where network physicians have admitting privileges
++ Network tier provider participates, as applicable
++ Whether individual providers offer telehealth
+and excluding providers that:
+− Are not authorized to practice a health profession in Michigan
+− Have an inactive license
+− Are sanctioned or prohibited from participation in federal health care programs under either
+Section 1128 or Section 1128A of the Social Security Act
+− No longer offer health care services
+See 45 CRF 156.230(b)
+
+4.7. Tiered Networks
+Tiered networks must:
+• Be based on reasonable factors such as quality, performance, and market standards
+• Not be solely based on cost nor impede the provision of timely and high-quality care
+• Ensure enrollees of all ages have access to all covered services, including specialty services,
+without additional cost sharing or administrative burdens
+• Comply with rules for non-quantitative treatment limitations at 45 CFR § 146.136
+• Be designed without regard to whether a provider is a mental health (MH), or substance use
+disorder (SUD) or a medical/surgical (M/S) provider
+• Ensure any methodology used for MH/SUD network tiers are comparable to and applied no
+more stringently than that used for M/S network tiers
+Issuers must clearly convey to DIFS:
+• Identity of tiers
+• Basis for tiering (performance, quality, cost)
+• What tier(s) providers participate
+Michigan Network Adequacy Guidance
+
+8
+
+•
+•
+
+Which, if any, provider belongs exclusively to one tier and if so, why
+Enrollee access and cost-sharing relative to utilization of providers in each tier
+
+See instructions (internal) for Michigan Network Adequacy Template (FIS 2385) to identify tier(s)
+associated with network providers.
+
+4.8. Essential Community Providers
+An essential community provider (ECP) is a medical or dental provider that serves predominantly lowincome and medically underserved individuals.
+Adhere to CMS’ ECP standards and directions for submitting ECP data. See CMS’ web page QHP
+Certification Application Materials for Application Instructions, ECPs, Program Attestations, and
+Frequently Asked Questions.
+QHP issuers networks must:
+• Include a sufficient number and geographic distribution of a broad range of ECPs, where
+available, to ensure reasonable and timely access (45 CFR § 156.230 and 235), and
+• Satisfy CMS’ applicable ECP Standards. See CMS’ QHP Information and Guidance.
+
+4.9. Required Templates & Supporting Documentation
+Requirements may depend on market offering/participation and whether standards are met.
+4.9.1 Medical On and/or Off Marketplace Plan Networks
+Federal Templates
+➢ Plans and Benefits
+➢ Network ID
+➢ Service Area
+➢ Network Adequacy
+Supporting Documentation
+Federal
+➢ State Partnership Exchange (SPE) Issuer Program Attestation Response
+➢ Service Area Partial County Supplemental Response, as applicable
+State
+➢ Michigan Network Adequacy Template (FIS 2385)
+➢ Checklist for Individual and Small Group MEDICAL Plans – NETWORK ADEQUACY (FIS
+2313) (New for PY27 informational only)
+➢ Network Attestation
+➢ Network Coverage Attestation
+➢ Appointment Wait Time Attestation
+➢ Network Submission Summary
+➢ Network Adequacy Justification, as applicable
+4.9.2 Medical Off Marketplace Only Plan Networks
+Federal Templates:
+➢ Plans and Benefits
+➢ Network ID
+➢ Service Area
+
+Michigan Network Adequacy Guidance
+
+9
+
+Supporting Documentation
+State
+➢ Michigan Network Adequacy Template (FIS 2385)
+➢ Checklist for Individual and Small Group MEDICAL Plans – NETWORK ADEQUACY (FIS
+2313) (New for PY27 informational only)
+➢ Network Attestation
+➢ Network Coverage Attestation
+➢ Network Submission Summary
+➢ Network Adequacy Justification, as applicable
+4.9.3 Service Area Expansions (Large Group HMOs & AFDS)
+Supporting Documentation
+➢ Michigan Network Adequacy Template (FIS 2385)
+➢ Network Attestation
+➢ Network Coverage Attestation
+➢ Network Submission Summary
+➢ Network Adequacy Justification, as applicable
+➢ Executed Network Hospital Contracts
+➢ Financial Information
+
+4.10. Detail of Templates & Supporting Documentation
+Plans and Benefits Template: Syncs network(s) and service area(s) data with plan variation
+information, covered benefits, and cost-sharing.
+Network ID Template: Identifies number of issuer’s proposed network(s) by network name and
+network identification number (ID).
+Service Area Template: Identifies issuer’s proposed service area(s) by:
+• Identification number
+• Name
+• Whether entire state of Michigan is covered
+• County when entire state is not covered
+• Zip code when partial counties are proposed
+Issuers must inform DIFS of any service area data change, including:
+1. Revising Service Area Template to:
+a. change any service area name or ID
+b. add or remove a service area
+c. add or remove a county/ies to a service area
+d. change a county from full to partial
+e. change a county from partial to full
+f. add or remove a zip code(s) associated with a partial county
+2. Revising the Plans and Benefits Template (PBT) to:
+a. Change a service area ID
+b. Add or remove a service area ID
+3. Any change to the list of counties associated with a particular plan
+Any change to the Service Area Template must be accurately reflected on the Michigan Network
+Adequacy Template (FIS 2385).
+
+Michigan Network Adequacy Guidance
+
+10
+
+After DIFS’ final transfer deadline, service area data may only be changed with DIFS’ approval
+and CMS Certification of a Data Change Request (DCR), even if the change is directed by DIFS
+or CMS. Submission of the DCR to CMS is through the cases tab of the Plan Management
+Community and must include an explanation and justification for the change(s), evidence of
+state approval, and the Change Analysis Report. Issuers generate the Change Analysis Report
+in the Plan Validation Workspace of the Marketplace Plan Management System Module within
+the Health Insurance Oversight System. See CMS’ QHP Information and Guidance for Service
+Area and Data Change Windows.
+State Partnership Exchange Issuer Program Attestation Response Form: Medical issuers
+of on- and/or off-marketplace and all SADP issuers must agree to adhere to all certification
+standards and operational applicable requirements in 45 CFR Parts 146, 147, 153, 155, and
+156.
+Service Area Partial County Supplemental Response: Federal form required by DIFS
+when medical issuer proposes a partial county in a service area. This form must be completed
+and explain why issuer cannot provide service to an entire county.
+Michigan Network Adequacy Template (FIS 2385): Macro-enabled Excel file (*.xlsm) for collecting
+individual and small group medical and SADP network provider and service area data. (Instructions
+are contained in this template.)
+Checklist for Individual and Small Group MEDICAL Plans – NETWORK ADEQUACY (FIS 2313):
+New for PY27, this checklist is for information purposes only to assist issuers with comprehensive
+and accurate binder submissions relative to network adequacy. This checklist is not intended to be
+an all-inclusive list of requirements.
+Attestations: Issuer created verifications, including:
+• Title of attestation
+• Issuer name
+• Name and title of issuer’s authorized representative
+• Signed by issuer’s authorized representative
+Network Attestation: Issuer verification that all providers included on the Michigan Network
+Adequacy Template (FIS 2385) (as applicable), on the date of submission in SERFF are:
+• Credentialed, and either
+o Employed by issuer, or
+o Have executed contracts/agreements (signed by both parties) as participating
+providers with issuer
+Network Coverage Attestation: Issuer verification that if it has an insufficient number or type of
+participating providers to provide a covered benefit, issuer ensures the enrollee obtains the
+covered benefit in a timely manner, geographically accessible, and at no greater cost to the
+enrollee than if obtained from in-network providers.
+Appointment Wait Time Attestation: Issuer verification of compliance with CMS’ QHP
+appointment wait time standards and access requirement for provider network(s). See QHP
+Appointment Wait Time FAQs.
+Network Submission Summary: Issuer created narrative to provide DIFS with greater clarity of
+issuer’s network and service area submission, such as:
+Michigan Network Adequacy Guidance
+
+11
+
+•
+•
+•
+•
+•
+
+Availability/lack of providers in a requested county
+Referral patterns when health care services are not available
+Reliance on network providers in adjacent county/ies when providers are not available in a
+county
+Any network designs with cost-sharing differentials for providers in levels or tiers
+Changes to network and/or service area from prior year
+
+Network Adequacy Justification: Required of all issuers when network adequacy standards are not
+met. Issuer creates and submits in Supporting Documentation of SERFF binder, detailing:
+• Reasons standard(s) not met
+• Mitigating measures issuer is taking to ensure enrollee access to respective provider specialty
+types
+• Information concerning enrollee complaints regarding network adequacy
+• Frequency and sources for monitoring provider availability
+Issuer’s efforts to recruit additional providers
+Executed Network Hospital Contracts: Minimally, Service Area Expansion Filings must include the
+following, on affiliated provider contract templates previously approved by DIFS (MCL 500.3529):
+• First page, defining all parties
+• Signature page(s), including signatures for named parties
+• Applicable amendments
+Financial Information:
+• Two-years’ financial projections
+o Balance sheet
+o Income Statement
+o Cash flow
+o Risk-based capital (RBC) level
+• Three-years’ membership enrollment projections, by county:
+o Number of enrollees and prospective enrollees (include in cover letter and on Michigan
+Network Adequacy Template (FIS 2385)
+
+5. Evaluation Factors
+In determining network adequacy, DIFS considers:
+Enrollment Projections: Issuers must ensure reasonable levels of access for all covered benefits for
+anticipated enrollment.
+Time and Distance Standards: DIFS adopted CMS’ Medicare Advantage network adequacy time
+and distance standards and access requirements. See PY23 Final Letter and QHP Population
+Sample File DIFS includes additional provider specialties and associated measurement criteria to
+CMS’ specialties and criteria.
+Hospital Admitting Privileges: Most network physicians should have admitting privileges at network
+hospitals. For any network physicians that do not, issuers should explain how such physicians will
+attend to enrollees within network hospitals (i.e., use of hospitalists as liaisons).
+Acceptance of New Patients: Issuer networks must include providers accepting new patients
+(Primary Care Physicians, Specialists, and Dentists) and providers with the capacity to maintain
+issuer’s current enrollment and additional enrollees. DIFS recognizes a network provider’s mere
+Michigan Network Adequacy Guidance
+
+12
+
+acceptance of new patients does not satisfy the requirement for the provider to have sufficient
+availability or ability to serve additional enrollees.
+County Designation: DIFS aligned with CMS’ classification of counties into five county type
+designations: Large Metro, Metro, Micro, Rural, and Counties with Extreme Access Considerations
+(CEAC). The county type designation method is based on the population size and density
+parameters of individual counties used by the U.S. Census Bureau of “urbanized areas” and “urban
+clusters,” and the U.S. Office of Management and Budget of “metropolitan” and “micropolitan.” See
+current plan year’s QHP Issuer Application Instructions: Network Adequacy Standards.
+Mail, Mobile, and Out-of-State Providers: DIFS recognizes the physical location of a network
+provider may not reflect where services are available. Issuers should make clear when providers
+serve locations beyond the physical address(es) of the provider listed on the relevant Michigan
+network provider data collection template.
+This information should be included in the Network Submission Summary to avoid the appearance of
+any deficiency or gap in services.
+Telemedicine/Telehealth: DIFS requires issuer networks to include providers offering services by
+alternate means in addition to in-person visits and identify on the Michigan Network Adequacy
+Template (FIS 2385).
+Claims: DIFS requires information whether individual provider specialties have submitted claims
+within six months (of the end of the former plan year) for individual and small group medical and
+SADP networks. This information is collected on the Michigan Network Adequacy Template (FIS
+2385).
+Attestations: DIFS requires Network, Network Coverage, and Appointment Wait Time Attestations
+for issuers to verify certain criteria is met.
+Supplemental Justifications: DIFS requires issuers to create and submit a Network Adequacy
+Justification when applicable requirements or standards are not met.
+
+6. SADP Network Requirements & Standards
+The criteria in 4.1 DIFS’ Additional Provider Specialties & Measurement Criteria (above) for oral
+surgery and 6.1 Time & Distance Standards for SADP Networks (below) for all other dental
+specialties apply.
+DIFS adopted CMS’ time and distance and underlying 90% access requirement. See tables below
+and CMS Population Sample File.
+DIFS requires issuers create and submit a Network Adequacy Justification when network adequacy
+standards are not met.
+
+Michigan Network Adequacy Guidance
+
+13
+
+6.1. Time & Distance Standards for SADP Networks
+Maximum Time and Distance Standardsa
+Individual
+Provider
+Specialty
+Type
+
+Dental
+a
+
+Large Metro
+County
+
+Metro County
+
+Micro County
+
+Rural County
+
+Time
+
+Distance
+
+Time
+
+Distance
+
+Time
+
+Distance
+
+Time
+
+Distance
+
+30
+
+15
+
+45
+
+30
+
+80
+
+60
+
+90
+
+75
+
+Counties with
+Extreme Access
+Considerations
+(CEAC)
+Time
+Distance
+
+125
+
+110
+
+Time standard is measured in minutes. Distance standard is measured in miles.
+
+(Source current plan year QHP Issuer Application Instructions: Network Adequacy Standards)
+
+6.2. Essential Community Providers
+Adhere to CMS’ ECP standards and directions for submitting ECP data. See CMS’ web page QHP
+Certification Application Materials for Application Instructions, ECPs, Program Attestations, and
+Frequently Asked Questions.
+SADP issuers networks must:
+• Include a sufficient number and geographic distribution of a broad range of ECPs, where
+available, to ensure reasonable and timely access (45 CFR § 156.230 and 235), and
+• Satisfy CMS’ applicable ECP Standards. See CMS’ QHP Information and Guidance.
+SADP Templates & Documentation
+Federal Templates
+➢ Plans and Benefits
+➢ Network ID
+➢ Service Area
+➢ Network Adequacy
+State
+➢ Michigan Network Adequacy Template (FIS 2385)
+➢ Checklist for Individual and Small Group STAND-ALONE DENTAL Plans – Network Adequacy
+(FIS 2314) (New for PY27 informational only)
+➢ Network Attestation
+➢ Network Coverage Attestation
+➢ Network Submission Summary
+➢ Network Adequacy Justification, as applicable
+Federal
+➢ State Partnership Exchange Issuer Program Attestation Response
+6.2.1 Detail of SADP Templates & Documentation
+Checklist for Individual and Small Group STAND-ALONE DENTAL Plans – NETWORK
+ADEQUACY (FIS 2314) New for PY27, this checklist is for information purposes only to assist
+issuers with comprehensive and accurate binder submissions relative to network adequacy. This
+checklist is not intended to be an all-inclusive list of requirements.
+See 4.10 Detail of Templates and Supporting Documentation for commercial medical networks
+above, as applicable.
+
+Michigan Network Adequacy Guidance
+
+14
+
+7. Medicaid Service Area Expansions
+DIFS is responsible for the initial review and determination of an HMO’s Medicaid network and
+service area upon application for licensure in Michigan and when any service area expansion is
+sought. However, the Michigan Department of Health and Human Services (MDHHS) administers
+the Medicaid program in Michigan and establishes standards for network adequacy. MDHHS
+conducts Medicaid program network adequacy reviews and issues all final approvals for Medicaid
+Service Area Expansions.
+Any change to a Medicaid service area is at the sole discretion of MDHHS during the contract term.
+MDHHS requires HMO service areas to comply with the ten state designated Prosperity Regions.
+DIFS performs a financial and cursory network review. Medicaid HMO networks must comply with
+Chapter 35 of the Code and include sufficient number and types of providers to ensure covered
+services are accessible and available without unreasonable delay.
+Service Area Expansion Filings for Medicaid HMOs must be submitted to DIFS through SERFF and
+include:
+• *Cover Letter
+• **Michigan Network Adequacy Template (FIS 2385)
+• Medicaid Network Attestation
+• Network Coverage Attestation
+• Financial information
+o Two-years’ financial projections
+▪ Balance sheet
+▪ Income statement
+▪ Cash flow
+▪ Risk-based capital (RBC) level
+• Three-years’ enrollment projections
+o Estimated number of enrollees issuer expects in the following 3
+years for each county expansion is sought
+▪ *Identify in Cover Letter and on **Michigan Network
+Adequacy Template FIS 2385
+The Medicaid Network Attestation verifies HMO’s contracted provider network meets MDHHS’
+network adequacy standards. It also specifies whether use of MDHHS’ Hospital Access Agreement
+is necessary to meet the network adequacy standards if not enough hospitals are contracted.
+Sample Medicaid Network Attestation:
+I attest that [HMO] meets the Medicaid network adequacy standards as outlined by the
+Michigan Department of Health and Human Services, Administrator of the Michigan Medicaid
+program and contracts.
+[If the Hospital Access Agreement is used to meet network adequacy standards, add the
+following: [HMO] further attests that to meet hospital access standards in [name of count/ies],
+[HMO] relies on the MDHHS Hospital Access Agreement.]
+[Signature of HMO Authorized Representative]
+Michigan Network Adequacy Guidance
+
+15
+
+[Name of HMO Authorized Representative]
+[Title of HMO Authorized Representative]
+The Hospital Access Agreement is between MDHHS and participating hospitals and outlines service
+and payment terms for noncontracted hospitals servicing Medicaid beneficiaries, created to bridge the
+gap between HMOs and noncontracted hospitals. The list of hospitals that have signed and executed
+the Hospital Access Agreement is available through MDHHS.
+
+8. Medicare Advantage Service Area Expansions
+The federal government preempts any state law or regulation other than for licensure and plan
+solvency for Medicare Advantage (MA) plans (Medicare Modernization Act amended section
+1856(b)(3) of the SSA and 42 CFR 422.402). Thus, DIFS has no authority pertaining to provider
+contracts or network adequacy over MA plans.
+CMS establishes MA network adequacy criteria and issues related guidance. CMS conducts network
+adequacy reviews at the initial application for MA plans and every three years thereafter, unless there
+is a triggering event.
+For state authorization of the “CMS State Certification Form” in CMS’ “Part C-Medicare Advantage
+and 1876 Cost Plan Expansion Application” for MA service area expansions, HMOs should contact
+DIFS’ Office of Insurance Evaluation at 517-284-8762 or toll free at 877-999-6442. This authorization
+does not depend on DIFS’ approval of the same service area for HMO’s commercial and/or Medicaid
+health plans in Michigan.
+
+Michigan Network Adequacy Guidance
+
+16
+
+9. Appendix
+9.1. Specialty Types & Codes
+9.1.1 Individual Provider Specialty Types & Codes
+Individual Provider Specialty Types (51)
+028 Podiatry
+001 General Practice
+029 Psychiatry
+002 Family Medicine
+030 Pulmonology
+003 Internal Medicine
+031 Rheumatology
+004 Geriatrics
+033 Urology
+005 Primary Care – PA
+034 Vascular Surgery
+006 Primary Care - Advanced Reg NP
+035 Cardiothoracic Surgery
+007 Allergy and Immunology
+037 Emergency Medicine
+008 Cardiology
+049 Physical Therapy
+010 Chiropractor
+050 Occupational Therapy
+011 Dermatology
+051 Speech Therapy
+012 Endocrinology
+101 Primary Care - Pediatric
+013 ENT/Otolaryngology
+102 Social Worker
+014 Gastroenterology
+103 Psychologist
+015 General Surgery
+105 Marriage & Family Therapist
+016 Gynecology (OB/GYN)
+106 Addiction (SUD) Counselor
+017 Infectious Diseases
+107 Counselor (Mental Health & Professional)
+018 Nephrology
+108 Behavioral Health - Advanced Practice RN
+019 Neurology
+201 Dental - General
+020 Neurosurgery
+202 Dental - Orthodontist
+021 Oncology - Medical & Surgical
+203 Dental - Periodontist
+022 Oncology – Radiation
+204 Dental - Endodontist
+023 Ophthalmology
+206 Dental - Prosthodontist
+025 Orthopedic Surgery
+P201 - Pediatric Dental
+026 Physical Medicine & Rehabilitation
+800 Addiction Medicine Physician
+027 Plastic Surgery
+801 Behavioral Analyst
+
+Michigan Network Adequacy Guidance
+
+17
+
+`
+
+9.1.2 Facility Specialty Types & Codes
+Facility Specialty Types (15)
+040 Acute Inpatient Hospitals (Must have emergency services available 24/7)
+041 Cardiac Surgery Program
+042 Cardiac Catheterization Services
+043 Critical Care Services - Intensive Care Units (ICU)
+045 Surgical Services (Ambulatory Surgical Centers and Outpatient Hospital)
+046 Skilled Nursing Facilities
+047 Diagnostic Radiology (Free-standing; hospital outpatient; ambulatory health facilities with Dx
+Radiology)
+048 Mammography
+052 Inpatient Psychiatry (Free-standing inpatient behavioral health facility and behavioral health beds
+within an Acute Care Hospital)
+057 Outpatient Infusion/Chemotherapy
+072 Substance Abuse Rehabilitation Facility (Hospital unit and residential treatment facility)
+076 Mental Health Residential Treatment Facility (Mental Illness; Psychiatric)
+080 Urgent Care
+P072 Children's Substance Abuse Rehabilitation Facility
+P076 Children's Residential Treatment Facility (Mental Illness; Psychiatric)
+
+Michigan Network Adequacy Guidance
+
+18
+
+`
+
+9.2. Michigan County Designations
+MI County
+# Peninsula *No Hospital
+1 Lower
+Alcona*
+2 Upper
+Alger
+3 Lower
+Allegan
+4 Lower
+Alpena
+5 Lower
+Antrim*
+6 Lower
+Arenac
+7 Upper
+Baraga
+8 Lower
+Barry
+9 Lower
+Bay
+10 Lower
+Benzie
+11 Lower
+Berrien
+12 Lower
+Branch
+13 Lower
+Calhoun
+14 Lower
+Cass
+15 Lower
+Charlevoix
+16 Lower
+Cheboygan*
+17 Upper
+Chippewa
+18 Lower
+Clare
+19 Lower
+Clinton
+20 Lower
+Crawford
+21 Upper
+Delta
+22 Upper
+Dickinson
+23 Lower
+Eaton
+24 Lower
+Emmet
+25 Lower
+Genesee
+26 Lower
+Gladwin
+27 Upper
+Gogebic
+28 Lower
+Grand Traverse
+29 Lower
+Gratiot
+30 Lower
+Hillsdale
+31 Upper
+Houghton
+32 Lower
+Huron
+33 Lower
+Ingham
+34 Lower
+Ionia
+35 Lower
+Iosco
+36 Upper
+Iron
+37 Lower
+Isabella
+38 Lower
+Jackson
+39 Lower
+Kalamazoo
+40 Lower
+Kalkaska
+41 Lower
+Kent
+42 Upper
+Keweenaw*
+43 Lower
+Lake*
+
+Designations
+PY26
+PY27
+Rural
+Rural
+CEAC
+CEAC
+Metro
+Metro
+Micro
+Micro
+Micro
+Micro
+Rural
+Rural
+CEAC
+CEAC
+Metro
+Metro
+Metro
+Metro
+Micro
+Micro
+Metro
+Metro
+Micro
+Micro
+Metro
+Metro
+Metro
+Metro
+Micro
+Micro
+Rural
+Rural
+Rural
+Rural
+Micro
+Micro
+Metro
+Metro
+Rural
+Rural
+Rural
+Rural
+Rural
+Rural
+Metro
+Metro
+Micro
+Micro
+Metro
+Metro
+Micro
+Micro
+Rural
+Rural
+Metro
+Metro
+Micro
+Micro
+Micro
+Micro
+Rural
+Rural
+Rural
+Rural
+Metro
+Metro
+Metro
+Metro
+Rural
+Rural
+Rural
+Rural
+Metro
+Metro
+Metro
+Metro
+Metro
+Metro
+Rural
+Rural
+Metro
+Metro
+CEAC
+CEAC
+Rural
+Rural
+
+MI County
+# Peninsula *No Hospital
+44 Lower
+Lapeer
+45 Lower
+Leelanau*
+46 Lower
+Lenawee
+47 Lower
+Livingston
+48 Upper
+Luce
+49 Upper
+Mackinac
+50 Lower
+
+Macomb
+
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+
+Manistee
+Marquette
+Mason
+Mecosta
+Menominee*
+Midland
+Missaukee*
+Monroe
+Montcalm
+Montmorency*
+Muskegon
+Newaygo
+
+Lower
+Upper
+Lower
+Lower
+Upper
+Lower
+Lower
+Lower
+Lower
+Lower
+Lower
+Lower
+
+63 Lower
+
+Oakland
+
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+
+Oceana
+Ogemaw
+Ontonagon
+Osceola
+Oscoda*
+Otsego
+Ottawa
+Presque Isle*
+Roscommon*
+Saginaw
+Sanilac
+Schoolcraft
+Shiawassee
+St. Clair
+St. Joseph
+Tuscola
+Van Buren
+Washtenaw
+
+Lower
+Lower
+Upper
+Lower
+Lower
+Lower
+Lower
+Lower
+Lower
+Lower
+Lower
+Upper
+Lower
+Lower
+Lower
+Lower
+Lower
+Lower
+
+82 Lower
+
+Wayne
+
+83 Lower
+
+Wexford
+
+Michigan Network Adequacy Guidance
+
+19
+
+Designations
+PY26
+PY27
+Metro
+Metro
+Micro
+Micro
+Metro
+Metro
+Metro
+Metro
+CEAC
+CEAC
+Rural
+Rural
+Large
+Large
+Metro
+Metro
+Rural
+Rural
+Micro
+Micro
+Micro
+Micro
+Micro
+Micro
+Rural
+Rural
+Metro
+Metro
+Rural
+Rural
+Metro
+Metro
+Micro
+Micro
+Rural
+Rural
+Metro
+Metro
+Micro
+Micro
+Large
+Large
+Metro
+Metro
+Micro
+Micro
+Rural
+Rural
+CEAC
+CEAC
+Rural
+Rural
+Rural
+Rural
+Rural
+Micro
+Metro
+Metro
+Rural
+Rural
+Rural
+Rural
+Metro
+Metro
+Rural
+Rural
+CEAC
+CEAC
+Metro
+Metro
+Metro
+Metro
+Metro
+Metro
+Micro
+Micro
+Metro
+Metro
+Metro
+Metro
+Large
+Large
+Metro
+Metro
+Micro
+Micro
+
+`
+
+9.3. State & Federal Resources
+1. 45 CFR §146, 147, 155, and 156
+2. Michigan Insurance Code
+3. DIFS’ Insurance Bulletins - Form & Rate Filing Requirements for Medical & SADPs
+4. Michigan EHBs
+5. Michigan Pediatric Dental EHBs
+6. Michigan Network Adequacy Template (FIS 2385)
+7. CMS’ Qualified Health Plan Certification Information and Guidance
+8. Letters to Issuers in the Federally-facilitated Marketplaces
+9. HHS’ Notice of Benefit and Payment Parameters
+
+Michigan Network Adequacy Guidance
+
+20
+
+

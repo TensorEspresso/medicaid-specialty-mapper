@@ -1,0 +1,26 @@
+{
+  "program_name": "STAR / STAR Health / STAR+PLUS / STAR Kids",
+  "agency": "HHSC (Health and Human Services Commission)",
+  "sources": [
+    {
+      "name": "Uniform Managed Care Manual (UMCM) Ch. 5.28.1",
+      "file": "5-28-1.xlsx",
+      "description": "Access to Network Providers Performance Standards and Specifications (machine-readable xlsx)"
+    },
+    {
+      "name": "Network and Capacity Text File Layout (Ch. 5.24.2)",
+      "file": "5-24-2.xlsx",
+      "description": "Provider network data submission format"
+    },
+    {
+      "name": "Network Adequacy Report (Dec 2024)",
+      "file": "tx_network_adequacy_dec2024.pdf",
+      "description": "Provider network adequacy report with Appendix A standards tables"
+    }
+  ],
+  "crosswalk_origin": "missing",
+  "crosswalk_rows": 0,
+  "specialty_count": 36,
+  "verification_status": "verified",
+  "notes": "No official TX-to-NUCC crosswalk published. 3-tier county system (Metro/Micro/Rural). Dental carved out to DMOs. 16 MCOs + 3 DMOs."
+}

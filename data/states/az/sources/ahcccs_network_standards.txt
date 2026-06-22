@@ -1,0 +1,639 @@
+AHCCCS CONTRACTOR OPERATIONS MANUAL
+CHAPTER 400 – OPERATIONS
+
+436 – NETWORK STANDARDS
+EFFECTIVE DATES:
+
+10/01/13, 01/01/14, 10/01/15, 07/01/16, 10/01/17, 10/01/18,
+10/01/19, 10/01/20, 10/01/21, 10/01/22, 10/01/23, 10/01/24,
+10/01/25
+
+APPROVAL DATES:
+
+10/01/13, 12/19/13, 09/17/15, 03/17/16, 11/01/16, 03/30/17,
+11/02/17, 02/05/18, 04/05/18, 09/19/19, 03/19/20, 05/04/21,
+05/17/22, 06/13/23, 05/14/24, 05/06/25
+
+I.
+
+PURPOSE
+This Policy applies to ACC, ACC-RBHA, ALTCS E/PD, DCS CHP (CHP), and DES DDD (DDD) Contractors.
+This Policy establishes network standards for all Contractors. The Contractor shall develop and
+maintain a provider network that is sufficient to provide all covered services to AHCCCS members as
+specified in Contract, Policy, 42 CFR Part 457, and 42 CFR Part 438.
+
+II. DEFINITIONS
+Refer to the AHCCCS Contract and Policy Dictionary for common terms found in this Policy.
+III. POLICY
+A. STATEWIDE TIME AND DISTANCE NETWORK CALCULATION DEFINITIONS AND STANDARDS
+For each county in the Contractor’s assigned service area, the Contractor shall have a provider
+network in place to meet time and distance standards specified below.
+If the Contractor delegates any portion of the process for calculating time and distance in the Policy
+to a subcontracted entity [e.g., a dental benefits or Pharmacy Benefits Manager (PBM)], the
+Contractor shall ensure the entity complies with the definitions and calculation requirements
+specified in this Policy.
+For the purposes of this Policy, the Contractor shall use its network of the following provider types
+and specialties to calculate compliance with the time and distance standards in this Policy.
+
+PROVIDER CATEGORY
+
+REQUIRED PROVIDER/SPECIALTY TYPE(S)
+
+BEHAVIORAL HEALTH OUTPATIENT AND
+INTEGRATED CLINIC, ADULT AND PEDIATRIC
+
+77 or IC
+
+BEHAVIORAL HEALTH RESIDENTIAL FACILITY
+(BHRF)
+
+B8
+
+CARDIOLOGIST, ADULT
+
+08 or 31 with a Specialty Code of 062 or 927
+
+436 - Page 1 of 8
+
+AHCCCS CONTRACTOR OPERATIONS MANUAL
+CHAPTER 400 – OPERATIONS
+
+PROVIDER CATEGORY
+CARDIOLOGIST, PEDIATRIC
+
+CRISIS STABILIZATION FACILITY
+
+DENTIST, PEDIATRIC
+
+REQUIRED PROVIDER/SPECIALTY TYPE(S)
+08 or 31 with a Specialty Code of 062, 151, or
+927
+02, 71, B5, B6, B7, or 77 and ICs that
+are authorized to provide behavioral health
+observation/stabilization in accordance with
+AAC 9-10-1012.
+07 with a Specialty Code of 800 or 804, C2
+Federally Qualified Health Centers (FQHCs)
+identified by AHCCCS
+
+HOSPITAL
+
+02 or C4
+
+NURSING FACILITY (NF)
+
+22
+
+OBSTETICIAN/GYNECOLOGIST (OB/GYN)
+
+08, 19,31, or CN with a Specialty Code of 089,
+090, 091, 095, 181, or 219
+
+PHARMACY
+
+03 or 05
+
+PRIMARY CARE PROVIDER (PCP), ADULT
+
+08 or 31 with a Specialty Code of 050, 055,
+060, 089, or 091
+or
+19 or CN with a Specialty Code of 084, 095, or
+097
+or
+18 with a specialty code of 798
+
+PRIMARY CARE PROVIDER (PCP), PEDIATRIC
+
+08 or 31 with a Specialty Code of 050, 150, or
+176
+or
+19, CN with a Specialty Code of 084, 087, or
+097
+or
+18 with a specialty code of 798
+
+436 - Page 2 of 8
+
+AHCCCS CONTRACTOR OPERATIONS MANUAL
+CHAPTER 400 – OPERATIONS
+
+The table below outlines the methodology the Contractor shall utilize to calculate its compliance
+with the following time and distance standards. The table outlines the provider categories, the
+lines of business that calculate compliance for that provider type, the member population used in
+the calculation, and the time or distance standards for Maricopa/Pima and all other counties.
+PROVIDER
+CATEGORY
+BEHAVIORAL
+HEALTH
+OUTPATIENT AND
+INTEGRATED CLINIC,
+ADULT*
+BEHAVIORAL
+HEALTH
+OUTPATIENT AND
+INTEGRATED CLINIC,
+PEDIATRIC*
+
+APPLIES
+TO
+All
+Except
+CHP
+
+All*
+
+MEMBER
+POPULATION
+
+18 years or
+older
+
+Under 18
+years
+
+BEHAVIORAL
+HEALTH
+RESIDENTIAL
+FACILITY (BHRF)
+
+All
+
+CARDIOLOGIST,
+ADULT*
+
+All
+except
+CHP
+
+21 years or
+older
+
+CARDIOLOGIST,
+PEDIATRIC*
+
+All
+
+Under 21
+years
+
+CRISIS
+STABILIZATION
+FACILITY
+
+ACCRBHA
+Only
+
+DENTIST, PEDIATRIC
+
+HOSPITALS
+
+All
+
+All
+
+All
+
+All
+
+Maricopa,
+Pima
+
+STANDARD
+(90% of membership does not
+need to travel more than)
+15 minutes or 10 miles from
+their residence
+
+All Others
+
+60 miles from their residence.
+
+Maricopa,
+Pima
+
+15 minutes or 10 miles from
+their residence
+
+All Others
+
+60 miles from their residence.
+
+Maricopa,
+Pima
+
+15 minutes or 10 miles from
+their residence
+
+All Others
+
+95 minutes or 85 miles from
+their residence
+
+Maricopa,
+Pima
+
+30 minutes or 20 miles from
+their residence
+
+All Others
+
+75 minutes or 60 miles from
+their residence
+
+Maricopa,
+Pima
+
+60 minutes or 45 miles from
+their residence
+
+All Others
+
+110 minutes or 100 miles from
+their residence
+
+COUNTY
+
+Maricopa,
+Pima
+All Others
+
+Under 21
+years
+
+All
+
+436 - Page 3 of 8
+
+15 minutes or 10 miles from
+their residence
+45 miles from their residence
+
+Maricopa,
+Pima
+
+15 minutes or 10 miles from
+their residence
+
+All Others
+
+40 minutes or 30 miles from
+their residence
+
+Maricopa,
+Pima
+
+45 minutes or 30 miles from
+their residence
+
+All Others
+
+95 minutes or 85 miles from
+their residence
+
+AHCCCS CONTRACTOR OPERATIONS MANUAL
+CHAPTER 400 – OPERATIONS
+
+PROVIDER
+CATEGORY
+
+APPLIES
+TO
+
+NURSING FACILITY
+
+ALTCS
+E/PD
+Only
+
+OBSTETICIAN/
+GYNECOLOGIST
+(OB/GYN)
+
+PHARMACY
+
+PRIMARY CARE
+PROVIDER (PCP),
+ADULT*
+PRIMARY CARE
+PROVIDER (PCP),
+PEDIATRICS*
+
+All
+
+All
+
+MEMBER
+POPULATION
+Living in
+"Own Home"
+
+15 to 45
+years old
+
+All
+
+All
+except
+CHP
+
+21 years or
+older
+
+All
+
+Under 21
+years
+
+COUNTY
+Maricopa,
+Pima
+
+STANDARD
+(90% of membership does not
+need to travel more than)
+45 minutes or 30 miles from
+their residence
+
+All Others
+
+95 minutes or 85 miles from
+their residence
+
+Maricopa,
+Pima
+
+45 minutes or 30 miles from
+their residence
+
+All Others
+
+90 minutes or 75 miles from
+their residence
+
+Maricopa,
+Pima
+
+12 minutes or 8 miles from
+their residence
+
+All Others
+
+40 minutes or 30 miles from
+their residence
+
+Maricopa,
+Pima
+
+15 minutes or 10 miles from
+their residence
+
+All Others
+
+40 minutes or 30 miles from
+their residence
+
+Maricopa,
+Pima
+
+15 minutes or 10 miles from
+their residence
+
+40 minutes or 30 miles from
+their residence
+*Provider types marked with an asterisk are eligible for a telehealth standard modification. These
+provider types only require 80% of a county’s membership to meet these time and distance
+standards in any county where telehealth services are available for that provider category.
+All Others
+
+B. OTHER STATEWIDE NETWORK DEFINITIONS, STANDARDS AND REPORTING
+In addition to the time and distance standards specified above, ALTCS E/PD Contractors shall
+maintain contracts with enough Adult Foster Care Homes (AFC), Assisted Living Centers (ALC), and
+Assisted Living Homes (ALH) to meet member needs in each Geographic Service Area (GSA). The
+DDD shall maintain contracts with enough Group Homes for Persons with Developmental
+Disabilities (DD Group Homes) to meet member needs. The DDD shall also ensure that its members
+have access to at least one ALC or ALH in its network.
+
+436 - Page 4 of 8
+
+AHCCCS CONTRACTOR OPERATIONS MANUAL
+CHAPTER 400 – OPERATIONS
+
+1. For the purposes of this Policy, the Contractor shall use its network of DD Group Home, ALC
+and ALH/AFC Network providers as defined below to report compliance with this Policy.
+
+PROVIDER CATEGORY
+
+APPLIES
+TO
+
+REQUIRED
+PROVIDER
+TYPE
+
+MEMBER
+POPULATION
+
+REPORTING
+
+AFC
+
+ALTCS
+E/PD
+Only
+
+50
+
+All
+
+Refer to Attachment B,
+ALTCS E/PD Facility to
+Member Ratio Tables
+
+ALC
+
+ALTCS
+E/PD
+Only
+
+49
+
+All
+
+Refer to Attachment B,
+ALTCS E/PD Facility to
+Member Ratio Tables
+
+ALH
+
+ALTCS
+E/PD
+Only
+
+36
+
+All
+
+Refer to Attachment B,
+ALTCS E/PD Facility to
+Member Ratio Tables
+
+ALH, or ALC
+
+DES DDD
+Only
+
+36 or 49
+
+All
+
+Refer to Attachment B,
+DDD Facility Reporting
+
+DD GROUP HOMES
+
+DES DDD
+Only
+
+25
+
+All
+
+Refer to Attachment B,
+DDD Facility Reporting
+
+2. The Contractor shall maintain a sufficient network to meet the service needs of its members
+as based upon the minimum network requirements specified in Attachment B, and as specified
+in Contract, Section F, Attachment F3, Contractor Chart of Deliverables and Network Oversight
+Requirements:
+a. Attachment B includes the tab ALTCS E/PD Facility to Member Ratios for ALTCS E/PD
+Contractors to report the total number of combined contracted facilities types
+(AFC/ALC/ALH) in the GSA, its current enrolled membership, and a calculated ratio of the
+number of facilities per member by GSA:
+i. The ratios shall be reported in the format ‘1:XXXX’, where 1 represents a facility and
+the ‘XXXX’ refers to the ratio of members to one (1) facility,
+ii. The membership shall be reported as of the last day of the reporting period (March
+31- September 30), and
+iii. AHCCCS has included historical facility to member ratios in each GSA for reference.
+b. Attachment B includes the tab DDD Facility Reporting, for the DDD Contractor to report,
+by County:
+i. The number of ALH and ALC facilities available through its network in each county, and
+ii. The Number of DD Group Homes and the total number of members residing in those
+group homes in each county.
+
+436 - Page 5 of 8
+
+AHCCCS CONTRACTOR OPERATIONS MANUAL
+CHAPTER 400 – OPERATIONS
+
+3. Multi-Specialty Interdisciplinary Clinic (MSIC) Network Standards:
+a. The Contractor is expected to contract with all MSICs in its assigned GSAs, as well as any
+MSICs which have provided services to the Contractor’s members, and
+b. The Contractor shall submit the Minimum Network Requirements MSIC Report,
+Attachment C, to identify all contracted MSICs it has contracted as an alternative delivery
+model submitted under the Contract, and submit as specified in Contract Section F,
+Attachment F3, Contractor Chart of Deliverables.
+C. REQUEST FOR EXCEPTION TO NETWORK STANDARDS PROCESS
+1. When the Contractor has exhausted its efforts to meet any network standard specified in this
+Policy, a Contractor may submit Attachment D, Request for Exception to Network Standards
+as specified in Contract, Section F, Attachment F3, Contractor Chart of Deliverables.
+2. AHCCCS will review the exception request submitted and make a determination based upon
+criteria including, but not limited to the following:
+a. The total number of providers in the same specialty practicing in the County,
+b. The geographic composition of the County,
+c. Provider willingness to enter into a contract,
+d. Consideration of the rates offered to non-contracted providers to bring the Contractor into
+compliance with the standard,
+e. The availability of IHS/638 facilities available to the American Indian population in the
+County,
+f. The availability of alternative service delivery mechanisms available, such as telemedicine,
+telehealth, or virtual or mobile services, and
+g. The Contractor’s proposal for monitoring and ensuring member access.
+D. NETWORK OVERSIGHT REQUIREMENTS
+1. Minimum Network Requirements Reporting Requirements:
+a. AHCCCS has contracted with an independent reviewer to complete an annual Time and
+Distance analysis for each Contractor’s Line Of Business (LOB). The results of this analysis
+will be made available to the Contractor. The Contractor shall review the results of this
+annual analysis applicable to each of the Contractor’s LOB,
+b. The Contractor shall submit the Minimum Network Standards Results Review, as specified
+in Contract F, Attachment F3, Contractor Chart of Deliverables. The review shall include:
+i. A cover letter analyzing the results of the independent review and, for each line of
+business, addressing at a minimum the following:
+1) Any potential causes for each non-compliance identified in the independent
+reviewer’s Time and Distance analysis,
+2) The Contractor’s strategies and efforts to address each of the areas of noncompliance identified by the independent reviewer, and
+3) Details of any challenges experienced in the identified areas of non-compliance.
+ii. ALTCS E/PD Contractors shall provide the completed Minimum Network Standards
+Attachment B – ALTCS E/PD Facility to Member Ratio, and
+iii. The DDD shall provide the completed Minimum Networks Standards Attachment B –
+DDD Facility Reporting.
+
+436 - Page 6 of 8
+
+AHCCCS CONTRACTOR OPERATIONS MANUAL
+CHAPTER 400 – OPERATIONS
+
+c. The Contractor shall also submit the Minimum Network Standards Plan Review and Update
+as specified in Contract, Section F, Attachment F3, Contractor Chart of Deliverables. The
+Minimum Network Standards Plan Review and Update shall include:
+i. A cover letter for each line of business addressing, at a minimum, the following:
+1) The results of its own minimum network reporting evaluated against the
+requirements of this Policy and the findings of the independent review,
+2) An update on the Contractor’s strategies and efforts to address areas of noncompliance as reported in the Minimum Network Standards Results Review,
+3) Additional challenges experienced in areas of non-compliance, and
+4) An update on any data issues or discrepancies identified by the Contractor related
+to the independent review.
+ii. All Contractors except the DDD and the CHP shall submit a completed Attachment A Minimum Network Standards Time and Distance Verification,
+iii. The DDD and the CHP shall submit a completed Attachment A - Minimum Network
+Standards Time and Distance Verification for each of its Subcontracted Health Plans,
+iv. ALTCS E/PD Contractors shall submit the completed Attachment B – ALTCS E/PD
+Facility to Member Ratio,
+v. The DDD shall provide the completed Minimum Networks Standards Attachment B –
+DDD Facility Reporting,
+vi. All Contractors except the DDD and the CHP shall submit a completed Attachment C
+- Minimum Network Requirements MSIC Report, and
+vii. The DDD and the CHP shall submit a completed Attachment C – Minimum Network
+Requirements MSIC Report for each of its Subcontracted Health Plans.
+2. When submitting a completed Attachment A, the Contractor shall report compliance with
+these requirements for each county in its assigned service area. A separate report shall be
+submitted for each LOB. For purposes of calculating and reporting this data:
+a. The Contractor shall use its enrollment and its network as of the last day of the reporting
+period (September 30), the Contractor shall not include Non-Title XIX/XXI membership in
+it time and distance calculation,
+b. The Contractor shall analyze compliance with these standards based upon the provider
+network reported through the Contractor Provider Affiliation Transmission (PAT),
+c. The Contractor shall report the percentages in Attachment A, ‘Time and Distance’ tab
+rounded to the nearest tenth of a percent,
+d. The Contractor shall report ‘N/R’ (None Reported) for each time and distance standard,
+instead of a percentage, where there are no members meeting the population criteria in
+the County,
+e. The Contractor shall report in Attachment A, ‘Time and Distance’ tab, whether or not
+telehealth services are available in each county reported for each provider type eligible for
+a telehealth standard modification by the Contractor. This is identified by adding a ‘Y’ or
+‘N’ in the “Telehealth Available (Y/N)” row underneath the provider type,
+f. The Contractor shall report in Attachment A, ‘Time and Distance’ tab, whether or not
+telehealth services are available in each county reported for each provider type eligible for
+a telehealth standard modification by the Contractor. This is identified by adding a ‘Y’ or
+‘N’ in the “Telehealth Available (Y/N)” row underneath the provider type, and
+g. The Contractor shall consider in its dental network any contracted FQHC identified
+annually by AHCCCS as providing dental services.
+
+436 - Page 7 of 8
+
+AHCCCS CONTRACTOR OPERATIONS MANUAL
+CHAPTER 400 – OPERATIONS
+
+3. Network Plan Requirements:
+a. The Contractor shall take steps to ensure these networks standards are maintained. If
+established network standards cannot be met, the Contractor shall identify these gaps and
+address short and long-term interventions in the Network Development and Management
+Plan (NDMP) as specified in ACOM Policy 415. When an exception has been granted by
+AHCCCS, the Contractor shall address in the network plan the sufficiency of member access
+to the area, and assess the continued need for the exception, and
+b. The DDD shall report to AHCCCS its Subcontracted Health Plans’ network gaps and short
+and long-term interventions to address the gaps in its NDMP as specified in ACOM Policy
+415.
+
+436 - Page 8 of 8
+
+

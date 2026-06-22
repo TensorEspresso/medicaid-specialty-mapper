@@ -1,0 +1,902 @@
+Taxonomy Code Mapping
+Professional Providers
+Provider Specialty
+
+Taxonomy
+Code
+
+National Uniform Claim Committee
+www.nucc.org*
+
+Acupuncturists
+
+171100000X
+
+Acupuncturists
+
+Addiction Medicine
+
+207RA0401X
+
+Addiction Medicine
+
+Adult Care Nurse Practitioner
+
+363LA2200X
+
+Physician Assistants and Advanced Practice Nursing Providers –
+Nurse Practitioner – Adult Health
+
+Adult Psychiatric
+Mental Health Nursing
+
+364SP0809X
+
+Physician Assistants and Advanced Practice Nursing Providers –
+Clinical Nurse Specialist – Adult Psychiatric/Mental Health
+
+Allergy and Immunology
+
+207K00000X
+
+Allopathic and Osteopathic Physicians – Allergy and Immunology
+
+Ambulance Company
+
+341600000X
+
+Transportation Services – Ambulance
+
+Ambulatory Health Care Facility
+
+261QR0200X
+
+Freestanding Radiology Centers
+
+Ambulatory Surgical Center
+
+261QA1903X
+
+Ambulatory Health Care Facilities – Clinic/Center – Ambulatory
+Surgical
+
+Anesthesiologist
+
+1223D0004X
+
+Dental Providers – Dentists – Dentist Anesthesiologist
+
+Anesthesiology
+
+207L00000X
+
+Allopathic and Osteopathic Physicians – Anesthesiology
+
+Athletic Trainer
+
+2255A2300X
+
+Athletic Trainer
+
+Audiologist
+
+231H00000X
+
+Speech, Language and Hearing Providers – Audiologists
+
+Cardiovascular Disease
+
+207RC0000X
+
+Allopathic and Osteopathic Physicians – Internal Medicine
+
+Certified Registered Nurse
+Anesthetist
+
+367500000X
+
+Physician Assistants and Advanced Practice Nursing Providers
+
+Certified Social Worker
+
+104100000X
+
+Behavioral Health and Social Service Providers – Social Worker
+
+Child/Adolescent Psychiatric
+Nursing
+
+364SP0807X
+
+Physician Assistants and Advanced Practice Nursing Providers
+– Clinical Nurse Specialist – Psychiatric/Mental Health, Child &
+Adolescent
+
+Clinical Cardiac Electrophysiology
+
+207LA0401X
+
+Anesthesiology, Addition Medicine
+
+Clinical Cardiac Electrophysiology
+
+207RC0001X
+
+Clinical Cardiac Electrophysiology
+
+Clinical Genetics (MD)
+
+207SG0201X
+
+Clinical Genetics (MD)
+
+Clinical Nurse Specialist - Certified
+
+364S00000X
+
+Physician Assistants and Advanced Practice Nursing Providers –
+Clinical Nurse Specialist - Certified
+
+Clinical Psychologist
+
+103TC0700X
+
+Behavioral Health and Social Service Providers – Psychologist –
+Clinical
+
+Complex Family Planning
+
+207VC0300X
+
+Complex Family Planning
+
+Critical Care Medicine
+
+207RC0200X
+
+Allopathic and Osteopathic Physicians – Internal Medicine –
+Critical Care Medicine
+
+Dental Therapist
+
+125J00000X
+
+Dental Providers – Dental Therapist
+
+Denturist
+
+122400000X
+
+Dental Providers – Denturist
+
+Dermatology
+
+207N00000X
+
+Allopathic and Osteopathic Physicians – Dermatology
+
+Doctor of Chiropractic Medicine
+
+111N00000X
+
+Chiropractic Providers – Chiropractors
+
+Doctor of Dentistry
+
+122300000X
+
+Dental Providers – Dentists
+
+Doctor of Podiatric Medicine
+
+213E00000X
+
+Podiatric Medicine and Surgery Providers – Podiatrists
+
+Emergency Medicine
+
+207P00000X
+
+Allopathic and Osteopathic Physicians – Emergency Medicine
+
+Endodontist
+
+1223E0200X
+
+Dental Providers – Dentists – Endodontics
+
+W015774 JUN 25
+
+Blue Cross Blue Shield of Michigan and Blue Care Network are nonprofit corporations and independent
+licensees of the Blue Cross Blue Shield Association.
+
+1
+
+Taxonomy Code Mapping
+Professional Providers
+Taxonomy
+Code
+
+National Uniform Claim Committee
+www.nucc.org*
+
+Family Nurse Practitioner
+
+363LF0000X
+
+Physician Assistants and Advanced Practice Nursing Providers –
+Nurse Practitioner – Family
+
+Family Practice
+
+207Q00000X
+
+Allopathic and Osteopathic Physicians – Family Medicine
+
+Gastroenterology
+
+207RG0100X
+
+Allopathic and Osteopathic Physicians – Internal Medicine
+
+General Practice
+
+208D00000X
+
+Allopathic & Osteopathic Physicians – General Practice
+
+General Practitioner
+
+1223G0001X
+
+Dental Providers – Dentists – General Practice
+
+General Surgery
+
+208600000X
+
+Allopathic & Osteopathic Physicians – Surgery
+
+Genetic Counselor
+
+170300000X
+
+Genetic Counselor, MS
+
+Geriatric Medicine
+
+207RG0300X
+
+Allopathic and Osteopathic Physicians – Internal Medicine –
+Geriatric Medicine
+
+Geriatric Nurse Practitioner
+
+363LG0600X
+
+Physician Assistants and Advanced Practice Nursing Providers –
+Nurse Practitioner – Gerontology
+
+GP with Endodontics focus
+
+1223E0200X
+
+Dental Providers – Dentists – Endodontics
+
+GP with Oral Surgery focus
+
+204E00000X
+
+Dental Providers – Allopathic & Osteopathic Physicians - Oral &
+Maxillofacial Surgery (D.M.D.)
+
+GP with Orthodontics focus
+
+1223X0400X
+
+Dental Providers – Dentists – Orthodontics and Dentofacial
+Orthopedic Dentist
+
+GP with Pediatric Dentistry focus
+
+1223P0221X
+
+Dental Providers – Dentists – Pediatric Dentist
+
+GP with Periodontics focus
+
+1223P0300X
+
+Dental Providers – Dentists – Periodontist
+
+GP with Prosthodontics focus
+
+1223P0700X
+
+Dental Providers – Dentists – Prosthodontist
+
+Gynecologic Oncology
+
+207VC0300X
+
+Obstetrics/Gynecology
+
+Head Start Provider
+
+122300000X
+
+Dental Providers – Dentists
+
+Hematology
+
+207RH0000X
+
+Hematology
+
+Home Infusion Therapy
+
+251F00000X
+
+Agency – Home Infusion
+
+Hospice and Palliative Medicine
+
+207LA0401X
+
+Anesthesiology, Addition Medicine
+
+Hospice and Palliative Medicine
+
+207RH0002X
+
+Hospice and Palliative Medicine
+
+Hygienist
+
+124Q00000X
+
+Dental Providers – Dental Hygienist
+
+Immunization Practices
+
+261QH0100X
+
+Ambulatory Health Care Facilities – Clinic/Center – Health Service
+
+Infectious Diseases
+
+207RI0200X
+
+Allopathic and Osteopathic Physicians – Internal Medicine –
+Infectious Disease
+
+Infusion Therapy
+
+261QI0500X
+
+Ambulatory Infusion Therapy
+
+Internal Medicine
+
+207R00000X
+
+Allopathic and Osteopathic Physicians – Internal Medicine
+
+Laboratory
+
+291U00000X
+
+Laboratories – Clinical Medical Laboratories
+
+Licensed Behavior Analyst
+
+103K00000X
+
+Licensed Behavior Analyst, Mental Health, and Counseling
+
+Licensed Marriage Family Therapist
+
+106H00000X
+
+Behavioral Health & Social Service Providers – Marriage and
+Family Therapy
+
+Licensed Professional Counselor
+
+101Y00000X
+
+Behavioral Health and Social Service Providers – Licensed
+Professional Counselor
+
+Limited License Psychologist
+
+103T00000X
+
+Behavioral Health and Social Service Providers – Psychologist
+
+Multispecialty Group/Clinic
+
+193200000X
+
+Group – Multispecialty
+
+Provider Specialty
+
+W015774 JUN 25
+
+Blue Cross Blue Shield of Michigan and Blue Care Network are nonprofit corporations and independent
+licensees of the Blue Cross Blue Shield Association.
+
+2
+
+Taxonomy Code Mapping
+Professional Providers
+Provider Specialty
+
+Taxonomy
+Code
+
+National Uniform Claim Committee
+www.nucc.org*
+
+Neonatal Nurse Practitioner
+
+363LN0000X
+
+Physician Assistants and Advanced Practice Nursing Providers –
+Nurse Practitioner – Neonatal
+
+Nephrology
+
+207LA0401X
+
+Anesthesiology, Addition Medicine
+
+Nephrology
+
+207RN0300X
+
+Nephrology
+
+Neurological Surgery
+
+207T00000X
+
+Allopathic and Osteopathic Physicians – Neurological Surgery
+
+Neurology
+
+2084N0400X
+
+Allopathic and Osteopathic Physicians – Psychiatry and
+Neurology
+
+Neuromuscular Medicine –
+Psychiatry and Neurology
+
+2084N0008X
+
+Allopathic and Osteopathic Physicians
+
+Neuromusculoskeletal Medicine &
+OMM
+
+204D00000X
+
+Allopathic and Osteopathic Physicians – Neuromusculoskeletal
+Medicine & OMM
+
+Non-Traditional
+
+125Q00000X
+
+Dental Providers – Oral Medicinist
+
+Nuclear Medicine
+
+207U00000X
+
+Allopathic and Osteopathic Physicians – Nuclear Medicine
+
+Nurse Midwife
+
+367A00000X
+
+Physician Assistants and Advanced Practice Nursing Providers
+
+Nurse Practitioner
+
+363L00000X
+
+Physician Assistants and Advanced Practice Nursing Providers –
+Nurse Practitioner
+
+OB/GYN Nurse Practitioner
+
+363LX0001X
+
+Physician Assistants and Advanced Practice Nursing Providers –
+Nurse Practitioner – Obstetrics & Gynecology
+
+Obstetrics and Gynecology
+
+207V00000X
+
+Allopathic and Osteopathic Physicians – Obstetrics and
+Gynecology
+
+Obstetrics and Gynecology
+
+207VC0300X
+
+Obstetrics/Gynecology
+
+Occupational Therapist
+
+225X00000X
+
+Respiratory, Developmental, Rehabilitative and Restorative
+Service Providers – Occupational Therapist
+
+Oncology
+
+207LA0401X
+
+Anesthesiology, Addition Medicine
+
+Oncology
+
+207RX0202X
+
+Medical Oncology
+
+Ophthalmology and
+Otorhinolaryngology
+
+207W00000X
+
+Allopathic and Osteopathic Physicians – Ophthalmology
+
+Optometrist
+
+152W00000X
+
+Eye and Vision Service Providers – Optometrists
+
+Oral Pathologist
+
+1223P0106X
+
+Dental Providers – Dentists – Oral and Maxillofacial Pathology
+Dentist
+
+Oral Radiology
+
+1223X0008X
+
+Dental Providers – Dentists – Oral and Maxillofacial Radiology
+Dentist
+
+Oral Surgeon
+
+204E00000X
+
+Dental Providers – Allopathic & Osteopathic Physicians - Oral &
+Maxillofacial Surgery (D.M.D.)
+
+Oral Surgery – Dental Benefit
+
+1223S0112X
+
+Dental Providers – Dentists – Oral and Maxillofacial Surgery
+
+Orthodontist
+
+1223X0400X
+
+Dental Providers – Dentists – Orthodontics and Dentofacial
+Orthopedic Dentist
+
+Orthopaedic Surgery
+
+207X00000X
+
+Allopathic and Osteopathic Physicians – Orthopaedic Surgery
+
+Orthotist
+
+222Z00000X
+
+Respiratory, Developmental, Rehabilitative and Restorative
+Service Providers – Orthotist
+
+Otolaryngology
+
+207Y00000X
+
+Allopathic and Osteopathic Physicians – Otolaryngology
+
+W015774 JUN 25
+
+Blue Cross Blue Shield of Michigan and Blue Care Network are nonprofit corporations and independent
+licensees of the Blue Cross Blue Shield Association.
+
+3
+
+Taxonomy Code Mapping
+Professional Providers
+Provider Specialty
+
+Taxonomy
+Code
+
+Outpatient Psychiatric Facility
+
+261QM0801X
+
+Ambulatory Health Facility – Clinic/Center – Mental Health
+
+Pain Management
+
+163WP0000X
+
+Registered Nurse, Pain Management
+
+Pain Management
+
+207LC0200X
+
+Anesthesiology, Critical Care Medicine
+
+Pain Management
+
+208VP0000X
+
+Main Medicine
+
+Pathology
+
+207ZP0102X
+
+Allopathic and Osteopathic Physicians – Pathology – Anatomic
+Pathology and Clinical Pathology
+
+Pediatric Dentist
+
+1223P0221X
+
+Dental Providers – Dentists – Pediatric Dentist
+
+Pediatric Nurse Practitioner
+
+363LP0200X
+
+Physician Assistants and Advanced Practice Nursing Providers –
+Nurse Practitioner – Pediatrics
+
+Pediatric Transplant Hepatology
+
+2080T0004X
+
+Pediatric Transplant Hepatology
+
+Pediatric Urology
+
+2088P0231X
+
+Pediatric Urology
+
+Pediatrics
+
+208000000X
+
+Allopathic and Osteopathic Physicians – Pediatrics
+
+Periodontist
+
+1223P0300X
+
+Dental Providers – Dentists – Periodontist
+
+Pharmacy/Hemophilia Pharmacy
+
+333600000X
+
+Suppliers – Pharmacy
+
+Physical Medicine and Rehab
+
+208100000X
+
+Allopathic and Osteopathic Physicians – Physical Medicine and
+Rehab
+
+Physical Therapist
+
+225100000X
+
+Respiratory, Developmental, Rehabilitative and Restorative
+Service Providers – Physical Therapists
+
+Physician Assistant
+
+363A00000X
+
+Physician Assistants and Advanced Practice Nursing Providers
+
+Plastic Surgery
+
+208200000X
+
+Allopathic and Osteopathic Physicians – Plastic Surgery
+
+Preventive Medicine
+
+2083P0500X
+
+Allopathic and Osteopathic Physicians – Preventive Medicine
+
+Private Duty Nursing
+
+251J00000X
+
+Private Duty Nursing
+
+Proctology
+
+208C00000X
+
+Allopathic and Osteopathic Physicians – Colon and Rectal Surgery
+
+Prosthetist
+
+224P00000X
+
+Respiratory, Developmental, Rehabilitative and Restorative
+Service Providers – Prosthetist
+
+Prosthetist and Orthotist
+
+225000000X
+
+Respiratory, Developmental, Rehabilitative and Restorative
+Service Providers – Orthotist/Prosthetist Fitter
+
+Prosthodontist
+
+1223P0700X
+
+Dental Providers – Dentists – Prosthodontist
+
+Psychiatry and Neurology
+
+2084P0800X
+
+Allopathic and Osteopathic Physicians – Psychiatry and Neurology
+
+Psychosomatic Medicine
+
+2084P0015X
+
+Psychiatry and Neurology, Psychosomatic Medicine
+
+Public Health
+
+1223D0001X
+
+Dental Providers – Dentists – Dental Public Health
+
+Public Health and Welfare
+
+251K00000X
+
+Agency – Public Health or Welfare
+
+Pulmonary Disease
+
+207RP1001X
+
+Allopathic and Osteopathic Physicians – Internal Medicine –
+Pulmonary Disease
+
+Radiation Oncology
+
+2085R0001X
+
+Allopathic and Osteopathic Physicians – Radiology – Radiation
+Oncology
+
+Radiology
+
+2085R0202X
+
+Allopathic and Osteopathic Physicians – Radiology – Diagnostic
+Radiology
+
+School Nurse Practitioner
+
+363LS0200X
+
+Physician Assistants and Advanced Practice Nursing Providers –
+Nurse Practitioner – School
+
+W015774 JUN 25
+
+National Uniform Claim Committee
+www.nucc.org*
+
+Blue Cross Blue Shield of Michigan and Blue Care Network are nonprofit corporations and independent
+licensees of the Blue Cross Blue Shield Association.
+
+4
+
+Taxonomy Code Mapping
+Professional Providers
+Provider Specialty
+
+Taxonomy
+Code
+
+National Uniform Claim Committee
+www.nucc.org*
+
+Sleep Medicine
+
+207RS0012X
+
+Allopathic and Osteopathic Physicians – Sleep Medicine
+
+Sleep Medicine
+
+207LA0401X
+
+Anesthesiology, Addition Medicine
+
+Sleep Medicine - Family Medicine
+
+207QS1201X
+
+Sleep Medicine - Family Medicine
+
+Speech Therapy
+
+235Z00000X
+
+Speech Therapy
+
+Supplier
+
+332B00000X
+
+Suppliers – Durable Medical Equipment and Medical Supplies
+
+Thoracic Surgery
+
+208G00000X
+
+Allopathic and Osteopathic Physicians – Thoracic Surgery
+(Cardiothoracic Vascular Surgery)
+
+Urology
+
+208800000X
+
+Allopathic and Osteopathic Physicians – Urology
+
+Women’s Health Care Nurse
+Practitioner
+
+363LW0102X
+
+Women’s Health
+
+*Blue Cross Blue Shield of Michigan and Blue Care Network don’t own or control this website.
+
+W015774 JUN 25
+
+Blue Cross Blue Shield of Michigan and Blue Care Network are nonprofit corporations and independent
+licensees of the Blue Cross Blue Shield Association.
+
+5
+
+

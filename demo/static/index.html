@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Specialty Mapper</title>
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --surface: #141414;
+      --border: #2a2a2a;
+      --text: #e0e0e0;
+      --muted: #888;
+      --accent: #4f8ff7;
+      --accent-hover: #3a7be0;
+      --success: #34d399;
+      --warning: #fbbf24;
+      --danger: #f87171;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+
+    header {
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    header p {
+      color: var(--muted);
+      font-size: 0.875rem;
+      margin-top: 0.25rem;
+    }
+
+    .input-section {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .input-row {
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-end;
+    }
+
+    .input-group {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 0.375rem;
+    }
+
+    label {
+      font-size: 0.75rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--muted);
+    }
+
+    textarea {
+      width: 100%;
+      min-height: 120px;
+      padding: 0.75rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      color: var(--text);
+      font-family: inherit;
+      font-size: 0.875rem;
+      resize: vertical;
+      outline: none;
+      transition: border-color 0.15s;
+    }
+
+    textarea:focus {
+      border-color: var(--accent);
+    }
+
+    textarea::placeholder {
+      color: #555;
+    }
+
+    select {
+      padding: 0.75rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      color: var(--text);
+      font-size: 0.875rem;
+      outline: none;
+      min-width: 160px;
+      cursor: pointer;
+    }
+
+    select:focus {
+      border-color: var(--accent);
+    }
+
+    button {
+      padding: 0.75rem 1.5rem;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.15s;
+      white-space: nowrap;
+    }
+
+    button:hover {
+      background: var(--accent-hover);
+    }
+
+    button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .resetBtn {
+      padding: 0.25rem 0.625rem;
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.6875rem;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.15s;
+      white-space: nowrap;
+    }
+
+    .resetBtn:hover {
+      background: var(--surface);
+      color: var(--text);
+      border-color: var(--muted);
+    }
+
+    .resetBtn:disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+    }
+
+    .results {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .results-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 1rem;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .results-header h2 {
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+
+    .badge {
+      font-size: 0.75rem;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      background: var(--border);
+      color: var(--muted);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    thead th {
+      text-align: left;
+      padding: 0.625rem 1rem;
+      font-size: 0.6875rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--muted);
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+    }
+
+    tbody td {
+      padding: 0.75rem 1rem;
+      font-size: 0.875rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    .confidence {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.375rem;
+    }
+
+    .confidence-bar {
+      width: 40px;
+      height: 4px;
+      background: var(--border);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+
+    .confidence-fill {
+      height: 100%;
+      border-radius: 2px;
+      transition: width 0.3s;
+    }
+
+    .confidence-high .confidence-fill { background: var(--success); }
+    .confidence-med .confidence-fill { background: var(--warning); }
+    .confidence-low .confidence-fill { background: var(--danger); }
+
+    .confidence-high { color: var(--success); }
+    .confidence-med { color: var(--warning); }
+    .confidence-low { color: var(--danger); }
+
+    .notes {
+      color: var(--muted);
+      font-size: 0.8125rem;
+      max-width: 250px;
+    }
+
+    .code {
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      font-size: 0.8125rem;
+      background: var(--surface);
+      padding: 0.125rem 0.375rem;
+      border-radius: 3px;
+    }
+
+    .loading {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem;
+      color: var(--muted);
+      font-size: 0.875rem;
+    }
+
+    .loading::before {
+      content: '';
+      width: 16px;
+      height: 16px;
+      border: 2px solid var(--border);
+      border-top-color: var(--accent);
+      border-radius: 50%;
+      animation: spin 0.6s linear infinite;
+      margin-right: 0.75rem;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    .empty-state {
+      padding: 3rem;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.875rem;
+    }
+
+    .error {
+      padding: 1rem;
+      background: rgba(248, 113, 113, 0.1);
+      border: 1px solid rgba(248, 113, 113, 0.3);
+      border-radius: 6px;
+      color: var(--danger);
+      font-size: 0.875rem;
+      margin-bottom: 1rem;
+    }
+
+    .toggle-row {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .toggle {
+      position: relative;
+      width: 36px;
+      height: 20px;
+      cursor: pointer;
+    }
+
+    .toggle input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .toggle-slider {
+      position: absolute;
+      inset: 0;
+      background: var(--border);
+      border-radius: 10px;
+      transition: background 0.2s;
+    }
+
+    .toggle-slider::before {
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      left: 2px;
+      top: 2px;
+      background: #fff;
+      border-radius: 50%;
+      transition: transform 0.2s;
+    }
+
+    .toggle input:checked + .toggle-slider {
+      background: var(--accent);
+    }
+
+    .toggle input:checked + .toggle-slider::before {
+      transform: translateX(16px);
+    }
+
+    .toggle-label {
+      font-size: 0.75rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      user-select: none;
+    }
+
+    .mode-description {
+      display: flex;
+      flex-direction: column;
+      gap: 0.375rem;
+      padding: 0.75rem 1rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+    }
+
+    .mode-desc-item {
+      font-size: 0.8125rem;
+      color: var(--muted);
+      display: flex;
+      align-items: baseline;
+      gap: 0.375rem;
+    }
+
+    .mode-desc-item strong {
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .mode-dot {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .mode-dot.fast {
+      background: var(--accent);
+    }
+
+    .mode-dot.agent {
+      background: var(--warning);
+    }
+
+    .mode-badge {
+      font-size: 0.6875rem;
+      padding: 0.125rem 0.375rem;
+      border-radius: 3px;
+      font-weight: 500;
+    }
+
+    .mode-badge.fast {
+      background: rgba(79, 143, 247, 0.15);
+      color: var(--accent);
+    }
+
+    .mode-badge.agent {
+      background: rgba(251, 191, 36, 0.15);
+      color: var(--warning);
+    }
+
+    .footer {
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.75rem;
+    }
+
+    .provenance {
+      margin-bottom: 2rem;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+
+    .provenance-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 1rem;
+      background: var(--surface);
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .provenance-header:hover {
+      background: #1a1a1a;
+    }
+
+    .provenance-header h3 {
+      font-size: 0.8125rem;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .provenance-chevron {
+      transition: transform 0.2s;
+      color: var(--muted);
+      font-size: 0.75rem;
+    }
+
+    .provenance-chevron.open {
+      transform: rotate(180deg);
+    }
+
+    .provenance-body {
+      padding: 1rem;
+      display: none;
+    }
+
+    .provenance-body.open {
+      display: block;
+    }
+
+    .provenance-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .provenance-stat {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    .provenance-stat-label {
+      font-size: 0.6875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--muted);
+    }
+
+    .provenance-stat-value {
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+
+    .provenance-sources {
+      margin-top: 0.75rem;
+    }
+
+    .provenance-sources h4 {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .provenance-source-item {
+      display: flex;
+      gap: 0.5rem;
+      padding: 0.375rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.8125rem;
+    }
+
+    .provenance-source-item:last-child {
+      border-bottom: none;
+    }
+
+    .provenance-source-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      margin-top: 0.375rem;
+      flex-shrink: 0;
+    }
+
+    .provenance-source-name {
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    .provenance-source-desc {
+      color: var(--muted);
+      font-size: 0.75rem;
+      margin-top: 0.125rem;
+    }
+
+    .provenance-notes {
+      margin-top: 0.75rem;
+      padding: 0.625rem 0.75rem;
+      background: rgba(79, 143, 247, 0.08);
+      border-radius: 4px;
+      font-size: 0.75rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .crosswalk-badge {
+      display: inline-block;
+      font-size: 0.6875rem;
+      padding: 0.125rem 0.5rem;
+      border-radius: 3px;
+      font-weight: 500;
+    }
+
+    .crosswalk-badge.official {
+      background: rgba(52, 211, 153, 0.15);
+      color: var(--success);
+    }
+
+    .crosswalk-badge.best-effort {
+      background: rgba(251, 191, 36, 0.15);
+      color: var(--warning);
+    }
+
+    .crosswalk-badge.partial-official {
+      background: rgba(79, 143, 247, 0.15);
+      color: var(--accent);
+    }
+
+    .crosswalk-badge.missing {
+      background: rgba(248, 113, 113, 0.15);
+      color: var(--danger);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Specialty Mapper</h1>
+      <p>Map arbitrary specialty labels to NUCC taxonomy or state Medicaid codes</p>
+    </header>
+
+    <div class="input-section">
+      <div class="input-group">
+        <label for="input">Specialty Input</label>
+        <textarea id="input" placeholder="Enter specialty labels, one per line&#10;e.g.&#10;Cardiologist&#10;Pediatrician&#10;Psychiatrist"></textarea>
+      </div>
+
+      <div class="input-row">
+        <div class="input-group" style="flex: 0 0 auto;">
+          <label for="target">Map To</label>
+          <select id="target">
+            <option value="nucc">NUCC Taxonomy</option>
+          </select>
+        </div>
+        <div class="input-group" style="flex: 0 0 auto;">
+          <label>&nbsp;</label>
+          <div class="toggle-row">
+            <label class="toggle">
+              <input type="checkbox" id="agentMode">
+              <span class="toggle-slider"></span>
+            </label>
+            <span class="toggle-label">Agent Mode</span>
+            <button class="resetBtn" id="resetBtn" onclick="resetSession()" title="Reset agent session (clear accumulated context)">Reset Session</button>
+          </div>
+        </div>
+        <button id="mapBtn" onclick="doMap()">Map Specialties</button>
+      </div>
+
+      <div class="mode-description">
+        <span class="mode-desc-item"><span class="mode-dot fast"></span><strong>Fast:</strong> Direct LLM call with embedded reference data. Best for quick, high-volume mapping.</span>
+        <span class="mode-desc-item"><span class="mode-dot agent"></span><strong>Agent:</strong> Full agent with skills, tools, and web search. Can look up providers, verify sources, and reason through ambiguous specialties.</span>
+      </div>
+    </div>
+
+    <div id="error"></div>
+
+    <div id="provenance" class="provenance" style="display:none;">
+      <div class="provenance-header" onclick="toggleProvenance()">
+        <h3>📄 <span id="provenance-title">State Data Provenance</span></h3>
+        <span class="provenance-chevron" id="provenance-chevron">▼</span>
+      </div>
+      <div class="provenance-body" id="provenance-body"></div>
+    </div>
+
+    <div id="results">
+      <div class="empty-state">Enter specialty labels above and click "Map Specialties"</div>
+    </div>
+
+    <div class="footer">
+      Powered by Tensor Automata &middot; Specialty Mapping Engine
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      try {
+        const res = await fetch('/api/states');
+        const data = await res.json();
+        const select = document.getElementById('target');
+        for (const state of data.states) {
+          const opt = document.createElement('option');
+          opt.value = state;
+          opt.textContent = `${state} Medicaid`;
+          select.appendChild(opt);
+        }
+      } catch (e) {
+        console.warn('Failed to load states:', e);
+      }
+
+      // Listen for target changes to load state provenance
+      document.getElementById('target').addEventListener('change', loadStateInfo);
+    });
+
+    async function loadStateInfo() {
+      const target = document.getElementById('target').value;
+      const provDiv = document.getElementById('provenance');
+      const provBody = document.getElementById('provenance-body');
+      const provTitle = document.getElementById('provenance-title');
+      const provChevron = document.getElementById('provenance-chevron');
+
+      if (target === 'nucc') {
+        provDiv.style.display = 'none';
+        return;
+      }
+
+      provDiv.style.display = 'block';
+      provBody.innerHTML = '<div class="loading" style="padding:1.5rem;">Loading source info...</div>';
+      provChevron.classList.add('open');
+      provBody.classList.add('open');
+
+      try {
+        const res = await fetch(`/api/state-info/${target}`);
+        if (!res.ok) throw new Error('No source info available');
+        const meta = await res.json();
+        provTitle.textContent = `${target.toUpperCase()} — Data Provenance`;
+        provBody.innerHTML = renderProvenance(meta);
+      } catch (e) {
+        provBody.innerHTML = `<div class="error" style="margin:0;">${escapeHtml(e.message)}</div>`;
+      }
+    }
+
+    function toggleProvenance() {
+      const body = document.getElementById('provenance-body');
+      const chevron = document.getElementById('provenance-chevron');
+      body.classList.toggle('open');
+      chevron.classList.toggle('open');
+    }
+
+    function renderProvenance(m) {
+      const cwClass = m.crosswalk_origin.replace(/-/g, '-');
+      const cwLabel = m.crosswalk_origin.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+
+      let html = `
+        <div class="provenance-grid">
+          <div class="provenance-stat">
+            <span class="provenance-stat-label">Program</span>
+            <span class="provenance-stat-value">${escapeHtml(m.program_name)}</span>
+          </div>
+          <div class="provenance-stat">
+            <span class="provenance-stat-label">Agency</span>
+            <span class="provenance-stat-value">${escapeHtml(m.agency)}</span>
+          </div>
+          <div class="provenance-stat">
+            <span class="provenance-stat-label">Specialties</span>
+            <span class="provenance-stat-value">${m.specialty_count}</span>
+          </div>
+          <div class="provenance-stat">
+            <span class="provenance-stat-label">Crosswalk Origin</span>
+            <span class="provenance-stat-value"><span class="crosswalk-badge ${cwClass}">${cwLabel}${m.crosswalk_rows ? ` · ${m.crosswalk_rows} rows` : ''}</span></span>
+          </div>
+        </div>`;
+
+      if (m.sources && m.sources.length) {
+        html += `<div class="provenance-sources"><h4>Source Documents</h4>`;
+        for (const s of m.sources) {
+          const link = s.url ? `<a href="${escapeHtml(s.url)}" target="_blank" style="color:var(--accent);font-size:0.6875rem;">↗</a>` : '';
+          html += `
+            <div class="provenance-source-item">
+              <span class="provenance-source-dot"></span>
+              <div>
+                <span class="provenance-source-name">${escapeHtml(s.name)}${link}</span>
+                <div class="provenance-source-desc">${escapeHtml(s.description)}</div>
+              </div>
+            </div>`;
+        }
+        html += `</div>`;
+      }
+
+      if (m.notes) {
+        html += `<div class="provenance-notes">${escapeHtml(m.notes)}</div>`;
+      }
+
+      return html;
+    }
+
+    async function doMap() {
+      const input = document.getElementById('input').value.trim();
+      const target = document.getElementById('target').value;
+      const agentMode = document.getElementById('agentMode').checked;
+      const btn = document.getElementById('mapBtn');
+      const errorDiv = document.getElementById('error');
+      const resultsDiv = document.getElementById('results');
+
+      if (!input) {
+        errorDiv.innerHTML = '<div class="error">Please enter at least one specialty label.</div>';
+        return;
+      }
+
+      errorDiv.innerHTML = '';
+      btn.disabled = true;
+      btn.textContent = 'Mapping...';
+      const modeLabel = agentMode ? 'Hermes Agent' : 'Fast LLM';
+      resultsDiv.innerHTML = `<div class="loading">Mapping specialties via ${modeLabel}...</div>`;
+
+      try {
+        const agentParam = agentMode ? '?agent=true' : '';
+        const res = await fetch(`/api/map${agentParam}`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ text: input, target }),
+        });
+
+        if (!res.ok) {
+          const err = await res.json().catch(() => ({ detail: `HTTP ${res.status}` }));
+          throw new Error(err.detail || 'Mapping failed');
+        }
+
+        const data = await res.json();
+        renderResults(data);
+      } catch (err) {
+        errorDiv.innerHTML = `<div class="error">${escapeHtml(err.message)}</div>`;
+        resultsDiv.innerHTML = '';
+      } finally {
+        btn.disabled = false;
+        btn.textContent = 'Map Specialties';
+      }
+    }
+
+    function renderResults(data) {
+      const resultsDiv = document.getElementById('results');
+      const { results, target, input_count, mode } = data;
+
+      if (!results || !results.length) {
+        resultsDiv.innerHTML = '<div class="empty-state">No results returned.</div>';
+        return;
+      }
+
+      const modeClass = mode === 'agent' ? 'agent' : 'fast';
+      const modeLabel = mode === 'agent' ? 'Agent' : 'Fast';
+      const isNucc = target === 'nucc';
+
+      let html = `
+        <div class="results">
+          <div class="results-header">
+            <h2>Mapping Results</h2>
+            <span class="badge">${input_count} input → ${target}</span>
+            <span class="mode-badge ${modeClass}">${modeLabel} Mode</span>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Input</th>
+                <th>NUCC Code</th>
+                ${isNucc ? '<th>NUCC Name</th>' : '<th>State Code</th><th>State Category</th>'}
+                <th>Confidence</th>
+                <th>Notes</th>
+              </tr>
+            </thead>
+            <tbody>`;
+
+      results.forEach((r, i) => {
+        const conf = r.confidence ?? 0;
+        const confClass = conf >= 0.8 ? 'confidence-high' : conf >= 0.5 ? 'confidence-med' : 'confidence-low';
+        const confPct = Math.round(conf * 100);
+
+        html += `
+              <tr>
+                <td>${i + 1}</td>
+                <td>${escapeHtml(r.input || '')}</td>
+                <td><span class="code">${escapeHtml(r.nucc_code || '—')}</span></td>
+                ${isNucc
+                  ? `<td>${escapeHtml(r.nucc_name || '—')}</td>`
+                  : `<td><span class="code">${escapeHtml(r.state_code || '—')}</span></td>
+                     <td>${escapeHtml(r.state_category || '—')}</td>`
+                }
+                <td>
+                  <span class="confidence ${confClass}">
+                    <span class="confidence-bar"><span class="confidence-fill" style="width:${confPct}%"></span></span>
+                    ${confPct}%
+                  </span>
+                </td>
+                <td class="notes">${escapeHtml(r.notes || '')}</td>
+              </tr>`;
+      });
+
+      html += `
+            </tbody>
+          </table>
+        </div>`;
+
+      resultsDiv.innerHTML = html;
+    }
+
+    function escapeHtml(str) {
+      const div = document.createElement('div');
+      div.textContent = str;
+      return div.innerHTML;
+    }
+
+    document.getElementById('input').addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) {
+        doMap();
+      }
+    });
+
+    async function resetSession() {
+      const btn = document.getElementById('resetBtn');
+      btn.disabled = true;
+      btn.textContent = 'Resetting...';
+      try {
+        const res = await fetch('/api/reset', { method: 'POST' });
+        if (!res.ok) {
+          const err = await res.json().catch(() => ({ detail: `HTTP ${res.status}` }));
+          throw new Error(err.detail || 'Reset failed');
+        }
+        btn.textContent = 'Reset ✓';
+        setTimeout(() => { btn.textContent = 'Reset Session'; btn.disabled = false; }, 1500);
+      } catch (err) {
+        btn.textContent = 'Reset Session';
+        btn.disabled = false;
+        document.getElementById('error').innerHTML = `<div class="error">${escapeHtml(err.message)}</div>`;
+      }
+    }
+  </script>
+</body>
+</html>

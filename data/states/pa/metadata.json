@@ -1,0 +1,21 @@
+{
+  "program_name": "HealthChoices (CHC)",
+  "agency": "PA DHS (Department of Human Services)",
+  "sources": [
+    {
+      "name": "2025 Community HealthChoices Agreement",
+      "file": "2025-chc-agreement.pdf",
+      "description": "PA DHS CHC Agreement — network adequacy requirements by specialty (Section V)"
+    },
+    {
+      "name": "PA Taxonomy Crosswalk",
+      "file": "pa_taxonomy_crosswalk.pdf",
+      "description": "PA-to-NUCC code mappings (252 mappings, multi-column PDF)"
+    }
+  ],
+  "crosswalk_origin": "official",
+  "crosswalk_rows": 252,
+  "specialty_count": 86,
+  "verification_status": "verified",
+  "notes": "Official PA DHS crosswalk with 252 mappings. Original 'Provider Type Specialty Codes' PDF now 404 — data extracted from CHC Agreement. BH-MCO specialties defined in separate agreement."
+}

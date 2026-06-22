@@ -1,0 +1,12809 @@
+REFERENCE SUBSYSTEM
+CODES AND VALUES
+2026
+
+Revised 03/27/2026
+
+1|Page
+
+Reference Subsystem Codes and Values 2026
+
+Introduction
+There have been numerous changes made to the Codes and Values since 2023. Information that is no longer
+used has been deleted from the 2019 version. If you are trying to locate certain information that is no longer
+listed, please reference Codes and Values 2019 dated 10-02-2019. The newest information is identified in
+Red.
+Introduction
+
+Most of the data found in this manual is found in the PMMIS Reference Subsystem:
+With proper security clearance to the PMMIS Recipient Subsystem, access to the
+Reference Subsystem is also possible.
+TR: RF000
+NTR: ______________________
+1.
+2.
+3.
+4.
+5.
+6.
+7.
+8.
+9.
+10.
+11.
+12.
+13.
+14.
+15.
+
+AHCCCS - REFERENCE
+REFERENCE MAIN MENU
+
+09/05/02
+13:35:51
+RF00M000
+
+PROCEDURE MENU
+DIAGNOSIS MENU
+PHARMACY ITEM MENU
+HEALTH PLAN MENU
+RECIPIENT MENU
+PROVIDER MENU
+ENCOUNTER/CLAIMS MENU
+CASE MANAGEMENT MENU
+UR/QA AND INFORMATION MANAGEMENT MENU
+MISCELLANEOUS MENU
+REPORTS/MAILING LABELS MENU
+SSR MAINTENANCE MENU
+IRF HELP MAINTENANCE MENU
+SVES-WTPY MENU
+KIDSCARE-QC MENU
+ENTER SELECTION: __
+
+PF: 1=HLP 2=RTN 3=CLR 4=MSG
+
+12=ESC
+
+The above Menu and the individual screens reflect what is actually in the
+Reference Subsystem and is the most accurate information available.
+This Codes & Values document, which is updated sometime after the additions or
+changes in PMMIS Reference Subsystem are made, may be a valuable tool in
+meetings and other functions where no access to the actual reference table
+screens is possible.
+
+Table of Contents
+Introduction ............................................................................................................................................................ 2
+Revised 03/27/2026
+2|Page
+
+Reference Subsystem Codes and Values 2026
+Non-Reference Table Values ................................................................................................................................... 6
+Address County Type........................................................................................................................................... 6
+Code Type Action ................................................................................................................................................ 6
+Payment Cycle Type ............................................................................................................................................ 6
+PMMIS RECIPIENT SCREENS .................................................................................................................................... 7
+Correspondence Codes – RP205 ......................................................................................................................... 7
+Enrollment Status – RP160.................................................................................................................................. 7
+Medicare – RP150 ............................................................................................................................................... 7
+Pended Transaction Status – RP325 .................................................................................................................... 7
+Reservation Indicator – RP135 ............................................................................................................................ 8
+PMMIS REFERENCE SCREENS .................................................................................................................................. 9
+Address Type – RF527 ......................................................................................................................................... 9
+Age Limits – RP533 .............................................................................................................................................. 9
+Alternate Id Type – RF523 ................................................................................................................................. 10
+AZTECS Eligibility Key Codes – RF512................................................................................................................ 11
+Benefit Category – RF503.................................................................................................................................. 13
+Benefit Continuance – RF504 ............................................................................................................................ 15
+Benefit Payment Type – RF505 ......................................................................................................................... 15
+Benefit Qualifier – RF506 .................................................................................................................................. 16
+Capitation Rate [Codes] – RF401 ...................................................................................................................... 17
+Recipient Care Level – RF519 ............................................................................................................................ 34
+Change Reason – RF525 .................................................................................................................................... 35
+Contract Type – RF410 ...................................................................................................................................... 40
+Converted Transaction Status – RF529 ............................................................................................................. 41
+Co-Pay Data – RF553 ......................................................................................................................................... 42
+Co-Pay Eligibility Key Map – RF575 ................................................................................................................... 43
+Co-Pay Exception Type – RF554 ........................................................................................................................ 48
+Co-Pay Level Type – RF555 ................................................................................................................................ 49
+Co-Pay Payment Type – RF557 .......................................................................................................................... 49
+Co-Pay Service Type – RF556 ............................................................................................................................ 50
+Correspondence Type – RF528 ......................................................................................................................... 50
+Revised 03/27/2026
+
+3|Page
+
+Reference Subsystem Codes and Values 2026
+County – RF012 & (General Service Area) GSA – RF013 ................................................................................... 56
+CTY/RHBA Assignment [Codes] – RF576 ........................................................................................................... 57
+Current Health Plan List 10/01/2025 – 09/30/2026 ......................................................................................... 58
+Data Specific Source Codes – RF546 ................................................................................................................. 58
+Source Codes – RF522 ....................................................................................................................................... 60
+Eligibility Key Code / Buy-in Indicator ............................................................................................................... 62
+Eligibility Category – RF509 ............................................................................................................................... 63
+Eligibility Key Hierarchy – RF538 & Eligibility Key Combined – RF534 .............................................................. 64
+Eligibility Program – RF547 ............................................................................................................................... 70
+Eligibility Qualifier – RF510 ............................................................................................................................... 71
+Eligibility Type – RF537 ..................................................................................................................................... 71
+Enrollment Type – RF513 .................................................................................................................................. 72
+Exception [Codes] – RF539................................................................................................................................ 73
+Function Specific Reason Codes – RF545 .......................................................................................................... 77
+Insured Relationship – RF715............................................................................................................................ 81
+Language [Code] – RF514.................................................................................................................................. 82
+Marital Status – RF515 ...................................................................................................................................... 83
+Medical Condition – RF532 ............................................................................................................................... 84
+Mental Health Category – RF404 ...................................................................................................................... 86
+Mental Health Rate Code – RF402 .................................................................................................................... 87
+MHS Site Provider – RF415 ............................................................................................................................... 88
+Pending Transactions – RF530 .......................................................................................................................... 89
+Provider Assignment – RF502 ........................................................................................................................... 89
+Race [Codes] – RF518........................................................................................................................................ 90
+Rate Category – RF411 ...................................................................................................................................... 91
+Recipient Action Codes – RF403 ....................................................................................................................... 94
+Special Programs – RF409 ................................................................................................................................. 97
+T/RHBA Phone Numbers – RF416 ..................................................................................................................... 98
+TRHBA/ Zip Assignment Codes – RF577............................................................................................................ 99
+Tribe Name [Code] – RF536 ............................................................................................................................ 101
+In Depth Health Plan Matrix ........................................................................................................................... 102
+Revised 03/27/2026
+
+4|Page
+
+Reference Subsystem Codes and Values 2026
+ACUTE CONTRACTORS ................................................................................................................................ 102
+LONG TERM CARE CONTRACTORS .............................................................................................................. 104
+Tribal Regional Behavioral Health Authorities (TRBHA) .............................................................................. 105
+Acute and LTC GSA ...................................................................................................................................... 106
+ACUTE - Choice ............................................................................................................................................ 107
+LTC - Choice ................................................................................................................................................. 108
+Revision Log Table ........................................................................................................................................... 109
+
+Revised 03/27/2026
+
+5|Page
+
+Reference Subsystem Codes and Values 2026
+
+Non-Reference Table Values
+Address County Type
+Address County Type
+R
+F
+
+Description
+Residential
+Fiscal
+
+Code Type Action
+Code Type Action
+A
+C
+T
+
+Description
+Add
+Change
+Terminate
+
+Payment Cycle Type
+Payment Cycle Type
+15
+14
+13
+
+Revised 03/27/2026
+
+Description
+Daily
+Monthly
+Retroactive
+
+6|Page
+
+Reference Subsystem Codes and Values 2026
+
+PMMIS RECIPIENT SCREENS
+Correspondence Codes – RP205
+Correspondence Code
+D
+N
+P
+R
+T
+V
+X
+
+Description
+Not processed due to death
+Not processed / Not printed
+Processed / Printed
+Responded
+Returned
+Verified
+In Process
+
+Enrollment Status – RP160
+Enrollment Status
+A
+H
+I
+N
+P
+
+Description
+Active
+History
+Inactive
+Inactive No Pay
+Pended
+
+Medicare – RP150
+Medicare Code
+A
+B
+C
+D
+MBI
+
+Description
+Part A
+Part B
+QMB For Part A & B
+Drug Plan
+Medicare Beneficiary Identifier
+
+Pended Transaction Status – RP325
+Pended Transaction Status
+A
+D
+F
+P
+
+Revised 03/27/2026
+
+Description
+Add
+Delete from RP – CONV
+Force Apply/Add to data base
+Pended
+
+7|Page
+
+Reference Subsystem Codes and Values 2026
+
+Reservation Indicator – RP135
+Reservation Indicator
+Y
+N
+
+Revised 03/27/2026
+
+Description
+Yes
+No
+
+8|Page
+
+Reference Subsystem Codes and Values 2026
+
+PMMIS REFERENCE SCREENS
+Address Type – RF527
+Code
+H
+M
+
+Description
+Home (Residence)
+Mailing
+
+Age Limits – RF533
+
+Code
+265
+270
+275
+350
+351
+352
+355
+357
+359
+368
+428
+455
+465
+468
+560
+565
+570
+750
+949
+
+Description
+A AF Acute
+A AF Cash Foster
+A AF MAO Young Adult Tr.
+A AF MAO SOBRA Child
+A AF MAO SC Expanded
+SOBRA CHILD 100-133% AG
+A AF MAO DES SO NB
+A AF MAO DES Newborn
+DES HIFA Newborn
+A KidsCare
+Acute SSI Disabled MAO
+A KidsCare Newborn
+SOBRA CHILD 100-133% 6M
+A KidsCare 12-Month Guar
+A AF MAO BC Patient
+A AF MAO CC Patient
+A AF MAO CL Patient
+A AF MAO
+FES YATI AGE 18 - 26
+
+Revised 03/27/2026
+
+Age
+Limit
+21
+19
+26
+19
+19
+19
+1
+1
+1
+19
+18
+1
+18
+19
+65
+65
+65
+19
+26
+
+Birthday
+Beginning
+Date
+
+Effective
+Beginning
+Date
+
+Effective
+Ending
+Date
+
+05/01/2013
+10/01/1982
+01/01/2014
+07/01/2001
+07/01/2001
+01/01/2014
+07/01/1991
+02/01/1994
+08/18/2005
+11/01/1998
+06/01/1998
+11/01/1998
+01/01/2014
+11/01/1998
+01/01/2002
+01/01/2002
+01/01/2002
+10/01/2009
+01/01/2014
+
+9|Page
+
+Reference Subsystem Codes and Values 2026
+
+Alternate Id Type – RF523
+*Where these are used:
+• These Alternate ID codes may
+be found in the PMMIS
+Subsystem on the RP185 Inquire
+Alternate ID Screen.
+• At the RP185 Add Alternate Id
+screen: Place the cursor on the
+"ID TYPE" line and depress the
+F1 Help Key, the entire table will
+be seen.
+*"Where These Are Used" boxes
+are not designed to be fully
+comprehensive and they in no
+way represent all of the locations
+or applications of the codes
+shown.
+
+Revised 03/27/2026
+
+Code
+AC
+AD
+AH
+AI
+AS
+BD
+BM
+CL
+CR
+CV
+DC
+FW
+HE
+KC
+MB
+MC
+NB
+NU
+PB
+RB
+SI
+SN
+
+Description
+Application Control Number
+Alternate DOB
+T19/T21 AHCCCS ID (PRISONER ONLY)
+AHCCCS ID
+ACE System ID Number (PID)
+BENDEX Claim Number
+CICS (BHMIS) Alternate ID
+DES Client Number (APIS/AZTEC)
+Children’s Rehabilitative Services
+Converted From Previous System
+AZ Dept Of Corrections
+Freedom To Work
+HEA PLUS ID
+KEDS Client ID
+Medicare Beneficiary Identifier
+Medicare Claim ID
+Newborn Alternate ID
+IEVS/Numident Verified SSN
+Premium Billing ID
+State Only BHS RBHA-ID
+BHS STATE-ONLY ID
+Unverified SSN/PSUEDO ID
+
+10 | P a g e
+
+Reference Subsystem Codes and Values 2026
+
+AZTECS Eligibility Key Codes – RF512
+ELG
+KEY
+231
+232
+260
+260
+265
+270
+275
+305
+320
+332
+332
+334
+334
+350
+351
+355
+355
+355
+357
+357
+357
+360
+361
+371
+372
+585
+586
+587
+588
+595
+595
+750
+900
+905
+905
+
+PGM
+MA
+MA
+MA
+MA
+MA
+MA
+MA
+MA
+MA
+MA
+MA
+MA
+MA
+MA
+MA
+MA
+MA
+MA
+MA
+MA
+MA
+MA
+MA
+MA
+MA
+MA
+MA
+MA
+MA
+MA
+MA
+MA
+MA
+
+Revised 03/27/2026
+
+CAT
+31
+3E
+CB
+4E
+ST
+4E
+YA
+CB
+CS
+FE
+T1
+SE
+T2
+SC
+3C
+NB
+NB
+NB
+NB
+NB
+NB
+SW
+3W
+SM
+SA
+AC
+AM
+AM
+AC
+MD
+PD
+AF
+**
+SW
+3W
+
+FC-AS
+**
+**
+AS
+AS
+AS
+FC
+
+INDICATORS
+PQ
+
+ES
+
+FC
+**
+**
+**
+**
+**
+**
+**
+**
+**
+**
+**
+**
+**
+
+**
+*
+*
+
+Y
+Y
+Y
+
+BEG
+DATE
+01/01/1999
+07/01/2001
+10/01/1982
+10/01/1982
+07/01/1998
+10/01/1982
+07/18/2000
+10/01/1982
+10/01/1982
+04/01/1990
+04/01/1990
+04/01/1990
+04/01/1990
+01/01/1988
+07/01/2001
+07/01/1991
+07/01/1991
+07/01/1991
+02/01/1994
+02/01/1994
+02/01/1994
+01/01/1988
+07/01/2001
+04/01/2001
+04/01/2001
+10/01/2001
+01/01/2014
+09/01/2001
+01/01/2014
+10/01/2001
+10/01/2001
+07/01/1991
+01/01/1993
+01/01/1993
+07/01/2001
+
+END
+DATE
+
+12/31/2013
+12/31/2013
+
+11 | P a g e
+
+Reference Subsystem Codes and Values 2026
+908
+910
+910
+915
+915
+920
+920
+960
+
+MA
+MA
+MA
+MA
+MA
+MA
+MA
+MA
+
+Revised 03/27/2026
+
+3E
+UG
+UH
+UJ
+UK
+UL
+UM
+FP
+
+*
+*
+*
+*
+*
+*
+
+Y
+Y
+Y
+Y
+Y
+Y
+Y
+
+07/01/2001
+01/01/1993
+01/01/1993
+01/01/1993
+01/01/1993
+01/01/1993
+01/01/1993
+06/22/2007
+
+12 | P a g e
+
+Reference Subsystem Codes and Values 2026
+
+Benefit Category – RF503
+Code
+AD
+AM
+AP
+AS
+BC
+CC
+DA
+DC
+DS
+EM
+EX
+E3
+E4
+FS
+JU
+KC
+ME
+NB
+NI
+PK
+PQ
+RI
+RT
+SA
+SM
+SN
+S0O
+TP
+TW
+UP
+WD
+XE
+YG
+4C
+6F
+6G
+
+Description
+Adult Inmate - Non-Medicaid
+AHCCCS Care/MI
+SSI (Supplemental Security Income) Appeal
+Acute
+Breast Cancer
+Cervical Cancer
+Disabled Adult Child
+Disabled Child
+Deemed Sibling [regarded as a brother or sister]
+Emergency
+SSI Ex parte
+AHCCCS 6 MO Continued Coverage (3RD Extension)
+AHCCCS 6 MO Continued Coverage (4TH Extension)
+Foster
+Juvenile Detainee - Non-Medicaid
+KidsCare
+Emergency ACA Expanded
+Newborn
+Non-Issuance of AFDC (Aid For Dependent Children) Cash
+PICKLE
+Prior Quarter
+RIBICOFF
+Retroactive
+State-Funded Alien
+SSI (AHCCCS Care)
+SOBRA (Sixth Omnibus Budget and Reconciliation Act) Newborn
+SOBRA
+TRANSPLANT
+Freedom To Work
+Unemployed Parent
+Widow Or Widower
+Expanded Eligibility
+12-Month Guarantee
+4 Month Continuance
+AHCCCS 6 Month Continued Coverage (1st Extension)
+Six Month Guarantee
+
+Revised 03/27/2026
+
+13 | P a g e
+
+Reference Subsystem Codes and Values 2026
+6M
+6S
+9C
+
+6-Month Guarantee AHC Care/MI
+AHCCCS 6 Month Continued Coverage (2nd Extension)
+9 Month Continuance
+
+Revised 03/27/2026
+
+14 | P a g e
+
+Reference Subsystem Codes and Values 2026
+
+Benefit Continuance – RF504
+EFFECTIVE
+CODE
+SH
+UA
+
+DESCRIPTION
+SOBRA Child Hospitalized Age Limit
+Under Appeal
+
+BEGIN
+DATE
+01/01/1988
+10/01/1982
+
+END
+DATE
+
+Benefit Payment Type – RF505
+Where these are used:
+• These Benefit Payment Type
+Codes may be found in the
+PMMIS Subsystem on the
+RP250 Inquire Payment
+History Screen
+• At the RP250 Inquire screen:
+place cursor on the "Select
+Payment Type" line and
+depress F1 Help Key, the
+entire table may be seen.
+
+Revised 03/27/2026
+
+Code
+03
+41
+42
+43
+51
+52
+53
+91
+92
+93
+94
+
+Description
+MHS (Mental Health Services) Capitation
+LTC (Long Term Care) Capitation
+LTC SMIB (Supplemental Medical Insurance Beneficiary Part B Medicare)
+LTC HIB (Hospitalization Insurance Beneficiary Part A Medicare)
+Acute Capitation
+Recon/Supplemental Payments
+AIMHS
+Acute SMIB
+Acute HIB
+QI1 SMIB
+SLMB SMIB
+
+15 | P a g e
+
+Reference Subsystem Codes and Values 2026
+
+Benefit Qualifier – RF506
+Code
+
+Description
+
+CH
+CM
+DP
+ER
+ES
+FP
+JS
+KC
+KH
+LE
+LT
+NB
+NE
+NQ
+O1
+O2
+PA
+PG
+PN
+PQ
+P3
+
+Child
+Children's Medical Program
+Deprived
+Earnings
+Expansion State
+S.O.B.R.A Women Family Planning Services
+JASSO Period for SSI Foster
+KidsCare
+KidsCare HIFA Parent
+Lesions
+Less Than $10
+DES Newborn
+ACA Newly Eligible
+Non-Qualified Immigrant for ESP [Emergency Services Program]
+Transplant Option 1
+Transplant Option 2
+Undocumented Pregnant for ESP
+Pregnant
+Non-Qualified Pregnant Immigrant For ESP
+Qualified Pregnant Immigrant For ESP
+Pregnant 3rd Trimester
+
+QL
+RP
+SH
+SU
+TR
+TW
+UD
+UP
+XA
+XE
+XH
+XM
+XP
+YA
+31
+4E
+
+Qualified Immigrant For ESP
+Non-Qualified Pregnant Resident < 8/22/96 ESP
+SOBRA HIFA Parent
+Support
+ACA Transition
+Freedom To Work 6 Month Guarantee
+Undocumented For ESP
+Undocumented Pregnant For ESP
+Expanded Eligibility
+Expanded Eligibility
+Expanded Hospitalized
+Expanded AHCCCS Care/MI
+Expanded Pregnant Eligibility
+Young Adult Transitional Insurance (YATI)
+1931 Eligible
+Out Of State Foster 4E
+
+Revised 03/27/2026
+
+16 | P a g e
+
+Reference Subsystem Codes and Values 2026
+
+Capitation Rate [Codes] – RF401
+Where these are used: In the PMMIS Recipient subsystem: The Capitation Rate Codes are system generated and
+may be seen on the RP160 Inquire Enrollment RP285 Inquire Eligibility and Enrollment RP060 Inquire Combined
+Enrollment Screens and others.
+
+Code
+AIMH
+CRSH
+CRSL
+CRSM
+P000
+S000
+U000
+100A
+100B
+100C
+100D
+100E
+100F
+100G
+100H
+100J
+100Z
+1000
+1001
+1002
+1003
+1004
+1005
+1006
+1007
+1008
+1009
+101A
+101B
+101C
+101D
+101E
+
+Description
+AMERICAN INDIAN MEDICAL HEALTH SERVICES
+CRS ONLY-HIGH RISK
+CRS ONLY-LOW RISK
+CRS ONLY-MEDIUM RISK
+PUBLIC SAFETY (AZ DEPT OF CORRECTIONS)
+STATE-ONLY BHS
+UNINSURED COVID-19
+TANF < 1 M & F WITH MEDICARE PPC
+TANF 01-05 M & F WITH MEDICARE PPC
+TANF 06-13 M & F WITH MEDICARE PPC
+TANF 14-20 MALE WITH MEDICARE PPC
+TANF 14-20 FEMALE WITH MEDICARE PPC
+TANF 21-44 MALE WITH MEDICARE PPC
+TANF 21-44 FEMALE WITH MEDICARE PPC
+TANF 44-64 M & F WITH MEDICARE PPC
+TANF 65+ M & F WITH MEDICARE PPC
+TANF ALTCS WITH MEDICARE PPC
+TANF WITH MEDICARE
+TANF < 1 M & F WITH MEDICARE
+TANF 01-05 M & F WITH MEDICARE
+TANF 06-13 M & F WITH MEDICARE
+TANF 14-20 MALE WITH MEDICARE
+TANF 14-20 FEMALE WITH MEDICARE
+TANF 21-44 MALE WITH MEDICARE
+TANF 21-44 FEMALE WITH MEDICARE
+TANF 45-64 M & F WITH MEDICARE
+TANF 65+ M & F WITH MEDICARE
+TANF < 1 M & F NON-MEDICARE PPC
+TANF 01-05 M & F NON-MEDICARE PPC
+TANF 06-13 M & F NON-MEDICARE PPC
+TANF 14-20 MALE NON-MEDICARE PPC
+TANF 14-20 FEMALE NON-MEDICARE PPC
+
+Revised 03/27/2026
+
+Effective Date
+Begin
+End
+01/01/2017
+07/01/2000
+07/01/2000
+07/01/2000
+08/01/2004
+10/01/2009
+01/01/2020
+10/01/1996
+10/01/1996
+10/01/1996
+10/01/1996
+10/01/1996
+10/01/1996
+10/01/1996
+10/01/1996
+10/01/1996
+10/01/1996
+10/01/1982
+10/01/1997
+10/01/1997
+10/01/1997
+10/01/1997
+10/01/1997
+10/01/1997
+10/01/1997
+10/01/1997
+10/01/1997
+10/01/1996
+10/01/1996
+10/01/1996
+10/01/1996
+10/01/1996
+17 | P a g e
+
+Reference Subsystem Codes and Values 2026
+101F
+101G
+101H
+101J
+101Z
+1010
+1011
+1012
+1013
+1014
+1015
+1016
+1017
+1018
+1019
+102A
+102B
+102C
+102D
+102E
+102F
+102G
+102H
+102J
+102Z
+1020
+1021
+1022
+1023
+1024
+1025
+1026
+1027
+1028
+1029
+110A
+110B
+110C
+110D
+
+TANF 21-44 MALE NON-MEDICARE PPC
+TANF 21-44 FEMALE NON-MEDICARE PPC
+TANF 44-64 M & F NON-MEDICARE PPC
+TANF 65+ N & F NON-MEDICARE PPC
+TANF ALTCS NON-MEDICARE PPC
+TANF NON-MEDICARE
+TANF <1 M & F NON-MEDICARE
+TANF 01-05 M & F NON-MEDICARE
+TANF 06-13 M & F NON-MEDICARE
+TANF 14-20 MALE NON-MEDICARE
+TANF 14-20 FEMALE NON-MEDICARE
+TANF 21-44 MALE NON-MEDICARE
+TANF 21-44 FEMALE NON-MEDICARE
+TANF 45-64 M & F NON-MEDICARE
+TANF 65+ M & F NON-MEDICARE
+TANF < 1 M & F WITH QMB PPC
+TANF 01-05 M & F WITH QMB PPC
+TANF 06-13 M & F WITH QMB PPC
+TANF 14-20 MALE WITH QMB PPC
+TANF 14-20 FEMALE WITH QMB PPC
+TANF 21-44 MALE WITH QMB PPC
+TANF 21-44 FEMALE WITH QMB PPC
+TANF 44-64 M & F WITH QMB PPC
+TANF 65+ M & F WITH QMB PPC
+TANF ALTCS WITH QMB PPC
+TANF WITH QMB
+TANF <1 M & F WITH QMB
+TANF 01-05 M & F WITH QMB
+TANF 06-13 M & F WITH QMB
+TANF 14-20 MALE WITH QMB
+TANF 14-20 FEMALE WITH QMB
+TANF 21-44 MALE WITH QMB
+TANF 21-44 FEMALE WITH QMB
+TANF 45-64 M & F WITH QMB
+TANF 65+ M & F WITH QMB
+TANF EXPANDED <1 M&F W/MDC PPC
+TANF EXPANDED 01-05 M&F W/MDC PPC
+TANF EXPANDED 06-13 M&F W/MDC PPC
+TANF EXPANDED 14-20 MALE W/MDC PPC
+
+Revised 03/27/2026
+
+10/01/1996
+10/01/1996
+10/01/1996
+10/01/1996
+10/01/1996
+10/01/1982
+10/01/1997
+10/01/1997
+10/01/1997
+10/01/1997
+10/01/1997
+10/01/1997
+10/01/1997
+10/01/1997
+10/01/1997
+10/01/1996
+10/01/1996
+10/01/1996
+10/01/1996
+10/01/1996
+10/01/1996
+10/01/1996
+10/01/1996
+10/01/1996
+10/01/1996
+01/01/1989
+10/01/1997
+10/01/1997
+10/01/1997
+10/01/1997
+10/01/1997
+10/01/1997
+10/01/1997
+10/01/1997
+10/01/1997
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+18 | P a g e
+
+Reference Subsystem Codes and Values 2026
+110E
+110F
+110G
+110H
+110J
+1101
+1102
+1103
+1104
+1105
+1106
+1107
+1108
+1109
+111A
+111B
+111C
+111D
+111E
+111F
+111G
+111H
+111J
+1111
+1112
+1113
+1114
+1115
+1116
+1117
+1118
+1119
+112A
+112B
+112C
+112D
+112E
+112F
+112G
+
+TANF EXPANDED 14-20 FEMALE W/MDC PPC
+TANF EXPANDED 21-44 MALE W/MDC PPC
+TANF EXPANDED 21-44 FEMALE W/MDC PPC
+TANF EXPANDED 45-64 M&F W/MDC PPC
+TANF EXPANDED 65+ M&F W/MDC PPC
+TANF EXPANDED <1 M& F W/MDC
+TANF EXPANDED 01-05 M&F W/MDC
+TANF EXPANDED 06-13 M&F W/MDC
+TANF EXPANDED 14-20 MALE W/MDC
+TANF EXPANDED 14-20 FEMALE W/MDC
+TANF EXPANDED 21-44 MALE W/MDC
+TANF EXPANDED 21-44 FEMALE W/MDC
+TANF EXPANDED 45-64 M&F W/MDC
+TANF EXPANDED 65+ M&F W/MDC
+TANF EXPANDED <1 M&F NO MDC PPC
+TANF EXPANDED 01-05 M&F NO MDC PPC
+TANF EXPANDED 06-13 M&F NO MDC PPC
+TANF EXPANDED 14-20 MALE NO MDC PPC
+TANF EXPANDED 14-20 FEMALE NO MDC PPC
+TANF EXPANDED 21-44 MALE NO MDC PPC
+TANF EXPANDED 21-44 FEMALE NO MDC PPC
+TANF EXPANDED 45-64 M&F NO MDC PPC
+TANF EXPANDED 65+ M&F NO MDC PPC
+TANF EXPANDED <1 M&F NO MDC
+TANF EXPANDED 01-05 M&F NO MDC
+TANF EXPANDED 06-13 M&F NO MDC
+TANF EXPANDED 14-20 MALE NO MDC
+TANF EXPANDED 14-20 FEMALE NO MDC
+TANF EXPANDED 21-44 MALE NO MDC
+TANF EXPANDED 21-44 FEMALE NO MDC
+TANF EXPANDED 45-64 M&F NO MDC
+TANF EXPANDED 65+ M&F NO MDC
+TANF EXPANDED <1 M&F W/QMB PPC
+TANF EXPANDED 01-05 M&F W/QMB PPC
+TANF EXPANDED 06-13 M&F W/QMB PPC
+TANF EXPANDED 14-20 MALE W/QMB PPC
+TANF EXPANDED 14-20 FEMALE W/QMB PPC
+TANF EXPANDED 21-44 MALE W/QMB PPC
+TANF EXPANDED 21-44 FEMALE W/QMB PPC
+
+Revised 03/27/2026
+
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+19 | P a g e
+
+Reference Subsystem Codes and Values 2026
+112H
+112J
+1121
+1122
+1123
+1124
+1125
+1126
+1127
+1128
+1129
+13AD
+13JU
+210Z
+2100
+211Z
+2110
+212Z
+2120
+220Z
+2200
+221Z
+2210
+222Z
+2220
+230Z
+2300
+231Z
+2310
+232Z
+2320
+240Z
+2400
+241Z
+2410
+242Z
+2420
+250Z
+2500
+
+TANF EXPANDED 45-64 M&F W/QMB PPC
+TANF EXPANDED 65+ M&F W/QMB PPC
+TANF EXPANDED <1 M&F W/QMB
+TANF EXPANDED 01-05 M&F W/QMB
+TANF EXPANDED 06-13 M&F W/QMB
+TANF EXPANDED 14-20 MALE W/QMB
+TANF EXPANDED 14-20 FEMALE W/QMB
+TANF EXPANDED 21-44 MALE W/QMB
+TANF EXPANDED 21-44 FEMALE W/QMB
+TANF EXPANDED 45-64 M&F W/QMB
+TANF EXPANDED 65+ M&F W/QMB
+MARICOPA ADULT INMATE - NON-MEDICAID
+MARICOPA JUVENILE DETAINEE - NON-MEDICAID
+SSI AGED WITH MEDICARE PPC
+SSI AGED WITH MEDICARE
+SSI AGED NON-MEDICARE PPC
+SSI AGED NON-MEDICARE
+SSI AGED WITH QMB PPC
+SSI AGED WITH QMB
+SSI DISABLED WITH MEDICARE PPC
+SSI DISABLED WITH MEDICARE
+SSI DISABLED NON-MEDICARE PPC
+SSI DISABLED NON-MEDICARE
+SSI DISABLED WITH QMB PPC
+SSI DISABLED WITH QMB
+SSI BLIND WITH MEDICARE PPC
+SSI BLIND WITH MEDICARE
+SSI BLIND NON-MEDICARE PPC
+SSI BLIND NON-MEDICARE
+SSI BLIND WITH QMB PPC
+SSI BLIND WITH QMB
+SSI AGED EXPANDED WITH MEDICARE PPC
+SSI AGED EXPANDED WITH MEDICARE
+SSI AGED EXPANDED NON-MEDICARE PPC
+SSI AGED EXPANDED NON-MEDICARE
+SSI AGED EXPANDED WITH QMB PPC
+SSI AGED EXPANDED WITH QMB
+SSI BLIND EXPANDED WITH MEDICARE PPC
+SSI BLIND EXPANDED WITH MEDICARE
+
+Revised 03/27/2026
+
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+06/01/2007
+06/01/2007
+10/01/1996
+10/01/1982
+10/01/1996
+10/01/1982
+10/01/1996
+01/01/1989
+10/01/1996
+10/01/1982
+10/01/1996
+10/01/1982
+10/01/1996
+01/01/1989
+10/01/1996
+10/01/1982
+10/01/1996
+10/01/1982
+10/01/1996
+01/01/1989
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+20 | P a g e
+
+Reference Subsystem Codes and Values 2026
+251Z
+2510
+252Z
+2520
+260Z
+2600
+261Z
+2610
+262Z
+2620
+300Z
+3000
+301Z
+3010
+310Z
+3100
+320Z
+3200
+330A
+330B
+330C
+330D
+330E
+330F
+330G
+330H
+330J
+3301
+3302
+3303
+3304
+3305
+3306
+3307
+3308
+3309
+331A
+331B
+331C
+
+SSI BLIND EXPANDED NON-MEDICARE PPC
+SSI BLIND EXPANDED NON-MEDICARE
+SSI BLIND EXPANDED WITH QMB PPC
+SSI BLIND EXPANDED WITH QMB
+SSI DISABLED EXPANDED WITH MEDICARE PPC
+
+SSI DISABLED EXPANDED WITH MEDICARE
+SSI DISABLED EXPANDED NON-MEDICARE PPC
+SSI DISABLED EXPANDED NON-MEDICARE
+SSI DISABLED EXPANDED WITH QMB PPC
+SSI DISABLED EXPANDED WITH QMB
+MN/MI WITH MEDICARE PPC
+MN/MI WITH MEDICARE
+MN/MI NON-MEDICARE PPC
+MN/MI NON-MEDICARE
+TRANSPLANT OPTION 1 PPC
+TRANSPLANT OPTION 1
+TRANSPLANT OPTION 2 PPC
+TRANSPLANT OPTION 2
+AHC CARE M&F < 1 W/ MDC PPC
+AHC CARE M&F 1-5 W/ MDC PPC
+AHC CARE M&F 6-13 W/ MDC PPC
+AHC CARE MALE 14-20 W/ MDC PPC
+AHC CARE FEMALE 14-20 W/ MDC PPC
+AHC CARE MALE 21-44 W/ MDC PPC
+AHC CARE FEMALE 21-44 W/ MDC PPC
+AHC CARE M&F 45-64 W/ MDC PPC
+AHC CARE M&F 65+ W/ MDC PPC
+AHC CARE M&F < 1 W/ MDC
+AHC CARE M&F 1-5 W/ MDC
+AHC CARE M&F 6-13 W/ MDC
+AHC CARE MALE 14-20 W/ MDC
+AHC CARE FEMALE 14-20 W/ MDC
+AHC CARE MALE 21-44 W/ MDC
+AHC CARE FEMALE 21-44 W/ MDC
+AHC CARE M&F 45-64 W/ MDC
+AHC CARE M&F 65+ W/ MDC
+AHC CARE M&F < 1 NO MDC PPC
+AHC CARE M&F 1-5 NO MDC PPC
+AHC CARE M&F 6-13 NO MDC PPC
+
+Revised 03/27/2026
+
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+10/01/1996
+10/01/1982
+10/01/1996
+10/01/1982
+10/01/2007
+10/01/2008
+10/01/2007
+10/01/2008
+10/01/2001
+10/01/2001
+10/01/2001
+10/01/2001
+10/01/2001
+10/01/2001
+10/01/2001
+10/01/2001
+10/01/2001
+10/01/2001
+10/01/2001
+10/01/2001
+10/01/2001
+10/01/2001
+10/01/2001
+10/01/2001
+10/01/2001
+10/01/2001
+10/01/2001
+10/01/2001
+10/01/2001
+
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+21 | P a g e
+
+Reference Subsystem Codes and Values 2026
+331D
+331E
+331F
+331G
+331H
+331J
+3311
+3312
+3313
+3314
+3315
+3316
+3317
+3318
+3319
+332A
+332B
+332C
+332D
+332E
+332F
+332G
+332H
+332J
+3321
+3322
+3323
+3324
+3325
+3326
+3327
+3328
+3329
+340Z
+3400
+341Z
+3410
+342Z
+3420
+
+AHC CARE MALE 14-20 NO MDC PPC
+AHC CARE FEMALE 14-20 NO MDC PPC
+AHC CARE MALE 21-44 NO MDC PPC
+AHC CARE FEMALE 21-44 NO MDC PPC
+AHC CARE M&F 45-64 NO MDC PPC
+AHC CARE M&F 65+ NO MDC PPC
+AHC CARE M&F < 1 NO MDC
+AHC CARE M&F 1-5 NO MDC
+AHC CARE M&F 6-13 NO MDC
+AHC CARE MALE 14-20 NO MDC
+AHC CARE FEMALE 14-20 NO MDC
+AHC CARE MALE 21-44 NO MDC
+AHC CARE FEMALE 21-44 NO MDC
+AHC CARE M&F 45-64 NO MDC
+AHC CARE M&F 65+ NO MDC
+AHC CARE M&F < 1 W/ QMB PPC
+AHC CARE M&F 1-5 W/ QMB PPC
+AHC CARE M&F 6-13 W/ QMB PPC
+AHC CARE MALE 14-20 W/ QMB PPC
+AHC CARE FEMALE 14-20 W/ QMB PPC
+AHC CARE MALE 21-44 W/ QMB PPC
+AHC CARE FEMALE 21-44 W/ QMB PPC
+AHC CARE M&F 45-64 W/ QMB PPC
+AHC CARE M&F 65+ W/ QMB PPC
+AHC CARE M&F < 1 W/ QMB
+AHC CARE M&F 1-5 W/ QMB
+AHC CARE M&F 6-13 W/ QMB
+AHC CARE MALE 14-20 W/ QMB
+AHC CARE FEMALE 14-20 W/ QMB
+AHC CARE MALE 21-44 W/ QMB
+AHC CARE FEMALE 21-44 W/ QMB
+AHC CARE M&F 45-64 W/ QMB
+AHC CARE M&F 65+ W/ QMB
+MED ELIGIBILITY W/ MDC PPC
+MED ELIGIBILITY W/ MDC
+MED ELIGIBILITY NON-MDC PPC
+MED ELIGIBILITY NON-MDC
+MED ELIGIBILITY W/ QMB PPC
+MED ELIGIBILITY W/ QMB
+
+Revised 03/27/2026
+
+10/01/2001
+10/01/2001
+10/01/2001
+10/01/2001
+10/01/2001
+10/01/2001
+10/01/2001
+10/01/2001
+10/01/2001
+10/01/2001
+10/01/2001
+10/01/2001
+10/01/2001
+10/01/2001
+10/01/2001
+10/01/2001
+10/01/2001
+10/01/2001
+10/01/2001
+10/01/2001
+10/01/2001
+10/01/2001
+10/01/2001
+10/01/2001
+10/01/2001
+10/01/2001
+10/01/2001
+10/01/2001
+10/01/2001
+10/01/2001
+10/01/2001
+10/01/2001
+10/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+06/01/2018
+06/01/2018
+06/01/2018
+22 | P a g e
+
+Reference Subsystem Codes and Values 2026
+350D
+350E
+350F
+350G
+350H
+350J
+3500
+3504
+3505
+3506
+3507
+3508
+3509
+351D
+351E
+351F
+351G
+351H
+351J
+3510
+3514
+3515
+3516
+3517
+3518
+3519
+352D
+352E
+352F
+352G
+352H
+352J
+3520
+3524
+3525
+3526
+3527
+3528
+3529
+
+ADULT 40-100% MALE 14-20 W/ MDC PPC
+ADULT 40-100% FEMALE 14-20 W/ MDC PPC
+ADULT 40-100% MALE 21-44 W/ MDC PPC
+ADULT 40-100% FEMALE 21-44 W/ MDC PPC
+ADULT 40-100% M&F 45-64 W/ MDC PPC
+ADULT 40-100% M&F 65+ W/ MDC PPC
+ADULT 40-100% FOR FINANCE/FIZ SUPPOR
+ADULT 40-100% MALE 14-20 W/ MDC
+ADULT 40-100% FEMALE 14-20 W/ MDC
+ADULT 40-100% MALE 21-44 W/ MDC
+ADULT 40-100% FEMALE 21-44 W/ MDC
+ADULT 40-100% M&F 45-64 W/ MDC
+ADULT 40-100% M&F 65+ W/ MDC
+ADULT 40-100% MALE 14-20 NO MDC PPC
+ADULT 40-100% FEMALE 14-20 NO MDC PPC
+ADULT 40-100% MALE 21-44 NO MDC PPC
+ADULT 40-100% FEMALE 21-44 NO MDC PPC
+ADULT 40-100% M&F 45-64 NO MDC PPC
+ADULT 40-100% M&F 65+ NO MDC PPC
+ADULT 40-100% FOR FINANCE/FIZ SUPPOR
+ADULT 40-100% MALE 14-20 NO MDC
+ADULT 40-100% FEMALE 14-20 NO MDC
+ADULT 40-100% MALE 21-44 NO MDC
+ADULT 40-100% FEMALE 21-44 NO MDC
+ADULT 40-100% M&F 45-64 NO MDC
+ADULT 40-100% M&F 65+ NO MDC
+ADULT 40-100% MALE 14-20 W/ QMB PPC
+ADULT 40-100% FEMALE 14-20 W/ QMB PPC
+ADULT 40-100% MALE 21-44 W/ QMB PPC
+ADULT 40-100% FEMALE 21-44 W/ QMB PPC
+ADULT 40-100% M&F 45-64 W/ QMB PPC
+ADULT 40-100% M&F 65+ W/ QMB PPC
+ADULT 40-100% FOR FINANCE/FIZ SUPPORT
+ADULT 40-100% MALE 14-20 W/ QMB
+ADULT 40-100% FEMALE 14-20 W/ QMB
+ADULT 40-100% MALE 21-44 W/ QMB
+ADULT 40-100% FEMALE 21-44 W/ QMB
+ADULT 40-100% M&F 45-64 W/ QMB
+ADULT 40-100% M&F 65+ W/ QMB
+
+Revised 03/27/2026
+
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+23 | P a g e
+
+Reference Subsystem Codes and Values 2026
+360A
+360B
+360C
+360D
+360E
+360F
+360G
+360H
+360J
+3601
+3602
+3603
+3604
+3605
+3606
+3607
+3608
+3609
+361A
+361B
+361C
+361D
+361E
+361F
+361G
+361H
+361J
+3611
+3612
+3613
+3614
+3615
+3616
+3617
+3618
+3619
+362A
+362B
+362C
+
+AHC CARE/MI M&F < 1 W/ MDC PPC
+AHC CARE/MI M&F 1-5 W/ MDC PPC
+AHC CARE/MI M&F 6-13 W/ MDC PPC
+AHC CARE/MI MALE 14-20 W/ MDC PPC
+AHC CARE/MI FEMALE 14-20 W/ MDC PPC
+AHC CARE/MI MALE 21-44 W/ MDC PPC
+AHC CARE/MI FEMALE 21-44 W/ MDC PPC
+AHC CARE/MI M&F 45-64 W/ MDC PPC
+AHC CARE/MI M&F 65+ W/ MDC PPC
+AHC CARE/MI M&F < 1 W/ MDC
+AHC CARE/MI M&F 1-5 W/ MDC
+AHC CARE/MI M&F 6-13 W/ MDC
+AHC CARE/MI MALE 14-20 W/ MDC
+AHC CARE/MI FEMALE 14-20 W/ MDC
+AHC CARE/MI MALE 21-44 W/ MDC
+AHC CARE/MI FEMALE 21-44 W/ MDC
+AHC CARE/MI M&F 45-64 W/ MDC
+AHC CARE/MI M&F 65+ W/ MDC
+AHC CARE/MI M&F < 1 NO MDC PPC
+AHC CARE/MI M&F 1-5 NO MDC PPC
+AHC CARE/MI M&F 6-13 NO MDC PPC
+AHC CARE/MI MALE 14-20 NO MDC PPC
+AHC CARE/MI FEMALE 14-20 NO MDC PPC
+AHC CARE/MI MALE 21-44 NO MDC PPC
+AHC CARE/MI FEMALE 21-44 NO MDC PPC
+AHC CARE/MI M&F 45-64 NO MDC PPC
+AHC CARE/MI M&F 65+ NO MDC PPC
+AHC CARE/MI M&F < 1 NO MDC
+AHC CARE/MI M&F 1-5 NO MDC
+AHC CARE/MI M&F 6-13 NO MDC
+AHC CARE/MI MALE 14-20 NO MDC
+AHC CARE/MI FEMALE 14-20 NO MDC
+AHC CARE/MI MALE 21-44 NO MDC
+AHC CARE/MI FEMALE 21-44 NO MDC
+AHC CARE/MI M&F 45-64 NO MDC
+AHC CARE/MI M&F 65+ NO MDC
+AHC CARE/MI M&F < 1 W/ QMB PPC
+AHC CARE/MI M&F 1-5 W/ QMB PPC
+AHC CARE/MI M&F 6-13 W/ QMB PPC
+
+Revised 03/27/2026
+
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+24 | P a g e
+
+Reference Subsystem Codes and Values 2026
+362D
+362E
+362F
+362G
+362H
+362J
+3621
+3622
+3623
+3624
+3625
+3626
+3627
+3628
+3629
+370D
+370E
+370F
+370G
+370H
+370J
+3704
+3705
+3706
+3707
+3708
+3709
+371D
+371E
+371F
+371G
+371H
+371J
+3714
+3715
+3716
+3717
+3718
+3719
+
+AHC CARE/MI MALE 14-20 W/ QMB PPC
+AHC CARE/MI FEMALE 14-20 W/ QMB PPC
+AHC CARE/MI MALE 21-44 W/ QMB PPC
+AHC CARE/MI FEMALE 21-44 W/ QMB PPC
+AHC CARE/MI M&F 45-64 W/ QMB PPC
+AHC CARE/MI M&F 65+ W/ QMB PPC
+AHC CARE/MI M&F < 1 W/ QMB
+AHC CARE/MI M&F 1-5 W/ QMB
+AHC CARE/MI M&F 6-13 W/ QMB
+AHC CARE/MI MALE 14-20 W/ QMB
+AHC CARE/MI FEMALE 14-20 W/ QMB
+AHC CARE/MI MALE 21-44 W/ QMB
+AHC CARE/MI FEMALE 21-44 W/ QMB
+AHC CARE/MI M&F 45-64 W/ QMB
+AHC CARE/MI M&F 65+ W/ QMB
+ADULT <40% EXP MALE 14-20 W/ MDC PPC
+ADULT <40% EXP FEMALE 14-20 W/ MDC PPC
+
+ADULT <40% EXP MALE 21-44 W/ MDC PPC
+ADULT <40% EXP FEMALE 21-44 W/ MDC PPC
+
+ADULT <40% EXP M&F 45-64 W/ MDC PPC
+ADULT <40% EXP M&F 65+ W/ MDC PPC
+ADULT <40% EXP MALE 14-20 W/ MDC
+ADULT <40% EXP FEMALE 14-20 W/ MDC
+ADULT <40% EXP MALE 21-44 W/ MDC
+ADULT <40% EXP FEMALE 21-44 W/ MDC
+ADULT <40% EXP M&F 45-64 W/ MDC
+ADULT <40% EXP M&F 65+ W/ MDC
+ADULT <40% EXP MALE 14-20 NO MDC PPC
+ADULT <40% EXP FEMALE 14-20 NO MDC PPC
+
+ADULT <40% EXP MALE 21-44 NO MDC PPC
+ADULT <40% EXP FEMALE 21-44 NO MDC PPC
+
+ADULT <40% EXP M&F 45-64 NO MDC PPC
+ADULT <40% EXP M&F 65+ NO MDC PPC
+ADULT <40% EXP MALE 14-20 NO MDC
+ADULT <40% EXP FEMALE 14-20 NO MDC
+ADULT <40% EXP MALE 21-44 NO MDC
+ADULT <40% EXP FEMALE 21-44 NO MDC
+ADULT <40% EXP M&F 45-64 NO MDC
+ADULT <40% EXP M&F 65+ NO MDC
+
+Revised 03/27/2026
+
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+04/01/2001
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+
+25 | P a g e
+
+Reference Subsystem Codes and Values 2026
+372D
+372E
+372F
+372G
+372H
+372J
+3724
+3725
+3726
+3727
+3728
+3729
+390D
+390E
+390F
+390G
+390H
+390J
+3900
+3904
+3905
+3906
+3907
+3908
+3909
+391D
+391E
+391F
+391G
+391H
+391J
+3910
+3914
+3915
+3916
+3917
+3918
+3919
+392D
+
+ADULT <40% EXP MALE 14-20 W/ QMB PPC
+ADULT <40% EXP FEMALE 14-20 W/ QMB PPC
+
+ADULT <40% EXP MALE 21-44 W/ QMB PPC
+ADULT <40% EXP FEMALE 21-44 W/ QMB PPC
+
+ADULT <40% EXP M&F 45-64 W/ QMB PPC
+ADULT <40% EXP M&F 65+ W/ QMB PPC
+ADULT <40% EXP MALE 14-20 W/ QMB
+ADULT <40% EXP FEMALE 14-20 W/ QMB
+ADULT <40% EXP MALE 21-44 W/ QMB
+ADULT <40% EXP FEMALE 21-44 W/ QMB
+ADULT <40% EXP M&F 45-64 W/ QMB
+ADULT <40% EXP M&F 65+ W/ QMB
+NEWLY ELIGIBLE MALE 14-20 W/ MDC PPC
+NEWLY ELIGIBLE FEMALE 14-20 W/ MDC PPC
+
+NEWLY ELIGIBLE MALE 21-44 W/ MDC PPC
+NEWLY ELIGIBLE FEMALE 21-44 W/ MDC PPC
+
+NEWLY ELIGIBLE M&F 45-64 W/ MDC PPC
+NEWLY ELIGIBLE M&F 65+ W/ MDC PPC
+NEWLY ELIGIBLE FOR FINANCE/FIZ SUPPORT
+NEWLY ELIGIBLE MALE 14-20 W/ MDC
+NEWLY ELIGIBLE FEMALE 14-20 W/ MDC
+NEWLY ELIGIBLE MALE 21-44 W/ MDC
+NEWLY ELIGIBLE FEMALE 21-44 W/ MDC
+NEWLY ELIGIBLE M&F 45-64 W/ MDC
+NEWLY ELIGIBLE M&F 65+ W/ MDC
+NEWLY ELIGIBLE MALE 14-20 NO MDC PPC
+NEWLY ELIGIBLE FEMALE 14-20 NO MDC PPC
+
+NEWLY ELIGIBLE MALE 21-44 NO MDC PPC
+NEWLY ELIGIBLE FEMALE 21-44 NO MDC PPC
+
+NEWLY ELIGIBLE M&F 45-64 NO MDC PPC
+NEWLY ELIGIBLE M&F 65+ NO MDC PPC
+NEWLY ELIGIBLE FOR FINANCE/FIZ SUPPORT
+
+NEWLY ELIGIBLE MALE 14-20 NO MDC
+NEWLY ELIGIBLE FEMALE 14-20 NO MDC
+NEWLY ELIGIBLE MALE 21-44 NO MDC
+NEWLY ELIGIBLE FEMALE 21-44 NO MDC
+NEWLY ELIGIBLE M&F 45-64 NO MDC
+NEWLY ELIGIBLE M&F 65+ NO MDC
+NEWLY ELIGIBLE MALE 14-20 W/ QMB PPC
+
+Revised 03/27/2026
+
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+26 | P a g e
+
+Reference Subsystem Codes and Values 2026
+392E
+392F
+392G
+392H
+392J
+3920
+3924
+3925
+3926
+3927
+3928
+3929
+410A
+410B
+410C
+410D
+410E
+4101
+4102
+4103
+4104
+4105
+411A
+411B
+411C
+411D
+411E
+4111
+4112
+4113
+4114
+4115
+420A
+420B
+420C
+420D
+420E
+4201
+4202
+
+NEWLY ELIGIBLE FEMALE 14-20 W/ QMB PPC
+
+NEWLY ELIGIBLE MALE 21-44 W/ QMB PPC
+NEWLY ELIGIBLE FEMALE 21-44 W/ QMB PPC
+
+NEWLY ELIGIBLE M&F 45-64 W/ QMB PPC
+NEWLY ELIGIBLE M&F 65+ W/ QMB PPC
+NEWLY ELIGIBLE FOR FINANCE/FIZ SUPPORT
+
+NEWLY ELIGIBLE MALE 14-20 W/ QMB
+NEWLY ELIGIBLE FEMALE 14-20 W/ QMB
+NEWLY ELIGIBLE MALE 21-44 W/ QMB
+NEWLY ELIGIBLE FEMALE 21-44 W/ QMB
+NEWLY ELIGIBLE M&F 45-64 W/ QMB
+NEWLY ELIGIBLE M&F 65+ W/ QMB
+EAC < 1 M & F WITH MEDICARE PPC
+EAC 01-05 M & F WITH MEDICARE PPC
+EAC 06-13 M & F WITH MEDICARE PPC
+EAC 14-20 MALE WITH MEDICARE PPC
+EAC 14-20 FEMALE WITH MEDICARE PPC
+EAC <1 M & F WITH MEDICARE
+EAC 01-05 M & F WITH MEDICARE
+EAC 06-13 M & F WITH MEDICARE
+EAC 14-20 MALE WITH MEDICARE
+EAC 14-20 FEMALE WITH MEDICARE
+EAC < 1 M & F NON-MEDICARE PPC
+EAC 01-05 M & F NON-MEDICARE PPC
+EAC 06-13 M & F NON-MEDICARE PPC
+EAC 14-20 MALE NON-MEDICARE PPC
+EAC 14-20 FEMALE NON-MEDICARE PPC
+EAC <1 M & F NON-MEDICARE
+EAC 01-05 M & F NON-MEDICARE
+EAC 06-13 M & F NON-MEDICARE
+EAC 14-20 MALE NON-MEDICARE
+EAC 14-20 FEMALE NON-MEDICARE
+ELIC < 1 M & F WITH MEDICARE PPC
+ELIC 01-05 M & F WITH MEDICARE PPC
+ELIC 06-13 M & F WITH MEDICARE PPC
+ELIC 14-20 MALE WITH MEDICARE PPC
+ELIC 14-20 FEMALE WITH MEDICARE PPC
+ELIC <1 M & F WITH MEDICARE
+ELIC 01-05 M & F WITH MEDICARE
+
+Revised 03/27/2026
+
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+10/01/1996
+10/01/1996
+10/01/1996
+10/01/1996
+10/01/1996
+10/01/1997
+10/01/1997
+10/01/1997
+10/01/1996
+10/01/1996
+10/01/1996
+10/01/1996
+10/01/1996
+10/01/1996
+10/01/1996
+10/01/1997
+10/01/1997
+10/01/1997
+10/01/1996
+10/01/1996
+10/01/1996
+10/01/1996
+10/01/1996
+10/01/1996
+10/01/1996
+10/01/1997
+10/01/1997
+
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+27 | P a g e
+
+Reference Subsystem Codes and Values 2026
+4203
+4204
+4205
+421A
+421B
+421C
+421D
+421E
+4211
+4212
+4213
+4214
+4215
+430A
+430B
+430C
+430D
+430E
+4301
+4302
+4303
+4304
+4305
+431A
+431B
+431C
+431D
+431E
+4311
+4312
+4313
+4314
+4315
+432A
+432B
+432C
+432D
+432E
+4321
+
+ELIC 06-13 M & F WITH MEDICARE
+ELIC 14-20 MALE WITH MEDICARE
+ELIC 14-20 FEMALE WITH MEDICARE
+ELIC < 1 M & F NON-MEDICARE PPC
+ELIC 01-05 M & F NON-MEDICARE PPC
+ELIC 06-13 M & F NON-MEDICARE PPC
+ELIC 14-20 MALE NON-MEDICARE PPC
+ELIC 14-20 FEMALE NON-MEDICARE PPC
+ELIC <1 M & F NON-MEDICARE
+ELIC 01-05 M & F NON-MEDICARE
+ELIC 06-13 M & F NON-MEDICARE
+ELIC 14-20 MALE NON-MEDICARE
+ELIC 14-20 FEMALE NON-MEDICARE
+SOBRA CHILD < 1 M & F W/MEDICARE PPC
+SOBRA CHILD 01-05 M & F W/MEDICARE PPC
+SOBRA CHILD 06-13 M & F W/MEDICARE PPC
+SOBRA CHILD 14-20 MALE W/MEDICARE PPC
+SOBRA CHILD 14-20 FEMALE W/MEDICARE PPC
+SOBRA CHILD <1 M & F W/MEDICARE
+SOBRA CHILD 01-05 M & F W/MEDICARE
+SOBRA CHILD 06-13 M & F W/MEDICARE
+SOBRA CHILD 14-20 MALE W/MEDICARE
+SOBRA CHILD 14-20 FEMALE W/MEDICARE
+SOBRA CHILD < 1 M & F NON-MEDICARE PPC
+SOBRA CHILD 01-05 M & F NON-MEDICARE PPC
+SOBRA CHILD 6-13 M&F NO MDC PPC
+SOBRA CHILD 14-20 MALE NON-MEDICARE PPC
+SOBRA CHILD 14-20 FEMALE NON-MEDICARE PP
+
+SOBRA CHILD <1 M & F NON-MEDICARE
+SOBRA CHILD 01-05 M & F NON-MEDICARE
+SOBRA CHILD 06-13 M & F NON-MEDICARE
+SOBRA CHILD 14-20 MALE NON-MEDICARE
+SOBRA CHILD 14-20 FEMALE NON-MEDICARE
+SOBRA CHILD < 1 M & F WITH QMB PPC
+SOBRA CHILD 01-05 M & F WITH QMB PPC
+SOBRA CHILD 06-13 M & F WITH QMB PPC
+SOBRA CHILD 14-20 MALE WITH QMB PPC
+SOBRA CHILD 14-20 FEMALE WITH QMB PPC
+SOBRA CHILD <1 M & F WITH QMB
+
+Revised 03/27/2026
+
+10/01/1997
+10/01/1996
+10/01/1996
+10/01/1996
+10/01/1996
+10/01/1996
+10/01/1996
+10/01/1996
+10/01/1997
+10/01/1997
+10/01/1997
+10/01/1996
+10/01/1996
+10/01/1996
+10/01/1996
+10/01/1996
+10/01/1996
+10/01/1996
+10/01/1997
+10/01/1997
+10/01/1997
+10/01/1997
+10/01/1997
+10/01/1996
+10/01/1996
+10/01/1996
+10/01/1996
+10/01/1996
+10/01/1997
+10/01/1997
+10/01/1997
+10/01/1997
+10/01/1997
+10/01/1996
+10/01/1996
+10/01/1996
+10/01/1996
+10/01/1996
+10/01/1997
+
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+
+28 | P a g e
+
+Reference Subsystem Codes and Values 2026
+4322
+4323
+4324
+4325
+440A
+440B
+440C
+440D
+440E
+4400
+4401
+4402
+4403
+4404
+4405
+441A
+441B
+441C
+441D
+441E
+4410
+4411
+4412
+4413
+4414
+4415
+442A
+442B
+442C
+442D
+442E
+4420
+4421
+4422
+4423
+4424
+4425
+451E
+451G
+
+SOBRA CHILD 01-05 M & F WITH QMB
+SOBRA CHILD 06-13 M & F WITH QMB
+SOBRA CHILD 14-20 MALE WITH QMB
+SOBRA CHILD 14-20 FEMALE WITH QMB
+SOBRA 100-133% M&F < 1 W/ MDC PPC
+SOBRA 100-133% M&F 1-5 W/ MDC PPC
+SOBRA 100-133% M&F 6-13 W/ MDC PPC
+SOBRA 100-133% MALE 14-20 W/ MDC PPC
+SOBRA 100-133% FEMALE 14-20 W/ MDC PPC
+SOBRA 100-133% FOR FINANCE/FIZ SUPPORT
+SOBRA 100-133% M&F < 1 W/ MDC
+SOBRA 100-133% M&F 1-5 W/ MDC
+SOBRA 100-133% M&F 6-13 W/ MDC
+SOBRA 100-133% MALE 14-20 W/ MDC
+SOBRA 100-133% FEMALE 14-20 W/ MDC
+SOBRA 100-133% M&F < 1 NO MDC PPC
+SOBRA 100-133% M&F 1-5 NO MDC PPC
+SOBRA 100-133% M&F 6-13 NO MDC PPC
+SOBRA 100-133% MALE 14-20 NO MDC PPC
+SOBRA 100-133% FEMALE 14-20 NO MDC PPC
+SOBRA 100-133% FOR FINANCE/FIZ SUPPORT
+SOBRA 100-133% M&F < 1 NO MDC
+SOBRA 100-133% M&F 1-5 NO MDC
+SOBRA 100-133% M&F 6-13 NO MDC
+SOBRA 100-133% MALE 14-20 NO MDC
+SOBRA 100-133% FEMALE 14-20 NO MDC
+SOBRA 100-133% M&F < 1 W/ QMB PPC
+SOBRA 100-133% M&F 1-5 W/ QMB PPC
+SOBRA 100-133% M&F 6-13 W/ QMB PPC
+SOBRA 100-133% MALE 14-20 W/ QMB PPC
+SOBRA 100-133% FEMALE 14-20 W/ QMB PPC
+SOBRA 100-133% FOR FINANCE/FIZ SUPPORT
+SOBRA 100-133% M&F < 1 W/ QMB
+SOBRA 100-133% M&F 1-5 W/ QMB
+SOBRA 100-133% M&F 6-13 W/ QMB
+SOBRA 100-133% MALE 14-20 W/ QMB
+SOBRA 100-133% FEMALE 14-20 W/ QMB
+BC PATIENT FEMALE 14-20 NO MDC
+BC PATIENT FEMALE 21-44 NO MDC
+
+Revised 03/27/2026
+
+10/01/1997
+10/01/1997
+10/01/1997
+10/01/1997
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+01/01/2014
+12/01/2001
+12/01/2001
+29 | P a g e
+
+Reference Subsystem Codes and Values 2026
+451H
+451J
+4510
+4515
+4517
+4518
+4519
+461E
+461G
+461H
+461J
+4610
+4615
+4617
+4618
+4619
+500C
+500E
+500G
+500H
+5003
+5005
+5007
+5008
+501C
+501E
+501G
+501H
+5013
+5015
+5017
+5018
+502C
+502E
+502G
+502H
+5023
+5025
+5027
+
+BC PATIENT FEMALE 45-64 NO MDC
+BC PATIENT FEMALE 65 NO MDC
+BC PATIENT FOR FINANCE/FIZ SUPPORT
+BC PATIENT FEMALE 14-20 NO MDC
+BC PATIENT FEMALE 21-44 NO MDC
+BC PATIENT FEMALE 45-64 NO MDC
+BC PATIENT FEMALE 65 NO MDC
+CC PATIENT FEMALE 14-20 NO MDC
+CC PATIENT FEMALE 21-44 NO MDC
+CC PATIENT FEMALE 45-64 MP MDC
+CC PATIENT FEMALE 65 NO MDC
+CC PATIENT FOR FINANCE/FIZ SUPPORT
+CC PATIENT FEMALE 14-20 NO MDC
+CC PATIENT FEMALE 21-44 NO MDC
+CC PATIENT FEMALE 45-64 NO MDC
+CC PATIENT FEMALE 65 NO MDC
+SOBRA PREG 09-13 FEMALE W/MEDICARE PPC
+SOBRA PREG 14-20 FEMALE W/MEDICARE PPC
+SOBRA PREG 21-44 FEMALE W/MEDICARE PPC
+SOBRA PREG 45-64 FEMALE W/MEDICARE PPC
+SOBRA PREG 09-13 FEMALE WITH MEDICARE
+SOBRA PREG 14-20 FEMALE WITH MEDICARE
+SOBRA PREG 21-44 FEMALE WITH MEDICARE
+SOBRA PREG 45-64 FEMALE WITH MEDICARE
+SOBRA PREG 09-13 FEMALE NON-MEDICARE PPC
+SOBRA PREG 14-20 FEMALE NON-MEDICARE PPC
+SOBRA PREG 21-44 FEMALE NON-MEDICARE PPC
+SOBRA PREG 45-64 FEMALE NON-MEDICARE PPC
+SOBRA PREG 09-13 FEMALE NON-MEDICARE
+SOBRA PREG 14-20 FEMALE NON-MEDICARE
+SOBRA PREG 21-44 FEMALE NON-MEDICARE
+SOBRA PREG 45-64 FEMALE NON-MEDICARE
+SOBRA PREG 09-13 FEMALE WITH QMB PPC
+SOBRA PREG 14-20 FEMALE WITH QMB PPC
+SOBRA PREG 21-44 FEMALE WITH QMB PPC
+SOBRA PREG 45-64 FEMALE WITH QMB PPC
+SOBRA PREG 09-13 FEMALE WITH QMB
+SOBRA PREG 14-20 FEMALE WITH QMB
+SOBRA PREG 21-44 FEMALE WITH QMB
+
+Revised 03/27/2026
+
+12/01/2001
+12/01/2001
+10/01/1982
+12/01/2001
+12/01/2001
+12/01/2001
+12/01/2001
+12/01/2001
+12/01/2001
+12/01/2001
+12/01/2001
+10/01/1982
+12/01/2001
+12/01/2001
+12/01/2001
+12/01/2001
+10/01/1996
+10/01/1996
+10/01/1996
+10/01/1996
+10/01/1997
+10/01/1997
+10/01/1997
+10/01/1997
+10/01/1996
+10/01/1996
+10/01/1996
+10/01/1996
+10/01/1997
+10/01/1997
+10/01/1997
+10/01/1997
+10/01/1996
+10/01/1996
+10/01/1996
+10/01/1996
+10/01/1997
+10/01/1997
+10/01/1997
+30 | P a g e
+
+Reference Subsystem Codes and Values 2026
+5028
+5500
+5510
+5520
+6011
+6012
+6013
+6014
+6015
+6514
+6515
+6516
+6517
+6518
+6519
+6614
+6615
+6616
+6617
+6618
+6619
+7000
+7050
+7100
+7150
+7200
+7300
+7400
+7450
+7500
+7550
+7600
+7700
+7750
+7800
+7850
+8020
+8040
+8050
+
+SOBRA PREG 45-64 FEMALE WITH QMB
+SOBRA FPS FEMALE WITH MEDICARE
+SOBRA FPS FEMALE WITH NON-MEDICARE
+SOBRA FPS FEMALE WITH QMB
+KIDS <1M&F NON-MEDICARE
+KIDS 1-5 M & F NON-MEDICARE
+KIDS 6-13 M & F NON-MEDICARE
+KIDS 14-19 MALE NON-MEDICARE
+KIDS 14-19 FEMALE NON-MEDICARE
+SOBRA HIFA 14 - 20 MALE NON-MEDICARE
+SOBRA HIFA 14 - 20 FEMALE NON-MEDICARE
+SOBRA HIFA 21 - 44 MALE NON-MEDICARE
+SOBRA HIFA 21 - 44 FEMALE NON-MEDICARE
+SOBRA HIFA 45 - 64 MALE/FEMALE NON-MDC
+SOBRA HIFA 65+ MALE/FEMALE NON-MDC
+KC HIFA 14 - 20 MALE NON-MEDICARE
+KC HIFA 14 - 20 FEMALE NON-MEDICARE
+KC HIFA 21 - 44 MALE NON-MEDICARE
+KC HIFA 21 - 44 FEMALE NON-MEDICARE
+KC HIFA 45
+KC HIFA 65+ MALE/FEMALE NON
+CMHS
+CMHS PPC
+SMI
+SMI PPC
+CMHS/DD/18-20
+CMHS/SED
+GENERAL MENTAL HEALTH SERVICES
+GENERAL MENTAL HEALTH SERVICES PPC
+DD CHILD
+DD CHILD PPC
+SUBSTANCE ABUSE MENTAL HEALTH SERVICES
+DD ADULT
+DD ADULT PPC
+CMDP
+CMDP PPC
+QMB ONLY
+SLMB
+QI1
+
+Revised 03/27/2026
+
+10/01/1997
+10/01/1997
+10/01/1997
+10/01/1997
+10/01/1998
+10/01/1998
+10/01/1998
+10/01/1998
+10/01/1998
+10/01/2002
+10/01/2002
+10/01/2002
+10/01/2002
+10/01/2002
+10/01/2002
+10/01/2002
+10/01/2002
+10/01/2002
+10/01/2002
+10/01/2002
+10/01/2002
+11/01/1992
+10/01/2014
+11/01/1992
+10/01/2014
+11/01/1992
+11/01/1992
+10/01/1995
+10/01/2014
+10/01/2014
+10/01/2014
+10/01/1995
+10/01/2014
+10/01/2014
+10/01/2014
+10/01/2014
+07/01/1989
+10/01/2007
+10/01/2007
+
+09/30/2018
+09/30/2018
+09/30/2018
+
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+09/30/2018
+
+09/28/2016
+09/28/2016
+
+09/28/2016
+
+31 | P a g e
+
+Reference Subsystem Codes and Values 2026
+860Z
+8600
+861Z
+8610
+862Z
+8620
+870Z
+8700
+871Z
+8710
+872Z
+8720
+9000
+9810
+9811
+9812
+9813
+9814
+9815
+9816
+9817
+9818
+9819
+9820
+9821
+9822
+9823
+9833
+9834
+9835
+9836
+9837
+9839
+9844
+9845
+9846
+9887
+9898
+9900
+
+SSI BLIND FREEDOM/WORK W/ MDC PPC
+SSI BLIND FREEDOM/WORK W/ MDC
+SSI BLIND FREEDOM/WORK NON-MDC PPC
+SSI BLIND FREEDOM/WORK NON-MDC
+SSI BLIND FREEDOM/WORK W/ QMB PPC
+SSI BLIND FREEDOM/WORK W/ QMB
+SSI DISABLED FREEDOM/WORK W/ MDC PPC
+SSI DISABLED FREEDOM/WORK W/ MDC
+SSI DISABLED FREEDOM/WORK NON-MDC PPC
+SSI DISABLED FREEDOM/WORK NON-MDC
+SSI DISABLED FREEDOM/WORK W/ QMB PPC
+SSI DISABLED FREEDOM/WORK W/ QMB
+PRESUMPTIVE ELIGIBILITY
+RURAL HOSP PMT TACI <1
+RURAL HOSP PMT TACI <1 Expanded
+RURAL HOSP PMT TACI (1-13)
+RURAL HOSP PMT TACI (1-13) Expanded
+RURAL HOSP PMT MALE
+RURAL HOSP PMT MALE Expanded
+RURAL HOSP PMT FMAL
+RURAL HOSP PMT FMAL Expanded
+RURAL HOSP PMT ADLT
+RURAL HOSP PMT ADLT Expanded
+RURAL HOSP PMT SSI W/MEDICARE
+RURAL HOSP PMT SSI W/0 MEDICARE
+RURAL HOSP PMT For SSI 2/MDC Expanded
+RURAL HOSP PMT For SSI NO MDC Expanded
+RURAL HOSP PMT For SSI AHCCCS CARE
+RURAL HOSP PMT For MED ELIGIBLES
+RURAL HOSPITAL PMT ADULT 10-100%
+RURAL HOSP PMT For AHC CARE/MI
+RURAL HOSPITAL PMT ADULT <40%
+RURAL HOSPITAL PMT ADULT >100%
+RURAL HOSPITAL PMT SOBRA CHILD 100-133%
+RURAL HOSP PMT For BCTP
+RURAL HOSP PMT For CCTP
+RH PAYMENT FREEDOM TO WORK
+NURSING FACILITY SUPPLEMENTAL
+HOSP. KICK PAYMENT AC/XE
+
+Revised 03/27/2026
+
+10/01/2001
+10/01/2001
+10/01/2001
+10/01/2001
+10/01/2001
+10/01/2001
+10/01/2001
+10/01/2001
+10/01/2001
+10/01/2001
+10/01/2001
+10/01/2001
+10/01/2013
+10/01/2009
+10/01/2009
+10/01/2009
+10/01/2009
+10/01/2009
+10/01/2009
+10/01/2009
+10/01/2009
+10/01/2009
+10/01/2009
+10/01/2009
+10/01/2009
+10/01/2009
+10/01/2009
+10/01/2009
+10/01/2009
+12/01/2013
+10/01/2009
+12/01/2013
+12/01/2013
+12/01/2013
+10/01/2009
+10/01/2009
+10/01/2009
+10/01/2010
+10/01/2001
+32 | P a g e
+
+Reference Subsystem Codes and Values 2026
+9901
+9902
+9910
+9911
+9920
+9921
+9922
+9923
+9930
+9933
+9934
+9935
+9936
+9937
+9939
+9944
+9945
+9946
+9950
+9960
+9965
+9966
+9990
+
+HOSP. KICK PAYMENT AC/XW
+HOSP. KICK PAYMENT MD/XW
+TANF & SOBRA CHILDREN MAO KICK PAYMENT
+
+SB PAYMENT FOR TANF Expanded
+SSI W/MEDICARE KICK PAYMENT
+SSI W/O MEDICARE KICK PAYMENT
+SB PAYMENT FOR SSI Expanded W/MDC
+SB PAYMENT FOR SSI Expanded NO MDC
+EAC/ELIC & MN/MI KICK PAYMENT
+SB PAYMENT FOR AHCCS CARE
+SB PAYMENT FOR MED ELIGIBLES
+BIRTH SUPP PAYMENT ADULT 40-100%
+SB PAYMENT FOR AHC CARE/MI
+BIRTH SUPP PAYMENT ADULT <40%
+BIRTH SUPP PAYMENT NEWLY ELIGIBLE
+BIRTH SUPP PAYMENT SOBRA 100-133%
+SB KICK PAYMENT FOR BCTP
+SB KICK PAYMENT FOR CCTP
+S.O.B.R.A. KICK PAYMENT
+KIDSCARE KICK PAYMENT
+SB HIFA NB KICK
+KC HIFA NB KICK
+SOBRA SUPPLEMENTAL PAYMENT
+
+Revised 03/27/2026
+
+10/01/2001
+10/01/2001
+10/01/1999
+07/01/2001
+10/01/1999
+10/01/1999
+04/01/2001
+04/01/2001
+10/01/1999
+10/01/2001
+04/01/2001
+01/01/2014
+04/01/2001
+01/01/2014
+01/01/2014
+01/01/2014
+12/01/2001
+12/01/2001
+10/01/1999
+10/01/1999
+09/01/2007
+09/01/2007
+10/01/1997
+
+09/30/2018
+09/30/2018
+09/30/2018
+
+33 | P a g e
+
+Reference Subsystem Codes and Values 2026
+
+Recipient Care Level – RF519
+Code
+ACH
+HOC
+HOG
+HOI
+HOR
+ICF
+ICM
+L11
+L12
+L13
+L14
+L15
+L21
+L22
+L23
+L24
+L25
+L31
+L32
+L33
+L34
+L35
+L41
+L42
+L43
+L44
+L45
+L51
+L52
+L53
+L54
+L55
+SN1
+SN2
+SN3
+SRL
+Revised 03/27/2026
+
+Description
+Adult Care Home
+Continuous Hospice
+General Inpatient Hospice
+Inpatient Hospice
+Routine Hospice
+Intermediate Care Facility
+Intermediate Care Facility – MR
+PUBLIC 1,INSTIT 1 (ADC)
+PUBLIC 1,INSTIT 2 (ADC)
+PUBLIC 1,INSTIT 3 (ADC)
+PUBLIC 1,INSTIT 4 (ADC)
+PUBLIC 1,INSTIT 5 (ADC)
+PUBLIC 2,INSTIT 1 (ADC)
+PUBLIC 2,INSTIT 2 (ADC)
+PUBLIC 2,INSTIT 3 (ADC)
+PUBLIC 2,INSTIT 4 (ADC)
+PUBLIC 2,INSTIT 5 (ADC)
+PUBLIC 3,INSTIT 1 (ADC)
+PUBLIC 3,INSTIT 2 (ADC)
+PUBLIC 3,INSTIT 3 (ADC)
+PUBLIC 3,INSTIT 4 (ADC)
+PUBLIC 3,INSTIT 5 (ADC)
+PUBLIC 4,INSTIT 1 (ADC)
+PUBLIC 4,INSTIT 2 (ADC)
+PUBLIC 4,INSTIT 3 (ADC)
+PUBLIC 4,INSTIT 4 (ADC)
+PUBLIC 4,INSTIT 5 (ADC)
+PUBLIC 5,INSTIT 1 (ADC)
+PUBLIC 5,INSTIT 2 (ADC)
+PUBLIC 5,INSTIT 3 (ADC)
+PUBLIC 5,INSTIT 4 (ADC)
+PUBLIC 5,INSTIT 5 (ADC)
+Skilled Nursing Facility Level 1
+Skilled Nursing Facility Level 2
+Skilled Nursing Facility Level 3
+Supportive Residential Living
+34 | P a g e
+
+Reference Subsystem Codes and Values 2026
+
+Change Reason – RF525
+Where these are used:
+These Change Reason Type Codes may be found in the PMMIS Subsystem on the RP145C Change Eligibility Summary
+Screen as well as other screens.
+
+To view change reasons:
+At RP145C Change screen:
+• select an eligibility key code by placing the letter 's' on the line and enter.
+This transaction will travel to the next screen. The cursor will now be found on the "Change Reason" line.
+• Depress F1 Help Key, the table will become visible.
+After eligibility is changed it may be seen on the RP145 I Inquire Eligibility Summary screen.
+Other Locations:
+RP160 I, RP250 I, RP595 I, and others.
+Code
+AB
+AD
+AE
+AF
+AG
+AI
+AO
+AP
+AR
+AT
+CA
+CB
+CC
+CD
+CE
+CH
+CI
+CL
+CM
+CN
+CO
+CP
+
+Description
+Absolute Discharge From ADJC
+Adoption Final
+Applied For New Eligibility
+Eligible For AFDC Cash
+Age Limit Exceeded for Category
+Refused to Assign Medical Support
+Plan Change, Administrative-Out
+Co-Pay Term Due to Timely Appeal
+Co-Pay Appeal Resolved/Ended
+Refused to Assign or Provide TPL Info
+Term Due to Increase in Co-Pay
+Failed Review for Continued Benefits
+Case Change
+Term Due to Decrease in Co-Pay
+Coverage Ended
+Eligibility Change Causes Disenrollment
+Reported Change Causes Ineligibility
+Contact Lost
+Computer Match, Info Validated
+1931 Conversion Project
+County Move-Out
+Copay Change
+
+Revised 03/27/2026
+
+35 | P a g e
+
+Reference Subsystem Codes and Values 2026
+Code
+CR
+CS
+CT
+CU
+CV
+DA
+DC
+DE
+DF
+DH
+DI
+DJ
+DL
+DM
+DN
+DO
+DP
+DQ
+DR
+DS
+DT
+DX
+EC
+EE
+EI
+EM
+EO
+EP
+ER
+ES
+E8
+E9
+FF
+FH
+FM
+FO
+HC
+
+Description
+Currently Receiving MA
+Excess Income = 31 Term to 4 Month Continuance
+Contract Terminated
+Term Due to Update Of Co-Pay Data
+Converted/Higher Eligibility
+Change Of Assessment
+No Eligible Deprived/Dependent Child
+Deceased
+Discharge For Cause From ADJC
+Death
+Incarceration
+Short Term Incarceration
+Loss Of Contract
+Move From RBHA (Regional Behavioral Health Authority) Area
+Non-Compliance
+Move Out of State
+Duplicate Record
+Disqualified for SOBRA Family Planning
+Inter RBHA Transfer
+Need Additional Services
+Treatment Completed
+Administrative Closure
+No Eligible Deprived/Dependent
+Exhausted All Efforts
+Excessive Income
+End Of MD Eligibility
+Open Enrollment-Out
+ESI Participant (Employer Sponsored INS)
+Entered in Error (Technical Closure)
+Emergency Services County Termination
+INELIG DURING PHE UNWIND PERIOD
+INELIG DUE TO PHE UNWIND REDETERMINATION
+
+Fleeing Felon
+Failed to Verify TPL (HIFA Parent)
+Foster/MEDICS (Medical Eligibility Determination and Information Control System)
+Implementation
+Plan Change -Out-Family Continuity
+Higher From Exparte
+
+Revised 03/27/2026
+
+36 | P a g e
+
+Reference Subsystem Codes and Values 2026
+Code
+HE
+HO
+HT
+IB
+IC
+IE
+IF
+IL
+IM
+IN
+IP
+IR
+KH
+KT
+LA
+LC
+LT
+MA
+MB
+MC
+MI
+MN
+MO
+MR
+MS
+MT
+NC
+ND
+NE
+NG
+NO
+NP
+NQ
+NR
+NS
+NT
+NW
+NX
+
+Description
+Higher Eligibility
+Moved Out of Health Plan Area
+County Term Due to KidsCare Add
+Ineligible Under Blind Category
+Incarceration
+Ineligible
+DES Interface-Created Transaction
+Earnings Disregard Ended
+Ineligible Mother
+Failed to Complete Initial Interview
+Ineligible For MA, Elig For FP
+Referred To AHCCCS For SSI/MAO
+KC Immediate Termination
+KidsCare Termination Due to Higher Eligibility
+Living Arrangement
+Loss Of Contact /Returned Mail
+Eligible For AFDC MAO Long Term Care
+Medicare Added, Caused Termination
+Medical Benefits Ended--Hearing Decision
+TMA Closure – No Earnings
+Member Income Change
+Mom and Baby in New Care
+Plan Change-Out-Med Care Continued
+Maximum Resources Exceeded
+Living Arrangements Verified
+Medical Terminations
+Non-Compliance with DCES
+Non-Comply DCSE
+No Eligible Child (HIFA Parent)
+NOT GIVEN
+No Good Faith Effort
+Nonpayment Of Premium
+Non-Qualified
+Newborn Does Not Live with Mom in AZ
+No Signature on Application
+Newborn Termination Due to Higher Eligibility
+Not Willing to Pay Premium
+Failed to Respond with Newborn Information
+
+Revised 03/27/2026
+
+37 | P a g e
+
+Reference Subsystem Codes and Values 2026
+Code
+OC
+OM
+OS
+OT
+PA
+PE
+PL
+PO
+PP
+PR
+PT
+QC
+RA
+RC
+RE
+RH
+RI
+RM
+RO
+RT
+RV
+SA
+SD
+SE
+SM
+SR
+SS
+ST
+TD
+TE
+TH
+TL
+TP
+TR
+TY
+UE
+UP
+US
+
+Description
+Currently Receiving Assist
+One Month of Elig ONLY
+AZ Residency not Established
+Other Term Reason
+PARIS Residency Fail
+Pregnancy Ended
+Paroled From ADJC
+End Of Contract-Out: Direct Move Method
+Premium Payment Not Made
+Failed To Comply
+End Of Contract-Out: %; Auto; Rule Method
+Refused to Cooperate with QC
+Retroactive Enrollment
+Rate Code Change
+Redetermination not Completed
+Child Returned to Parent (FC)
+Reside in Institution (ASH)
+Refuse Medical Denial Only
+Mental Health Services Disenrollment
+Retroactive Eligibility
+Failed to Verify Resources
+Sponsored Alien: Agency/Organ
+Disabled ES Referred to SSI MAO
+State Employee (HIFA Parent)
+NO ACTIVE MEDICARE PART A
+SSI MAO Referral
+SSN (Social Security Number) Requirements not Met
+Surgical Sterilization
+Terminated Disability
+Eligible for TMA 1st Extension
+Term Hospital Presumptive Eligibility
+Eligible for AFDC 2nd Extension
+Third Party Exists
+Term One Record
+Three Years of Non-Service
+Eligible AFDC MAO Unemployed Parent Coverage
+Eligible AFDC Unemployed Parent Coverage
+Citizen Requirements Not Met (HIFA Parent)
+
+Revised 03/27/2026
+
+38 | P a g e
+
+Reference Subsystem Codes and Values 2026
+Code
+VB
+VI
+VK
+VR
+VW
+WU
+ZZ
+
+Description
+Voluntary Withdrawal Term EOM
+Failure to Comply with Proc. Req.
+Voluntary Withdrawal KidsCare (No 12-Month Guarantee)
+Loss of Contact/Whereabouts Unknown
+Voluntary Withdrawal Immediate Term
+Loss of Contact/Whereabouts Unknown
+Special EAC Terminations Tape from DES (9/23)
+
+Revised 03/27/2026
+
+39 | P a g e
+
+Reference Subsystem Codes and Values 2026
+
+Contract Type – RF410
+Type
+$
+%
+#
+@
+A
+C
+D
+E
+F
+G
+H
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+S
+
+Code
+AIMHS
+CRS/CAP
+BH/FFS
+DES/DD/RI
+ACC/CAP
+ACC/CAP/BHS
+ACC/PPC/BHS
+ACC/FFS
+ACC/FFS/EMO
+ACC/FFS/FPS
+ACC/PPC
+LTC/CAP
+MHS/CAP/ACC
+LTC/CAP/ACU
+LTC/PPC
+ACC/NONCAP
+LTC/PPC/ACU
+LTC/CAP/PAR
+ACC/CAP/FPS
+LTC/FFS
+MHS/CAP/DD
+
+T
+U
+
+LTC/FFS/ACU
+UNDOC/FFS/EM
+
+V
+W
+X
+Y
+Z
+1
+6
+7
+8
+9
+
+MHS/CAP/KC
+ACC/KC/BHS
+ACC/FFS/KC
+ACC/CAP/KC
+MHS/CAP/HIFA
+NO/PMT
+MHS/CAP/TMCP
+MHS/CAP/CMDP
+NON/PAY
+NON/AHC
+
+Revised 03/27/2026
+
+Contract Code Description
+American Indian Medical Home Services
+Children's Rehab Services, Capitation
+BEHAV HEALTH, FEE FOR SERVICE
+Des DD Reinsurance Indicator
+ACC Capitated
+ACC, SMI CAPITATED
+ACC, SMI PRIOR PERIOD COVERAGE
+ACC Fee-For-Service
+ACC, Fee-For-Service Emergency Services Only
+ACC, Fee-For-Service, Family Planning Services
+ACC Prior Period Coverage
+Long Term Care, Capitated
+Mental Health Services, Capitated, Acute Only
+Long Term Care Capitated Acute Only
+Long Term Care Prior Period Coverage
+ACC NON-CAPPED
+Long Term Care Prior Period Coverage Acute
+Long Term Care, Partially Capitated
+ACC Capitated Family Planning Services Only
+Long Term Care Fee-For-Service
+Mental Health Services, Capitated, DD (Developmentally
+Disabled)
+Long Term Care Fee-For-Service Acute Only
+Undocumented Aliens, Fee-For-Service, Emergency Services
+Only
+Mental Health Services Capitated KidsCare
+ACC, SMI KIDS CARE CAPITATED
+ACC Fee-For-Service KidsCare
+ACC Capitated KidsCare
+Mental Health Services Capitated HIFA
+No Payment Allowed
+Mental Health Services, Capitated, Temp MED
+Mental Health Services, Capitated
+No Payment/Medicare Claims Only
+Non-AHCCCS Claims Processing ONLY
+
+Indicator
+Cap
+FFS
+Y
+N
+Y
+N
+N
+Y
+N
+N
+Y
+N
+Y
+N
+Y
+N
+N
+Y
+N
+Y
+N
+Y
+Y
+N
+Y
+N
+Y
+N
+Y
+N
+Y
+N
+N
+N
+Y
+N
+Y
+Y
+Y
+N
+N
+Y
+Y
+N
+Y
+N
+
+Y
+Y
+
+Y
+Y
+N
+Y
+Y
+N
+Y
+Y
+N
+N
+
+N
+N
+Y
+N
+N
+N
+N
+N
+Y
+Y
+
+40 | P a g e
+
+Reference Subsystem Codes and Values 2026
+
+Converted Transaction Status – RF529
+Used only.
+for internal
+processing
+of Pended
+transactions.
+
+Revised 03/27/2026
+
+Code
+A
+D
+F
+P
+
+Description
+Apply
+Delete
+Force Apply
+Pended
+
+41 | P a g e
+
+Reference Subsystem Codes and Values 2026
+
+Co-Pay Data – RF553
+PAYMENT TYPE
+
+CO-PAY LEVEL: 20 TRADITIONAL - URBAN
+SERVICE TYPE
+AMOUNT
+BEGIN DATE
+
+O Nominal Co-Pay
+O Nominal Co-Pay
+O Nominal Co-Pay
+
+04 Office Visit
+06 Pharmacy
+08 Outpatient Therapy
+
+PAYMENT TYPE
+
+CO-PAY LEVEL: 21 HIFA
+SERVICE TYPE
+AMOUNT
+
+O Nominal Co-Pay
+O Nominal Co-Pay
+O Nominal Co-Pay
+
+04 Office Visit
+06 Pharmacy
+08 Outpatient Therapy
+
+3.40
+2.30
+2.30
+
+3.40
+2.30
+2.30
+
+END DATE
+
+10/01/2010
+10/01/2010
+10/01/2010
+BEGIN DATE
+
+END DATE
+
+10/01/2010
+10/01/2010
+10/01/2010
+
+CO-PAY LEVEL: 25 TRADITIONAL - RURAL
+
+O Nominal Co-Pay
+O Nominal Co-Pay
+O Nominal Co-Pay
+O Nominal Co-Pay
+
+04 Office Visit
+06 Pharmacy
+08 Outpatient Therapy
+10 Missed Appointment
+
+3.40
+2.30
+2.30
+0.00
+
+PAYMENT TYPE
+
+CO-PAY LEVEL: 40 TWG – URBAN
+SERVICE TYPE
+AMOUNT
+
+M Mandatory Co-Pay
+M Mandatory Co-Pay
+M Mandatory Co-Pay
+M Mandatory Co-Pay
+M Mandatory Co-Pay
+
+01 Generic Drug
+02 Brand Name Drug
+03 Non Emer Use ER
+04 Office Visit
+09 Transportation
+
+4.00
+10.00
+30.00
+5.00
+2.00
+
+10/01/2010
+10/01/2010
+10/01/2010
+04/01/2012
+BEGIN DATE
+
+END DATE
+
+10/01/2003
+10/01/2003
+10/01/2010
+10/01/2003
+04/01/2012
+
+CO-PAY LEVEL: 45 TWG - RURAL
+
+M Mandatory Co-Pay
+M Mandatory Co-Pay
+M Mandatory Co-Pay
+M Mandatory Co-Pay
+
+01 Generic Drug
+02 Brand Name Drug
+03 Non Emer Use ER
+04 Office Visit
+
+4.00
+10.00
+30.00
+5.00
+
+PAYMENT TYPE
+
+CO-PAY LEVEL: 50 TMA
+SERVICE TYPE
+AMOUNT
+
+10/01/2003
+10/01/2003
+10/01/2010
+10/01/2003
+BEGIN DATE
+
+END DATE
+
+M Mandatory Co-Pay
+05 Office Visits
+4.00
+10/01/2010
+M Mandatory Co-Pay
+06 Pharmacy
+2.30
+10/01/2010
+M Mandatory Co-Pay
+07 Surgery
+3.00
+10/01/2010
+M Mandatory Co-Pay
+08 Outpatient Therapy
+3.00
+10/01/2010
+Where these are used: In the PMMIS Recipient subsystem: The Co-Pay Inquiry screen, the RP701 and the
+Co-Pay Detail Inquiry screen, the RP702 may contain the values listed in the Co-Pay tables.
+
+Revised 03/27/2026
+
+42 | P a g e
+
+Co-Pay Eligibility Key Map – RF575
+Elig Description
+
+EXMPT
+EXMPT
+EXMPT
+EXMPT
+EXMPT
+EXMPT
+EXMPT
+EXMPT
+EXMPT
+EXMPT
+EXMPT
+NOM
+NOM
+NOM
+NOM
+NOM
+NOM
+NOM
+NOM
+NOM
+NOM
+NOM
+NOM
+NOM
+NOM
+
+JUVENILE CORRECTIONS
+PUBLIC SAFETY (AZ DEPT OF CORRECTIONS)
+STATE-ONLY BHS
+L SA CASH
+L SB CASH
+L SD CASH
+L AF CASH
+L AF CASH FOSTER OR ADOPT SUBSIDY
+L SA MAO
+L AF MAO CHILD
+L AF MAO DEPRIVED
+L AF MAO PREG
+L SB MAO
+L SD MAO
+A SA CASH
+A SB CASH
+A SD CASH
+A AF MAO 1931
+A AF MAO 1931
+A AF MAO 1931 EXPANDED
+A AF MAO 1931 EXPANDED
+A AF ACUTE
+A AF ACUTE
+A AF CASH FOSTER
+A AF MAO YOUNG ADULT TRANSITIONAL
+A AF COBRA (OUT OF STATE) FOSTER
+A AF 4 MO CONT. DUE TO CHILD SUPPORT
+SOBRA HIFA PARENT
+
+Revised 03/27/2026
+
+Elg
+Key
+JC1
+PS1
+ST1
+040
+050
+060
+080
+085
+090
+100
+110
+120
+130
+140
+200
+210
+220
+231
+231
+232
+232
+260
+265
+270
+275
+305
+320
+325
+
+URB
+
+Y
+N
+Y
+N
+
+LVL
+
+AGE
+
+SMI
+
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+20
+20
+20
+20
+25
+20
+25
+20
+20
+20
+20
+20
+20
+21
+
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+
+TRBHA
+
+CRS
+
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+
+DDD
+
+QMB
+DUAL
+
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+
+CMD
+P
+
+IHS
+
+FFS
+
+SPC
+
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+
+43 | P a g e
+
+Reference Subsystem Codes and Values 2026
+Elig Description
+NOW
+TMA
+TMA
+NOM
+NOM
+EXMPT
+NOM
+NOM
+NOM
+EXMPT
+EXMPT
+EXMPT
+NOM
+NOM
+NOM
+NOM
+NOM
+NOM
+NOM
+NOM
+NOM
+NOM
+NOM
+NOM
+NOM
+NOM
+NOM
+NOM
+NOM
+NOM
+
+KIDSCARE HIFA PARENT
+A AF 6 MO CONT. TMA 1ST EXT.
+A AF 6 MO CONT. TMA 2ND EXT.
+A AF MAO S.O.B.R.A.CHILD
+A AF MAO SC EXPANDED
+SOBRA CHILD 100-133% AGES 6-18
+A AF MAO DES SO NB
+A AF MAO DES NEWBORN
+DES HIFA NEWBORN
+A AF MAO S.O.B.R.A. PG
+A AF MAO SW EXPANDED
+A KIDSCARE
+A SA MAO
+SSI (AHCCCS CARE/MI)
+SSI (AHCCCS CARE EXPANDED)
+A SA MAO EXPANDED
+A SA MAO PICKLE
+ACUTE SSI AGED MAO EXPARTE
+A SB MAO
+ACUTE SSI BLIND MAO EXPARTE
+A SB MAO FREEDOM TO WORK
+ACUTE SSI BLIND MAO APPEAL
+A SB MAO EXPANDED
+A SB MAO PICKLE
+A SD MAO FREEDOM TO WORK
+A SD MAO
+A SD MAO EXPANDED
+A SD MAO PICKLE
+ACUTE SSI DISABLED MAO EXPARTE
+ACUTE SSI DISABLED MAO APPEAL
+
+Revised 03/27/2026
+
+Elg
+Key
+327
+332
+334
+350
+351
+352
+355
+357
+359
+360
+361
+368
+370
+371
+372
+375
+380
+382
+390
+392
+393
+394
+395
+400
+403
+410
+415
+420
+422
+424
+
+URB
+
+LVL
+
+AGE
+
+SMI
+
+21
+50
+50
+20
+20
+00
+20
+20
+20
+00
+00
+00
+20
+20
+20
+20
+20
+20
+20
+20
+20
+20
+20
+20
+20
+20
+20
+20
+20
+20
+
+00
+00
+00
+00
+00
+
+00
+00
+00
+00
+00
+
+00
+00
+00
+00
+00
+
+QMB
+DUAL
+00
+00
+00
+00
+00
+
+00
+00
+00
+
+00
+00
+00
+
+00
+00
+00
+
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+
+TRBHA
+
+CRS
+
+DDD
+
+CMD
+P
+
+IHS
+
+FFS
+
+SPC
+
+00
+00
+00
+00
+00
+
+00
+00
+00
+00
+00
+
+00
+00
+00
+00
+00
+
+00
+00
+00
+
+00
+00
+00
+
+00
+00
+00
+
+00
+00
+00
+
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+
+00
+00
+
+44 | P a g e
+
+Reference Subsystem Codes and Values 2026
+Elig Description
+NOM
+NOM
+NOM
+NOM
+NOM
+NOM
+NOM
+EXMPT
+NOM
+EXMPT
+NOM
+NOM
+NOM
+EXMPT
+NOM
+EXMPT
+EXMPT
+EXMPT
+NOM
+NOM
+EXMPT
+EXMPT
+EXMPT
+NOM
+NOM
+NOM
+NOM
+NOM
+NOM
+NOM
+
+ACUTE SSI DISABLED MAO DAC
+ACUTE SSI DISABLED MAO DIS CHILD
+A SD MAO WIDOW/ER
+A SA MAO WIDOW/ER
+A SB MAO WIDOW/ER
+A AF AHCCCS NEWBORN
+A AF AHCCCS SOBRA NEWBORN
+SOBRA HIFA DEEMED NEWBORN
+A SSI AHCCCS NEWBORN
+A KIDSCARE NEWBORN
+A AF MAO 6MO GUAR
+A AF MAO EXPANDED 6-MO GUARANTEE
+A AF MAO S.O.B.R.A.CHILD 6M GUAR
+A AHCCCS CARE > 40% FPL 6MG
+A AF MAO S.O.B.R.A.PREG 6M GUAR
+SOBRA CHILD 100-133% 6MG
+A AHCCCS CARE < 40% FPL 6MG
+A KIDSCARE 12-MONTH GUARANTEE
+A SA MAO 6MO GUAR
+A SA MAO EXPANDED 6-MO GUARANTEE
+ADULTS < 40% 6MG
+ADULTS 40-100% 6MG
+ADULTS > 100% 6MG
+A SB MAO 6MO GUAR
+A SB MAO EXPANDED 6-MO GUARANTEE
+A SB FREEDOM TO WORK 6MO GUAR
+A SI MAO NEWBORN 6G
+A SD MAO 6MO GUAR
+A SD MAO EXPANDED 6-MO GUAR
+A SD FREEDOM TO WORK 6MO GUAR
+
+Revised 03/27/2026
+
+Elg
+Key
+426
+428
+430
+431
+432
+440
+445
+447
+450
+455
+460
+461
+462
+463
+464
+465
+467
+468
+470
+471
+475
+476
+477
+480
+481
+482
+485
+490
+491
+492
+
+URB
+
+LVL
+
+AGE
+
+SMI
+
+20
+20
+20
+20
+20
+20
+20
+00
+20
+00
+20
+20
+20
+00
+20
+00
+00
+00
+20
+20
+00
+00
+00
+20
+20
+20
+20
+20
+20
+20
+
+00
+00
+00
+00
+00
+00
+00
+
+00
+00
+00
+00
+00
+00
+00
+
+00
+00
+00
+00
+00
+00
+00
+
+QMB
+DUAL
+00
+00
+00
+00
+00
+00
+00
+
+00
+
+00
+
+00
+
+00
+00
+00
+
+00
+00
+00
+
+00
+00
+
+TRBHA
+
+CRS
+
+DDD
+
+CMD
+P
+
+IHS
+
+FFS
+
+SPC
+
+00
+00
+00
+00
+00
+00
+00
+
+00
+00
+00
+00
+00
+00
+00
+
+00
+00
+00
+00
+00
+00
+00
+
+00
+
+00
+
+00
+
+00
+
+00
+00
+00
+
+00
+00
+00
+
+00
+00
+00
+
+00
+00
+00
+
+00
+00
+00
+
+00
+00
+
+00
+00
+
+00
+00
+
+00
+00
+
+00
+00
+
+00
+00
+
+00
+00
+
+00
+00
+
+00
+00
+
+00
+00
+
+00
+00
+
+00
+00
+
+00
+00
+
+00
+00
+00
+00
+00
+00
+00
+
+00
+00
+00
+00
+00
+00
+00
+
+00
+00
+00
+00
+00
+00
+00
+
+00
+00
+00
+00
+00
+00
+00
+
+00
+00
+00
+00
+00
+00
+00
+
+00
+00
+00
+00
+00
+00
+00
+
+00
+00
+00
+00
+00
+00
+00
+
+45 | P a g e
+
+Reference Subsystem Codes and Values 2026
+Elig Description
+NOM
+NOM
+NOM
+TRAN
+TRAN
+EXMPT
+EXMPT
+EXMPT
+EXMPT
+EXMPT
+EXMPT
+NOM
+EXMPT
+EXMPT
+EXMPT
+EXMPT
+EXMPT
+EXMPT
+EXMPT
+EXMPT
+EXMPT
+EXMPT
+EXMPT
+EXMPT
+EXMPT
+EXMPT
+EXMPT
+EXMPT
+EXMPT
+EXMPT
+
+A AF MAO BC PATIENT
+A AF MAO CC PATIENT
+A AF MAO CL PATIENT
+TRANSPLANT OPTION 1
+TRANSPLANT OPTION 2
+ADULTS < 40%
+ADULTS 40-100%
+ADULTS > 100%
+PRESUMPTIVE ELIGIBILITY
+L SB MAO FREEDOM TO WORK
+L SD MAO FREEDOM TO WORK
+A AF MAO
+QMB ONLY OTHER
+QMB ONLY AGED
+QMB ONLY BLIND
+QMB ONLY DISABLED
+PART B ONLY - SLMB
+PART B ONLY - QI1
+A AFDC MAO EMER SVCE DES UNDOCUMENTED
+A AFDC MAO EMER PG DES UNDOCUMENTED
+A AF MA EXPANDED EMER SVCS
+A SA MAO EMER SVCS SSI UNDOCUMENTED
+A SA MAO EMER SVCS EXPANDED
+A SB MAO EMER SVCS SSI UNDOCUMENTED
+A SB MAO EMER SVCS EXPANDED
+A SD MAO EMER SVCS SSI UNDOCUMENTED
+A SD MAO EMER SVCS EXPANDED
+FES YATI AGE 18 - 26
+ADULTS FES 40-100%
+ADULTS FES > 100%
+
+Revised 03/27/2026
+
+Elg
+Key
+560
+565
+570
+581
+582
+586
+588
+589
+675
+725
+735
+750
+800
+810
+820
+830
+840
+850
+900
+905
+908
+910
+911
+915
+916
+920
+921
+949
+950
+953
+
+URB
+
+LVL
+
+AGE
+
+SMI
+
+20
+20
+20
+20
+20
+00
+00
+00
+00
+00
+00
+20
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+00
+
+00
+00
+00
+00
+00
+
+00
+00
+00
+00
+00
+
+00
+00
+00
+00
+00
+
+QMB
+DUAL
+00
+00
+00
+00
+00
+
+00
+
+00
+
+00
+
+00
+
+TRBHA
+
+CRS
+
+DDD
+
+CMD
+P
+
+IHS
+
+FFS
+
+SPC
+
+00
+00
+00
+00
+00
+
+00
+00
+00
+00
+00
+
+00
+00
+00
+00
+00
+
+00
+
+00
+
+00
+
+46 | P a g e
+
+Reference Subsystem Codes and Values 2026
+Elig Description
+EXMPT
+EXMPT
+
+ADULTS FES < 40%
+A SB FPS MAO
+
+Revised 03/27/2026
+
+Elg
+Key
+955
+960
+
+URB
+
+LVL
+
+AGE
+
+SMI
+
+TRBHA
+
+CRS
+
+DDD
+
+QMB
+DUAL
+
+CMD
+P
+
+IHS
+
+FFS
+
+SPC
+
+00
+00
+
+47 | P a g e
+
+Co-Pay Exception Type – RF554
+CODE
+AGE
+CMD
+CRS
+DDD
+ELG
+FFS
+GMH
+HBC
+HSC
+IHS
+INC
+INS
+ITU
+MET
+NAM
+PRG
+QMD
+SMI
+TRB
+URB
+U18
+ZIP
+
+DESCRIPTION
+Under Age 19
+CMDP Enrolled
+CRS Coverage
+DES DDD Enrolled (not currently used)
+Eligibility Exemption
+FFS Enrollment
+General Mental Health (TWG only)
+Home and Community Based Services
+Hospice
+IHS Enrolled
+Income Change
+Institutionalized
+ITU Exception Code
+Copay Threshold Met
+Native American HIFA Parent
+Pregnant
+QMB Dual Covered
+SMI/SED Coverage
+TRBHA Coverage (not currently used)
+URBAN Residence
+Underage 18
+Resides in a Split Zip Code
+
+Revised 03/27/2026
+
+48 | P a g e
+
+Reference Subsystem Codes and Values 2026
+
+Co-Pay Level Type – RF555
+CODE
+00
+20
+21
+25
+40
+45
+50
+55
+60
+65
+
+DESCRIPTION
+No Co-Pay
+Traditional – Urban
+HIFA (Health Insurance Flexibility and Accountability)
+Traditional – Rural
+TWG (Title XIX Waiver Group) – Urban
+TWG (Title XIX Waiver Group) – Rural
+Transitional Medical Assist-Urban
+Transitional Medical Assist-Rural
+Adults>106% FPL/TRNSPLNT1&2 Mand-Urban
+Adults>106% FPL/TRNSPLNT1&2 Mand-Rural
+
+Co-Pay Payment Type – RF557
+CODE
+M
+N
+O
+
+DESCRIPTION
+Mandatory Co-Pay
+No Co-Pay
+Nominal Co-Pay
+
+Revised 03/27/2026
+
+49 | P a g e
+
+Reference Subsystem Codes and Values 2026
+
+Co-Pay Service Type – RF556
+CODE
+01
+02
+03
+04
+05
+06
+07
+08
+09
+10
+11
+12
+
+DESCRIPTION
+Generic Rx
+Brand Name Rx
+Non-Emergency Use Of ER
+Office Visit
+Office Visits
+Pharmacy
+Surgery
+Outpatient Therapy
+Transportation
+Missed Appointment
+Inpatient Stay
+Non-Emergency Transportation - Taxi
+
+Correspondence Type – RF528
+Where these are used:
+These Correspondence Type Codes may be found in the PMMIS Recipient subsystem on the RP205 Inquire Correspondence
+Screen.
+
+CODE
+AC
+AE
+AH
+AL
+AM
+AO
+AP
+AS
+AT
+AU
+AV
+AZ
+BA
+BB
+BC
+BD
+BE
+BF
+
+DESCRIPTION
+COBRA/AS Choice
+ACUTE AE
+AD HOC Mailing
+EAC Term-Age Limit Letter
+Acute Special Mailing
+AE Phone Answer
+AE Phone Call
+American Indian Gaining Medicare
+ALTCS Plan Change
+AE Phone No Answer
+AE Post Card
+SELECTIVELY ASSIGNED TO AZCH LTC
+Incumbent Acute Awarded-Nonutilizer
+Incumbent Acute Awarded-Nonutilizer
+Incumbent Acute Awarded-Nonutilizer
+Incumbent Acute Awarded-Nonutilizer
+Incumbent Acute Awarded-Nonutilizer
+Incumbent Acute Awarded-Nonutilizer
+
+Revised 03/27/2026
+
+50 | P a g e
+
+Reference Subsystem Codes and Values 2026
+CODE
+CA
+CB
+CC
+CD
+CE
+CF
+CG
+CH
+CI
+CJ
+CK
+CM
+CO
+CP
+CR
+CX
+DA
+DB
+DC
+DD
+DE
+DF
+DG
+DH
+DI
+DJ
+DK
+DL
+DM
+DN
+DO
+DP
+DS
+EA
+EI
+EK
+EN
+EP
+
+DESCRIPTION
+Copay – Adverse Action
+Incumbent Acute Plan Awarded-Utilizer
+Incumbent Acute Plan Awarded-Utilizer
+Incumbent Acute Plan Awarded-Utilizer
+Incumbent Acute Plan Awarded-Utilizer
+Incumbent Acute Plan Awarded-Utilizer
+Incumbent Acute Plan Awarded-Utilizer
+Incumbent Acute Plan Awarded-Utilizer
+Copay – Information
+Incumbent Acute Plan Awarded-Utilizer
+Incumbent Acute Plan Awarded-Utilizer
+Copay Threshold Met
+SPECIAL ENROLL CHOICE/CARE1ST ENDING
+Copay – Initial
+Copay – Hearing Rights
+SPECIAL ENROLL NON-CHOICE/CARE1ST
+Incumbent Acute Plan Not Awarded
+Incumbent Acute Plan Not Awarded
+Incumbent Acute Plan Not Awarded
+Incumbent Acute Plan Not Awarded
+Incumbent Acute Plan Not Awarded
+Incumbent Acute Plan Not Awarded
+Incumbent Acute Plan Not Awarded
+Incumbent Acute Plan Not Awarded
+Incumbent Acute Plan Not Awarded
+Incumbent Acute Plan Not Awarded
+Incumbent Acute Plan Not Awarded
+Incumbent Acute Plan Not Awarded
+Incumbent Acute Plan Not Awarded
+Plan Denial Letter
+Incumbent Acute Plan Not Awarded
+Incumbent Acute Plan Not Awarded
+EPD PLAN DENIAL LTR WITH DSNP
+EAC Eligibility Notice
+Emergency Fee-for-Service ID Card
+Keds ended Continuing Food stamps (EAC)
+EPD DSNP INITIAL LETTER
+EPD PLAN CHANGE
+
+Revised 03/27/2026
+
+51 | P a g e
+
+Reference Subsystem Codes and Values 2026
+CODE
+ES
+ET
+FA
+FB
+FC
+FD
+FE
+FF
+FI
+FN
+FP
+FT
+GA
+GB
+GC
+GD
+GE
+GF
+GG
+GH
+GI
+GJ
+GK
+GL
+GM
+GN
+GO
+HC
+HE
+HM
+HT
+HV
+IA
+IB
+IC
+ID
+IE
+IF
+
+DESCRIPTION
+Emer services letter
+EAC Term letter
+CRS Fully integrated SMI
+CRS Fully integrated SMI
+30 Day Choice Letter
+FPS (Family Planning Services)/Service Package Change
+FPS Termination Letter Due to New Eligibility
+CRS Fully integrated SMI
+AHCCCS FFS ID CARD
+FES NB ENRL NOTICE
+FPS Reminder Letter for IHS
+SOBRA Family Planning Services Term Letter
+CRS FULLY INTEGRATED & CRS PARTIAL-ACUTE
+GENERAL HMO BLOCK NOTICE
+CRS FULLY INTEGRATED & CRS PARTIAL-ACUTE
+CRS FULLY INTEGRATED & CRS PARTIAL-ACUTE
+CRS FULLY INTEGRATED & CRS PARTIAL-ACUTE
+CRS FULLY INTEGRATED & CRS PARTIAL-ACUTE
+CRS FULLY INTEGRATED & CRS PARTIAL-ACUTE
+CRS FULLY INTEGRATED & CRS PARTIAL-ACUTE
+CRS FULLY INTEGRATED & CRS PARTIAL-ACUTE
+CRS FULLY INTEGRATED & CRS PARTIAL-ACUTE
+CRS FULLY INTEGRATED & CRS PARTIAL-ACUTE
+CRS FULLY INTEGRATED & CRS PARTIAL-ACUTE
+CRS FULLY INTEGRATED & CRS PARTIAL-ACUTE
+CRS FULLY INTEGRATED & CRS PARTIAL-ACUTE
+CRS FULLY INTEGRATED & CRS PARTIAL-ACUTE
+1095B New-Reprint Form
+HIGHER ELIGBILITY
+1095B Corrected Form
+REPORTING ONLY-COUNTY TERM DUE TO KC
+1095B Voided Form
+Integrated Acute
+INITIAL HMO BLOCK NOTICE
+Incarcerated Notice
+AHCCCS ID Card
+CRS PARTIALLY INTEGRATED ACUTE - SMI
+CRS PARTIALLY INTEGRATED ACUTE - SMI
+
+Revised 03/27/2026
+
+52 | P a g e
+
+Reference Subsystem Codes and Values 2026
+CODE
+IG
+IH
+IN
+IS
+JA
+JB
+JC
+JL
+KA
+KB
+LA
+LB
+LC
+LD
+LE
+LF
+LI
+LM
+LS
+MA
+MB
+MC
+MD
+ME
+MF
+MH
+MM
+MN
+NB
+ND
+NI
+NN
+NQ
+NS
+NT
+NU
+OA
+OB
+
+DESCRIPTION
+CRS PARTIALLY INTEGRATED ACUTE - SMI
+IHS FAMILY PLANNING SERVICES
+Integrated Native American
+Integrated Address Change
+CRS PARTIALLY INTEGRATED BH - CMDP
+CRS PARTIALLY INTEGRATED BH - CMDP
+CRS PARTIALLY INTEGRATED BH - CMDP
+SSI EXPARTE
+CRS PARTIALLY INTEGRATED BH - DDD
+KC NB ENROLLMENT
+CRS ONLY - AIHP/TRBHA MEMBERS
+CRS ONLY - AIHP/TRBHA MEMBERS
+LTC FREEDOM CHOICE
+CRS ONLY - AIHP/TRBHA MEMBERS
+LTC AE
+CRS ONLY - AIHP/TRBHA MEMBERS
+AHCCCS LTC ID CARD
+LTC SPECIAL MAILING
+EPD AEC LETTER
+CRS ONLY – AIHP/RBHA MEMBERS
+CRS ONLY – AIHP/RBHA MEMBERS
+MERCY CARE FAMILY PLANNING SERVICES
+CRS ONLY – AIHP/RBHA MEMBERS
+Medicare with a Medicaid Add
+CRS ONLY - AIHP/RBHA MEMBERS
+AIMHS ASSIGNMENT LTR
+DRUG COVERAGE
+MN/MI NEWBORN ENRL NOTICE
+NB ENROLLMENT
+No Part D
+North Integrated
+North Native American
+NEWBORN QUESTIONNAIRE
+North Address Change
+CATEGORICAL NB TERM NOTICE
+Numident [SSA Number Identification Verification Process]
+CRS ONLY - AIHP SMI
+CRS ONLY - AIHP SMI
+
+Revised 03/27/2026
+
+53 | P a g e
+
+Reference Subsystem Codes and Values 2026
+CODE
+OC
+OE
+OI
+ON
+OS
+PA
+PN
+PS
+QA
+QB
+QC
+QD
+QE
+QF
+QG
+QH
+QI
+QJ
+QT
+RN
+SA
+SB
+SC
+SF
+SI
+SN
+SS
+ST
+TA
+TM
+UA
+UB
+UC
+UH
+VA
+VB
+VC
+VD
+
+DESCRIPTION
+CRS ONLY - AIHP SMI
+ANNUAL ENROLL CHOICE/ENDING HEALTH PLAN
+ANNUAL ENROLL CHOICE/(NA)IN 1 PLAN CTY
+ANNUAL ENROLL CHOICE NOTICE
+Out Of State Notice
+CRS ONLY - CMDP/TRBHA
+MYAHCCCS PIN Number
+PRIVACY AND SECURITY NOTICE (HIPAA)
+INCUMBENT ACUTE AWARDED ACC-TRBHA
+QMB Approval Notice
+INCUMBENT ACUTE AWARDED ACC-TRBHA
+INCUMBENT ACUTE AWARDED ACC-TRBHA
+QMB ELIGIBILITY NOTICE
+INCUMBENT ACUTE AWARDED ACC-TRBHA
+INCUMBENT ACUTE AWARDED ACC-TRBHA
+INCUMBENT ACUTE AWARDED ACC-TRBHA
+QMB ONLY ID CARD
+QMB TERMINATION BECAUSE OF INCARCERATION
+QMB Termination Notice
+ELIC/MN/MI REDETERM NOTICE
+Address change
+S.O.B.R.A. NEWBORN ENRL NOTICE
+South Integrated
+SOBRA/FPS REJECT LETTER
+SSDI TERM
+South Native American
+South Address Change
+S.O.B.R.A. TERMINATION LETTER
+CRS ONLY - AIHP SMI/TRBHA
+Gaining Medicare
+AIHP/RBHA
+AIHP/RBHA
+AIHP/RBHA
+SELECTIVELY ASSIGNED TO UNITED LTC
+INCUMBENT ACUTE PLAN NOT AWARDED
+INCUMBENT ACUTE PLAN NOT AWARDED
+INCUMBENT ACUTE PLAN NOT AWARDED
+INCUMBENT ACUTE PLAN NOT AWARDED
+
+Revised 03/27/2026
+
+54 | P a g e
+
+Reference Subsystem Codes and Values 2026
+CODE
+VE
+VF
+VG
+WA
+WB
+WS
+XA
+XB
+XC
+XD
+XE
+XF
+XG
+XH
+XI
+XJ
+XK
+XL
+XM
+XN
+YA
+YG
+YS
+1C
+2C
+24
+3C
+4P
+5P
+6G
+65
+9S
+
+DESCRIPTION
+INCUMBENT ACUTE PLAN NOT AWARDED
+INCUMBENT ACUTE PLAN NOT AWARDED
+INCUMBENT ACUTE PLAN NOT AWARDED
+CRF & AZ COMPLETE MERGER ACC CHOICE
+Welcome Back to AHCCCS Letter
+CRF & AZ COMPLETE MERGER SMI NON-CHOICE
+CRS FULLY INTEGRATED_CRS PARTIAL-ACUTE
+CRS FULLY INTEGRATED_CRS PARTIAL-ACUTE
+CRS FULLY INTEGRATED_CRS PARTIAL-ACUTE
+CRS FULLY INTEGRATED_CRS PARTIAL-ACUTE
+CRS FULLY INTEGRATED_CRS PARTIAL-ACUTE
+CRS FULLY INTEGRATED_CRS PARTIAL-ACUTE
+CRS FULLY INTEGRATED_CRS PARTIAL-ACUTE
+CRS FULLY INTEGRATED_CRS PARTIAL-ACUTE
+Discard Extra ID Card Letter
+CRS FULLY INTEGRATED_CRS PARTIAL-ACUTE
+CRS FULLY INTEGRATED_CRS PARTIAL-ACUTE
+CRS FULLY INTEGRATED_CRS PARTIAL-ACUTE
+CRS FULLY INTEGRATED_CRS PARTIAL-ACUTE
+CRS FULLY INTEGRATED_CRS PARTIAL-ACUTE
+CRF & AZ COMPLETE MERGER ACC CHOICE
+KidsCare Year Guarantee Notice
+CRF & AZ COMPLETE MERGER SMI NON-CHOICE
+UFC ASSIGN CENTRAL
+MCP ASSIGN CENTRAL
+POTENTIAL MEDICARE D FOR DISABILITY
+UHC ASSIGN CENTRAL
+UFC ASSIGN PIMA
+MCP ASSIGN PIMA
+6 Month Guarantee Letter
+POTENTIAL MEDICARE D FOR AGE
+UFC ASSIGN SOUTH
+
+Revised 03/27/2026
+
+55 | P a g e
+
+Reference Subsystem Codes and Values 2026
+
+County – RF012 & (General Service Area) GSA – RF013
+Code
+01
+03
+05
+07
+09
+11
+13
+15
+17
+19
+21
+23
+25
+27
+29
+31
+33
+35
+97
+98
+99
+
+COUNTY RF012
+Description
+Apache
+Cochise
+Coconino
+Gila
+Graham
+Greenlee
+Maricopa
+Mohave
+Navajo
+Pima
+Pinal
+Santa Cruz
+Yavapai
+Yuma
+La Paz
+Out Of State
+Out Of Country
+Unknown
+Statewide Dental
+Pricing (Primary)
+Statewide Dental
+Pricing (Secondary)
+Statewide (For Pricing)
+
+Revised 03/27/2026
+
+GSA RF013
+Code
+02
+04
+06
+08
+10
+12
+14
+40
+42
+44
+98
+
+Description
+Yuma/La Paz
+Apache/Coconino/Mohave/
+Navajo
+Yavapai
+Gila/Pinal
+Pima/Santa Cruz
+Maricopa
+Cochise/Graham/Greenlee
+North GSA
+Central GSA
+South GSA
+All
+
+Begin Date
+10/01/2003
+10/01/2003
+
+End Date
+09/30/18
+09/30/18
+
+10/01/2003
+10/01/1997
+10/01/2003
+10/01/1997
+10/01/2003
+10/01/2017
+10/01/2017
+10/01/2017
+10/01/1997
+
+09/30/18
+09/30/18
+09/30/18
+09/30/18
+09/30/18
+
+Where these are used:
+County Codes: Easily seen on the RP135 I Demographic Inquire or on the
+RP135C Change Recipient Demographic screen, in the PMMIS Recipient
+subsystem. On this screen: by placing cursor on "County Code" numeral
+and depressing the F1 help key the table becomes visible.
+General Service Area Codes: GSA Codes: are not readily discernable in
+PMMIS Recipient subsystem.
+
+56 | P a g e
+
+Reference Subsystem Codes and Values 2026
+
+CTY/RHBA Assignment [Codes] – RF576
+S
+T
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+
+CTY
+CD
+01
+03
+05
+07
+09
+11
+13
+15
+17
+19
+21
+23
+25
+27
+29
+
+County
+Description
+Apache
+Cochise
+Coconino
+Gila
+Graham
+Greenlee
+Maricopa
+Mohave
+Navajo
+Pima
+Pinal
+Santa Cruz
+Yavapai
+Yuma
+LaPaz
+
+Revised 03/27/2026
+
+CTY
+CD
+38
+39
+38
+38
+39
+39
+37
+38
+38
+39
+39
+39
+38
+39
+39
+
+RHBA
+Description
+Health Choice
+Cenpatico
+Health Choice
+Health Choice
+Cenpatico
+Cenpatico
+Mercy Maricopa Integrated
+Health Choice
+Health Choice
+Cenpatico
+Cenpatico
+Cenpatico
+Health Choice
+Cenpatico
+Cenpatico
+
+Begin
+Date
+10/01/10
+10/01/10
+10/01/10
+10/01/10
+10/01/10
+10/01/10
+10/01/10
+10/01/10
+10/01/10
+10/01/10
+10/01/10
+10/01/10
+10/01/10
+10/01/10
+10/01/10
+
+End
+Date
+
+57 | P a g e
+
+Reference Subsystem Codes and Values 2026
+
+Current Health Plan List 10/01/2025 – 09/30/2026
+Health Plans ID Numbers & Names
+Name
+Code
+
+Code
+000850
+002220
+003335
+007700
+008040
+008050
+008690
+008715
+008800
+010500
+010158
+010166
+010314
+010306
+010422
+010497
+999998
+CTYPRI
+DOCMAT
+NONAHC
+
+ACUTE
+Federal Emergency Services
+AHCCCS Non-Pay
+FFS Regular
+FFS DD Prior Quarter
+SLMB - PART B BUY-IN ONLY
+QI1 - PART B BUY-IN ONLY
+FFS Temporary
+AHCCCS QMB – Only
+FFS Prior Quarter
+Molina Complete Care
+United Healthcare
+DCS/CHP
+Banner Univ Family Care
+Mercy Care Plan
+Az Complete Health Care
+Blue Cross Blue Shield of Arizona
+Health Choice
+AHCCCS American Indian Health
+Program (AIHP)
+County Prisoners
+DOC Matched Recipient
+State ONLY BHS
+
+Name
+FYI DATE
+TSC
+AZEIP
+
+999222
+999555
+
+LONG TERM CARE
+110007
+110050
+110306
+110313
+
+DES DD LTC
+United Health Care LTC
+Mercy Care Plan LTC
+Banner University LTC
+
+190000
+190009
+190017
+190025
+190033
+190075
+
+NACHC/FFS
+White Mountain Apache
+Navajo Nation
+Gila River Tribe
+Tohono O’odham
+Pasqua Yaqui Tribe
+
+190083
+
+San Carlos Apache
+
+190091
+
+Hopi Tribe
+
+Data Specific Source Codes – RF546
+INDICATORS
+SOURCE CODE
+
+AC
+AK
+AS
+AT
+AW
+
+DESCRIPTION
+
+County Referral from Des
+ACE KIDSCARE
+ACE System
+ATLAS
+Apache White Mountain TRBHA
+
+Revised 03/27/2026
+
+ELIGIBILITY
+
+√
+√
+√
+
+MEDICARE
+
+MEDICAL
+CONDITION
+
+√
+
+√
+√
+
+√
+
+58 | P a g e
+
+Reference Subsystem Codes and Values 2026
+√
+√
+HEAPLUS 10/1/13-AZTECS BEFORE
+10/1/13
+BA
+Batch Processing
+√
+BD
+BENDEX Tape
+√
+CF
+CARE 1ST ARIZONA (010254)
+CH
+Capitation History (Conversion)
+√
+CI
+AZ COMPLETE HEALTH
+√
+√
+√
+CO
+County
+√
+√
+√
+CV
+Conversion Only
+√
+√
+CY
+CHILDS/ACYF
+√
+ED
+Medicare Enrollment Database
+√
+√
+EQ
+Enrollment Questionnaire
+√
+√
+√
+ET
+Eligibility Transaction Document
+FM
+Foster/Medics Implementation
+√
+GR
+Gila River Tribe TRBHA
+√
+HA
+HEALTH CHOICE AZ
+IH
+IHS Medical Record
+√
+√
+KC
+KidsCare
+√
+√
+√
+LC
+LEDS/CATS
+√
+MC
+Medicare (Conversion)
+√
+√
+√
+MD
+Office Of Medical Director
+√
+MI
+MERCY CARE
+√
+√
+MM
+Member Master (Conversion)
+√
+MS
+CMS - Center for Medicare/Medicaid
+SVCS
+√
+NN
+Navajo Nation TRBHA
+√
+NU
+Numident
+√
+√
+√
+OA
+On-Line, DMS
+√
+√
+√
+ON
+On-Line, Newborn
+√
+PY
+Pasqua Yaqui Tribe TRBHA
+√
+SI
+SMIB Tape
+SS
+SSA 8019 [TPL]
+√
+√
+SX
+SDX File
+TC
+TPL Contractor
+VS
+Vital Statistics Tape (Date of Death)
+Where these are used: In the PMMIS Recipient subsystem: Source codes are seen on the RP145A Add
+Eligibility Screen. Place the cursor on "SRC" line: depress the F1 help key and the table will appear. Also,
+individual codes may be seen on the RP150I and other screens.
+AZ
+
+Revised 03/27/2026
+
+59 | P a g e
+
+Reference Subsystem Codes and Values 2026
+
+Revised 03/27/2026
+
+60 | P a g e
+
+Reference Subsystem Codes and Values 2026
+
+Source Codes – RF522
+CODE
+AC
+AE
+AK
+AP
+AS
+AT
+AW
+AZ
+BA
+BD
+BH
+BW
+BY
+CF
+CH
+CI
+CL
+CM
+CO
+CP
+CR
+CS
+CV
+CY
+DC
+DD
+ED
+EN
+EQ
+ES
+ET
+FM
+GR
+HA
+HC
+HI
+
+DESCRIPTION
+County Referral from DES
+Administrative Error
+ACE KidsCare/HIFA
+United Healthcare (010158)
+ACE System
+ATLAS
+Apache White Mountain TRBHA
+HEAPLUS 10/1/13-AZTECS Before 10/1/13
+Batch Processing
+BENDEX Tape
+Behavioral Health (ADHS/BHS) (code 079999 end date 09/30/16)
+Bridgeway Acute (010088)
+Bridgeway LTC (110088 & 550088)
+Care 1st Arizona (010254)
+Capitation History (Conversion)
+AZ COMPLETE HEALTH (010735)
+Claims Referral
+CMDP (010166)
+County
+COCHISE LTC (110003 & 550003)
+CRS FULLY INTEGRATED (010115)
+Child Support Enforcement Agency (CSEA)
+Conversion Only
+CHILDS/ACYF
+Az Department of Corrections
+DES DD LTC (110007 & 550005)
+Medicare Enrollment Database
+Encounter Referral
+Enrollment Questionnaire
+United Healthcare LTC (110050)
+Eligibility Transaction Document
+Foster/Medics Implementation
+Gila River Tribe TRBHA
+HEALTH CHOICE AZ (010715)
+Health Choice Arizona (010497)
+HIB Tape
+
+Revised 03/27/2026
+
+61 | P a g e
+
+Reference Subsystem Codes and Values 2026
+HN
+IH
+JC
+KC
+LC
+LK
+MA
+MC
+MD
+ME
+MG
+MI
+ML
+MM
+MS
+MZ
+NN
+NU
+OA
+ON
+PG
+PH
+PL
+PM
+PY
+SC
+SG
+SI
+SS
+SX
+TC
+UF
+UN
+VS
+YL
+13
+
+Health Net Access (010422)
+IHS Medical Record (999998)
+Juvenile Corrections
+Kids Care
+LEDS/CATS
+Linked Record
+Maricopa Health Plan (010083)
+Medicare (Conversion)
+Office Of Medical Director
+Mercy Care (010306)
+MOLINA COMPLETE CARE (010500)
+MERCY CARE (010795)
+MARICOPA COUNTY LTC (110023 & 550021)
+Member Master (Conversion)
+CMS - Center for Medicare/Medicaid SVCS
+Mercy Care LTC (110306)
+Navajo Nation TRBHA
+NUMIDENT
+On-Line, DMS
+On-Line, Newborn
+PINAL/GILA LTC (110065 & 550013)
+Phoenix Health Plan (010299)
+PIMA LTC (110015 & 550013)
+PIMA HEALTH SYSTEM (010124)
+Pasqua Yaqui Tribe TRBHA
+SCAN LTC (110097 & 550099)
+System Generated
+SMIB TAPE
+SSA 8019
+SDX FILE
+TPL Contractor
+University Family Care (010314)
+UNIVERSITY FAMILY LTC (110313)
+Vital Statistics Tape (Date of Death)
+YAVAPAI LTC (110025 & 550025)
+Maricopa County – Non-Medicaid
+
+Revised 03/27/2026
+
+62 | P a g e
+
+Reference Subsystem Codes and Values 2026
+
+Eligibility Key Code / Buy-in Indicator
+Eligibility Key Code listing displays key codes and Buy/In codes for members who are eligible for Part/B
+premium payment due to active Medicaid and Medicare entitlement. BUY-IN Codes: BLANK = indicates we are
+asking CMS for the BUY/IN code, the C = Cash, the M = MAO, the P = QMB, the L = SLMB and the U = QI-1.
+KEY
+CODE
+040
+050
+060
+085
+
+BUY-IN
+CODE
+BLANK
+BLANK
+BLANK
+C
+
+KEY
+CODE
+395
+400
+410
+415
+
+DESCRIPTION SOURCE
+
+M
+M
+M
+BLANK
+BLANK
+
+420
+422
+424
+426
+428
+
+BUY-IN
+CODE
+M
+BLANK
+M
+M
+
+090
+130
+140
+200
+210
+
+DESCRIPTION SOURCE
+L SA CASH
+L SB CASH
+L SD CASH
+L AF CASH FOSTER OR ADOPTION
+SUBSIDY
+L SA MAO
+L SB MAO
+L SD MAO
+A SA CASH
+A SB CASH
+
+220
+231
+232
+260
+270
+305
+
+A SD CASH
+A AF MAO 1931
+A AF MAO 1931 EXPANDED
+A AF ACUTE
+A AF CASH FOSTER
+A AF COBRA (OUT OF STATE) FOSTER
+
+BLANK
+C
+C
+C
+C
+C
+
+430
+431
+432
+460
+461
+462
+
+A SD MAO PICKLE
+ACUTE SSI DISABLED MAO EXPARTE
+ACUTE SSI DISABLED MAO APPEAL
+ACUTE SSI DISABLED MAO DAC
+ACUTE SSI DISABLED MAO DISABLED
+CHILD
+A SD MAO WIDOW/ER
+A SA MAO WIDOW/ER
+A SB MAO WIDOW/ER
+A AF MAO 6MO GUAR
+A AF MAO EXPANDED 6-MO GUARANTEE
+A AF MAO S.O.B.R.A.CHILD 6M GUAR
+
+320
+
+C
+
+465
+
+A AF MAO SOBRA 100-133% 6G
+
+M
+
+C
+C
+C
+C
+
+470
+471
+475
+480
+
+A SA MAO 6MO GUAR
+A SA MAO EXPANDED 6-MO GUARANTEE
+A AF MAO SOBRA 100-133% 6G
+A SB MAO 6MO GUAR
+
+M
+M
+M
+M
+
+361
+370
+371
+372
+
+A AF 4 MO CONT. DUE TO CHILD
+SUPPORT
+A AF 6 MO CONT. TMA 1ST EXT
+A AF 6 MO CONT. TMA 2ND EXT.
+A AF MAO SC EXPANDED
+A AF MAO SOBRA CHILD 100-133%
+HEA
+A AF MAO SW EXPANDED
+A SA MAO
+SSI (AHCCCS CARE/MI)
+SSI (AHCCCS CARE EXPANDED)
+
+C
+M
+M
+M
+
+481
+490
+491
+800
+
+A SB MAO EXPANDED 6-MO GUARANTEE
+A SD MAO 6MO GUAR
+A SD MAO EXPANDED 6-MO GUARANTEE
+QMB ONLY OTHER
+
+M
+M
+M
+P
+
+375
+380
+382
+390
+392
+
+A SA MAO EXPANDED
+A SA MAO PICKLE (ACE)
+ACUTE SSI AGED MAO EXPARTE
+A SB MAO
+ACUTE SSI BLIND MAO EXPARTE
+
+M
+BLANK
+M
+M
+M
+
+810
+820
+830
+840
+850
+
+QMB ONLY AGED
+QMB ONLY BLIND
+QMB ONLY DISABLED
+PART B ONLY - SLMB
+PART B ONLY - QI1
+
+P
+P
+P
+L
+U
+
+332
+334
+351
+352
+
+Revised 03/27/2026
+
+A SB MAO EXPANDED
+A SB MAO PICKLE
+A SD MAO
+A SD MAO EXPANDED
+
+BLANK
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+
+63 | P a g e
+
+Reference Subsystem Codes and Values 2026
+
+Eligibility Category – RF509
+Code
+AF
+BQ
+BS
+EA
+EL
+FP
+JC
+ME
+MI
+MN
+PE
+PS
+QA
+QB
+QD
+QO
+SA
+SB
+SC
+SD
+SF
+SI
+SO
+ST
+TA
+UI
+13
+
+Description
+AFDC (Aid for Dependent Children)
+Buy-In QI1
+Buy-In SLMB
+EAC (Eligible Assistance Children)
+ELIC (Eligible Low-Income Children)
+SOBRA (Sixth Omnibus Budget and Reconciliation Act) Women Family Planning Services
+
+Juvenile Corrections
+Emergency ACA Expanded
+Medically Indigent
+Medically Needy
+Presumptive Eligibility
+Public Safety (AZ Dept Of Corrections)
+QMB (Qualified Medicare Beneficiary) Only Aged
+QMB Only Blind
+QMB Only Disabled
+QMB Only Other
+SSI (Supplemental Security Income) Aged
+SSI Blind
+SOBRA Child
+SSI Disabled
+State Funded
+SSI
+SOBRA Woman
+STATE-ONLY BHS
+TANF (Temporary Assistance for Needy Families)
+Uninsured – Covid-19
+Maricopa County - Non-Medicaid
+
+Revised 03/27/2026
+
+64 | P a g e
+
+Reference Subsystem Codes and Values 2026
+
+Eligibility Key Hierarchy – RF538 & Eligibility Key Combined – RF534
+Note: Information in this section is based on the tables listed above but has been expanded for clarity.
+Where these are used: In the PMMIS Recipient subsystem: The eligibility Key Codes listed on the far left of
+this table are found on the RP145 Inquire Eligibility Summary, RP345 Inquire Combined Eligibility, RP285
+Inquire Eligibility and Enrollment screens and is seen on reports.
+
+060 L SD CA
+
+LTC SSI DISABLED
+
+085 L AF MA
+
+LTC AFDC
+
+090 L SA MA
+
+1931
+LTC SSI AGED
+
+13J A 13 MA
+
+130 L SB MA
+
+JC
+
+10/01/08
+
+X
+
+900
+
+PS
+
+PS
+
+08/01/04
+
+X
+X
+Y
+
+890
+900
+120
+
+ST ST
+UI
+UI
+SA SI 19
+
+03/30/18
+03/01/20
+12/19/88
+
+Y
+
+120
+
+SB SI 19
+
+12/19/88
+
+Y
+
+120
+
+SD SI 19
+
+12/19/88
+
+Y
+
+155
+
+TA
+
+19
+
+01/01/99
+
+Y
+
+150
+
+SA SI 19
+
+12/19/88
+
+AD
+
+X
+
+900
+
+CT CA 13
+
+12/01/07
+
+JU
+
+X
+
+900
+
+CT CJ 13
+
+12/01/07
+
+Y
+
+150
+
+SB SI 19
+
+12/19/88
+
+Y
+
+150
+
+SD SI 19
+
+12/19/88
+
+Y
+
+230
+
+SA SI 19
+
+10/01/82
+
+Y
+
+230
+
+SB SI 19
+
+10/01/82
+
+LTC SSI AGED
+
+CASH
+CASH
+CASH
+31
+
+MAO
+MAO
+MARICOPA CO
+ADULT INMATES
+MARICOPA CO
+JUVENILE
+DETAINEES
+LTC
+
+SUB PROGRAM
+
+JC
+
+QUALIFIER
+
+900
+
+CATEGORY
+
+BEGIN
+
+LTC SSI BLIND
+
+13A A 13 MA
+
+FUND SOURCE
+
+050 L SB CA
+
+DATE
+
+PROGRAM
+
+Uninsured Covid-19
+
+ELIGIBILITY
+
+X
+
+JUVENILE
+CORRECTIONS
+Public Safety (AZ
+Department of
+Corrections)
+State Only BHS
+
+ST1 A ST
+UIN A UI
+040 L SA CA
+
+CATE- PRECEGORICAL DENCE
+
+LEVEL
+
+PS1 A PS MA
+
+BENEFIT
+
+INDICATOR
+
+JC1 A JC MA
+
+RF538
+
+DESCRIPTION
+
+KEY
+TYPE
+CATEGORY
+QUALIFIER
+
+ELIGIBILITY
+
+SSI BLIND
+
+MAO
+140 L SD MA
+
+LTC SSI DISABLED
+
+MAO
+200 A SA CA
+
+SSI AGED
+
+210 A SB CA
+
+SSI BLIND
+
+Revised 03/27/2026
+
+CASH
+CASH
+
+65 | P a g e
+
+Reference Subsystem Codes and Values 2026
+220 A SD CA
+231 A AF MA
+
+SSI DISABLED
+
+Y
+
+230
+
+SD SI 19
+
+10/01/82
+
+31
+
+Y
+
+425
+
+TA
+
+19
+
+01/01/99
+
+31
+
+Y
+
+426
+
+TA XE XE
+
+07/01/01
+
+AS
+
+Y
+
+410
+
+TA
+
+19
+
+10/01/82
+
+STATE ADOPTION AS
+
+Y
+
+415
+
+TA
+
+19
+
+07/01/98
+
+YA
+
+Y
+Y
+
+225
+425
+
+TA
+TA
+
+19
+19
+
+10/01/82
+07/18/00
+
+4E
+
+Y
+
+425
+
+TA
+
+19
+
+03/01/92
+
+4C
+
+SU
+
+Y
+
+425
+
+TA
+
+19
+
+10/01/82
+
+SO
+
+SH
+
+Y
+
+631
+
+KC SP H2
+
+01/01/03
+
+KH
+
+Y
+
+630
+
+KC KP H2
+
+01/01/03
+
+Y
+
+425
+
+TA
+
+19
+
+04/01/90
+
+Y
+
+425
+
+TA
+
+19
+
+04/01/90
+
+CASH
+MAO
+1931
+
+232 A AF MA
+
+MAO 1931
+
+XE
+
+EXPANDED
+
+260 A AF CA
+
+IVE ADOPTION
+SUBSIDY
+
+265 A AF MA
+
+SUBSIDY
+
+270 A AF CA
+275 A AF MA
+305 A AF MA
+
+CASH FOSTER
+MAO
+YATI
+COBRA
+
+FS
+
+OUT OF STATE
+
+FOSTER
+
+320 A AF MA
+
+4 MONTH
+CONTINUANCE CHILD
+
+SUPPORT
+
+325 A AF MA
+327 A AF MA
+332 A AF MA
+
+SOBRA HIFA
+PARENT
+KIDSCARE HIFA
+PARENT
+
+6 MO. CONTINUANCE 6F
+TMA 1ST
+EXTENSION
+
+334 A AF MA
+
+6 MO. CONTINUANCE 6S
+TMA 2ND
+EXTENSION
+
+350 A AF MA
+352 A AF MA
+
+MAO SOBRA CHILD SO
+SOBRA CHILD 100- EX
+
+CH
+CH
+
+Y
+Y
+
+425
+425
+
+SC
+19
+SC XA CE
+
+01/01/88
+10/01/13
+
+355 A AF MA
+
+MAO DES SOBRA SO
+
+NB
+
+Y
+
+425
+
+SC
+
+19
+
+07/01/91
+
+NB
+
+Y
+
+425
+
+TA
+
+19
+
+02/01/94
+
+NB
+
+KH
+
+Y
+
+630
+
+KC
+
+21
+
+01/01/03
+
+SO
+
+PG
+
+Y
+
+425
+
+SO
+
+19
+
+01/01/88
+
+KC
+
+Y
+Y
+
+456
+420
+
+KC
+21
+SA SI 19
+
+10/14/98
+10/01/82
+
+Y
+
+420
+
+SA SI 19
+
+10/01/08
+
+Y
+
+421
+
+SA XE XE
+
+04/01/01
+
+133% AGES 06-18
+NEWBORN
+
+357 A AF MA
+
+MAO DES
+NEWBORN
+
+359 A AF MA
+360 A AF MA
+
+DES HIFA
+NEWBORN
+MAO
+SOBRA PG
+
+368 A AF MA
+370 A SA MA
+
+KidsCare
+
+371 A SA MA
+
+SSI (AHCCCS
+CARE/MI)
+A SA MAO
+EXPANDED
+
+SM
+
+380 A SA MA
+
+SSI AGED MAO
+PICKLE
+
+PK
+
+Y
+
+420
+
+SA SI 19
+
+10/01/82
+
+382 A SA MA
+
+SSI AGED MAO
+
+EX
+
+Y
+
+432
+
+SA SI 19
+
+06/01/98
+
+420
+432
+
+SB SI 19
+SB SI 19
+
+10/01/82
+06/01/98
+
+424
+
+SB TW 19
+
+10/01/01
+
+375 A SA MA
+
+SSI AGED
+
+MAO
+XE
+
+EXPARTE
+
+390 A SB MA
+392 A SB MA
+
+SSI BLIND MAO
+SSI BLIND MAO
+EXPARTE
+
+EX
+
+Y
+Y
+
+393 A SB MA
+
+SSI BLIND MAO
+
+TW
+
+Y
+
+Revised 03/27/2026
+
+66 | P a g e
+
+Reference Subsystem Codes and Values 2026
+FREEDOM TO WORK
+
+394 A SB MA
+395 A SB MA
+
+SSI BLIND MAO
+APPEAL
+SSI BLIND
+
+400 A SB MA
+
+EXPANDED
+SSI BLIND
+
+403 A SD MA
+
+AP
+
+Y
+
+430
+
+SB SI 19
+
+06/01/98
+
+Y
+
+421
+
+SB XE XE
+
+04/01/01
+
+PK
+
+Y
+
+420
+
+SB SI 19
+
+10/01/82
+
+TW
+
+Y
+
+424
+
+SD TW 19
+
+10/01/01
+
+Y
+Y
+
+420
+421
+
+SD SI 19
+SD XE XE
+
+10/01/82
+04/01/01
+
+XE
+
+MAO
+MAO PICKLE
+SSI DISABLED
+
+MAO
+FREEDOM TO WORK
+
+410 A SD MA
+415 A SD MA
+
+SSI DISABLED MAO
+
+420 A SD MA
+
+SSI DISABLED MAO PK
+PICKLE
+
+Y
+
+420
+
+SD SI 19
+
+10/01/82
+
+422 A SD MA
+
+SSI DISABLED MAO EX
+EXPARTE
+
+Y
+
+432
+
+SD SI 19
+
+06/01/98
+
+424 A SD MA
+
+SSI DISABLED MAO AP
+APPEAL
+
+Y
+
+430
+
+SD SI 19
+
+06/01/98
+
+426 A SD MA
+
+SSI DISABLED MAO DA
+DISABLED ADULT
+
+Y
+
+420
+
+SD SI 19
+
+06/01/98
+
+428 A SD MA
+
+SSI DISABLED MAO DC
+DISABLED CHILD
+SSI DISABLED
+WD
+
+Y
+
+420
+
+SD SI 19
+
+06/01/98
+
+Y
+
+420
+
+SD SI 19
+
+10/01/82
+
+WD
+
+Y
+
+420
+
+SA SI 19
+
+10/01/82
+
+WD
+
+Y
+
+420
+
+SB SI 19
+
+10/01/82
+
+NB
+
+Y
+
+435
+
+TA
+
+19
+
+10/01/82
+
+SN
+
+Y
+
+435
+
+SC
+
+19
+
+01/01/88
+
+Y
+
+631
+
+KC
+
+21
+
+01/01/03
+
+Y
+
+430
+
+TA
+
+19
+
+10/01/82
+
+Y
+
+457
+
+KC
+
+21
+
+11/01/98
+
+Y
+
+445
+
+TA
+
+19
+
+10/01/82
+
+SSI DISABLED MAO
+EXPANDED
+
+XE
+
+CHILD
+
+430 A SD MA
+
+MAO
+
+431 A SA MA
+
+WIDOW/ER
+SSI AGED
+
+432 A SB MA
+
+WIDOW/ER
+SSI BLIND
+
+MAO
+MAO
+WIDOW/ER
+
+440 A AF MA
+
+AHCCCS
+NEWBORN
+
+445 A AF MA
+447 A AF MA
+450 A SI MA
+
+AHCCCS
+
+SOBRA NEWBORN
+SOBRA HIFA
+NB
+DEEMED NEWBORN
+SSI AHCCCS
+NEWBORN
+
+NB
+
+455 A AF MA
+
+KidsCare
+
+NB
+
+460 A AF MA
+
+NEWBORN
+AFDC
+
+6G
+
+461 A AF MA
+
+6 MO. GUARANTEE
+AFDC
+EXPANDED
+
+SH
+
+KC
+
+6G
+
+XE
+
+Y
+
+446
+
+TA XE XE
+
+07/01/01
+
+MAO SOBRA CHILD 6G
+
+CH
+
+Y
+
+445
+
+SC
+
+19
+
+01/01/88
+
+6 MO. GUARANTEE
+462 A AF MA
+
+6 MO. GUARANTEE
+
+463 A MI
+464 A AF MA
+
+A AHCCCS CARE >
+40% FPL 6MG
+
+6G
+
+XE
+
+Y
+
+525
+
+AZ NH XE
+
+10/01/01
+
+MAO SOBRA
+PREGNANT
+
+6G
+
+PG
+
+Y
+
+445
+
+SO
+
+01/01/88
+
+19
+
+6 MO. GUARANTEE
+
+Revised 03/27/2026
+
+67 | P a g e
+
+Reference Subsystem Codes and Values 2026
+465 A AF MA
+
+SOBRA CHILD 100133% 6MG
+
+XE
+
+Y
+
+446
+
+SC XE CE
+
+467 A MI
+
+A AHCCCS CARE 6M XE
+< 40% FPL 6MG
+KidsCare
+YG
+KC
+12 mo.
+
+Y
+
+525
+
+AC NH XW
+
+Y
+
+458
+
+KC
+
+21
+
+11/01/98
+
+Y
+
+440
+
+SA SI 19
+
+10/01/82
+
+468 A AF MA
+
+6G
+
+10/01/13
+10/01/01
+
+GUARANTEE
+
+470 A SA MA
+
+SSI AGED MAO
+6 MO. GUARANTEE
+
+6G
+
+471 A SA MA
+
+SSI AGED MAO
+EXPANDED
+6 MO. GUARANTEE
+ADULTS < 40% 6MG
+
+6G
+
+XE
+
+Y
+
+441
+
+SA XE XE
+
+04/01/01
+
+6M
+
+ES
+ES
+
+Y
+Y
+
+525
+525
+
+AC XE EW
+AC XE EE
+
+10/01/13
+10/01/13
+
+NE
+
+Y
+Y
+
+525
+440
+
+AC XE NE
+SB SI 19
+
+10/01/13
+10/01/82
+
+475 A MI
+476 A MI
+477 A MI
+480 A SB MA
+
+ADULTS 40-100% 6G
+6MG
+ADULTS > 100% 6MG 6G
+SSI BLIND
+
+MAO
+
+6G
+
+481 A SB MA
+
+6 MO. GUARANTEE
+SSI BLIND
+EXPANDED
+
+6G
+
+XE
+
+Y
+
+441
+
+SB XE XE
+
+04/01/01
+
+482 A SB MA
+
+6 MO. GUARANTEE
+SSI BLIND
+6G
+FREEDOM TO WORK
+6 MO. GUARANTEE
+
+TW
+
+Y
+
+440
+
+SB TW 19
+
+09/01/02
+
+Y
+
+440
+
+TA
+
+19
+
+10/01/82
+
+Y
+
+440
+
+SD SI 19
+
+10/01/82
+
+MAO
+
+485 A SI MA
+490 A SD MA
+
+SSI MAO
+6G
+6 MO GUARANTEE
+SSI DISABLED
+6G
+MAO
+6 MO
+GUARANTEE
+
+491 A SD MA
+
+SSI DISABLED
+
+MAO
+
+6G
+
+XE
+
+Y
+
+441
+
+SD XE XE
+
+04/01/01
+
+6G
+
+TW
+
+Y
+
+440
+
+SD TW 19
+
+09/01/02
+
+Y
+
+460
+
+BC BC 19
+
+01/01/02
+
+Y
+
+460
+
+BC CC 19
+
+01/01/02
+
+LE
+
+Y
+
+460
+
+BC CC 19
+
+01/01/02
+
+O1
+
+N
+
+485
+
+TP O1 SO
+
+10/01/07
+
+O2
+
+N
+
+485
+
+TP O2 SO
+
+10/01/07
+
+ES
+ES
+NE
+
+Y
+Y
+Y
+
+479
+479
+479
+
+AC XE EW
+AC XE EE
+AC XE NE
+
+10/01/13
+10/01/13
+10/01/13
+
+EXPANDED
+6 MO
+GUARANTEE
+
+492 A SD MA
+
+SSI DISABLED
+
+MAO
+FREEDOM TO WORK
+6 MO
+GUARANTEE
+
+560 A AF MA
+565 A AF MA
+570 A AF MA
+581 A AF MA
+582 A AF MA
+586 A MI
+588 A MI
+589 A MI
+
+Revised 03/27/2026
+
+AFDC MAO
+BC
+BREAST CANCER
+PATIENT
+AFDC MAO
+CC
+CERVICAL CANCER
+PATIENT
+AFDC MAO
+CC
+CERVICAL CANCER
+W/ LESIONS PATIENT
+TRANSPLANT
+TP
+OPTION 1
+TRANSPLANT
+TP
+OPTION 2
+
+ADULTS < 40% AM
+ADULTS 40-100%
+ADULTS > 100%
+
+68 | P a g e
+
+Reference Subsystem Codes and Values 2026
+675 A PE
+725 L SB MA
+735 L SD MA
+750 A AF MA
+800 Q QO MA
+
+Presumptive Eligibility PE
+LTC
+TW
+SSI BLIND MAO
+FREEDOM TO WORK
+LTC SSI DISABLED TW
+MAO FREEDOM TO
+WORK
+AFDC
+
+MAO
+QMB (QUALIFIED
+
+Y
+Y
+
+900
+154
+
+PE
+PE
+SB TW 19
+
+01/01/15
+10/01/01
+
+Y
+
+154
+
+SD TW 19
+
+10/01/01
+
+Y
+
+425
+
+TA
+
+19
+
+10/01/09
+
+Q
+
+480
+
+QO
+
+19
+
+07/01/89
+
+Q
+
+480
+
+QA
+
+19
+
+07/01/89
+
+Q
+
+480
+
+QB
+
+19
+
+07/01/89
+
+Q
+
+480
+
+QD
+
+19
+
+07/01/89
+
+Y
+Y
+
+530
+530
+
+BO BS 19
+BO BQ 19
+
+10/01/07
+10/01/07
+
+Y
+
+460
+
+TA
+
+19
+
+01/01/93
+
+MEDICARE
+BENEFICIARY)
+
+ONLY
+OTHER
+
+810 Q QA MA
+
+QMB (QUALIFIED
+MEDICARE
+BENEFICIARY)
+
+ONLY
+AGED
+
+820 Q QB MA
+
+QMB (QUALIFIED
+MEDICARE
+BENEFICIARY)
+
+ONLY
+BLIND
+
+830 Q QD MA
+
+QMB (QUALIFIED
+MEDICARE
+BENEFICIARY)
+
+ONLY
+840 B BS
+850 B BQ
+900 A AF MA
+
+905 A AF MA
+
+DISABLED
+PART B Only – SLMB
+PART B ONLY – QI1
+AFDC MAO
+EMERGENCY
+SERVICES DES
+UNDOCU-MENTED
+
+AFDC MAO
+EMERGENCY
+
+EM
+
+EM
+
+PG
+
+Y
+
+460
+
+TA
+
+19
+
+01/01/93
+
+EM
+
+XE
+
+Y
+
+461
+
+TA XE XE
+
+07/01/01
+
+Y
+
+455
+
+SA SI 19
+
+01/01/93
+
+Y
+
+456
+
+SA XE XE
+
+04/01/01
+
+Y
+
+455
+
+SB SI 19
+
+01/01/93
+
+Y
+
+456
+
+SB XE XE
+
+04/01/01
+
+Y
+
+455
+
+SD SI 19
+
+01/01/93
+
+Y
+
+456
+
+SD XE XE
+
+04/01/01
+
+PREGNANT DES
+UNDOCU-MENTED
+
+908 A AF MA
+
+AFDC MAO
+EXPANDED
+EMERGENCY
+
+910 A SA MA
+911 A SA MA
+915 A SB MA
+916 A SB MA
+
+SERVICES
+SSI AGED MAO
+EMERGENCY SERVICES
+DES UNDOCU-MENTED
+
+SSI AGED MAO
+EMERGENCY SERVICES
+EXPANDED
+
+SSI BLIND MAO
+EMERGENCY SERVICES
+DES UNDOCU-MENTED
+
+SSI BLIND MAO
+
+EM
+EM
+EM
+EM
+
+920 A SD MA
+
+EMERGENCY SERVICES
+EXPANDED
+SSI DISABLED
+EM
+
+921 A SD MA
+
+EMERGENCY SERVICES
+DES UNDOC-UMENTED
+SSI DISABLED
+EM
+
+Revised 03/27/2026
+
+XE
+
+XE
+
+MAO
+
+MAO
+
+XE
+
+69 | P a g e
+
+Reference Subsystem Codes and Values 2026
+EMERGENCY SERVICES
+EXPANDED
+
+949 A AF MA
+950 A MI
+953 A MI
+955 A MI
+
+Revised 03/27/2026
+
+FES YATI AGE 18 - 26 EM
+ADULTS FES 40EM
+100%
+ADULTS FES > 100% EM
+ADULTS FES < 40%
+
+ME
+
+YA
+TR
+
+N
+Y
+
+460
+460
+
+TA XE 19
+AC XE NE
+
+10/01/13
+10/01/13
+
+NE
+ES
+
+Y
+Y
+
+460
+460
+
+AC XE NE
+AC XE NE
+
+10/01/13
+10/01/13
+
+70 | P a g e
+
+Reference Subsystem Codes and Values 2026
+
+Eligibility Program – RF547
+Code
+AC
+AF
+AI
+BC
+BO
+CT
+EA
+EL
+FP
+JC
+KC
+MD
+MI
+MN
+PE
+PS
+QA
+QB
+QD
+QO
+SA
+SB
+SC
+SD
+SI
+SO
+ST
+TA
+TM
+TP
+UI
+
+Revised 03/27/2026
+
+Description
+AHCCCS Care
+AFDC (Non-SOBRA)
+AMERICAN INDIAN MEDICAL HEALTH SERVICES
+BCCTP (Breast & Cervical Cancer Treatment Program)
+Part B Buy-In ONLY
+County TPA
+EAC (Eligible Assistance Children)
+ELIC (Eligible Low-Income Children)
+SOBRA Woman Family Planning Services
+Juvenile Corrections
+KidsCare (State Children's Health Insurance Program)
+M.E.D. (Medical Expense Deduction)
+Medically Indigent
+Medically Needy
+Presumptive Eligibility
+Public Safety (AZ Dept Of Corrections)
+QMB (Qualified Medicare Beneficiary) Only Aged
+QMB Only Blind
+QMB Only Disabled
+QMB Only Other
+SSI (Supplemental Security Income) Aged
+SSI Blind
+SOBRA Child
+SSI Disabled
+SSI
+SOBRA Woman (Mother)
+STATE-ONLY BHS
+TANF (Temporary Assistance for Needy Families)
+Temporary Coverage SSDI
+Transplant Program
+Uninsured – Covid-19
+
+71 | P a g e
+
+Reference Subsystem Codes and Values 2026
+
+Eligibility Qualifier – RF510
+Code
+CA
+MA
+
+Description
+Cash
+MAO (Medical Assistance Only)
+
+Eligibility Type – RF537
+Code
+A
+B
+L
+Q
+
+Description
+ACC
+Buy-In Part B ONLY - SLMB/QI1
+LTC (Long Term Care)
+QMB Only
+
+Revised 03/27/2026
+
+72 | P a g e
+
+Reference Subsystem Codes and Values 2026
+
+Enrollment Type – RF513
+Where these are used:
+In the PMMIS Recipient
+subsystem:
+The RP160 Add Enrollment, Inquire
+Enrollment, Change Enrollment
+screens all feature this table's data
+as well as the corresponding RP560
+supervisor override screens.
+On the RP160/RP560 Add screens:
+The cursors first position is on the
+"Enrollment Type" line. Depress the
+F1 help key, and the Enrollment Type
+table appears.
+
+Revised 03/27/2026
+
+Code
+AA
+AE
+CV
+EC
+FA
+FC
+FE
+FI
+FM
+MA
+MC
+MI
+MM
+PA
+PC
+PD
+PE
+PH
+PK
+PO
+PP
+PW
+RA
+RB
+RC
+RE
+UN
+
+Description
+Algorithm Assigned
+Annual Enrollment
+Conversion – Unknown
+Enrollment Choice
+Administrative In-Force Assigned
+Family Continuity (Case)
+Forced Enrollment
+County In-Force Assigned
+Plan Change in Medical Care - Force Assigned
+Manually Assigned
+County In-Manually Assigned
+Administrative In-Manually Assigned
+Plan Change in Medical Care - Manually Assigned
+'Multiple Plan Split-Auto Assign'
+Pended Choice Enrollment
+'Direct Move' Evaluation Method
+Pended Enrollment - No Eligibility
+Pended HEA Enrollment Choice
+Pended KidsCare Enrollment
+Pended Enrollment - Open Enrollment
+'Multiple Plan Split-Percentage'
+Pend Waiting
+Retroactive Enrollment
+Rule-Based Assignment
+Rate Code Change
+Re-Enrollment
+Unknown
+
+73 | P a g e
+
+Reference Subsystem Codes and Values 2026
+
+Exception [Codes] – RF539
+Code
+AA
+AD
+AG
+AH
+AL
+AP
+AS
+BO
+CA
+CC
+CF
+CI
+CM
+CO
+CR
+CT
+DA
+DC
+E0
+EP
+FE
+FM
+FO
+FR
+GB
+GH
+GL
+GR
+HB
+HC
+HE
+HI
+HL
+HR
+IB
+ID
+IH
+IM
+IO
+IS
+JC
+
+Description
+Use ALPHA Codes for Recipient Subsystem
+AHCCCS Care Medicare Move
+AHCCCS Care Age Move
+AHCCCS Care Diagnosis Move
+Alabama Hurricane Katrina Refugees
+Apache County Inmates
+AHCCCS Care SMI Move
+Buy in ONLY
+Client Advocate Case
+Coconino County Inmates
+Chronic Federalized
+ADOC Inmates Less Than 1 Year
+City of Mesa Inmates
+Cochise County Inmates
+Capitation Recovery Exists
+Court Ordered Treatment
+Potential DAC (Disabled Adult Child) Acute
+Disabled Child-SSI Recipient On 8/22/96
+E01, Living Arrangement Not D (EO1 =SDX (State Data Exchange) Payment Status Code designating
+eligible for Federal and/or State benefits SDX Code D="Title XIX institution”)
+Presumptive Eligibility Extension
+FES Foster Care
+Newborn Of FES Mother
+PREVIOUS CHILD REHABILITATIVE SVC (PCR)
+Potential Fraud
+General HMO Block
+Graham County Inmates
+Gila County Inmates
+Greenlee County Inmates
+HMO Block
+HCBS Recipient
+H20 Eligible Member
+Hospitalized Inmate
+Homeless
+Hurricane Rita Refugees
+Initial HMO Block
+ID Card Returned
+NATIVE AMERICAN STATUS VERIFIED
+IMD STAY GREATER THAN 15 DAYS
+Override IH – Used ITU, Not NA
+Institutionalized (IMD, ASH, Hospital)
+Juvenile Corrections
+
+Revised 03/27/2026
+
+74 | P a g e
+
+Reference Subsystem Codes and Values 2026
+JD
+KA
+KC
+KF
+KG
+LA
+LP
+MA
+MC
+MH
+MI
+MO
+MP
+
+Juvenile Detention Child in CTYPRI
+Keep Member in AHCCCS Care
+KidsCare II Under SNCP
+Kidscare 200-225%
+KINSHIP Guardianship IV-E
+Louisiana Hurricane Katrina Refugees
+LaPaz County Inmates
+MED Adjustment Period
+Maricopa County Inmates
+Mohave County Inmates
+Medically Improved FTW
+SSI Cash Moved out of State
+Medicaid Prisoner Inpat Services Only
+
+MS
+NB
+NC
+NS
+NT
+NV
+PM
+PN
+PP
+PR
+RA
+RC
+RI
+RJ
+RM
+SC
+SP
+TC
+UD
+WW
+XX
+YA
+YU
+YV
+00
+01
+
+Mississippi Hurricane Katrina Refugees
+Returned Delivered Newborn Corres
+No Conversion
+New To State
+Medicaid PPC Over State Only Enroll
+Navajo County Inmates
+Pima County Inmates
+Pinal County Inmates
+POSTPARTUM PERIOD
+PRISONER RELEASE HIGH MEDICAL NEEDS
+H2O RENTAL ASSISTANCE-ENHANCED SHELTER
+Review Completed
+Released From IMD (ASH, ETC)
+Released From Jail
+OE Returned Mail
+Santa Cruz County Inmates
+SPECIAL PROCESSING
+Tuba City RHC Inmates
+Undocumented Alien
+Potential Widow/Widower
+Confidential Record
+Young Adult Transitional Insurance (YATI)
+Yuma County Inmates
+Yavapai County Inmates
+Use Numeric Codes for Claims/Encounters
+Recipient Enrolled in Medicare HMO
+
+02
+03
+04
+05
+
+Review All Claims for This Recipient
+Assaults (ADC/DOC ONLY)
+Self-Inflicted (ADC/DOC ONLY)
+RESERVED FOR ADC/DOC
+
+Revised 03/27/2026
+
+75 | P a g e
+
+Reference Subsystem Codes and Values 2026
+06
+07
+13
+22
+25
+26
+27
+28
+30
+31
+40
+50
+51
+52
+53
+55
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+80
+81
+82
+83
+84
+85
+86
+
+RESERVED FOR ADC/DOC
+RESERVED FOR ADC/DOC
+Legal Alien No Longer Eligible for SSA Cash
+HIGH UTILIZATION
+Review All Claims for Transplantation
+Review All ESP Extended Care Recipients
+Option 1 Transplant Recipient
+Option 2 Transplant Recipient
+SPECIAL PROCESSING
+Non-Cash AFDC
+No FFP (Federal Financial Participation) Claiming Allowed
+Allow FFS (Fee-For-Service) Claims for Capitated Enrollment
+IRCA (Immigration Reform Control Act)
+Recipient Authorized to Receive Hospice Services
+IHS DD (Developmentally Disabled) Referrals
+Contract Year 98 Enrollment
+Potential DAC (Disabled Adult/Children)
+Apache County Inmates
+Cochise County Inmates
+Coconino County Inmates
+Gila County Inmates
+Graham County Inmates
+Greenlee County Inmates
+Maricopa County Inmates
+Mohave County Inmates
+Navajo County Inmates
+Pima County Inmates
+Pinal County Inmates
+Santa Cruz County Inmates
+Yavapai County Inmates
+Yuma County Inmates
+La Paz County Inmates
+Tuba City Inmates
+Absent Parent
+SEVERELY EMOTIONALLY DISTURBED (SED)
+NEONATAL ABSTINENCE SYNDROME (NAS)
+SEVERE COMBINED IMMUNODEFICIENCY (SCI)
+AUTISM OR AT RISK (AUT)
+OFFICE OF HUMAN RIGHTS SPC ASSIST (OHR)
+SMI OPT OUT
+
+Revised 03/27/2026
+
+76 | P a g e
+
+Reference Subsystem Codes and Values 2026
+87
+90
+98
+99
+
+Dual Sensory Loss
+SMI (Seriously Mentally Ill)
+Retroactive Medicare Termination
+Manual Price All Recipient Claims - N.R.
+
+Revised 03/27/2026
+
+77 | P a g e
+
+Reference Subsystem Codes and Values 2026
+
+Function Specific Reason Codes – RF545
+
+Revised 03/27/2026
+
+Y
+N
+Y
+N
+N
+Y
+Y
+N
+N
+Y
+N
+N
+N
+N
+Y
+N
+N
+Y
+N
+Y
+Y
+N
+Y
+N
+Y
+N
+N
+N
+Y
+N
+N
+N
+N
+
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+Y
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+Y
+N
+N
+N
+N
+N
+N
+N
+N
+
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+Y
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+Y
+N
+N
+N
+N
+N
+N
+N
+N
+
+Program
+
+Y
+Y
+N
+Y
+Y
+Y
+N
+N
+N
+Y
+N
+Y
+N
+Y
+N
+Y
+Y
+Y
+Y
+N
+Y
+Y
+N
+N
+Y
+N
+N
+N
+Y
+N
+N
+N
+N
+
+Third Party
+Coverage
+Indicator
+Special
+
+Medicare
+
+Description
+Absolute Discharge From ADJC
+Adoption Final
+Applied For New Eligibility
+Eligible For AFDC Cash
+AGE LIMIT EXCEEDED FOR CATEGORY
+Refused To Assign Medical Support
+Plan Change, Admin-Out
+Co-Pay Term Due to Timely Appeal
+Co-Pay Appeal Resolved/Ended
+Refused To Assign or Provide TPL Info
+Term Due to Increase in Co-Pay
+Failed Review for Continued Benefits
+Term Due to Decrease in Co-Pay
+Coverage Ended
+Eligibility Change Causes Disenrollment
+Reported Change Causes Ineligibility
+Contact Lost
+Computer Match, Info Validated
+1931 Conversion Project
+County Move-Out
+Currently Receiving MA
+EXCESS INCOME=31 TERM TO 4 MO CONT
+Contract Terminated
+Term Due to Update of Co-Pay Data
+Converted/Higher Eligibility
+Change Of Assessment
+NO ELIG DEPRIVED/DEPENDENT CHILD
+Deceased
+Discharge for Cause From ADJC
+Death
+Incarceration
+Short Term Incarceration
+Loss Of Contract
+
+Enrollment
+
+Code
+AB
+AD
+AE
+AF
+AG
+AI
+AO
+AP
+AR
+AT
+CA
+CB
+CD
+CE
+CH
+CI
+CL
+CM
+CN
+CO
+CR
+CS
+CT
+CU
+CV
+DA
+DC
+DE
+DF
+DH
+DI
+DJ
+DL
+
+Eligibility
+
+Indicators
+
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+Y
+N
+N
+N
+Y
+N
+N
+N
+N
+N
+N
+N
+N
+
+78 | P a g e
+
+Reference Subsystem Codes and Values 2026
+DM
+DN
+DO
+DP
+DQ
+DR
+DS
+DT
+DX
+EC
+EE
+EI
+EM
+EO
+EP
+ER
+ES
+FH
+FM
+FO
+HC
+HE
+HO
+HT
+IC
+IE
+IF
+IL
+IM
+KH
+KT
+LA
+LC
+LT
+MA
+MB
+MC
+MN
+MO
+
+Move From RBHA Area
+Non-Compliance
+Move Out of State
+Duplicate Record
+Disqualified For SOBRA Family Planning
+Inter RBHA Transfer
+Need Additional SVCS
+Treatment Completed
+Administrative Closure
+No Elig Deprived/Dependent
+Exhausted All Efforts
+Excessive Income
+End Of MD Eligibility
+Open Enrollment-Out
+ESI Participant (Employer Sponsored Ins)
+ENTERED IN ERROR (TECHNICAL CLOSURE)
+Emergency Services County Term
+FAILED TO VERIFY TPL (HIFA PARENT)
+Foster/Medics Implementation
+Plan Change-Out-Family Continuity
+Higher From Exparte
+Higher Eligibility
+Moved Out of Health Plan Area
+County Termination Due to KidsCare Add
+Incarceration
+Ineligible
+DES Interface-Created Transaction
+Earnings Disregard Ended
+Ineligible Mother
+KC Immediate Termination
+KidsCare Termination Due to Higher Eligibility
+Living Arrangement
+LOSS OF CONTACT/RETURNED MAIL
+Eligibility For AFDC MAO Long Term Care
+Medicare Added, Caused Termination
+MEDICAL BENEFITS ENDED--HEARING DECISION
+TMA Closure No Earnings
+Mom and Baby in New Case
+Plan Change-Out-Medical Care Continued
+
+Revised 03/27/2026
+
+N
+N
+N
+N
+Y
+N
+N
+N
+N
+Y
+Y
+Y
+Y
+N
+Y
+Y
+N
+Y
+N
+N
+N
+N
+N
+N
+Y
+Y
+N
+Y
+Y
+Y
+N
+Y
+Y
+Y
+Y
+Y
+Y
+Y
+N
+
+N
+N
+N
+Y
+N
+N
+N
+N
+N
+Y
+N
+N
+N
+Y
+N
+Y
+N
+N
+N
+Y
+N
+N
+Y
+N
+Y
+N
+N
+N
+N
+N
+N
+Y
+N
+N
+N
+Y
+Y
+Y
+Y
+
+N
+N
+N
+Y
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+Y
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+
+N
+N
+N
+Y
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+Y
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+
+N
+N
+N
+Y
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+Y
+N
+N
+N
+N
+N
+N
+N
+N
+N
+Y
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+
+79 | P a g e
+
+Reference Subsystem Codes and Values 2026
+MR
+MT
+NC
+NE
+NO
+NP
+NQ
+NR
+NS
+NT
+NW
+NX
+OS
+OT
+PA
+PE
+PL
+PO
+PP
+PR
+PT
+QC
+RA
+RC
+RE
+RH
+RI
+RM
+RO
+RT
+RV
+SA
+SD
+SE
+SM
+SR
+SS
+ST
+TE
+
+Maximum Resources Exceeded
+Medical Termination
+NON-COMPLIANCE WITH DCES
+NO ELIGIBLE CHILD (HIFA PARENT)
+No Good Faith Effort
+Nonpayment Of Premium
+Non-Qualified
+NB Does Not Live with Mom in AZ
+No signature on Application
+Newborn Termination Due to Higher Eligibility
+Not Willing to Pay Premium
+Failed To Respond with NB Information
+AZ RESIDENCY NOT ESTABLISHED
+Other Term Reason
+PARIS Residency Fail
+Pregnancy Ended
+Paroled From ADJC
+End Of Contract-Out: Direct Move Method
+Premium Payment Not Made
+Failure To Comply
+End Of Contract-Out: %; Auto; Rule Method
+Refused To Cooperate With QC
+Retroactive Enrollment
+Rate Code Change
+REDETERMINATION NOT COMPLETED
+Child Returned to Parent (FC)
+Reside In Institution (ASH)
+Refuse Medical Denial ONLY
+Mental Health Services Disenrollment
+Retroactive Eligibility
+Failed to Verify Resources
+Sponsored Alien: Agency/Organ
+Disabled ES Referred to SSI MAO
+STATE EMPLOYEE (HIFA PARENT)
+NO ACTIVE MEDICARE PART A
+SSI MAO Referral
+SSN Requirements Not Met
+Surgical Sterilization
+ELIG FOR TMA 1ST EXT
+
+Revised 03/27/2026
+
+Y
+N
+Y
+Y
+Y
+Y
+Y
+Y
+Y
+N
+Y
+Y
+Y
+Y
+Y
+Y
+Y
+N
+Y
+N
+N
+Y
+N
+N
+Y
+Y
+Y
+Y
+N
+Y
+Y
+Y
+Y
+Y
+Y
+Y
+Y
+Y
+N
+
+Y
+N
+N
+N
+N
+N
+Y
+Y
+Y
+N
+Y
+Y
+N
+Y
+Y
+N
+Y
+N
+N
+N
+N
+Y
+Y
+Y
+N
+Y
+Y
+Y
+N
+Y
+Y
+Y
+Y
+N
+Y
+Y
+N
+N
+N
+
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+Y
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+Y
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+Y
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+Y
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+
+Y
+N
+N
+N
+N
+N
+N
+Y
+N
+N
+N
+N
+N
+Y
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+Y
+Y
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+
+80 | P a g e
+
+Reference Subsystem Codes and Values 2026
+TH
+TL
+TP
+TY
+UE
+UP
+US
+VB
+VI
+VK
+VR
+VW
+ZZ
+
+Term Hospital Presumptive Eligibility
+Eligible For AFDC 2nd Extension
+THIRD PARTY EXISTS
+Three Years of Non-Service
+Eligibility AFDC MAO Unemployed Parent Coverage
+Eligibility AFDC Unemployed Parent Coverage
+Citizen REQ Not Met (HIFA Parent)
+Voluntary Withdraw Term EOM
+Failure To Comply with Proc Req
+Voluntary Withdraw KidsCare (No 12-Mo)
+Loss of Contact/Whereabouts Unknown
+Voluntary Withdrawal Immediate Term
+Special EAC Termination Tape from DES (9/23)
+
+Revised 03/27/2026
+
+Y
+N
+Y
+N
+N
+Y
+Y
+Y
+Y
+Y
+Y
+Y
+Y
+
+Y
+N
+N
+N
+N
+N
+Y
+Y
+Y
+Y
+Y
+Y
+N
+
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+Y
+N
+N
+
+N
+N
+N
+N
+N
+N
+N
+N
+N
+N
+Y
+N
+N
+
+Y
+N
+N
+N
+N
+N
+N
+N
+N
+N
+Y
+N
+N
+
+81 | P a g e
+
+Reference Subsystem Codes and Values 2026
+
+Insured Relationship – RF715
+Where these are used:
+In the PMMIS Recipient subsystem: RP155
+Add Third Party Coverage Detail Screen's
+last field is where this code is found.
+Place the cursor on the "Relationship Of
+Policy Holder To Recipient" line: Depress
+the F1 help key and this table will appear.
+Entries may be viewed on the RP155
+Inquire Third Party Coverage Summary
+Screen.
+
+Revised 03/27/2026
+
+Code
+A
+C
+G
+H
+L
+O
+P
+S
+
+Description
+Absent Parent (CSEA)
+Child
+Guarantor
+Holder (self)
+Legal Guardian
+Other
+Parent
+Spouse
+
+82 | P a g e
+
+Reference Subsystem Codes and Values 2026
+
+Language [Code] – RF514
+Code
+&
+%
+#
+@
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+S
+T
+U
+V
+W
+X
+Y
+Z
+0
+1
+2
+3
+4
+5
+
+Description
+Yiddish
+Vietnamese
+Tagalog
+Somali
+Albanian
+American Sign Language
+Amharic
+Arabic
+English
+Armenian
+Cantonese
+Chinese
+Croation
+Farsi
+Filipino
+French
+German
+Greek
+Other
+Haitian/Creole
+Hindi
+Hmong
+Spanish
+Hopi
+Unknown/Unspecific
+Hungarian
+Indian (India)
+Italian
+Japanese
+Khmer
+Serbian
+Korean
+Laotian
+Mandarin
+Mon-Khmer
+Native American
+
+Revised 03/27/2026
+
+83 | P a g e
+
+Reference Subsystem Codes and Values 2026
+6
+7
+8
+9
+
+Navajo
+Polish
+Portuguese
+Russian
+
+Marital Status – RF515
+Code
+M
+S
+U
+W
+
+Description
+Married
+Single
+Unknown/Unspecified
+Widow/Widower
+
+Revised 03/27/2026
+
+84 | P a g e
+
+Reference Subsystem Codes and Values 2026
+
+Medical Condition – RF532
+Where these are used:
+In the PMMIS Recipient
+subsystem: Transaction travel to
+the RP140A Add Medical
+Condition Screen. The cursor will
+be on the "Medical Condition"
+line. Depress the F1 help key,
+and this table will appear.
+Once the fields on the above
+screen are populated: the
+Medical Condition Codes may be
+seen from the RP140I Inquire
+Medical Condition Summary
+Screen.
+
+Revised 03/27/2026
+
+Code
+AS
+BB
+BC
+CC
+CH
+CM
+DI
+ER
+HA
+HI
+HK
+HS
+NI
+NN
+OA
+PG
+PR
+RT
+SI
+SN
+ST
+TP
+XC
+XD
+XG
+XH
+XI
+XL
+XM
+XO
+XP
+XR
+XS
+XT
+XV
+XW
+
+Description
+Adoption Subsidy Children
+Bed-Bound
+Breast And Cervical Cancer Program Member
+LTC Facility Convalescent Care
+Chemotherapy
+Applicant Chronic Med. Cond.
+Dialysis
+ER-Accident/Injury Related
+Hospitalized-Accident/Injury Related
+Head Injury
+Hospitalized, Kick Payment [To Be] Considered
+Hospitalized
+NICU
+Newborn-Normal
+Outpatient- Accident/Injury Related
+Pregnant
+Pregnant-High Risk
+Radiation Therapy
+Spinal Cord Injury
+NB-Sick
+Surgical Sterilization
+Transplants
+HEP C (FOR ADC USE ONLY)
+Dialysis (FOR ADC USE ONLY)
+Geriatric (FOR ADC USE ONLY)
+HIV (FOR ADC USE ONLY)
+Insulin Dependent Diabetic (ADC ONLY)
+LTC-Transition From IPC/HOSP (ADC ONLY)
+Mobility Issues (FOR ADC USE ONLY)
+Oxygen Needs (FOR ADC USE ONLY)
+Pregnancy (FOR ADC USE ONLY)
+Radiation/Chemo (FOR ADC USE ONLY)
+Special Handling (FOR ADC USE ONLY)
+TB-Interferon/RIBAVIRIN TX (ADC ONLY)
+Psych-On Meds-Not SMI (FOR ADC USE ONLY)
+SMI (FOR ADC USE ONLY)
+85 | P a g e
+
+Reference Subsystem Codes and Values 2026
+XX
+XZ
+
+Revised 03/27/2026
+
+MRDD (FOR ADC USE ONLY)
+Hospice (FOR ADC USE ONLY)
+
+86 | P a g e
+
+Reference Subsystem Codes and Values 2026
+
+Mental Health Category – RF404
+Where these are used:
+In PMMIS Recipient subsystem: When adding Mental Health eligibility to a client record on the RP216
+Inquire BHS/FYI Data, these codes are used.
+Code
+A
+C
+D
+G
+H
+I
+S
+Z
+
+Description
+STATE ONLY SERVICES
+Children Services
+SUBSTANCE/ALCOHOL ABUSE MENTAL HLTH SVCS
+General Mental Health Services
+GMH ALCOHOL/SUBSTANCE SV (ELIM 11/17/95)
+NON-SMI DD 18 THRU 20 (ELIM 09/30/99)
+(SMI) Seriously Mentally Ill
+SED CHILDREN
+
+Revised 03/27/2026
+
+87 | P a g e
+
+Reference Subsystem Codes and Values 2026
+
+Mental Health Rate Code – RF402
+Code
+7000
+7050
+7100
+7150
+7200
+7300
+7400
+7450
+7500
+7550
+7600
+7700
+7750
+7800
+7850
+
+Revised 03/27/2026
+
+Tribe Code
+
+MHS Category
+C
+C
+S
+S
+I
+Z
+G
+G
+C
+C
+D
+G
+G
+C
+C
+
+88 | P a g e
+
+Reference Subsystem Codes and Values 2026
+
+MHS Site Provider – RF415
+Site
+02
+03
+07
+11
+14
+15
+17
+22
+25
+26
+27
+28
+32
+33
+36
+37
+38
+39
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+77
+78
+79
+98
+
+TI
+Y
+Y
+Y
+
+Y
+
+Y
+N
+N
+
+N
+N
+
+Description
+Cenpatico 2
+Yuma Behavioral Health Service
+Magellan Health Services
+Gila River Indian Tribe
+Navajo Nation
+Northern AZ Reg Behavioral Ser
+Salt River Pima-Maricopa Ind
+Cenpatico 4
+Pascua Yaqui Tribe
+Comm Partner So AZ Svc Area 5
+Comm Partner So AZ Svc Area 3
+Apache White Mountain
+Cenpatico 3
+UHCCP/Children’s Rehab
+CARE1ST NON19
+MMIC<10-1/MERCYCRE NON19>10-1
+HCIC<10-1/SHCA NON19>10-1
+CIC<10-1/AZCOMPHTH NON19>10-1
+Care 1st Arizona
+Arizona Complete Health
+Health Choice AZ
+Maricopa Health Plan
+Mercy Care Plan
+Phoenix Health Plan
+United Health Care
+Banner University Family Care
+United Health Care LTC
+Mercy Care Plan - LTC
+Bridgeway Health Solution
+UNIVERSITY FAMILY CARE LTC
+DD - SUB
+MOLINA COMPLETE CARE
+DCS\CHP
+Mercy Maricopa Integrated
+Health Choice Integrated Care
+Cenpatico Integrated Care
+American Indian Health Program
+
+Revised 03/27/2026
+
+PR ID
+944563
+415712
+310691
+990010
+990030
+006511
+123456
+551922
+990040
+551111
+321076
+990020
+560049
+830372
+010254
+010306
+010497
+010422
+010254
+010422
+010497
+010383
+010306
+010299
+010158
+010314
+110050
+110306
+110088
+110313
+110007
+010500
+010166
+010795
+010715
+010735
+999998
+
+Name
+Cenpatico Behavioral Health
+Gila River Indian Comm
+Magellan Health Services
+Gila River Indian TRBHA
+Navajo Nation
+Northern AZ Regional BHF
+Jesse Kossar
+Cenpatico Behavioral Health A
+Pascua Yaqui Tribe
+CPSA
+CPSA
+Apache Behavioral Health
+Cenpatico Behavioral Health A
+Children’s Rehab Serv UHC
+CARE1ST HEALTH PLAN
+Mercy Care Plan
+Health Choice AZ
+AZ Complete Health Care
+Care 1st Arizona
+AZ Complete Health Care
+BCBSAZ HEALTH CHOICE
+Maricopa Health Plan
+Mercy Care Plan
+Phoenix Health Plan
+United Health Care
+Banner University Family Care
+United Health Care LTC
+Mercy Care Plan - LTC
+Bridgeway Health Solution
+BANNER - UNIVERSITY LTC
+LTC DD DES
+MOLINA COMPLETE CARE
+CHP DCS
+Mercy Maricopa Integrated
+Health Choice Integrated
+Cenpatico Integrated Care
+AHCCCS American Indian H
+
+89 | P a g e
+
+Reference Subsystem Codes and Values 2026
+
+Pending Transactions – RF530
+Code
+DU
+OV
+
+Description
+Potential Duplicate
+Potential Overlay
+
+Provider Assignment – RF502
+Code
+10
+20
+30
+40
+50
+
+Description
+Primary Care Physician (PCP)
+Nursing Facility
+Hospice
+HCBS (Home and Community Based Services
+Case Manager
+
+Revised 03/27/2026
+
+90 | P a g e
+
+Reference Subsystem Codes and Values 2026
+
+Race [Codes] – RF518
+Where these are used:
+In the PMMIS Recipient subsystem: In the RP010A Add Recipient Loop, at the Add Recipient Demographics Screen. Place cursor
+on the "Race" line: Depress the F1 help key and this table will appear.
+
+AI
+AO
+AS
+AU
+BL
+CH
+CN
+CW
+FI
+GU
+HA
+HS
+JA
+KO
+MA
+MN
+NA
+NU
+OP
+OT
+SA
+UN
+US
+VI
+
+Revised 03/27/2026
+
+ASIAN INDIAN
+OTHER ASIAN
+ASIAN/PAC ISLND
+ASIAN UNKNOWN
+BLACK
+CUBAN/HAITIAN
+CHINESE
+CAUCASIAN/WHITE
+FILIPINO
+GUAM/CHAMORRO
+NATIVE HAWAIIAN
+HISPANIC
+JAPANESE
+KOREAN
+MEXICAN AMERICAN (ADC ONLY)
+MEXICAN NATIONAL (ADC ONLY)
+NATIVE AMERICAN
+NAT HAW OR OTHER PAC ISLND UNKNOWN
+OTHER PACIFIC ISLANDER
+OTHER
+SAMOAN
+UNKNOWN
+UNSPECIFIED
+VIETNAMESE
+
+91 | P a g e
+
+Reference Subsystem Codes and Values 2026
+
+Rate Category – RF411
+Code
+ACAD
+ACCI
+ACCS
+ACFE
+ACMA
+ADLT
+AFDC
+AFSB
+AIMH
+ALTC
+CHLD
+CRSH
+CRSL
+CRSM
+CTPA
+DUAL
+FMAL
+HADT
+HFML
+HMAL
+HS00
+HS01
+HS02
+KIDC
+KIDF
+KIDI
+KIDM
+KIDS
+LTCN
+LTCW
+MALE
+MEDE
+MNIN
+MNIW
+MNMI
+NEAD
+
+Description
+AHC Care Adult 45+
+AHC Care Infant < 1
+AHC Care Children 1-13
+AHC Care Female 14-44
+AHC Care Male 14-44
+TANF M & F And S.O.B.R.A Females 45+
+AFDC
+AFDC & S.O.B.R.A. Woman
+AMERICAN INDIAN MEDICAL HEALTH SERVICES
+TANF, SOBRA Women and Children -- ALTCS
+EAC, ELIC, & S.O.B.R.A. Child
+CRS Only High Risk
+CRS Only Low Risk
+CRS Only Medium Risk
+County TPA - Non-Medicaid
+DUAL ELIGIBLE ADULTS M & F
+TANF, Children, SOBRA Females 14-44
+HIFA Parent M & F 45+
+HIFA Parent Female 14-44
+HIFA Parent Male 14-44
+HS Payment AHC Care
+HS Payment AHC Care /MI
+HS Payment MED
+KIDS 1-13 M & F
+KIDS 14-19 Female
+KIDS < 1 M & F
+KIDS 14-19 Male
+EAC AND ELIC KIDS
+ALTCS - W/O MDC SOBRA Women and Children
+ALTCS - W/MDC SOBRA Women and Children
+TANF, Children Males 14-44
+MED Eligibility
+MN/MI Non-Medicare
+MN/MI Medicare
+MN/MI NON-MEDICARE AND MEDICARE
+Newly Eligible Adult
+
+Revised 03/27/2026
+
+92 | P a g e
+
+Reference Subsystem Codes and Values 2026
+Code
+PRES
+P000
+QIBI
+QMBE
+SABN
+SABW
+SBRA
+SB10
+SB11
+SB20
+SB21
+SB22
+SB23
+SB30
+SB33
+SB34
+SB35
+SB36
+SB37
+SB39
+SB44
+SB45
+SB46
+SB50
+SB60
+SB65
+SB66
+SFPS
+SLMB
+SSAN
+SSAW
+SSBN
+SSBW
+SSDN
+SSDW
+SSIN
+SSIW
+
+Description
+Presumptive Eligibility
+Public Safety (AZ Dept Of Corrections)
+QI1 Buy-In Only
+QMB Only
+SSI Aged, Blind Without Medicare
+SSI Aged, Blind with Medicare
+S.O.B.R.A. Supplemental
+Supplemental Birth (SB) Payment
+Supplemental Birth Payment for TANF Expanded
+Supplemental Birth Payment
+Supplemental Birth Payment
+Supplemental Birth Payment for SSI Expanded W/ Medicare
+Supplemental Birth Payment for SSI Expanded No Medicare
+Supplemental Birth Payment
+Supplemental Birth Payment for AHCCCS Care
+Supplemental Birth Payment for MED Eligibles
+Birth Supp Payment Adult 40-100%
+Supplemental Birth Payment for AHC Care/MI
+Birth Supp Payment Adult <40%
+Birth Supp Payment Newly Elig
+Birth Supp Payment SOBRA 100-133%
+Supplemental Birth KICK Payment for BCTP
+Supplemental Birth KICK Payment for CCTP
+Supplemental Birth Payment
+Supplemental Birth Payment
+NB Kick Payment for SB HIFA
+NB Kick Payment for KC HIFA
+SOBRA FAMILY PLANNING SERVICES
+SLMB Buy-In ONLY
+SSI Aged Without Medicare
+SSI Aged with Medicare
+SSI Blind Without Medicare
+SSI Blind with Medicare
+SSI Disabled Without Medicare
+SSI Disabled with Medicare
+SSI Aged, Disabled, Blind Non-Medicare
+SSI Aged, Disabled, Blind Medicare
+
+Revised 03/27/2026
+
+93 | P a g e
+
+Reference Subsystem Codes and Values 2026
+Code
+S000
+TACI
+TACS
+TADT
+TMCN
+TMCW
+TRAN
+TXCI
+TXCS
+TYTH
+U000
+XADU
+XFEM
+XMAL
+XSSN
+XSSW
+
+Description
+STATE-ONLY BHS
+TANF And Children M & F < 1 Year
+TANF, Children and SOBRA Pregnant Female
+TANF & ADULTS 21+ M & F
+TMCP NON-MEDICARE
+TMCP WITH MEDICARE
+TRANSPLANTS
+TANF Expanded Children M & F <1
+TANF Expanded Child & SOBRA Pregnant 1-13
+TANF & CHILDREN < 20 M & F
+Uninsured COVID-19
+TANF Expanded M & F And SOBRA Female 45+
+TANF Expanded Children Female 14-44
+TANF Expanded Children Male 14-44
+Expanded SSI Non-Medicare
+Expanded SSI With Medicare
+
+Revised 03/27/2026
+
+94 | P a g e
+
+Reference Subsystem Codes and Values 2026
+
+Recipient Action Codes – RF403
+Code
+$P
+$R
+AA
+AB
+AC
+AE
+AG
+AI
+AL
+AO
+BD
+BI
+BO
+CA
+CE
+CH
+CI
+CO
+CP
+CS
+CX
+DB
+DE
+DM
+EC
+EI
+EL
+EN
+EO
+FI
+FO
+HC
+HK
+HO
+IB
+
+Description
+Manual Payment
+Manual Recoupment
+Algorithm Assigned
+New Recipient
+Address Change
+Applied For New Eligibility
+Age Termination
+Administrative-In
+Alternate ID (SSN)
+Administrative –Out
+BENDEX Request
+Enrollment Block In
+Enrollment Block Out
+CIS CAPITATION
+Closed-Ended Eligibility
+Eligibility Change Causes Disenrollment
+County Move-In
+County Move-Out
+Co-Pay Notification
+CIS Homeless Change
+Co-Pay Internal Review Transaction
+Date Of Birth Change
+Deceased
+Demographic Change
+Enrollment Choice
+Open Enrollment-In
+Newly Determined Eligible
+Enrollment Transaction
+Open Enrollment-Out
+Family Continuity-In
+Family Continuity-Out
+Acute Health Plan Change
+Hospitalized, Kick to Be [Considered]
+Move Out of Health Plan Area
+Inactivate BHS/FYI
+
+Revised 03/27/2026
+
+Action
+Type
+A
+D
+A
+X
+C
+D
+D
+A
+X
+D
+X
+A
+D
+X
+X
+D
+A
+D
+C
+C
+X
+C
+D
+X
+A
+A
+X
+X
+D
+A
+D
+C
+C
+D
+C
+
+Retroactive
+Indicator
+Y
+Y
+N
+N
+N
+Y
+Y
+N
+N
+Y
+N
+N
+Y
+N
+N
+Y
+N
+Y
+N
+N
+N
+N
+Y
+N
+N
+N
+N
+N
+Y
+N
+Y
+N
+N
+Y
+N
+95 | P a g e
+
+Reference Subsystem Codes and Values 2026
+Code
+IE
+IR
+KC
+KD
+LC
+MA
+MC
+MI
+MO
+MR
+MS
+MT
+NB
+NC
+NE
+NI
+NP
+OS
+PA
+PC
+PD
+PG
+PM
+PO
+PP
+PR
+PT
+RA
+RC
+RE
+RL
+RO
+SB
+SC
+SP
+SX
+
+Description
+Ineligible
+Inactivate CRS/FYI
+Potential KidsCare Eligible
+Key Demographic Change (IEVS Request)
+Level Of Care Change
+Mass Adjustment Recoupment
+Mental Health Change
+Medical Care Continuity-In
+Medical Care Continuity-Out
+Mass Adjustment Payment
+CRS Change
+Mother Termination
+Newborn
+Name Change
+Normal Enrollment
+NICU
+Normal Enrollment-Prior Plan
+Out Of State Move
+End Of Contract-In: Auto Assign
+Pended Choice Enrollment Action
+End Of Contract-In: Direct Move
+Pregnant Women
+Prospective Medicare
+End Of Contract-Out: Direct Move
+End Of Contract-In: Percentage
+End Of Contract-In: Rule Matrix
+End Of Contract-Out: %, Auto, Rule
+Retroactive Enrollment
+Rate Code Change
+Re-Enrollment
+Recipient Linked to Another ID
+Recoupment MHS
+Supplement Birth Payment
+Share Of Cost Change
+Special Program Change
+Sex Change
+
+Revised 03/27/2026
+
+Action
+Type
+D
+C
+X
+X
+X
+D
+C
+A
+D
+A
+C
+X
+A
+C
+A
+C
+A
+D
+A
+X
+A
+C
+C
+D
+A
+A
+D
+A
+C
+A
+X
+D
+C
+C
+X
+C
+
+Retroactive
+Indicator
+Y
+N
+N
+N
+N
+Y
+N
+N
+Y
+Y
+N
+N
+N
+N
+N
+N
+N
+Y
+N
+N
+N
+N
+N
+Y
+N
+N
+Y
+N
+N
+N
+N
+Y
+N
+N
+N
+N
+96 | P a g e
+
+Reference Subsystem Codes and Values 2026
+Code
+
+Description
+
+TM
+TR
+VW
+XA
+XN
+XR
+ZC
+
+Mental Health Termination
+CRS Termination
+Voluntary Withdrawal
+Admin out for Conversion
+Normal Enrollment for Conversion
+Set BHS Category SMI
+BHS Zip Code Change
+
+Revised 03/27/2026
+
+Action
+Type
+C
+C
+D
+D
+A
+X
+X
+
+Retroactive
+Indicator
+N
+N
+Y
+Y
+N
+N
+N
+
+97 | P a g e
+
+Reference Subsystem Codes and Values 2026
+
+Special Programs – RF409
+Where these are used:
+In the PMMIS Recipient subsystem: The Special Program Types are seen on the RP210 Inquire Special
+Program screen. On the RP210 Add Special Program screen with the cursor on the “Special Program” line.
+Depress the F1 help key and this table appears.
+Code
+AC
+AO
+CB
+DD
+DP
+FC
+GI
+HA
+HR
+IH
+IT
+KR
+PE
+PQ
+RN
+RY
+VD
+07
+
+Description
+Address Confidentiality Program
+Acute Eligible W/ LTC Services
+Cobra-Out Of State
+Developmentally Disabled
+Difficult Patient
+Foster Care
+Group Health Insurance Buy-In
+LTC Eligible W/Acute Services
+Hurricane Rita Refugees
+Native American Status Verified
+NATIVE AMERICAN STATUS PENDING
+Hurricane Katrina
+Presumptive Eligibility
+Prior Quarter
+Off Reservation Native American
+On Reservation Native American
+LTC Ventilator Dependent
+N07/N08 Adult SSI Term in Appeal W/SSA
+
+Effective Date
+Begin
+End
+06/04/2012
+10/01/1982
+10/01/1982
+10/01/1982
+10/01/1982
+10/01/1982
+06/01/1992
+12/19/1988
+09/01/2005
+11/01/2024
+11/01/2024
+09/01/2005
+01/01/2015
+01/01/2014
+10/01/1982
+10/01/1982
+01/01/1989
+11/01/1997
+
+(State Data Exchange Payment Status Codes N07= Disability Ceased, N08 = Blindness
+Ceased)
+
+Revised 03/27/2026
+
+98 | P a g e
+
+Reference Subsystem Codes and Values 2026
+
+T/RHBA Phone Numbers – RF416
+Site
+02
+07
+11
+14
+15
+22
+25
+26
+27
+28
+32
+33
+36
+37
+38
+39
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+77
+78
+79
+98
+
+Description
+1-866-495-6738 For Cenpatico
+1-800-564-5465 FOR MAGELLAN HEALTH SRVS
+1-800-259-3449 For Gila River
+1-866-841-0277 For Navajo Nation
+1-800-640-2123 For Narbha
+1-866-495-6738 For Cenpatico
+1-877-342-0912 For Pasqua Yaqui
+1-800-771-9889 For CPSA 5
+1-800-771-9889 For CPSA
+1-877-336-4811 For Apache White Mountain
+1-866-495-6738 For Cenpatico 3
+1-800-348-4058 For CRS
+1-866-560-4042 FOR CARE 1ST
+1-800-564-5465 For Mercy Maricopa
+1-877-923-1400 For Health Choice
+1-866-495-6738 For Cenpatico
+1-866-560-4042 For Care 1st Arizona
+1-888-788-4408 For AZ COMPLETE HEALTH
+(480)-968-6866 For HEALTH CHOICE ARIZONA
+1-800-582-8686 For Maricopa Health Plan
+(602)-263-3000 For Mercy Care Plan
+(602)-824-3700 For Phoenix Health Plan
+1-800-348-4058 For United Health Care
+1-800-582-8686 For BANNER UNIVERSITY
+1-800-293-3740 For United Health Care LTC
+(602)-263-3000 For Mercy Care Plan - LTC
+1-866-475-3129 For Bridgeway Health Solutions
+1-800-582-8686 For Banner University Care LTC
+1-844-770-9500 For DD – SUB
+1-800-424-5891 MOLINA COMPLETE CARE
+(602)-771-3649 FOR DCS\CHP
+1-800-564-5465 For MMIC - Integrated
+1-877-923-1400 For Health Choice Integra
+1-866-495-6738 For Cenpatico Integrated
+1-800-962-6690 FOR AMER INDIAN HLTH PGM
+
+Revised 03/27/2026
+
+Effective
+08/24/10
+08/24/10
+08/24/10
+08/24/10
+08/24/10
+08/24/10
+08/24/10
+08/24/10
+08/24/10
+08/24/10
+11/30/10
+04/03/14
+09/28/22
+09/28/15
+09/28/15
+09/28/15
+04/04/19
+04/04/19
+05/06/20
+09/28/15
+09/28/15
+09/28/15
+09/28/15
+09/28/15
+09/28/15
+09/28/15
+09/28/15
+04/04/19
+10/01/19
+10/15/18
+12/17/20
+03/20/14
+09/28/15
+09/28/15
+09/28/18
+99 | P a g e
+
+Reference Subsystem Codes and Values 2026
+
+TRHBA/ Zip Assignment Codes – RF577
+S
+T
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+
+ZIP
+
+CD
+
+85121
+85122
+85128
+85131
+85132
+85139
+85147
+85221
+85247
+85248
+85339
+85757
+85911
+85926
+85930
+85935
+85941
+86020
+86031
+86033
+86034
+86035
+86040
+86044
+86045
+86047
+86053
+86054
+86502
+86503
+86504
+86505
+86506
+86507
+86508
+
+11
+11
+11
+11
+11
+11
+11
+11
+11
+11
+11
+25
+28
+28
+28
+28
+28
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+
+Revised 03/27/2026
+
+TRBHA
+Description
+Gila River Indian Tribe
+Gila River Indian Tribe
+Gila River Indian Tribe
+Gila River Indian Tribe
+Gila River Indian Tribe
+Gila River Indian Tribe
+Gila River Indian Tribe
+Gila River Indian Tribe
+Gila River Indian Tribe
+Gila River Indian Tribe
+Gila River Indian Tribe
+Pascua Yaqui Tribe
+Apache White Mountain
+Apache White Mountain
+Apache White Mountain
+Apache White Mountain
+Apache White Mountain
+Navajo Nation
+Navajo Nation
+Navajo Nation
+Navajo Nation
+Navajo Nation
+Navajo Nation
+Navajo Nation
+Navajo Nation
+Navajo Nation
+Navajo Nation
+Navajo Nation
+Navajo Nation
+Navajo Nation
+Navajo Nation
+Navajo Nation
+Navajo Nation
+Navajo Nation
+Navajo Nation
+
+Begin
+Date
+10/01/10
+10/01/10
+10/01/10
+10/01/20
+10/01/10
+10/01/10
+10/01/10
+10/01/10
+10/01/10
+10/01/10
+10/01/10
+10/01/10
+10/01/10
+10/01/10
+10/01/10
+10/01/10
+10/01/10
+10/01/10
+10/01/10
+10/01/10
+10/01/20
+10/01/10
+10/01/10
+10/01/10
+10/01/10
+10/01/10
+10/01/10
+10/01/10
+10/01/10
+10/01/10
+10/01/10
+10/01/10
+10/01/10
+10/01/10
+10/01/10
+
+End
+Date
+01/01/2021
+
+01/01/2021
+
+100 | P a g e
+
+Reference Subsystem Codes and Values 2026
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+
+86510
+86511
+86512
+86514
+86515
+86520
+86535
+86538
+86540
+86544
+86545
+86547
+86556
+
+Revised 03/27/2026
+
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+14
+
+Navajo Nation
+Navajo Nation
+Navajo Nation
+Navajo Nation
+Navajo Nation
+Navajo Nation
+Navajo Nation
+Navajo Nation
+Navajo Nation
+Navajo Nation
+Navajo Nation
+Navajo Nation
+Navajo Nation
+
+10/01/10
+10/01/10
+10/01/20
+10/01/10
+10/01/10
+10/01/10
+10/01/10
+10/01/10
+10/01/10
+10/01/10
+10/01/10
+10/01/10
+10/01/10
+
+101 | P a g e
+
+Reference Subsystem Codes and Values 2026
+
+Tribe Name [Code] – RF536
+Where these are used:
+In the PMMIS Recipient subsystem:
+In the RP010A Add Recipient Loop,
+at the Add Recipient Demographics
+Screen, place cursor on the "Tribe
+ID" line. Depress the F1 help key
+and this table will appear.
+
+Revised 03/27/2026
+
+Tribe
+Code
+CH
+CO
+CR
+FM
+GE
+GR
+HA
+HO
+HU
+KP
+MY
+NA
+NC
+PY
+QU
+SC
+SJ
+SR
+TA
+TO
+WM
+YA
+YP
+
+Description
+Ak Chin
+Cocopah
+CRIT (Colorado River Indian Tribe)
+Fort Mohave
+Generic Tribe
+Gila River Indian Community
+Havasupai
+Hopi
+Hualapai
+Kaibab Paiute
+Fort McDowell Indian Community
+Navajo Nation
+Navajo (NACH)
+Pascua Yaqui
+Quechan (Fort Yuma)
+San Carlos Apache
+San Juan Southern Paiute
+Salt River Pima-Maricopa
+Tonto Apache
+Tohono O'odham
+White Mountain Apache
+Camp Verde Yavapai Apache
+Yavapai Prescott
+
+Health Plan ID
+190000
+190000
+190000
+190000
+190000
+190025
+190000
+190091
+190000
+190000
+190000
+190017
+190000
+190075
+190000
+190083
+190000
+190000
+190000
+190033
+190009
+190000
+190000
+
+102 | P a g e
+
+In Depth Health Plan Matrix
+10/01/2025 – 09/30/2026
+
+ACUTE CONTRACTORS
+
+SFTP / HP ID
+Splitter file
+type
+Source
+code
+MCC 010500
+UHC
+
+010158
+
+Acu
+Cap
+
+ACC
+SMI
+
+C
+
+ACC Acu FFS Acu PPC RBHATX ACC
+SMI PPC
+Full
+IX
+Non Cap
+**
+
+D
+
+E
+
+H
+
+K
+
+N
+
+EMS
+FFS
+
+U
+
+RBHA
+SMI Acu FFS Acu
+TXXI ** KIDSCAR
+KC
+Cap
+E
+KC
+
+V
+
+W
+
+X
+
+Y
+
+No Pay
+
+Non
+AHC
+
+1
+
+8
+
+9
+
+SITE
+CD
+
+PLAN NAME
+
+A
+
+63
+
+Molina HealthCare
+
+A
+
+H
+
+N
+
+Y
+
+07, 13, 21
+
+56
+
+United HealthCare Community Plan
+
+A
+
+H
+
+N
+
+Y
+
+07, 13, 19, 21
+
+H
+
+Y
+
+ALL
+01, 05, 07, 13, 15, 17, 21,
+25
+03, 07, 09, 11, 13, 19, 21,
+23, 27, 29
+
+CMDP
+
+010166
+
+64
+
+CHP
+
+A
+
+HCA
+
+010497
+
+52
+
+BCBSAZ HEALTH CHOICE
+
+A
+
+H
+
+N
+
+Y
+
+UPI
+
+010314
+
+57
+
+Banner-University Family Care
+
+A
+
+H
+
+N
+
+Y
+
+MER 010306
+AC
+MER 010306
+BH
+MER State NONAHC
+Only DOCMATCTY
+SO / MI PRI
+
+54
+
+Mercy Care
+
+A
+
+H
+
+N
+
+Y
+
+54
+
+Mercy Care – SMI, RBHA functions
+
+37
+
+Mercy Care – State Only
+
+NET 010422
+AC
+NET 010422
+BH
+NET NONAHC
+State Only DOCMATCTY
+SO / CI PRI
+
+51
+
+Az Complete Health – Complete
+Care Plan
+Az Complete Health – SMI, RBHA
+functions
+Az Complete Health – State only
+
+Revised 03/27/2026
+
+No
+Pmt
+
+51
+39
+
+C
+
+D
+
+A
+
+K
+
+H
+C
+
+D
+
+N
+
+V
+
+W
+
+N
+K
+
+N
+
+W
+
+07, 13, 21
+07, 13, 21
+K,V = all counties
+
+Y
+V
+
+COUNTIES
+
+01,03,05,09,11,15,17,
+19,23,25,27,29
+All counties
+K,V = all counties
+
+103 | P a g e
+
+Reference Subsystem Codes and Values 2026
+Acu
+Cap
+
+IHS
+
+999998
+000850
+
+98
+
+American Indian Health Plan (AIHP)
+Federal Emergency Services
+
+ACC
+SMI
+
+ACC Acu FFS Acu PPC RBHATX ACC
+SMI PPC
+Full
+IX
+Non Cap
+**
+
+EMS
+FFS
+
+E
+
+RBHA
+SMI Acu FFS Acu
+TXXI ** KIDSCAR
+KC
+Cap
+E
+KC
+
+No
+Pmt
+
+No Pay
+
+Non
+AHC
+
+X
+
+ALL
+
+U
+
+ALL
+elg cd 900s
+8
+
+002220
+
+Non Pay
+
+003335
+
+FFS Regular
+
+008040
+
+AHCCCS SLMB
+
+1
+
+008050
+
+AHCCCS QI1
+
+1
+
+008690
+
+FFS Temporary
+
+008715
+
+QMB – ONLY
+
+008800
+
+FFS Prior Quarter
+
+CTYPRI
+
+County Prisoners
+
+1
+
+9
+
+ALL (9=SO)
+
+DOCMAT
+
+DOC Matched Recipients
+
+1
+
+9
+
+ALL
+
+NONAHC
+
+Non-AHCCCS
+
+9
+
+ALL
+
+Revised 03/27/2026
+
+E
+
+ALL
+
+X
+
+E
+
+ALL
+ALL
+elig cd 840
+ALL
+elig cd 850
+
+X
+
+ALL
+8
+
+E
+
+U
+
+ALL
+elig 800,810,820,830
+
+X
+
+ALL
+
+104 | P a g e
+
+Reference Subsystem Codes and Values 2026
+
+LONG TERM CARE CONTRACTORS
+FTP
+
+PLAN NAME
+
+LTC Cap
+
+LTC Cap
+Acu
+
+LTC PPC
+Full
+
+LTC PPC Non Cap
+Acu
+
+J
+
+L
+
+M
+
+O
+
+N
+
+LTC Cap
+Par
+
+P
+
+LTC FFS LTC FFS
+Acu
+
+PLAN
+
+SITE
+
+R
+
+T
+
+COUNTIES
+
+DDD
+
+110007
+
+62
+
+DES DD LTC
+
+J
+
+L
+
+M
+
+O
+
+N
+
+ALL
+
+UHCLTC
+
+110050
+
+58
+
+United HealthCare LTC
+
+J
+
+L
+
+M
+
+O
+
+N
+
+01, 05, 07, 13, 15, 17, 21, 25
+
+UFCLTC
+
+110313
+
+61
+
+Banner University Family Care LTC
+
+J
+
+L
+
+M
+
+O
+
+N
+
+03, 07, 09, 11, 13, 19, 21, 23, 27, 29
+
+MER
+
+110306
+003335
+
+59
+
+Mercy Care Plan - LTC
+FFS Regular
+
+J
+
+L
+
+M
+
+O
+
+N
+R
+
+T
+
+07, 13, 19, 21
+ALL
+
+008690
+
+FFS Temporary
+
+R
+
+T
+
+ALL
+
+007700
+
+FFS DD Prior Quarter
+
+R
+
+T
+
+ALL
+
+008800
+
+FFS Prior Quarter
+
+R
+
+T
+
+ALL
+
+190000
+
+NACH
+
+P
+
+R
+
+T
+
+ALL
+
+190009
+
+White Mountain Apache
+
+P
+
+R
+
+T
+
+ALL
+
+190017
+
+Navajo Nation
+
+P
+
+R
+
+T
+
+ALL
+
+190025
+
+Gila River Tribe
+
+P
+
+R
+
+T
+
+ALL
+
+190033
+
+Tohono O’odham
+
+P
+
+R
+
+T
+
+ALL
+
+190075
+
+Pasqua Yaqui Tribe
+
+P
+
+R
+
+T
+
+ALL
+
+190083
+
+San Carlos Apache
+
+P
+
+R
+
+T
+
+ALL
+
+190091
+
+Hopi Tribe
+
+P
+
+R
+
+T
+
+ALL
+
+Revised 03/27/2026
+
+105 | P a g e
+
+Tribal Regional Behavioral Health Authorities (TRBHA)
+Contract type = #
+SFTP
+GCT
+SRC GR
+AWMT
+SRC AW
+NNT
+SRC NN
+PYT
+SRC PY
+
+PLAN
+990010
+
+SITE
+11
+
+PLAN NAME
+Gila River Tribe TRHBA
+
+990020
+
+28
+
+Apache White Mountain TRBHA
+
+ALL
+
+990030
+
+14
+
+Navajo Nation TRBHA
+
+ALL
+
+990040
+
+25
+
+Pasqua Yaqui Tribe TRBHA
+
+ALL
+
+Revised 03/27/2026
+
+FFS
+
+COUNTIES
+ALL
+
+106 | P a g e
+
+Reference Subsystem Codes and Values 2026
+
+Acute and LTC GSA
+GSA 40
+(North)
+
+GSA 42
+(Central)
+
+GSA 44
+(South)
+
+Apache
+
+01
+
+Gila
+
+07
+
+Cochise
+
+03
+
+Coconino
+
+05
+
+Maricopa
+
+13
+
+Graham
+
+09
+
+Mohave
+
+15
+
+Pinal
+
+21
+
+Greenlee
+
+11
+
+Navajo
+
+17
+
+Pima
+
+19
+
+Yavapai
+
+25
+
+Santa Cruz
+
+23
+
+Yuma
+
+27
+
+La Paz
+
+29
+
+(Table: RF-GSA-CTY, RF019)
+
+Revised 03/27/2026
+
+107 | P a g e
+
+Reference Subsystem Codes and Values 2026
+
+ACUTE - Choice
+
+North GSA
+
+Central GSA
+
+South GSA
+
+APACHE – 01
+
+COCONINO – 05
+
+GILA – 07
+
+MARICOPA – 13
+
+COCHISE – 03
+
+GRAHAM – 09
+
+NET – 010422
+
+NET – 010422
+
+UHC – 010158
+
+UHC – 010158
+
+UPI – 010314
+
+UPI – 010314
+
+HCA – 010497
+
+HCA – 010497
+
+MER – 010306
+
+MER – 010306
+
+NET – 010422
+
+NET – 010422
+
+MOHAVE – 15
+
+NAVAJO – 17
+
+UPI – 010314
+
+UPI – 010314
+
+GREENLEE – 11
+
+PIMA – 19
+
+NET – 010422
+
+NET – 010422
+
+NET – 010422
+
+NET – 010422
+
+UPI – 010314
+
+UHC – 010158
+
+HCA – 010497
+
+HCA – 010497
+
+HCA – 010497
+
+HCA – 010497
+
+NET – 010422
+
+UPI – 010314
+
+YAVAPAI – 25
+
+MCC – 010500
+
+MCC – 010500
+
+SANTA CRUZ – 23
+
+NET – 010422
+
+NET – 010422
+
+PINAL – 21
+
+UPI – 010314
+
+YUMA – 27
+
+HCA – 010497
+
+UHC – 010158
+
+NET – 010422
+
+UPI – 010314
+
+MER – 010306
+
+LA PAZ – 29
+
+NET – 010422
+
+UPI – 010314
+
+UPI – 010314
+
+NET – 010422
+
+NET – 010422
+
+HCA – 010497
+MCC – 010500
+
+Revised 03/27/2026
+
+108 | P a g e
+
+Reference Subsystem Codes and Values 2026
+
+LTC - Choice
+
+North GSA
+
+Central GSA
+
+South GSA
+
+APACHE – 01
+
+COCONINO – 05
+
+GILA – 07
+
+MARICOPA – 13
+
+COCHISE – 03
+
+GRAHAM – 09
+
+UHCLTC – 110050
+
+UHCLTC – 110050
+
+UHC LTC –
+110050
+
+UHC LTC – 110050
+
+UFCLTC – 110313
+
+UFCLTC – 110313
+
+MOHAVE – 15
+
+NAVAJO – 17
+
+UFCLTC – 110313
+
+UFCLTC – 110313
+
+GREENLEE – 11
+
+PIMA – 19
+
+UHCLTC – 110050
+
+UHCLTC – 110050
+
+MCP – 110306
+
+MCP – 110306
+
+UFCLTC – 110313
+
+UFCLTC – 110313
+
+YAVAPAI – 25
+
+PINAL – 21
+
+SANTA CRUZ – 23
+
+MCP – 110306
+
+UHCLTC – 110050
+
+UHC LTC –
+110050
+
+UFCLTC – 110313
+
+YUMA – 27
+
+UFCLTC – 110313
+
+LA PAZ – 29
+
+UFCLTC – 110313
+
+MCP – 110306
+
+UFCLTC – 110313
+
+Revised 03/27/2026
+
+109 | P a g e
+
+Reference Subsystem Codes and Values 2026
+
+Revision Log Table
+CONTRACT YEAR 2019-2025 CHANGES MADE AFTER 09/31/2019
+TABLE #
+REVISION DATE
+TABLE#
+REVISION DATE
+RF013
+09/13/2018
+RF401
+09/28/2023
+RF013
+09/13/2018
+RF539
+09/28/2023
+RF013
+09/13/2018
+RF403
+03/22/2024
+RF013
+09/13/2018
+RF528
+06/24/2024
+RF013
+09/13/2018
+RF522
+06/24/2024
+RF013
+09/13/2018
+RF415
+06/24/2024
+RF013
+09/13/2018
+RF528
+11/12/2024
+RF401
+05/26/2020
+RF528
+11/12/2024
+RF403
+05/26/2020
+RF528
+11/12/2024
+RF411
+05/26/2020
+RF539
+11/12/2024
+RF416
+05/26/2020
+RF539
+11/12/2024
+RF509
+05/26/2020
+RF528
+11/12/2024
+RF539
+05/26/2020
+RF528
+11/12/2024
+RF545
+05/26/2020
+RF409
+03/27/2025
+Table of Contents
+05/26/2020
+RF409
+03/27/2025
+RF525
+11/29/2021
+RF528
+06/25/2025
+RF528
+11/29/2021
+RF528
+06/25/2025
+RF522
+11/29/2021
+RF575
+09/25/2025
+RF415
+11/29/2021
+RF528
+09/25/2025
+RF577
+11/29/2021
+Current Health Plan List
+09/29/2025
+Acute Contractors
+11/29/2021
+RF522
+09/29/2025
+RF416
+02/07/2022
+RF539
+09/29/2025
+Current Health Plan List
+04/1/2022
+RF415
+09/29/2025
+RF525
+06/24/2022
+RF528
+12/30/2025
+Acute Contractors
+09/16/2022
+RF525
+09/16/2022
+
+Revised 03/27/2026
+
+110 | P a g e
+
+

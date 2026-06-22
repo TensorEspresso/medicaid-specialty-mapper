@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en-GB" dir="ltr">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<base href="https://www.nucc.org/index.php/code-sets-mainmenu-41/provider-taxonomy-mainmenu-40/csv-mainmenu-57" />
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="author" content="Steve Bass" />
+	<meta name="description" content="Joomla! - the dynamic portal engine and content management system" />
+	<meta name="generator" content="Joomla! - Open Source Content Management" />
+	<title>National Uniform Claim Committee - CSV</title>
+	<link href="/templates/js_keenly/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+	<link href="https://www.nucc.org/index.php/component/search/?Itemid=132&amp;format=opensearch" rel="search" title="Search National Uniform Claim Committee" type="application/opensearchdescription+xml" />
+	<link href="/plugins/system/jce/css/content.css?badb4208be409b1335b815dde676300e" rel="stylesheet" type="text/css" />
+	<link href="/media/system/css/modal.css?627940de1391ce3681cea92c6759c867" rel="stylesheet" type="text/css" />
+	<link href="/templates/js_keenly/css/style-cherry.css" rel="stylesheet" type="text/css" />
+	<link href="/templates/js_keenly/css/joomla30-cherry-extended.css" rel="stylesheet" type="text/css" />
+	<link href="/templates/js_keenly/css/joomla30-cherry-responsive.css" rel="stylesheet" type="text/css" />
+	<link href="/templates/js_keenly/css/custom.css" rel="stylesheet" type="text/css" />
+	<link href="/templates/js_keenly/wright/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+	<script type="application/json" class="joomla-script-options new">{"csrf.token":"f3eed7ae3e265ea66be84179b65a8de6","system.paths":{"root":"","base":""}}</script>
+	<script src="/templates/js_keenly/js/jui/jquery.min.js?627940de1391ce3681cea92c6759c867" type="text/javascript"></script>
+	<script src="/media/jui/js/jquery-noconflict.js?627940de1391ce3681cea92c6759c867" type="text/javascript"></script>
+	<script src="/media/jui/js/jquery-migrate.min.js?627940de1391ce3681cea92c6759c867" type="text/javascript"></script>
+	<script src="/media/system/js/caption.js?627940de1391ce3681cea92c6759c867" type="text/javascript"></script>
+	<script src="/templates/js_keenly/js/jui/bootstrap.min.js?627940de1391ce3681cea92c6759c867" type="text/javascript"></script>
+	<script src="/media/system/js/mootools-core.js?627940de1391ce3681cea92c6759c867" type="text/javascript"></script>
+	<script src="/media/system/js/core.js?627940de1391ce3681cea92c6759c867" type="text/javascript"></script>
+	<script src="/media/system/js/mootools-more.js?627940de1391ce3681cea92c6759c867" type="text/javascript"></script>
+	<script src="/media/system/js/modal.js?627940de1391ce3681cea92c6759c867" type="text/javascript"></script>
+	<script type="text/javascript">
+jQuery(window).on('load',  function() {
+				new JCaption('img.caption');
+			});
+		jQuery(function($) {
+			SqueezeBox.initialize({});
+			initSqueezeBox();
+			$(document).on('subform-row-add', initSqueezeBox);
+
+			function initSqueezeBox(event, container)
+			{
+				SqueezeBox.assign($(container || document).find('a.modal').get(), {
+					parse: 'rel'
+				});
+			}
+		});
+
+		window.jModalClose = function () {
+			SqueezeBox.close();
+		};
+
+		// Add extra modal close functionality for tinyMCE-based editors
+		document.onreadystatechange = function () {
+			if (document.readyState == 'interactive' && typeof tinyMCE != 'undefined' && tinyMCE)
+			{
+				if (typeof window.jModalClose_no_tinyMCE === 'undefined')
+				{
+					window.jModalClose_no_tinyMCE = typeof(jModalClose) == 'function'  ?  jModalClose  :  false;
+
+					jModalClose = function () {
+						if (window.jModalClose_no_tinyMCE) window.jModalClose_no_tinyMCE.apply(this, arguments);
+						tinyMCE.activeEditor.windowManager.close();
+					};
+				}
+
+				if (typeof window.SqueezeBoxClose_no_tinyMCE === 'undefined')
+				{
+					if (typeof(SqueezeBox) == 'undefined')  SqueezeBox = {};
+					window.SqueezeBoxClose_no_tinyMCE = typeof(SqueezeBox.close) == 'function'  ?  SqueezeBox.close  :  false;
+
+					SqueezeBox.close = function () {
+						if (window.SqueezeBoxClose_no_tinyMCE)  window.SqueezeBoxClose_no_tinyMCE.apply(this, arguments);
+						tinyMCE.activeEditor.windowManager.close();
+					};
+				}
+			}
+		};
+		
+	</script>
+
+
+	<link href='http://fonts.googleapis.com/css?family=Karma:300,400,600' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+</head>
+<body class="is_mozilla v_5  responsive b_jdefault h_jdefault s_cherry id_132 rev_1.4.18_3.7.14">
+	<div class="frame"></div>
+		<div class="container">
+		
+								
+		<header id="header">
+			<div class="row clearfix">
+				<div id="logo" class="span8">
+
+<div class="custom"  >
+	<p><img src="/images/stories/top_banner.png" border="0" alt="" /></p></div>
+</div><div id="top" class="span4"><div id="top_primary" class="clearfix"> 		<div class="moduletable">
+						<div class="search">
+	<form action="/index.php/code-sets-mainmenu-41/provider-taxonomy-mainmenu-40/csv-mainmenu-57" method="post" class="form-inline">
+		<label for="mod-search-searchword" class="element-invisible"> </label> <input name="searchword" id="mod-search-searchword" maxlength="200"  class="inputbox search-query" type="text" size="20" value="Search ..."  onblur="if (this.value=='') this.value='Search ...';" onfocus="if (this.value=='Search ...') this.value='';" /> <button class="button btn" onclick="this.form.searchword.focus();">Search</button>		<input type="hidden" name="task" value="search" />
+		<input type="hidden" name="option" value="com_search" />
+		<input type="hidden" name="Itemid" value="132" />
+	</form>
+</div>
+		</div>
+	 </div></div>
+				<div class="clear"></div>
+			</div>
+		</header>
+				
+   		<div class="wrapper-menu">
+				<div class="">
+					<nav id="menu">
+						<div class="navbar navbar-inverse"">
+							<div class="navbar-inner">
+					            <a class="btn btn-navbar collapsed" data-toggle="collapse" data-target="#nav-menu">
+						            <span class="icon-bar"></span>
+						            <span class="icon-bar"></span>
+						            <span class="icon-bar"></span>
+					            </a>
+					            <div class="nav-collapse" id="nav-menu">
+									 
+<ul class="menu navbar-inner nav">
+<li class="item-101 deeper dropdown parent"><a class=" dropdown-toggle" href="/index.php" >Home<b class="caret"></b></a><ul class="dropdown-menu"><li class="item-104"><a href="/index.php/home-mainmenu-1/archive-home-page-mainmenu-74" > Archive - Home Page</a></li></ul></li><li class="item-105"><a href="/index.php/announcements-mainmenu-45" >Announcements</a></li><li class="item-106 deeper dropdown parent"><a class=" dropdown-toggle" href="/index.php/nucc-structure-mainmenu-36" >NUCC Structure<b class="caret"></b></a><ul class="dropdown-menu"><li class="item-107"><a href="/index.php/nucc-structure-mainmenu-36/members-mainmenu-31" >Members</a></li><li class="item-108"><a href="/index.php/nucc-structure-mainmenu-36/bylaws-mainmenu-32" >Bylaws</a></li><li class="item-109"><a href="/index.php/nucc-structure-mainmenu-36/subcommittees-mainmenu-33" >Subcommittees</a></li><li class="item-110"><a href="/index.php/nucc-structure-mainmenu-36/contact-us-mainmenu-34" >Contact Us</a></li></ul></li><li class="item-111"><a href="/index.php/calendar-mainmenu-47" >Calendar</a></li><li class="item-112 deeper dropdown parent"><a class=" dropdown-toggle" href="/index.php/1500-claim-form-mainmenu-35" >1500 Claim Form<b class="caret"></b></a><ul class="dropdown-menu"><li class="item-114"><a href="/index.php/1500-claim-form-mainmenu-35/1500-instructions-mainmenu-42" >1500 Instructions</a></li><li class="item-116"><a href="/index.php/1500-claim-form-mainmenu-35/faqs-mainmenu-43" >FAQs</a></li><li class="item-139"><a href="/index.php/1500-claim-form-mainmenu-35/08-05-1500-claim-form" >08/05 1500 Claim Form</a></li></ul></li><li class="item-117 active deeper dropdown parent"><a class=" dropdown-toggle" href="/index.php/code-sets-mainmenu-41" >Code Sets<b class="caret"></b></a><ul class="dropdown-menu"><li class="item-118"><a href="/index.php/code-sets-mainmenu-41/condition-codes-mainmenu-38" >Condition Codes</a></li><li class="item-119 deeper dropdown parent dropdown-submenu"><a class=" dropdown-toggle" href="/index.php/code-sets-mainmenu-41/provider-characteristics-mainmenu-39" >Provider Characteristics<b class="caret"></b></a><ul class="dropdown-menu"><li class="item-120"><a href="/index.php/code-sets-mainmenu-41/provider-characteristics-mainmenu-39/code-lookup-mainmenu-63" >Code Lookup</a></li><li class="item-121"><a href="/index.php/code-sets-mainmenu-41/provider-characteristics-mainmenu-39/questions-mainmenu-65" >Questions</a></li><li class="item-122"><a href="/index.php/code-sets-mainmenu-41/provider-characteristics-mainmenu-39/more-information-mainmenu-64" >More Information</a></li><li class="item-168"><a href="/index.php/code-sets-mainmenu-41/provider-characteristics-mainmenu-39/new-codes-pc" >New Codes</a></li><li class="item-123"><a  href="http://www.nucc.org/images/stories/PDF/nucc_characteristics5.pdf" >PDF</a></li><li class="item-124"><a href="/index.php/code-sets-mainmenu-41/provider-characteristics-mainmenu-39/csv-mainmenu-67" >CSV</a></li></ul></li><li class="item-125 active deeper dropdown parent dropdown-submenu"><a class=" dropdown-toggle" href="/index.php/code-sets-mainmenu-41/provider-taxonomy-mainmenu-40" >Provider Taxonomy<b class="caret"></b></a><ul class="dropdown-menu"><li class="item-170"><a href="/index.php/code-sets-mainmenu-41/provider-taxonomy-mainmenu-40/code-lookups" >Code Lookups</a></li><li class="item-128"><a href="/index.php/code-sets-mainmenu-41/provider-taxonomy-mainmenu-40/more-information-mainmenu-55" >More Information</a></li><li class="item-129"><a href="/index.php/code-sets-mainmenu-41/provider-taxonomy-mainmenu-40/new-codes-mainmenu-79" >New Codes</a></li><li class="item-130"><a href="/index.php/code-sets-mainmenu-41/provider-taxonomy-mainmenu-40/modifications-mainmenu-80" >Modifications</a></li><li class="item-131"><a href="/index.php/code-sets-mainmenu-41/provider-taxonomy-mainmenu-40/pdf-mainmenu-53" >PDF</a></li><li class="item-132 current active"><a href="/index.php/code-sets-mainmenu-41/provider-taxonomy-mainmenu-40/csv-mainmenu-57" >CSV</a></li></ul></li></ul></li><li class="item-159"><a href="/index.php/definitions-mainmenu-37" >Definitions</a></li><li class="item-133"><a href="/index.php/resources-mainmenu-37" >Resources</a></li></ul>
+
+								</div>
+							</div>
+						</div>
+					</nav>
+				</div>
+			</div>
+				
+				
+						
+                
+		<div id="main-content" class="row ">
+			
+			
+			
+			<section class="span12" id="main" >
+												
+				<div id="system-message-container">
+    </div>
+<div class="item-page" itemscope itemtype="https://schema.org/Article">
+
+	<!-- Schema.org markup -->
+	<meta itemprop="name" content="CSV" />
+	<meta itemprop="headline" content="Health Care Provider Taxonomy Code Set (CSV)" />
+	<meta itemprop="inLanguage" content="en-GB" />
+	<meta itemprop="genre" content="Provider Taxonomy" />
+			<meta itemprop="dateCreated" content="2009-03-01T04:00:37-08:00" />
+	<meta itemprop="dateModified" content="2026-01-02T10:42:16-08:00" />
+	<meta itemprop="datePublished" content="2009-03-01T03:59:19-08:00" />
+			<div itemprop="publisher" itemscope itemtype="https://schema.org/Organization">
+			<meta itemprop="name" content="National Uniform Claim Committee" />
+			<div itemprop="logo" itemscope itemtype="https://schema.org/ImageObject">
+				<meta itemprop="url" content="https://www.nucc.org/images/stories/top_banner.png">
+			</div>
+		</div>
+		<div itemprop="author" itemscope itemtype="https://schema.org/Person">
+		<meta itemprop="name" content="Steve Bass" />
+	</div>
+
+	
+	
+<div class="item-container"></div><div class="divider-container"><div class="divider-vertical"></div></div><div class="content-wrapper">
+            
+                                                        
+	            <div itemprop="articleBody">
+                    <h1>Health Care Provider Taxonomy Code Set CSV</h1>
+<p>The current version of the Health Care Provider Taxonomy Code Set as a Comma Separated Values (CSV) file:</p>
+<ul>
+<li><a href="/images/stories/CSV/nucc_taxonomy_251.csv">Version 25.1, 7/1/25 &amp; 1/1/26</a></li>
+</ul>
+<p style="padding-top: 20px;">Previous versions:</p>
+<ul>
+<li><a href="/images/stories/CSV/nucc_taxonomy_250.csv">Version 25.0, 1/1/25</a></li>
+<li><a href="/images/stories/CSV/nucc_taxonomy_241.csv">Version 24.1, 7/1/24</a></li>
+<li><a href="/images/stories/CSV/nucc_taxonomy_240.csv">Version 24.0, 1/1/24</a></li>
+<li><a href="/images/stories/CSV/nucc_taxonomy_231.csv">Version 23.1, 7/1/23</a></li>
+<li><a href="/images/stories/CSV/nucc_taxonomy_230.csv">Version 23.0, 1/1/23</a></li>
+<li><a href="/images/stories/CSV/nucc_taxonomy_221.csv">Version 22.1, 7/1/22</a></li>
+<li><a href="/images/stories/CSV/nucc_taxonomy_220.csv">Version 22.0, 1/1/22</a></li>
+<li><a href="/images/stories/CSV/nucc_taxonomy_211.csv">Version 21.1, 7/1/21</a></li>
+<li><a href="/images/stories/CSV/nucc_taxonomy_210.csv">Version 21.0, 1/1/21</a></li>
+<li><a href="/images/stories/CSV/nucc_taxonomy_201.csv">Version 20.1, 7/1/20</a></li>
+<li><a href="/images/stories/CSV/nucc_taxonomy_200.csv">Version 20.0, 1/1/20</a></li>
+<li><a href="/images/stories/CSV/nucc_taxonomy_191.csv">Version 19.1, 7/1/19</a></li>
+<li><a href="/images/stories/CSV/nucc_taxonomy_190.csv">Version 19.0, 1/1/19</a></li>
+<li><a href="/images/stories/CSV/nucc_taxonomy_181.csv">Version 18.1, 7/1/18</a></li>
+<li><a href="/images/stories/CSV/nucc_taxonomy_180.csv">Version 18.0, 1/1/18</a></li>
+<li><a href="/images/stories/CSV/nucc_taxonomy_171.csv">Version 17.1, 7/1/17</a></li>
+<li><a href="/images/stories/CSV/nucc_taxonomy_170.csv">Version 17.0, 1/1/17</a></li>
+<li><a href="/images/stories/CSV/nucc_taxonomy_161.csv">Version 16.1, 7/1/16</a></li>
+<li><a href="/images/stories/CSV/nucc_taxonomy_160.csv">Version 16.0, 1/1/16</a></li>
+<li><a href="/images/stories/CSV/nucc_taxonomy_151.csv">Version 15.1, 7/1/15</a></li>
+<li><a href="/images/stories/CSV/nucc_taxonomy_150.csv">Version 15.0, 1/1/15</a></li>
+<li><a href="/images/stories/CSV/nucc_taxonomy_141.csv">Version 14.1, 7/1/14</a></li>
+<li><a href="/images/stories/CSV/nucc_taxonomy_140.csv">Version 14.0, 1/1/14</a></li>
+<li><a href="/images/stories/CSV/nucc_taxonomy_131.csv">Version 13.1, 7/1/13</a></li>
+<li><a href="/images/stories/CSV/nucc_taxonomy_130.csv">Version 13.0, 1/1/13</a></li>
+<li><a href="/images/stories/CSV/nucc_taxonomy_121.csv">Version 12.1, 7/1/12</a></li>
+<li><a href="/images/stories/CSV/nucc_taxonomy_120.csv">Version 12.0, 1/1/12</a></li>
+<li><a href="/images/stories/CSV/nucc_taxonomy_111.csv">Version 11.1, 7/1/11</a></li>
+<li><a href="/images/stories/CSV/nucc_taxonomy_110.csv">Version 11.0, 1/1/11</a></li>
+<li><a href="/images/stories/CSV/nucc_taxonomy_101.csv">Version 10.1, 7/1/10</a></li>
+<li><a href="/images/stories/CSV/nucc_taxonomy_100.csv">Version 10.0, 1/1/10</a></li>
+<li><a href="/images/stories/CSV/nucc_taxonomy_91.csv">Version 9.1, 7/1/09</a></li>
+<li><a href="/images/stories/CSV/nucc_taxonomy_90.csv">Version 9.0, 1/1/09</a></li>
+</ul>
+<p style="padding-top: 20px;">For commercial use, including sales or licensing, a license must be obtained from this web site.</p>
+<ul>
+<li><a href="/index.php/nucc-structure-mainmenu-36/contact-us-mainmenu-34?id=111">Form to request license</a></li>
+</ul> 	            </div>
+
+            
+                                                                                                </div>
+	</div>
+
+							</section>
+			
+			
+		</div>
+				
+	</div>
+
+	
+	<div class="wrapper-footer">
+	   <footer id="footer"  class="footer sticky">
+
+			
+	   	 <div class="container footer-content">
+	   							<div class="row"><div class="module first last mod_0 no_title span12">
+
+
+<div class="custom"  >
+	<p>Copyright 2026 American Medical Association</p></div>
+</div>
+</div>
+		 					
+			</div>
+	   </footer>
+	</div>
+		<script type='text/javascript' src='/templates/js_keenly/js/jkeenly.js'></script>
+
+<script src='/templates/js_keenly/wright/js/utils.min.js' type='text/javascript'></script>
+<script src='/templates/js_keenly/wright/js/stickyfooter.min.js' type='text/javascript'></script>
+</body>
+</html>

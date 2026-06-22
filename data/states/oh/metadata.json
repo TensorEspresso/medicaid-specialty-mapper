@@ -1,0 +1,31 @@
+{
+  "program_name": "Medicaid Managed Care (MCO / MCOP / OhioRISE)",
+  "agency": "ODM (Ohio Department of Medicaid)",
+  "sources": [
+    {
+      "name": "MCO Provider Agreement (Jan 2026)",
+      "file": "2026_01_MCO_Final_1.pdf",
+      "description": "Medicaid MCO Provider Agreement — 26 specialties with time/distance by geographic tier"
+    },
+    {
+      "name": "MyCare Ohio Provider Agreement (Jan 2026)",
+      "file": "2026_01_Next_Gen_MyCare_Final_PA.pdf",
+      "description": "Next Generation MyCare Ohio — 28 CMS specialties + 14 facilities with county-based minimums"
+    },
+    {
+      "name": "OhioRISE Provider Agreement (Jan 2026)",
+      "file": "2026_01_OhioRISE_Provider_Agreement_Final_Rates_Combined.pdf",
+      "description": "OhioRISE — 8 BH specialty types with distance-only standards"
+    },
+    {
+      "name": "Exception Request Process Memo (Nov 2025)",
+      "file": "2026_MCO_and_MCOP_Exception_Request_Process_Memo.pdf",
+      "description": "Exception request process with Appendix B verification data"
+    }
+  ],
+  "crosswalk_origin": "best-effort",
+  "crosswalk_rows": 60,
+  "specialty_count": 178,
+  "verification_status": "verified",
+  "notes": "Three separate programs with distinct frameworks (MCO, MCOP, OhioRISE). No official NUCC crosswalk published. 4 geographic tiers across 88 counties."
+}
