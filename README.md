@@ -11,8 +11,12 @@ consumes as evaluation data.
 ## What It Does
 
 Given free-text specialty labels ("Cardiologist", "Behavioral Health RN", …), the
-mapper returns the most specific NUCC code, display name, a confidence score, and a
-short rationale.
+mapper returns the most specific NUCC display name and code, a confidence score, and
+a short rationale.
+
+**Mapping model:** the LLM matches each input to a **NUCC Display Name** only (codes
+are withheld from the prompt). The **code is then resolved by direct lookup in the
+NUCC dataset** — never LLM-generated. Names that don't resolve are flagged for review.
 
 ## Repo Layout
 

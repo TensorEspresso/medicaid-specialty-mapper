@@ -12,7 +12,10 @@ reasoning. Matches fuzzy/colloquial specialty names to standardized NUCC entries
 ## Core Features
 
 - Map free-text specialty labels ("Cardiologist", "Behavioral Health", …) to the correct NUCC code
-- Single direct LLM call: full taxonomy embedded in the prompt, reasoning disabled, lowest latency
+- Display-name-first model: the LLM returns the best-matching **NUCC Display Name** only; the
+  **code is resolved by direct dataset lookup** (never LLM-generated). Unresolvable names are
+  flagged for review, not guessed.
+- Single direct LLM call: full display-name list embedded in the prompt, reasoning disabled
 - Confidence scoring per mapping
 - Web UI for interactive use
 
@@ -23,7 +26,7 @@ reasoning. Matches fuzzy/colloquial specialty names to standardized NUCC entries
 | Backend | Python FastAPI | Clean REST, simple deploy |
 | LLM | Local (Qwen 27B) via API | Fast, private, no per-token cost |
 | Frontend | Single-page HTML/CSS/JS | No build step, instant load |
-| Taxonomy | NUCC v25.1 CSV (884 codes) | Canonical, embedded in the prompt |
+| Taxonomy | NUCC v25.1 CSV (884 codes) | Canonical; display names embedded in the prompt, codes resolved by lookup |
 
 ## User Flow
 
@@ -32,8 +35,13 @@ User enters specialty labels (one per line)
          │
          ▼
   ┌─────────────┐
-  │ Direct LLM   │  ~8s, all 884 NUCC codes embedded in prompt
+  │ Direct LLM   │  ~8s, all 884 NUCC display names embedded in prompt
   └──────┬──────┘  No web search, no tool use
+         │  → matched display name per input
+         ▼
+  ┌──────────────────┐
+  │ Dataset lookup    │  display name → code (deterministic,
+  └──────┬───────────┘  codes never LLM-generated)
          │
          ▼
   Structured JSON response
@@ -76,9 +84,14 @@ Browser (single-page)
     ▼
 FastAPI server
     └── LLM API call
-        ├── System prompt: NUCC taxonomy (884 codes)
+        ├── System prompt: NUCC display names (884, codes withheld)
         ├── User prompt: specialty labels
-        └── Response: JSON array
+        └── Response: JSON array of {input, nucc_name, confidence, notes}
+
+    └── Code resolution (server-side)
+        ├── normalized exact match on Display Name
+        ├── tight fuzzy fallback (cutoff 0.97) for minor drift
+        └── unresolvable → flagged for review
 ```
 
 ## API

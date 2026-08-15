@@ -53,15 +53,35 @@ the FDE/remote path, where Number A + the capability is the proof.
 
 ---
 
-## 2. Diagnosis (what's real vs. what's thin)
+## 2. Mapping Model (product definition)
+
+The mapper works in two stages, and only the first stage touches the LLM:
+
+1. **Input → NUCC Display Name (LLM).** The LLM sees the full NUCC display-name list
+   (codes withheld) and returns the best-matching *display name string* for each input
+   label, with a confidence score and notes.
+2. **Display Name → Code (deterministic lookup).** The code is **never LLM-generated**.
+   It is resolved by direct lookup in the NUCC dataset (normalized exact match, tight
+   fuzzy fallback for minor drift). An unresolvable name is flagged for review, not
+   guessed.
+
+Why: codes are identifiers, not concepts — the LLM should do the semantic work (fuzzy
+label → canonical name) and the dataset should do the exact work (name → code). This
+removes a whole failure class (invented/malformed codes) and makes the output
+deterministically checkable against the taxonomy file.
+
+---
+
+## 3. Diagnosis (what's real vs. what's thin)
 
 ### Has teeth (keep, protect)
 - **11 states of verified Medicaid specialty reference data** (AZ, CA, FL, GA, IL, MI, NC, NY, OH,
   PA, TX) — each with source documentation + provenance. Rare, hard-to-get asset.
 - **NUCC v25.1 spine** (884 codes).
-- Sound concept: free-text label → NUCC → state crosswalk, semantic fallback, confidence +
-  review-flag.
-- Working demo (FastAPI, fast ~8s / agent ~26s, Qwen3.6-27B local on 5090).
+- Sound concept: free-text label → **NUCC display name (LLM)** → **NUCC code
+  (direct lookup in the NUCC dataset, never LLM-generated)** → state crosswalk,
+  semantic fallback, confidence + review-flag.
+- Working demo (FastAPI, single direct LLM call ~8s, Qwen3.6-27B local on 5090).
 - Real, specific problem: provider specialty data is messy, manual, expensive.
 
 ### Thin (the gap to close)
@@ -72,12 +92,10 @@ the FDE/remote path, where Number A + the capability is the proof.
 - **Demo + scripts, not a package.** (Contrast: `qhp-specialty-framework` already has proper
   `src/` layout, `pyproject.toml`, 33 passing tests.)
 - **NY and TX crosswalks `Missing`** in the manifest.
-- **Agent mode** = `subprocess`-calling Hermes under a session lock. Fine for a demo, not
-  production.
 
 ---
 
-## 3. North Star / Success Criteria
+## 4. North Star / Success Criteria
 
 The initiative is a success when all four are true:
 
@@ -93,7 +111,7 @@ The initiative is a success when all four are true:
 
 ---
 
-## 4. Open Questions (BLOCKING — resolve in Phase 0)
+## 5. Open Questions (BLOCKING — resolve in Phase 0)
 
 - [ ] **Eval-set source (load-bearing):** build Number A's ground truth from the *public* state
       catalogs (portable, citable, already in the personal repo). **Recommendation: yes — this is
@@ -110,7 +128,7 @@ The initiative is a success when all four are true:
 
 ---
 
-## 5. Phases
+## 6. Phases
 
 ### Phase 0 — Formalize (Week 1)
 Goal: convert a CDO compliment into a named, scoped, owned initiative — and get ownership, not a
@@ -148,8 +166,6 @@ Goal: tie Number B to a Quest dollar problem and make the code production-grade.
 - [ ] **Package it** — proper `src/` layout, `pyproject.toml`, test suite (match the
       `qhp-specialty-framework` standard, not the demo standard).
 - [ ] Complete **NY and TX crosswalks** (currently Missing).
-- [ ] Clean up agent-mode architecture (decouple the Hermes `subprocess` dependency for
-      production).
 - [ ] A short **README/one-pager** that leads with the measured accuracy (Number A), not the
       architecture.
 
@@ -167,7 +183,7 @@ Goal: convert the finished asset into durable leverage. Do **not** make the imme
 
 ---
 
-## 6. The 5 Agentic Differentiators (what the work must demonstrate)
+## 7. The 5 Agentic Differentiators (what the work must demonstrate)
 
 These are the resume/promotion lines almost nobody has. The initiative should visibly include them:
 
@@ -182,7 +198,7 @@ These are the resume/promotion lines almost nobody has. The initiative should vi
 
 ---
 
-## 7. Risks & IP
+## 8. Risks & IP
 
 - **IP / non-compete:** Michigan (Andy's state) has a generally non-compete-hostile climate (EO
   2024-1, subsequently litigated — confirm current status with employment counsel if needed).
@@ -200,7 +216,7 @@ These are the resume/promotion lines almost nobody has. The initiative should vi
 
 ---
 
-## 8. Definition of Done
+## 9. Definition of Done
 
 - [ ] **Number A** (portable accuracy on public-catalog ground truth), overall + by confidence
       band, in a standalone report citing no proprietary data.

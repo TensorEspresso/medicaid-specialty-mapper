@@ -1,10 +1,15 @@
 """
 Specialty Mapper — FastAPI backend.
-Maps arbitrary provider specialty labels to NUCC taxonomy codes via a direct LLM call.
+
+Mapping model: the LLM matches free-text input to a **NUCC Display Name** only.
+The NUCC **code is never produced by the LLM** — it is resolved by direct lookup
+in the NUCC dataset (display name → code).
 """
 
 import csv
 import json
+import difflib
+import re
 from pathlib import Path
 
 import urllib.request
@@ -28,32 +33,68 @@ LLM_API_KEY = "***"
 
 # Cache
 _nucc_cache = None
+_name_index = None  # normalized display name -> row
 
 
 def load_nucc():
     """Load NUCC taxonomy into memory."""
-    global _nucc_cache
+    global _nucc_cache, _name_index
     if _nucc_cache is not None:
         return _nucc_cache
 
     rows = []
+    name_index = {}
     with open(NUCC_CSV, "r", encoding="utf-8") as f:
         reader = csv.DictReader(f)
         for row in reader:
             rows.append(row)
+            key = normalize_name(row.get("Display Name", ""))
+            if key and key not in name_index:
+                name_index[key] = row
     _nucc_cache = rows
+    _name_index = name_index
     return rows
 
 
+def normalize_name(name: str) -> str:
+    """Normalize a display name for deterministic lookup."""
+    return re.sub(r"\s+", " ", name).strip().lower()
+
+
+def resolve_code(display_name: str):
+    """Resolve a NUCC Display Name to its code via direct dataset lookup.
+
+    Exact normalized match first, then close fuzzy match (cutoff 0.97) to
+    absorb minor spelling/wording drift. Returns the taxonomy row or None.
+    """
+    global _name_index
+    load_nucc()
+    if _name_index is None:
+        return None
+    if not display_name:
+        return None
+    key = normalize_name(display_name)
+    row = _name_index.get(key)
+    if row:
+        return row
+    matches = difflib.get_close_matches(key, _name_index.keys(), n=1, cutoff=0.97)
+    if matches:
+        return _name_index[matches[0]]
+    return None
+
+
 def build_reference_context() -> str:
-    """Build a compact NUCC reference context for the LLM prompt."""
+    """Build a NUCC display-name reference for the LLM prompt.
+
+    Deliberately omits codes — the LLM outputs display names only, and the
+    code is resolved from the dataset server-side.
+    """
     nucc = load_nucc()
-    lines = ["NUCC Taxonomy Reference (Code | Display Name | Classification):"]
+    lines = ["NUCC Taxonomy Display Names (Name | Classification):"]
     for row in nucc:
-        code = row.get("Code", "")
         name = row.get("Display Name", "")
         classification = row.get("Classification", "")
-        lines.append(f"  {code} | {name} | {classification}")
+        lines.append(f"  {name} | {classification}")
     return "\n".join(lines)
 
 
@@ -111,7 +152,6 @@ def parse_response(text: str) -> list:
     except json.JSONDecodeError:
         pass
 
-    import re
     json_candidates = []
     for match in re.finditer(r'\[', text):
         start = match.start()
@@ -186,12 +226,13 @@ async def map_specialty(req: MapRequest):
 
     reference = build_reference_context()
 
-    system_prompt = f"""You are a specialty mapping expert. Map provider specialty labels to NUCC taxonomy codes.
+    system_prompt = f"""You are a specialty mapping expert. Map provider specialty labels to NUCC taxonomy display names.
 
 {reference}
 
 Rules:
-- Match to the most specific code possible.
+- Match to the most specific NUCC display name possible.
+- "nucc_name" MUST be the exact display name string from the list above.
 - Confidence 1.0: exact match or standard synonym
 - Confidence 0.8-0.95: clear semantic match
 - Confidence 0.5-0.79: plausible but ambiguous
@@ -199,19 +240,45 @@ Rules:
 
 Return ONLY a JSON array, no markdown, no explanation."""
 
-    user_prompt = f"""Map these specialty labels to NUCC taxonomy codes:
+    user_prompt = f"""Map these specialty labels to NUCC taxonomy display names:
 
 {input_text}
 
 Return a JSON array:
 [
-  {{"input": "...", "nucc_code": "...", "nucc_name": "...", "confidence": 0.95, "notes": "..."}},
+  {{"input": "...", "nucc_name": "...", "confidence": 0.95, "notes": "..."}},
   ...
 ]"""
 
     try:
         response = call_llm(system_prompt, user_prompt)
-        results = parse_response(response)
+        raw_results = parse_response(response)
+
+        # Resolve codes via direct dataset lookup — the LLM never supplies codes.
+        results = []
+        for r in raw_results:
+            nucc_name = (r.get("nucc_name") or "").strip()
+            row = resolve_code(nucc_name)
+            notes = r.get("notes") or ""
+            if row:
+                results.append({
+                    "input": r.get("input", ""),
+                    "nucc_code": row.get("Code", ""),
+                    "nucc_name": row.get("Display Name", ""),
+                    "confidence": r.get("confidence", 0.0),
+                    "notes": notes,
+                })
+            else:
+                # Unresolvable display name — flag for review.
+                flag = "no match found — needs review" if not nucc_name else \
+                    f"display name '{nucc_name}' not found in NUCC dataset — needs review"
+                results.append({
+                    "input": r.get("input", ""),
+                    "nucc_code": None,
+                    "nucc_name": nucc_name or None,
+                    "confidence": 0.0,
+                    "notes": f"{notes}; {flag}" if notes else flag,
+                })
 
         return MapResponse(
             results=results,

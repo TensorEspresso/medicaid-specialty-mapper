@@ -53,10 +53,15 @@ specialty-mapper/
 | `LLM_API_KEY`    | `***`                | Placeholder; the local server accepts any non-empty key. |
 | **Port**         | **8645**                          | Single port across `run_server.py`, `start_demo.sh`, `start_bg.sh`, and the `__main__` block. Change everywhere if it changes. |
 
-## Mapping
+## Mapping Model (two stages)
 
-A single direct LLM call: the full NUCC taxonomy is embedded in the system prompt and
-reasoning is disabled. Lowest latency, no external dependencies beyond the LLM endpoint.
+1. **Input → NUCC Display Name (LLM).** Single direct call; the system prompt embeds the
+   full NUCC **display-name** list (codes withheld), reasoning disabled. Lowest latency,
+   no external dependencies beyond the LLM endpoint.
+2. **Display Name → Code (deterministic lookup).** `resolve_code()` looks the name up in
+   `data/nucc/nucc_taxonomy_251.csv` — normalized exact match, then a tight fuzzy fallback
+   (cutoff 0.97). **The code is never LLM-generated.** An unresolvable name is flagged for
+   review (`nucc_code: null`, confidence 0.0), never guessed.
 
 The JSON response shape (`results[]` with `input`, `nucc_code`, `nucc_name`,
 `confidence`, `notes`; plus `input_count`) is consumed by the web UI in
