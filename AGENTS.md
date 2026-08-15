@@ -29,7 +29,7 @@ specialty-mapper/
 │   └── nucc/
 │       └── nucc_taxonomy_251.csv   # Master NUCC reference (v25.1, 883 rows) — DO NOT MODIFY
 ├── demo/
-│   ├── main.py                # FastAPI backend (Fast + Agent modes)
+│   ├── main.py                # FastAPI backend (single LLM call)
 │   ├── requirements.txt
 │   └── static/index.html      # Web UI (single-page, no build step)
 ├── docs/
@@ -51,19 +51,15 @@ specialty-mapper/
 | `LLM_BASE_URL`   | `http://10.0.0.228:8080/v1`       | Local Qwen 27B OpenAI-compatible endpoint. |
 | `LLM_MODEL`      | `qwen-3.6-27b-mtp`                | |
 | `LLM_API_KEY`    | `***`                | Placeholder; the local server accepts any non-empty key. |
-| `HERMES_SESSION` | `specialty-mapper`                | Hermes agent session name for Agent mode. |
 | **Port**         | **8645**                          | Single port across `run_server.py`, `start_demo.sh`, `start_bg.sh`, and the `__main__` block. Change everywhere if it changes. |
 
-## Two Mapping Modes
+## Mapping
 
-- **Fast mode** (default, `POST /api/map`): single LLM call with the full NUCC taxonomy
-  embedded in the system prompt, reasoning disabled. Lowest latency.
-- **Agent mode** (`POST /api/map?agent=true`): Hermes CLI via
-  `hermes chat --resume specialty-mapper -q "..."`. Requires the `hermes` CLI on `PATH`.
-  `POST /api/reset` clears the accumulated session.
+A single direct LLM call: the full NUCC taxonomy is embedded in the system prompt and
+reasoning is disabled. Lowest latency, no external dependencies beyond the LLM endpoint.
 
 The JSON response shape (`results[]` with `input`, `nucc_code`, `nucc_name`,
-`confidence`, `notes`; plus `input_count`, `mode`) is consumed by the web UI in
+`confidence`, `notes`; plus `input_count`) is consumed by the web UI in
 `demo/static/index.html`. Changing the shape requires updating both.
 
 ## Structural Invariants

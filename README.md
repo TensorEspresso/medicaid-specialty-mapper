@@ -1,8 +1,7 @@
 # Specialty Mapper
 
 Maps arbitrary provider specialty labels to **NUCC taxonomy codes** using an LLM.
-Two runtime modes — a fast direct-LLM path and a full Hermes agent path — behind a
-small FastAPI server and web UI.
+A single direct LLM call (reasoning disabled) behind a small FastAPI server and web UI.
 
 This repo contains the **mapping tool** and the master NUCC reference it runs
 against. State-specific Medicaid specialty data (the ground-truth research output)
@@ -15,10 +14,6 @@ Given free-text specialty labels ("Cardiologist", "Behavioral Health RN", …), 
 mapper returns the most specific NUCC code, display name, a confidence score, and a
 short rationale.
 
-- **Fast mode** — single LLM call with the NUCC taxonomy embedded in the prompt,
-  reasoning disabled. Lowest latency.
-- **Agent mode** — Hermes agent with skills and web search for ambiguous cases.
-
 ## Repo Layout
 
 ```
@@ -30,7 +25,7 @@ specialty-mapper/
 │   └── nucc/
 │       └── nucc_taxonomy_251.csv   # Master NUCC reference (v25.1, 884 codes)
 ├── demo/
-│   ├── main.py                # FastAPI backend (Fast + Agent modes)
+│   ├── main.py                # FastAPI backend (single LLM call)
 │   └── static/index.html      # Web UI
 ├── docs/
 │   └── mapper-product.md      # Mapper product spec
@@ -51,8 +46,7 @@ python -m uvicorn main:app --host 0.0.0.0 --port 8645
 Then open `http://localhost:8645`.
 
 The backend expects an LLM endpoint at `http://10.0.0.228:8080/v1` (Qwen 27B) and
-the `hermes` CLI on `PATH` for agent mode. Adjust `LLM_BASE_URL` / `LLM_MODEL` in
-`demo/main.py` to reconfigure.
+nothing else. Adjust `LLM_BASE_URL` / `LLM_MODEL` in `demo/main.py` to reconfigure.
 
 ## API
 
@@ -60,8 +54,6 @@ the `hermes` CLI on `PATH` for agent mode. Adjust `LLM_BASE_URL` / `LLM_MODEL` i
 |--------|------|-------------|
 | `GET`  | `/`            | Web UI |
 | `POST` | `/api/map`     | Map specialties (body: `{"text": "...\n..."}`) |
-| `POST` | `/api/map?agent=true` | Map via Hermes agent mode |
-| `POST` | `/api/reset`   | Reset the agent session |
 
 Response:
 ```json
@@ -76,7 +68,6 @@ Response:
     }
   ],
   "input_count": 1,
-  "mode": "fast"
 }
 ```
 

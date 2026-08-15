@@ -1,28 +1,21 @@
 """
-Specialty Mapper Demo — FastAPI backend.
-Maps arbitrary provider specialty labels to NUCC taxonomy codes.
-
-Two modes:
-  - Fast mode (default): Direct LLM call, reasoning disabled (~8s)
-  - Agent mode: Full Hermes agent with skill reasoning (~26s)
+Specialty Mapper — FastAPI backend.
+Maps arbitrary provider specialty labels to NUCC taxonomy codes via a direct LLM call.
 """
 
 import csv
 import json
-import subprocess
-import threading
 from pathlib import Path
-from typing import Optional
 
 import urllib.request
 import urllib.error
 
-from fastapi import FastAPI, HTTPException, Query
+from fastapi import FastAPI, HTTPException
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 from pydantic import BaseModel
 
-app = FastAPI(title="Specialty Mapper Demo")
+app = FastAPI(title="Specialty Mapper")
 
 # Paths
 PROJECT_DIR = Path(__file__).parent
@@ -32,10 +25,6 @@ NUCC_CSV = PROJECT_DIR.parent / "data" / "nucc" / "nucc_taxonomy_251.csv"
 LLM_BASE_URL = "http://10.0.0.228:8080/v1"
 LLM_MODEL = "qwen-3.6-27b-mtp"
 LLM_API_KEY = "***"
-
-# Hermes session for agent mode
-HERMES_SESSION = "specialty-mapper"
-_session_lock = threading.Lock()
 
 # Cache
 _nucc_cache = None
@@ -69,7 +58,7 @@ def build_reference_context() -> str:
 
 
 def call_llm(system_prompt: str, user_prompt: str) -> str:
-    """Call the LLM API directly (fast mode — reasoning disabled)."""
+    """Call the LLM API directly (reasoning disabled)."""
     payload = {
         "model": LLM_MODEL,
         "messages": [
@@ -98,24 +87,8 @@ def call_llm(system_prompt: str, user_prompt: str) -> str:
         raise HTTPException(status_code=502, detail=f"LLM error: {e}")
 
 
-def call_hermes(prompt: str) -> str:
-    """Call Hermes Agent with session reuse (agent mode)."""
-    with _session_lock:
-        result = subprocess.run(
-            ["hermes", "chat", "--resume", HERMES_SESSION, "-q", prompt],
-            capture_output=True,
-            text=True,
-            timeout=120,
-        )
-
-    if result.returncode != 0:
-        raise HTTPException(status_code=500, detail=f"Hermes error: {result.stderr[:500]}")
-
-    return result.stdout
-
-
 def parse_response(text: str) -> list:
-    """Parse LLM or Hermes response into structured results."""
+    """Parse the LLM response into structured results."""
     text = text.strip()
 
     if "```" in text:
@@ -196,7 +169,6 @@ class MapRequest(BaseModel):
 class MapResponse(BaseModel):
     results: list
     input_count: int
-    mode: str
 
 
 @app.get("/")
@@ -204,55 +176,17 @@ async def serve_frontend():
     return FileResponse(PROJECT_DIR / "static" / "index.html")
 
 
-@app.post("/api/reset")
-async def reset_session():
-    result = subprocess.run(
-        ["hermes", "sessions", "delete", "--yes", HERMES_SESSION],
-        capture_output=True,
-        text=True,
-        timeout=10,
-    )
-    if result.returncode != 0:
-        if "not found" not in result.stderr.lower():
-            raise HTTPException(status_code=500, detail=f"Reset error: {result.stderr[:300]}")
-    return {"status": "ok", "message": f"Session '{HERMES_SESSION}' reset."}
-
-
 @app.post("/api/map")
-async def map_specialty(
-    req: MapRequest,
-    agent: bool = Query(default=False, description="Use Hermes agent mode"),
-):
+async def map_specialty(req: MapRequest):
     inputs = [line.strip() for line in req.text.strip().split("\n") if line.strip()]
     if not inputs:
         raise HTTPException(status_code=400, detail="No input text provided")
 
     input_text = "\n".join(f"- {inp}" for inp in inputs)
 
-    prompt = f"""Map the following specialty labels to NUCC taxonomy codes.
+    reference = build_reference_context()
 
-Input specialties:
-{input_text}
-
-Rules:
-1. Map to the most specific NUCC taxonomy code possible.
-2. Return ONLY a JSON array with this exact structure — no markdown, no explanation before or after:
-[
-  {{"input": "original text", "nucc_code": "...", "nucc_name": "...", "confidence": 0.95, "notes": "reasoning"}},
-  ...
-]
-
-The "nucc_name" field should be the full NUCC Display Name for the matched code.
-If no good match exists, set confidence to 0.0 and notes to "no match found — needs review"."""
-
-    try:
-        if agent:
-            response = call_hermes(prompt)
-            mode = "agent"
-        else:
-            reference = build_reference_context()
-
-            system_prompt = f"""You are a specialty mapping expert. Map provider specialty labels to NUCC taxonomy codes.
+    system_prompt = f"""You are a specialty mapping expert. Map provider specialty labels to NUCC taxonomy codes.
 
 {reference}
 
@@ -265,7 +199,7 @@ Rules:
 
 Return ONLY a JSON array, no markdown, no explanation."""
 
-            user_prompt = f"""Map these specialty labels to NUCC taxonomy codes:
+    user_prompt = f"""Map these specialty labels to NUCC taxonomy codes:
 
 {input_text}
 
@@ -274,15 +208,14 @@ Return a JSON array:
   {{"input": "...", "nucc_code": "...", "nucc_name": "...", "confidence": 0.95, "notes": "..."}},
   ...
 ]"""
-            response = call_llm(system_prompt, user_prompt)
-            mode = "fast"
 
+    try:
+        response = call_llm(system_prompt, user_prompt)
         results = parse_response(response)
 
         return MapResponse(
             results=results,
             input_count=len(inputs),
-            mode=mode,
         )
     except HTTPException:
         raise

@@ -12,8 +12,7 @@ reasoning. Matches fuzzy/colloquial specialty names to standardized NUCC entries
 ## Core Features
 
 - Map free-text specialty labels ("Cardiologist", "Behavioral Health", …) to the correct NUCC code
-- Fast mode: single LLM call, reasoning disabled, lowest latency
-- Agent mode: full Hermes agent with skill reasoning for ambiguous cases
+- Single direct LLM call: full taxonomy embedded in the prompt, reasoning disabled, lowest latency
 - Confidence scoring per mapping
 - Web UI for interactive use
 
@@ -23,9 +22,8 @@ reasoning. Matches fuzzy/colloquial specialty names to standardized NUCC entries
 |-------|--------|-----|
 | Backend | Python FastAPI | Clean REST, simple deploy |
 | LLM | Local (Qwen 27B) via API | Fast, private, no per-token cost |
-| Agent | Hermes Agent CLI | Skill system, web search, session memory |
 | Frontend | Single-page HTML/CSS/JS | No build step, instant load |
-| Taxonomy | NUCC v25.1 CSV (884 codes) | Canonical, embedded in prompt for fast mode |
+| Taxonomy | NUCC v25.1 CSV (884 codes) | Canonical, embedded in the prompt |
 
 ## User Flow
 
@@ -34,16 +32,8 @@ User enters specialty labels (one per line)
          │
          ▼
   ┌─────────────┐
-  │  Fast Mode   │  ◄─── default (fastest, ~8s)
-  │  (direct LLM)│      All 884 NUCC codes embedded in prompt
-  └──────┬──────┘      No web search, no tool use
-         │
-         │  (if user enables Agent Mode)
-         ▼
-  ┌─────────────┐
-  │  Agent Mode  │  ◄─── ~26s, handles edge cases
-  │  (Hermes)    │      Full agent with skill reasoning
-  └──────┬──────┘      Web search for verification
+  │ Direct LLM   │  ~8s, all 884 NUCC codes embedded in prompt
+  └──────┬──────┘  No web search, no tool use
          │
          ▼
   Structured JSON response
@@ -73,8 +63,7 @@ User enters specialty labels (one per line)
       "notes": "Colloquial term mapped to child/adolescent psychiatry"
     }
   ],
-  "input_count": 2,
-  "mode": "fast"
+  "input_count": 2
 }
 ```
 
@@ -84,19 +73,12 @@ User enters specialty labels (one per line)
 Browser (single-page)
     │
     │  POST /api/map  {"text": "Cardiologist\nPeds psych"}
-    │  GET  /api/reset
     ▼
 FastAPI server
-    │
-    ├── Fast mode: LLM API call
-    │   └── System prompt: NUCC taxonomy (884 codes)
-    │   └── User prompt: specialty labels
-    │   └── Response: JSON array
-    │
-    └── Agent mode: Hermes CLI
-        └── hermes chat --resume specialty-mapper -q "..."
-        └── Session persists between calls
-        └── /api/reset clears session
+    └── LLM API call
+        ├── System prompt: NUCC taxonomy (884 codes)
+        ├── User prompt: specialty labels
+        └── Response: JSON array
 ```
 
 ## API
@@ -106,29 +88,18 @@ FastAPI server
 Map specialty text to NUCC codes.
 
 - `text`: newline-separated specialty labels
-- `agent` (query param, optional): `true` for agent mode
 
 Returns structured results with confidence scores.
 
-### POST /api/reset
-
-Clear the Hermes agent session (removes accumulated context between mappings).
-
 ## Performance
 
-| Mode | Typical Latency | Best For |
-|------|----------------|----------|
-| Fast | ~8s | Bulk mapping, clear labels |
-| Agent | ~26s | Ambiguous labels, edge cases |
-
-Latency depends on label count and model load. 10 labels in fast mode ~10-15s.
+Typical latency ~8s for a small batch; scales with label count and model load.
+10 labels ~10-15s.
 
 ## Roadmap
 
 - **State-specific mapping profiles** — consume `medicaid-state-specialty-ref` to
-  map labels to a target state's Medicaid specialty codes alongside NUCC (the
-  "Map To" target select, state data provenance panel, and state-code result
-  columns are designed for this and will be re-introduced when it ships).
+  map labels to a target state's Medicaid specialty codes alongside NUCC.
 - Batch CSV upload
 - Integration API (webhook, API key auth)
 - Custom taxonomy profiles (non-NUCC target taxonomies)

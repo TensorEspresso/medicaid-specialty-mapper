@@ -70,8 +70,6 @@
       gap: 0.375rem;
     }
 
-    .input-group.grow { flex: 1; }
-
     label {
       font-size: 0.75rem;
       font-weight: 500;
@@ -113,26 +111,6 @@
 
     button:hover { background: var(--accent-hover); }
     button:disabled { opacity: 0.5; cursor: not-allowed; }
-
-    .resetBtn {
-      padding: 0.25rem 0.625rem;
-      background: transparent;
-      border: 1px solid var(--border);
-      color: var(--muted);
-      font-size: 0.6875rem;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: all 0.15s;
-      white-space: nowrap;
-    }
-
-    .resetBtn:hover {
-      background: var(--surface);
-      color: var(--text);
-      border-color: var(--muted);
-    }
-
-    .resetBtn:disabled { opacity: 0.3; cursor: not-allowed; }
 
     .results {
       border: 1px solid var(--border);
@@ -268,100 +246,6 @@
       margin-bottom: 1rem;
     }
 
-    .toggle-row {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .toggle {
-      position: relative;
-      width: 36px;
-      height: 20px;
-      cursor: pointer;
-    }
-
-    .toggle input { opacity: 0; width: 0; height: 0; }
-
-    .toggle-slider {
-      position: absolute;
-      inset: 0;
-      background: var(--border);
-      border-radius: 10px;
-      transition: background 0.2s;
-    }
-
-    .toggle-slider::before {
-      content: '';
-      position: absolute;
-      width: 16px;
-      height: 16px;
-      left: 2px;
-      top: 2px;
-      background: #fff;
-      border-radius: 50%;
-      transition: transform 0.2s;
-    }
-
-    .toggle input:checked + .toggle-slider { background: var(--accent); }
-    .toggle input:checked + .toggle-slider::before { transform: translateX(16px); }
-
-    .toggle-label {
-      font-size: 0.75rem;
-      color: var(--muted);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      user-select: none;
-    }
-
-    .mode-description {
-      display: flex;
-      flex-direction: column;
-      gap: 0.375rem;
-      padding: 0.75rem 1rem;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 6px;
-    }
-
-    .mode-desc-item {
-      font-size: 0.8125rem;
-      color: var(--muted);
-      display: flex;
-      align-items: baseline;
-      gap: 0.375rem;
-    }
-
-    .mode-desc-item strong { color: var(--text); font-weight: 500; }
-
-    .mode-dot {
-      display: inline-block;
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      flex-shrink: 0;
-    }
-
-    .mode-dot.fast { background: var(--accent); }
-    .mode-dot.agent { background: var(--warning); }
-
-    .mode-badge {
-      font-size: 0.6875rem;
-      padding: 0.125rem 0.375rem;
-      border-radius: 3px;
-      font-weight: 500;
-    }
-
-    .mode-badge.fast {
-      background: rgba(79, 143, 247, 0.15);
-      color: var(--accent);
-    }
-
-    .mode-badge.agent {
-      background: rgba(251, 191, 36, 0.15);
-      color: var(--warning);
-    }
-
     .footer {
       margin-top: 2rem;
       padding-top: 1rem;
@@ -386,20 +270,7 @@
       </div>
 
       <div class="input-row">
-        <div class="toggle-row" style="flex:1;">
-          <label class="toggle">
-            <input type="checkbox" id="agentMode">
-            <span class="toggle-slider"></span>
-          </label>
-          <span class="toggle-label">Agent Mode</span>
-          <button class="resetBtn" id="resetBtn" onclick="resetSession()" title="Reset agent session (clear accumulated context)">Reset Session</button>
-        </div>
         <button id="mapBtn" onclick="doMap()">Map Specialties</button>
-      </div>
-
-      <div class="mode-description">
-        <span class="mode-desc-item"><span class="mode-dot fast"></span><strong>Fast:</strong> Direct LLM call with embedded NUCC reference. Best for quick, high-volume mapping.</span>
-        <span class="mode-desc-item"><span class="mode-dot agent"></span><strong>Agent:</strong> Full agent with skills, tools, and web search. Can look up providers, verify sources, and reason through ambiguous specialties.</span>
       </div>
     </div>
 
@@ -417,7 +288,6 @@
   <script>
     async function doMap() {
       const input = document.getElementById('input').value.trim();
-      const agentMode = document.getElementById('agentMode').checked;
       const btn = document.getElementById('mapBtn');
       const errorDiv = document.getElementById('error');
       const resultsDiv = document.getElementById('results');
@@ -430,12 +300,10 @@
       errorDiv.innerHTML = '';
       btn.disabled = true;
       btn.textContent = 'Mapping...';
-      const modeLabel = agentMode ? 'Hermes Agent' : 'Fast LLM';
-      resultsDiv.innerHTML = `<div class="loading">Mapping specialties via ${modeLabel}...</div>`;
+      resultsDiv.innerHTML = '<div class="loading">Mapping specialties...</div>';
 
       try {
-        const agentParam = agentMode ? '?agent=true' : '';
-        const res = await fetch(`/api/map${agentParam}`, {
+        const res = await fetch('/api/map', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ text: input }),
@@ -459,22 +327,18 @@
 
     function renderResults(data) {
       const resultsDiv = document.getElementById('results');
-      const { results, input_count, mode } = data;
+      const { results, input_count } = data;
 
       if (!results || !results.length) {
         resultsDiv.innerHTML = '<div class="empty-state">No results returned.</div>';
         return;
       }
 
-      const modeClass = mode === 'agent' ? 'agent' : 'fast';
-      const modeLabel = mode === 'agent' ? 'Agent' : 'Fast';
-
       let html = `
         <div class="results">
           <div class="results-header">
             <h2>Mapping Results</h2>
             <span class="badge">${input_count} input → NUCC</span>
-            <span class="mode-badge ${modeClass}">${modeLabel} Mode</span>
           </div>
           <table>
             <thead>
@@ -529,25 +393,6 @@
         doMap();
       }
     });
-
-    async function resetSession() {
-      const btn = document.getElementById('resetBtn');
-      btn.disabled = true;
-      btn.textContent = 'Resetting...';
-      try {
-        const res = await fetch('/api/reset', { method: 'POST' });
-        if (!res.ok) {
-          const err = await res.json().catch(() => ({ detail: `HTTP ${res.status}` }));
-          throw new Error(err.detail || 'Reset failed');
-        }
-        btn.textContent = 'Reset ✓';
-        setTimeout(() => { btn.textContent = 'Reset Session'; btn.disabled = false; }, 1500);
-      } catch (err) {
-        btn.textContent = 'Reset Session';
-        btn.disabled = false;
-        document.getElementById('error').innerHTML = `<div class="error">${escapeHtml(err.message)}</div>`;
-      }
-    }
   </script>
 </body>
 </html>
