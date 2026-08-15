@@ -15,6 +15,10 @@ reasoning. Matches fuzzy/colloquial specialty names to standardized NUCC entries
 - Display-name-first model: the LLM returns the best-matching **NUCC Display Name** only; the
   **code is resolved by direct dataset lookup** (never LLM-generated). Unresolvable names are
   flagged for review, not guessed.
+- Mapping-bias rule: inputs arrive in a healthcare context, so anything with even a loose
+  overlap with a clinical entry is mapped at reduced confidence (e.g. "Artist" → Art
+  Therapist, 0.6); `null` is reserved for inputs with no medical connotation at all
+  (e.g. "Gamer").
 - Single direct LLM call: full display-name list embedded in the prompt, reasoning disabled
 - Confidence scoring per mapping
 - Web UI for interactive use

@@ -233,6 +233,14 @@ async def map_specialty(req: MapRequest):
 Rules:
 - Match to the most specific NUCC display name possible.
 - "nucc_name" MUST be the exact display name string from the list above.
+- These inputs arrive in a healthcare context (e.g. a specialty label on a provider
+  record). Bias TOWARD mapping: if the input can reasonably be read as shorthand for a
+  provider specialty, role, or practice area — even a loose or partial overlap with a
+  taxonomy entry (e.g. "Artist" -> "Art Therapist") — map it to the closest entry and
+  set confidence in the 0.5-0.79 ambiguous band.
+- Reserve null for inputs with essentially no medical connotation at all (e.g. a
+  product, place, or random word like "Gamer"). Set "nucc_name" to null, confidence
+  to 0.0, and say in "notes" that it is not a medical specialty.
 - Confidence 1.0: exact match or standard synonym
 - Confidence 0.8-0.95: clear semantic match
 - Confidence 0.5-0.79: plausible but ambiguous
@@ -246,7 +254,7 @@ Return ONLY a JSON array, no markdown, no explanation."""
 
 Return a JSON array:
 [
-  {{"input": "...", "nucc_name": "...", "confidence": 0.95, "notes": "..."}},
+  {{"input": "...", "nucc_name": "..." or null, "confidence": 0.95, "notes": "..."}},
   ...
 ]"""
 

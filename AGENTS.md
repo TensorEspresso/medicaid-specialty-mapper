@@ -63,6 +63,15 @@ specialty-mapper/
    (cutoff 0.97). **The code is never LLM-generated.** An unresolvable name is flagged for
    review (`nucc_code: null`, confidence 0.0), never guessed.
 
+The system prompt encodes the mapping-bias rule, which is **deliberate** — do not
+"simplify" it away:
+- Inputs arrive in a healthcare context, so bias **toward** mapping: any loose or
+  partial overlap with a clinical entry is mapped to the closest entry at 0.5–0.79
+  confidence (e.g. "Artist" → "Art Therapist" @ 0.6).
+- `nucc_name: null` (confidence 0.0) is reserved for inputs with essentially **no**
+  medical connotation (e.g. "Gamer"). Do not "fix" a null back into a best-effort
+  generic match — that was the explicit reason the rule exists.
+
 The JSON response shape (`results[]` with `input`, `nucc_code`, `nucc_name`,
 `confidence`, `notes`; plus `input_count`) is consumed by the web UI in
 `demo/static/index.html`. Changing the shape requires updating both.
