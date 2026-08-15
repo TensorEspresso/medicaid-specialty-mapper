@@ -1,5 +1,7 @@
 """
-Specialty Mapper Demo — FastAPI backend for Defacto demo.
+Specialty Mapper Demo — FastAPI backend.
+Maps arbitrary provider specialty labels to NUCC taxonomy codes.
+
 Two modes:
   - Fast mode (default): Direct LLM call, reasoning disabled (~8s)
   - Agent mode: Full Hermes agent with skill reasoning (~26s)
@@ -22,13 +24,11 @@ from pydantic import BaseModel
 
 app = FastAPI(title="Specialty Mapper Demo")
 
-# Paths (relative to parent project root)
+# Paths
 PROJECT_DIR = Path(__file__).parent
-PROJECT_ROOT = PROJECT_DIR.parent
-NUCC_CSV = PROJECT_ROOT / "data" / "nucc" / "nucc_taxonomy_251.csv"
-STATES_DIR = PROJECT_ROOT / "data" / "states"
+NUCC_CSV = PROJECT_DIR.parent / "data" / "nucc" / "nucc_taxonomy_251.csv"
 
-# LLM config (from Hermes config)
+# LLM config
 LLM_BASE_URL = "http://10.0.0.228:8080/v1"
 LLM_MODEL = "qwen-3.6-27b-mtp"
 LLM_API_KEY = "***"
@@ -37,7 +37,7 @@ LLM_API_KEY = "***"
 HERMES_SESSION = "specialty-mapper"
 _session_lock = threading.Lock()
 
-# Cache for reference data
+# Cache
 _nucc_cache = None
 
 
@@ -56,122 +56,16 @@ def load_nucc():
     return rows
 
 
-def load_state_specialties(state: str):
-    """Load a state's Medicaid specialties into memory."""
-    state_dir = STATES_DIR / state.lower()
-    csv_file = list(state_dir.glob("*_medicaid_specialties.csv"))[0]
-    rows = []
-    with open(csv_file, "r", encoding="utf-8") as f:
-        reader = csv.DictReader(f)
-        for row in reader:
-            rows.append(row)
-    return rows
-
-
-def load_state_crosswalk(state: str):
-    """Load a state's NUCC crosswalk if available."""
-    state_dir = STATES_DIR / state.lower()
-    csv_files = list(state_dir.glob("*_taxonomy_crosswalk.csv"))
-    if not csv_files:
-        return []
-    rows = []
-    with open(csv_files[0], "r", encoding="utf-8") as f:
-        reader = csv.DictReader(f)
-        for row in reader:
-            rows.append(row)
-    return rows
-
-
-def get_available_states():
-    """Discover available states from the data directory."""
-    if not STATES_DIR.exists():
-        return []
-    states = []
-    for d in sorted(STATES_DIR.iterdir()):
-        if d.is_dir():
-            state_code = d.name.upper()
-            csv_files = list(d.glob("*_medicaid_specialties.csv"))
-            if csv_files:
-                states.append(state_code)
-    return states
-
-
-def build_reference_context(target: str) -> str:
-    """Build a compact reference context for the LLM prompt."""
+def build_reference_context() -> str:
+    """Build a compact NUCC reference context for the LLM prompt."""
     nucc = load_nucc()
-
-    if target == "nucc":
-        lines = ["NUCC Taxonomy Reference (Code | Display Name | Classification):"]
-        for row in nucc:
-            code = row.get("Code", "")
-            name = row.get("Display Name", "")
-            classification = row.get("Classification", "")
-            lines.append(f"  {code} | {name} | {classification}")
-        return "\n".join(lines)
-    else:
-        try:
-            state_specs = load_state_specialties(target)
-            crosswalk = load_state_crosswalk(target)
-        except (IndexError, FileNotFoundError):
-            return f"No reference data available for state {target}"
-
-        lines = [f"{target} State Medicaid Specialty Reference:"]
-
-        # Include full NUCC taxonomy — don't filter by crosswalk, so the LLM can map
-        # to subspecialty codes that exist in NUCC but aren't in the state crosswalk.
-        lines.append(f"\nNUCC Taxonomy Reference ({len(nucc)} entries):")
-        for row in nucc:
-            code = row.get("Code", "")
-            name = row.get("Display Name", "")
-            classification = row.get("Classification", "")
-            lines.append(f"  {code} | {name} | {classification}")
-
-        if state_specs:
-            first_row = state_specs[0] if state_specs else {}
-            has_tier = "tier" in first_row
-            # Check if specialty_code column actually has values (OH has the column but it's empty)
-            has_specialty_code = "specialty_code" in first_row
-            code_col_has_values = any(
-                row.get("specialty_code", "").strip()
-                for row in state_specs
-            ) if has_specialty_code else False
-            code_col = "specialty_code" if (has_specialty_code and code_col_has_values) else "specialty"
-
-            if has_tier:
-                header = f"\nState Specialty Categories (Tier | Category | {code_col.title().replace('_', ' ')}):"
-                if code_col == "specialty":
-                    header += "\n  Note: specialty name is the identifier (no numeric code column)"
-                lines.append(header)
-                for row in state_specs[:50]:
-                    tier = row.get("tier", "")
-                    category = row.get("category", "")
-                    code = row.get(code_col, "")
-                    lines.append(f"  {tier} | {category} | {code}")
-            else:
-                header = f"\nState Specialty Categories (Category | {code_col.title().replace('_', ' ')}):"
-                if code_col == "specialty":
-                    header += "\n  Note: specialty name is the identifier (no numeric code column)"
-                lines.append(header)
-                for row in state_specs[:50]:
-                    category = row.get("category", "")
-                    code = row.get(code_col, "")
-                    lines.append(f"  {category} | {code}")
-
-        if crosswalk:
-            lines.append(f"\nNUCC Crosswalk ({len(crosswalk)} mappings):")
-            # Dynamically pick columns — OH uses different names than MI
-            first_cw = crosswalk[0] if crosswalk else {}
-            cw_keys = list(first_cw.keys())
-            # Pick relevant columns, skipping verbose ones like 'definition'/'nucc_definition'
-            verbose_keys = {"nucc_definition", "definition", "notes"}
-            cw_cols = [k for k in cw_keys if k not in verbose_keys]
-            for row in crosswalk[:100]:
-                vals = [row.get(k, "").strip() for k in cw_cols]
-                vals = [v for v in vals if v]
-                if vals:
-                    lines.append("  " + " | ".join(vals))
-
-        return "\n".join(lines)
+    lines = ["NUCC Taxonomy Reference (Code | Display Name | Classification):"]
+    for row in nucc:
+        code = row.get("Code", "")
+        name = row.get("Display Name", "")
+        classification = row.get("Classification", "")
+        lines.append(f"  {code} | {name} | {classification}")
+    return "\n".join(lines)
 
 
 def call_llm(system_prompt: str, user_prompt: str) -> str:
@@ -246,7 +140,7 @@ def parse_response(text: str) -> list:
 
     import re
     json_candidates = []
-    for match in re.finditer(r'\\[', text):
+    for match in re.finditer(r'\[', text):
         start = match.start()
         depth = 0
         end = start
@@ -270,7 +164,7 @@ def parse_response(text: str) -> list:
         except json.JSONDecodeError:
             continue
 
-    fixed = re.sub(r',\\s*([}\\]])', r'\\1', text)
+    fixed = re.sub(r',\s*([}\]])', r'\1', text)
     try:
         parsed = json.loads(fixed)
         if isinstance(parsed, list):
@@ -278,12 +172,12 @@ def parse_response(text: str) -> list:
     except json.JSONDecodeError:
         pass
 
-    object_pattern = r'\\{[^{}]*\"input\"[^{}]*\\}'
+    object_pattern = r'\{[^{}]*\"input\"[^{}]*\}'
     objects = re.findall(object_pattern, text, re.DOTALL)
     if objects:
         results = []
         for obj_str in objects:
-            obj_str = re.sub(r',\\s*}', '}', obj_str)
+            obj_str = re.sub(r',\s*}', '}', obj_str)
             try:
                 obj = json.loads(obj_str)
                 results.append(obj)
@@ -297,13 +191,10 @@ def parse_response(text: str) -> list:
 
 class MapRequest(BaseModel):
     text: str
-    target: str
-    state: Optional[str] = None
 
 
 class MapResponse(BaseModel):
     results: list
-    target: str
     input_count: int
     mode: str
 
@@ -311,22 +202,6 @@ class MapResponse(BaseModel):
 @app.get("/")
 async def serve_frontend():
     return FileResponse(PROJECT_DIR / "static" / "index.html")
-
-
-@app.get("/api/states")
-async def list_states():
-    return {"states": get_available_states()}
-
-
-@app.get("/api/state-info/{state}")
-async def state_info(state: str):
-    """Return source provenance metadata for a state."""
-    state_dir = STATES_DIR / state.lower()
-    meta_file = state_dir / "metadata.json"
-    if not meta_file.exists():
-        raise HTTPException(status_code=404, detail=f"No source info for state {state}")
-    with open(meta_file, "r", encoding="utf-8") as f:
-        return json.loads(f.read())
 
 
 @app.post("/api/reset")
@@ -340,46 +215,34 @@ async def reset_session():
     if result.returncode != 0:
         if "not found" not in result.stderr.lower():
             raise HTTPException(status_code=500, detail=f"Reset error: {result.stderr[:300]}")
-    return {"status": "ok", "message": f"Session '{HERMES_SESSION}' reset. Next agent request will start fresh."}
+    return {"status": "ok", "message": f"Session '{HERMES_SESSION}' reset."}
 
 
 @app.post("/api/map")
 async def map_specialty(
     req: MapRequest,
-    agent: bool = Query(default=False, description="Use Hermes agent mode (slower, more reasoning)"),
+    agent: bool = Query(default=False, description="Use Hermes agent mode"),
 ):
-    target = req.target.upper() if req.target.lower() != "nucc" else "nucc"
-
     inputs = [line.strip() for line in req.text.strip().split("\n") if line.strip()]
     if not inputs:
         raise HTTPException(status_code=400, detail="No input text provided")
 
     input_text = "\n".join(f"- {inp}" for inp in inputs)
-    target_desc = "NUCC taxonomy codes" if target == "nucc" else f"{target} state Medicaid specialty codes"
 
-    prompt = f"""Map the following specialty labels to {target_desc}.
+    prompt = f"""Map the following specialty labels to NUCC taxonomy codes.
 
 Input specialties:
 {input_text}
 
-Rules for State Mapping (if target is a State):
-1. First, identify the most appropriate NUCC taxonomy code for the specialty.
-2. Use the provided NUCC Crosswalk to find the corresponding State Specialty Code and State Category for that NUCC code.
-3. If the NUCC code exists in the crosswalk, use those exact State values.
-4. If no crosswalk match exists, map to the State Specialty Categories semantically as a best effort. In this case, explicitly note in the 'notes' field that the state mapping was semantic because no crosswalk match was found.
-
-Rules for NUCC Mapping (if target is 'nucc'):
-1. Map directly to the NUCC taxonomy codes.
-2. Do NOT mention crosswalks or state mappings in the notes.
-
-Return ONLY a JSON array with this exact structure — no markdown, no explanation before or after:
+Rules:
+1. Map to the most specific NUCC taxonomy code possible.
+2. Return ONLY a JSON array with this exact structure — no markdown, no explanation before or after:
 [
-  {{"input": "original text", "nucc_code": "...", "nucc_name": "...", "state_code": "...", "state_category": "...", "confidence": 0.95, "notes": "reasoning"}},
+  {{"input": "original text", "nucc_code": "...", "nucc_name": "...", "confidence": 0.95, "notes": "reasoning"}},
   ...
 ]
 
-The "nucc_name" field should be the full NUCC Display Name for the matched code (e.g. "Pediatric Hematology & Oncology Physician").
-
+The "nucc_name" field should be the full NUCC Display Name for the matched code.
 If no good match exists, set confidence to 0.0 and notes to "no match found — needs review"."""
 
     try:
@@ -387,21 +250,14 @@ If no good match exists, set confidence to 0.0 and notes to "no match found — 
             response = call_hermes(prompt)
             mode = "agent"
         else:
-            reference = build_reference_context(target)
+            reference = build_reference_context()
 
-            system_prompt = f"""You are a specialty mapping expert. Map provider specialty labels to standardized taxonomy codes.
+            system_prompt = f"""You are a specialty mapping expert. Map provider specialty labels to NUCC taxonomy codes.
 
 {reference}
 
 Rules:
 - Match to the most specific code possible.
-- If the target is 'NUCC', map directly to the NUCC taxonomy codes. Do NOT mention crosswalks or state mappings in the notes.
-- If the target is a State:
-    1. First, identify the most appropriate NUCC taxonomy code.
-    2. Use the provided NUCC Crosswalk to find the corresponding State Specialty Code and State Category.
-    3. If a crosswalk match exists, use those values.
-    4. If the state has no numeric specialty codes (uses specialty names as identifiers), use the specialty name as the state_code.
-    5. If no crosswalk match exists, map to the State Specialty Categories semantically and note this in the 'notes' field.
 - Confidence 1.0: exact match or standard synonym
 - Confidence 0.8-0.95: clear semantic match
 - Confidence 0.5-0.79: plausible but ambiguous
@@ -409,16 +265,15 @@ Rules:
 
 Return ONLY a JSON array, no markdown, no explanation."""
 
-            user_prompt = f"""Map these specialty labels to {target_desc}:
+            user_prompt = f"""Map these specialty labels to NUCC taxonomy codes:
 
 {input_text}
 
 Return a JSON array:
 [
-  {{"input": "...", "nucc_code": "...", "nucc_name": "...", "state_code": "...", "state_category": "...", "confidence": 0.95, "notes": "..."}},
+  {{"input": "...", "nucc_code": "...", "nucc_name": "...", "confidence": 0.95, "notes": "..."}},
   ...
-]
-Include "nucc_name" as the full NUCC Display Name for the matched code."""
+]"""
             response = call_llm(system_prompt, user_prompt)
             mode = "fast"
 
@@ -426,7 +281,6 @@ Include "nucc_name" as the full NUCC Display Name for the matched code."""
 
         return MapResponse(
             results=results,
-            target=target,
             input_count=len(inputs),
             mode=mode,
         )
