@@ -254,6 +254,85 @@
       color: var(--muted);
       font-size: 0.75rem;
     }
+
+    .policy {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      margin-bottom: 1.5rem;
+      background: var(--surface);
+    }
+
+    .policy-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .policy h3 {
+      font-size: 0.8125rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--muted);
+    }
+
+    .policy .summary {
+      font-size: 0.8125rem;
+      color: var(--text);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .policy p.desc {
+      color: var(--muted);
+      font-size: 0.75rem;
+      margin: 0.5rem 0 0.75rem;
+    }
+
+    .policy-row {
+      display: flex;
+      align-items: center;
+      gap: 0.875rem;
+      margin-top: 0.5rem;
+    }
+
+    .policy-row label {
+      width: 170px;
+      text-transform: none;
+      letter-spacing: 0;
+      font-size: 0.8125rem;
+      font-weight: 400;
+      color: var(--text);
+    }
+
+    .policy-row input[type=range] {
+      flex: 1;
+      accent-color: var(--accent);
+    }
+
+    .policy-row .policy-val {
+      width: 44px;
+      text-align: right;
+      font-size: 0.8125rem;
+      font-variant-numeric: tabular-nums;
+      color: var(--muted);
+    }
+
+    .action-cell { white-space: nowrap; }
+
+    .action-pill {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 500;
+      padding: 0.15rem 0.6rem;
+      border-radius: 999px;
+    }
+
+    .action-accept { background: rgba(52, 211, 153, 0.15); color: var(--success); }
+    .action-review { background: rgba(251, 191, 36, 0.15); color: var(--warning); }
+    .action-reject { background: rgba(248, 113, 113, 0.15); color: var(--danger); }
   </style>
 </head>
 <body>
@@ -275,6 +354,27 @@
     </div>
 
     <div id="error"></div>
+
+    <div class="policy" id="policyPanel">
+      <div class="policy-head">
+        <h3>Consumer Policy</h3>
+        <span class="summary" id="policySummary">—</span>
+      </div>
+      <p class="desc">
+        The mapper only reports confidence. How to act on it is <em>your</em> policy —
+        drag the thresholds and the recommended action updates instantly (no re-mapping).
+      </p>
+      <div class="policy-row">
+        <label for="acceptThresh">Auto-accept ≥</label>
+        <input type="range" id="acceptThresh" min="0" max="100" step="5" value="85">
+        <span class="policy-val" id="acceptVal">85%</span>
+      </div>
+      <div class="policy-row">
+        <label for="rejectThresh">Reject &lt;</label>
+        <input type="range" id="rejectThresh" min="0" max="100" step="5" value="50">
+        <span class="policy-val" id="rejectVal">50%</span>
+      </div>
+    </div>
 
     <div id="results">
       <div class="empty-state">Enter specialty labels above and click "Map Specialties"</div>
@@ -325,14 +425,84 @@
       }
     }
 
+    let lastResults = null;
+
+    function getPolicy() {
+      // Sliders are clamped so accept >= reject always holds.
+      const accept = parseInt(document.getElementById('acceptThresh').value, 10) / 100;
+      const reject = parseInt(document.getElementById('rejectThresh').value, 10) / 100;
+      return { accept, reject };
+    }
+
+    function recommendedAction(r) {
+      // No code resolved → never auto-acceptable, regardless of thresholds.
+      if (!r.nucc_code) return 'reject';
+      const { accept, reject } = getPolicy();
+      const conf = r.confidence ?? 0;
+      if (conf >= accept) return 'accept';
+      if (conf < reject) return 'reject';
+      return 'review';
+    }
+
+    const ACTION_LABELS = { accept: 'Auto-accept', review: 'Review', reject: 'Reject' };
+
+    function renderActions() {
+      if (!lastResults) {
+        document.getElementById('policySummary').textContent = '—';
+        return;
+      }
+      const counts = { accept: 0, review: 0, reject: 0 };
+      lastResults.forEach((r) => {
+        const action = recommendedAction(r);
+        counts[action]++;
+        const cell = document.getElementById('action-' + r._idx);
+        if (cell) {
+          cell.className = 'action-pill action-' + action;
+          cell.textContent = ACTION_LABELS[action];
+        }
+      });
+      document.getElementById('policySummary').textContent =
+        `${counts.accept} auto-accept · ${counts.review} review · ${counts.reject} reject`;
+    }
+
+    function bindPolicySliders() {
+      const acceptEl = document.getElementById('acceptThresh');
+      const rejectEl = document.getElementById('rejectThresh');
+      const acceptVal = document.getElementById('acceptVal');
+      const rejectVal = document.getElementById('rejectVal');
+
+      function onMove() {
+        // Keep the policy valid: accept >= reject.
+        let a = parseInt(acceptEl.value, 10);
+        let b = parseInt(rejectEl.value, 10);
+        if (a < b) {
+          if (document.activeElement === acceptEl) acceptEl.value = b;
+          else rejectEl.value = a;
+          a = parseInt(acceptEl.value, 10);
+          b = parseInt(rejectEl.value, 10);
+        }
+        acceptVal.textContent = a + '%';
+        rejectVal.textContent = b + '%';
+        renderActions();
+      }
+      acceptEl.addEventListener('input', onMove);
+      rejectEl.addEventListener('input', onMove);
+    }
+    bindPolicySliders();
+
     function renderResults(data) {
       const resultsDiv = document.getElementById('results');
       const { results, input_count } = data;
 
       if (!results || !results.length) {
         resultsDiv.innerHTML = '<div class="empty-state">No results returned.</div>';
+        lastResults = null;
+        renderActions();
         return;
       }
+
+      lastResults = results;
+      results.forEach((r, i) => { r._idx = i; });
 
       let html = `
         <div class="results">
@@ -348,6 +518,7 @@
                 <th>NUCC Code</th>
                 <th>NUCC Name</th>
                 <th>Confidence</th>
+                <th>Action</th>
                 <th>Notes</th>
               </tr>
             </thead>
@@ -357,6 +528,7 @@
         const conf = r.confidence ?? 0;
         const confClass = conf >= 0.8 ? 'confidence-high' : conf >= 0.5 ? 'confidence-med' : 'confidence-low';
         const confPct = Math.round(conf * 100);
+        const action = recommendedAction(r);
 
         html += `
               <tr>
@@ -370,6 +542,7 @@
                     ${confPct}%
                   </span>
                 </td>
+                <td class="action-cell"><span class="action-pill action-${action}" id="action-${i}">${ACTION_LABELS[action]}</span></td>
                 <td class="notes">${escapeHtml(r.notes || '')}</td>
               </tr>`;
       });
@@ -380,6 +553,7 @@
         </div>`;
 
       resultsDiv.innerHTML = html;
+      renderActions();
     }
 
     function escapeHtml(str) {

@@ -11,8 +11,9 @@ consumes as evaluation data.
 ## What It Does
 
 Given free-text specialty labels ("Cardiologist", "Behavioral Health RN", …), the
-mapper returns the most specific NUCC display name and code, a confidence score, and
-a short rationale.
+mapper returns the most specific NUCC display name and code, a confidence score, a
+short rationale, and a recommended action under your consumer policy (auto-accept /
+review / reject thresholds, tunable live in the UI).
 
 **Mapping model:** the LLM matches each input to a **NUCC Display Name** only (codes
 are withheld from the prompt). The **code is then resolved by direct lookup in the
@@ -65,15 +66,21 @@ Response:
   "results": [
     {
       "input": "Cardiologist",
-      "nucc_code": "208400000X",
-      "nucc_name": "Cardiovascular Disease (Cardiology)",
+      "nucc_code": "207RC0000X",
+      "nucc_name": "Cardiovascular Disease Physician",
       "confidence": 0.98,
-      "notes": "Direct match"
+      "notes": "Direct match."
     }
   ],
-  "input_count": 1,
+  "input_count": 1
 }
 ```
+
+**Consumer policy:** the API is policy-agnostic — it reports confidence, never an
+action. The web UI adds a Consumer Policy panel with two thresholds (auto-accept ≥ 85%,
+reject < 50% by default) that drive a per-row **Recommended Action** column, recomputed
+live as you drag the sliders. Rows with no resolved code are always Reject. In
+production the thresholds live in the consumer pipeline, not in this mapper.
 
 ## Companion Data Repo
 

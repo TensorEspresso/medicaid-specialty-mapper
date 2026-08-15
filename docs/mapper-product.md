@@ -58,22 +58,42 @@ User enters specialty labels (one per line)
   "results": [
     {
       "input": "Cardiologist",
-      "nucc_code": "208400000X",
-      "nucc_name": "Cardiovascular Disease (Cardiology)",
-      "confidence": 0.98,
-      "notes": "Direct match to NUCC specialty code"
+      "nucc_code": "207RC0000X",
+      "nucc_name": "Cardiovascular Disease Physician",
+      "confidence": 0.95,
+      "notes": "Direct specialty match."
     },
     {
       "input": "Peds psych",
-      "nucc_code": "208500000X",
-      "nucc_name": "Child/Adolescent Psychiatry",
-      "confidence": 0.85,
+      "nucc_code": "2084P0804X",
+      "nucc_name": "Child & Adolescent Psychiatry",
+      "confidence": 0.95,
       "notes": "Colloquial term mapped to child/adolescent psychiatry"
     }
   ],
   "input_count": 2
 }
 ```
+
+## Consumer Policy (UI)
+
+The API is **policy-agnostic**: it reports confidence, never an action. *How* to act on
+confidence is a consumer decision, so the demo makes that policy visible and tunable in
+the UI:
+
+| Tier | Condition | Action |
+|------|-----------|--------|
+| Green | `confidence ≥ auto-accept threshold` (default 0.85) | Auto-accept |
+| Yellow | `reject threshold ≤ confidence < accept threshold` | Flag for human review |
+| Red | `confidence < reject threshold` (default 0.50) | Reject |
+
+- Two sliders (auto-accept ≥ / reject <) recompute the **Recommended Action** column
+  live — no re-mapping — so the demo shows that policy is the consumer's, not the
+  model's.
+- Rows with `nucc_code: null` are always Reject, regardless of thresholds: an
+  unresolvable name can never be auto-accepted.
+- In production these thresholds live in the consumer pipeline; the mapper keeps
+  reporting confidence only.
 
 ## Architecture
 
