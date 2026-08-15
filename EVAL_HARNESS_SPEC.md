@@ -375,7 +375,7 @@ assertion).
 
 ## 8. File layout (additions)
 ```
-medicaid-specialty-mapper/
+specialty-mapper/
 ├── src/specialty_mapper/          # NEW — the callable core + eval
 │   ├── nucc.py                    # hierarchy-aware reference + resolve_code() + classify_ambiguity()
 │   ├── state.py

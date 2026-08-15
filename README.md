@@ -22,7 +22,7 @@ short rationale.
 ## Repo Layout
 
 ```
-medicaid-specialty-mapper/
+specialty-mapper/
 ├── README.md
 ├── PROMOTION_PLAN.md          # GTM / business model
 ├── EVAL_HARNESS_SPEC.md       # Evaluation harness design
