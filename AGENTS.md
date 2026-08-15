@@ -67,6 +67,21 @@ The JSON response shape (`results[]` with `input`, `nucc_code`, `nucc_name`,
 `confidence`, `notes`; plus `input_count`) is consumed by the web UI in
 `demo/static/index.html`. Changing the shape requires updating both.
 
+## Consumer Policy (UI only)
+
+The API is **policy-agnostic** — it reports confidence, never an action. Do not add
+action/recommendation fields to the `/api/map` response.
+
+The web UI adds a Consumer Policy panel (auto-accept ≥ / reject < sliders, defaults
+85% / 50%) that computes a per-row **Recommended Action** client-side and recomputes
+live on slider change. Rules the UI enforces:
+- `nucc_code: null` → always Reject, regardless of thresholds
+- sliders clamp so accept ≥ reject always holds
+
+This mirrors the production boundary: thresholds belong in the consumer pipeline, not
+in the mapper. If a policy decision ever needs to leave the UI, it goes in the consumer
+integration, not in `demo/main.py`.
+
 ## Structural Invariants
 
 - The mapper reads **only** `data/nucc/nucc_taxonomy_251.csv` for reference data.
