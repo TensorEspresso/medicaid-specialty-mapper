@@ -77,7 +77,7 @@ deterministically checkable against the taxonomy file.
 ### Has teeth (keep, protect)
 - **11 states of verified Medicaid specialty reference data** (AZ, CA, FL, GA, IL, MI, NC, NY, OH,
   PA, TX) — each with source documentation + provenance. Rare, hard-to-get asset.
-- **NUCC v25.1 spine** (884 codes).
+- **NUCC v25.1 spine** (883 codes).
 - Sound concept: free-text label → **NUCC display name (LLM)** → **NUCC code
   (direct lookup in the NUCC dataset, never LLM-generated)** → state crosswalk,
   semantic fallback, confidence + review-flag.

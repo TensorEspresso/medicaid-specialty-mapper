@@ -28,7 +28,7 @@ specialty-mapper/
 ├── EVAL_HARNESS_SPEC.md       # Evaluation harness design
 ├── data/
 │   └── nucc/
-│       └── nucc_taxonomy_251.csv   # Master NUCC reference (v25.1, 884 codes)
+│       └── nucc_taxonomy_251.csv   # Master NUCC reference (v25.1, 883 codes)
 ├── demo/
 │   ├── main.py                # FastAPI backend (single LLM call)
 │   └── static/index.html      # Web UI

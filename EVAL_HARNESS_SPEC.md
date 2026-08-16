@@ -388,9 +388,12 @@ specialty-mapper/
 │   └── runs/<ts>_<model>/{results.jsonl,summary.json,report.md}
 ├── tests/{test_parse,test_classify,test_resolve,test_perturb,test_score}.py
 ├── demo/                            # unchanged behavior; imports from src/
-├── pyproject.toml                   # NEW (matches qhp-specialty-framework standard)
-└── data/states/mi/                  # existing — the ground-truth source
+└── pyproject.toml                   # NEW (matches qhp-specialty-framework standard)
 ```
+
+The ground-truth MI crosswalk (`data/states/mi/`) lives in the companion
+`medicaid-state-specialty-ref` repo — it is **not** committed to this repo (see AGENTS.md
+structural invariants); the eval generator reads it from there.
 
 One structural decision: new top-level `src/` + `evals/` (+ `pyproject.toml`). Already the Phase 2
 production standard; starting it in Phase 1 is coherent because the eval requires the callable

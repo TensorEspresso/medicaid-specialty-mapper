@@ -5,6 +5,13 @@
 **Date:** June 9, 2026
 **System:** AI Specialty Mapper — NUCC Taxonomy Crosswalk Engine
 
+> **Note (post-split):** This report documents the **pre-split architecture** — a single system
+> that mapped labels to both NUCC codes *and* state Medicaid categories. The repo was split on
+> 2026-06-14: the **state crosswalk** stage described below now lives in the companion
+> `medicaid-state-specialty-ref` data repo, and the running mapper is **NUCC-only** (free-text
+> label → NUCC display name via LLM → deterministic NUCC code lookup). Read the state-crosswalk
+> sections as a record of the prior design, not current behavior.
+
 ---
 
 ### Executive Summary
@@ -21,7 +28,7 @@ The mapping pipeline operates in five stages:
 
 1. **Input Ingestion** — Accepts specialty labels in any format: abbreviations (*Ortho, ENT, Peds Card*), colloquial terms (*Allergies, Infectious*), full names, or mixed batches. No preprocessing or normalization required.
 
-2. **NUCC Taxonomy Resolution** — Each input label is matched against the full NUCC taxonomy dataset (884 codes, v25.1) using semantic search across classification, specialization, and definition fields. The system resolves abbreviations to their canonical specialty (e.g., *Peds Card* → *Pediatric Cardiology*) and identifies the most specific NUCC code (preferring Specialization over Classification over Grouping).
+2. **NUCC Taxonomy Resolution** — Each input label is matched against the full NUCC taxonomy dataset (883 codes, v25.1) using semantic search across classification, specialization, and definition fields. The system resolves abbreviations to their canonical specialty (e.g., *Peds Card* → *Pediatric Cardiology*) and identifies the most specific NUCC code (preferring Specialization over Classification over Grouping).
 
 3. **State Crosswalk Resolution** — The resolved NUCC code is mapped to the target state's Medicaid specialty category. Two lookup methods:
    - **Official crosswalk** — State-published NUCC-to-specialty mapping where available (e.g., CA's DHCS ArcGIS crosswalk, FL's Taxonomy Master List, NC's Provider Permission Matrix)
@@ -76,7 +83,7 @@ Every mapping traces a verifiable chain: **Input label** → **NUCC taxonomy cod
 **NUCC Taxonomy**
 - Source: National Uniform Claim Committee, Health Care Provider Taxonomy Code Set
 - Version: 25.1 (July 2025)
-- Coverage: 884 taxonomy codes across all provider groups
+- Coverage: 883 taxonomy codes across all provider groups
 - Fields per code: Classification, Specialization, Definition, Board certification source
 
 **State Medicaid Crosswalks**
