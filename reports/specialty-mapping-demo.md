@@ -1,69 +1,87 @@
 # AI-Powered Provider Specialty Mapping
-
 ## Capability Demonstration
 
-**Date:** June 9, 2026
-**System:** AI Specialty Mapper — NUCC Taxonomy Crosswalk Engine
+**Date:** August 17, 2026
+**System:** AI Specialty Mapper — NUCC Taxonomy Mapping Engine
+**Reference:** NUCC Provider Taxonomy v25.1 (883 codes)
+**Scope:** NUCC-only. This build maps free-text specialty labels to **NUCC** display
+names and codes. State/Medicaid crosswalks are out of scope for the current build.
 
-> **Note (post-split):** This report documents the **pre-split architecture** — a single system
-> that mapped labels to both NUCC codes *and* state Medicaid categories. The repo was split on
-> 2026-06-14: the **state crosswalk** stage described below now lives in the companion
-> `medicaid-state-specialty-ref` data repo, and the running mapper is **NUCC-only** (free-text
-> label → NUCC display name via LLM → deterministic NUCC code lookup). Read the state-crosswalk
-> sections as a record of the prior design, not current behavior.
+> **Note:** Earlier reports in this repo documented a pre-split architecture that also
+> produced per-state Medicaid categories. That state stage has been retired from the
+> product. This report reflects the current **NUCC-only** behavior, captured live from
+> the running service on 2026-08-17.
 
 ---
 
 ### Executive Summary
 
-This report demonstrates automated mapping of informal provider specialty labels to standardized Medicaid specialty codes with confidence scoring. The system ingests arbitrary specialty input — abbreviations, colloquial labels, partial names — and resolves them to authoritative state Medicaid specialty categories backed by NUCC taxonomy codes.
+This report demonstrates automated mapping of informal provider specialty labels to
+**NUCC taxonomy codes** with confidence scoring. The system ingests arbitrary specialty
+input — abbreviations, colloquial labels, partial names — and resolves each to an
+authoritative NUCC display name and code, with a confidence score and a short rationale.
+Items that cannot be resolved to a real NUCC code are flagged for human review, never
+guessed.
 
-**Core capability:** Free-text specialty label → State Medicaid code + NUCC taxonomy code + Confidence score + Mapping rationale
+**Core capability:** Free-text specialty label → NUCC display name → NUCC code +
+confidence score + mapping rationale.
 
 ---
 
 ### Architecture
 
-The mapping pipeline operates in five stages:
+The pipeline is two stages, and only the first stage touches the LLM:
 
-1. **Input Ingestion** — Accepts specialty labels in any format: abbreviations (*Ortho, ENT, Peds Card*), colloquial terms (*Allergies, Infectious*), full names, or mixed batches. No preprocessing or normalization required.
+1. **Label → NUCC Display Name (LLM).** The LLM is shown the full NUCC display-name list
+   (codes withheld) and returns, for each input, the best-matching *display name* plus a
+   confidence score and notes. This is the only judgment step.
+2. **Display Name → Code (deterministic lookup).** The code is **never LLM-generated**.
+   It is resolved by direct lookup in the NUCC dataset (normalized exact match, then a
+   tight fuzzy fallback for minor drift). An unresolvable name is flagged for review,
+   not guessed.
 
-2. **NUCC Taxonomy Resolution** — Each input label is matched against the full NUCC taxonomy dataset (883 codes, v25.1) using semantic search across classification, specialization, and definition fields. The system resolves abbreviations to their canonical specialty (e.g., *Peds Card* → *Pediatric Cardiology*) and identifies the most specific NUCC code (preferring Specialization over Classification over Grouping).
+Why: codes are identifiers, not concepts. The LLM does the semantic work (fuzzy label →
+canonical name) and the dataset does the exact work (name → code). This removes a whole
+failure class (invented or malformed codes) and makes every output deterministically
+checkable against the taxonomy file.
 
-3. **State Crosswalk Resolution** — The resolved NUCC code is mapped to the target state's Medicaid specialty category. Two lookup methods:
-   - **Official crosswalk** — State-published NUCC-to-specialty mapping where available (e.g., CA's DHCS ArcGIS crosswalk, FL's Taxonomy Master List, NC's Provider Permission Matrix)
-   - **Name-matching fallback** — Direct matching of NUCC classification/specialization names against state specialty catalog entries when no official crosswalk exists
-
-4. **Edge Case Handling** — Three special cases detected and handled explicitly:
-   - **Subspecialty-to-parent** — e.g., Pediatric Cardiology → Cardiology when the state has no pediatric subspecialty tier
-   - **Dual-mapping** — e.g., Pediatric Hematology-Oncology → both Hematology and Oncology categories
-   - **No-match flagging** — e.g., Allergy/Immunology when the state has no corresponding category
-   Each is scored down appropriately and annotated with reasoning.
-
-5. **Confidence Scoring & Output** — Each mapping receives a 0.0–1.0 confidence score. Output includes: original input, resolved NUCC code, state Medicaid category, tier assignment, confidence score, and mapping rationale. Items below 0.50 are flagged for human review rather than auto-assigned.
-
-### Data Lineage
-
-Every mapping traces a verifiable chain: **Input label** → **NUCC taxonomy code** (with definition from v25.1) → **State Medicaid specialty category** (with source document reference). No step is opaque — each link in the chain is auditable against the underlying reference data.
+**Data lineage:** every mapping traces a verifiable chain —
+**Input label** → **NUCC display name** (LLM-selected) → **NUCC code** (dataset lookup,
+v25.1). No step is opaque; each link is auditable against the reference file.
 
 ---
 
-### Demonstration: CA Medi-Cal Specialty Mapping
+### Demonstration: 8 Common Provider Labels
 
-**Input:** Informal specialty abbreviations as commonly seen in provider data feeds
+Live outputs from the running service (single LLM call, then dataset lookup):
 
-| # | Input Label | CA Medicaid Category | Tier | NUCC Code | Confidence | Mapping Notes |
-|---|---|---|---|---|---|---|
-| 1 | PCP | Adult Primary Care | Primary Care | 207Q00000X | 1.00 | Exact match. Pediatric variant → "Pediatric Primary Care" row |
-| 2 | OBGYN | OB/GYN Primary Care + Obstetrics and Gynecological Specialty Care | Primary Care / Specialist | 207V00000X | 1.00 | Dual role — counts as both PCP and specialist in CA |
-| 3 | Ortho | Orthopedic Surgery | Specialist | 207X00000X | 1.00 | Exact match |
-| 4 | ENT | ENT/Otolaryngology | Specialist | 207Y00000X | 1.00 | Exact match |
-| 5 | Peds Card | Cardiology/Interventional Cardiology | Specialist | 2080P0202X | 0.75 | Subspecialty → parent category. CA has no pediatric subspecialty tier |
-| 6 | Peds Onc | Oncology + Hematology | Specialist | 2080P0207X | 0.70 | Dual-mapped. CA has no pediatric subspecialty; counts toward both categories |
-| 7 | Allergies | — (No direct category) | — | 207K00000X | 0.30 | **Flagged for review.** CA Medicaid does not list Allergy/Immunology as a distinct specialist category |
-| 8 | Infectious | HIV/AIDS Specialists/Infectious Diseases | Specialist | 207RI0200X | 1.00 | Exact match |
+| # | Input Label | NUCC Display Name | NUCC Code | Confidence | Mapping Notes |
+|---|---|---|---|---|---|
+| 1 | PCP | Family Medicine Physician | 207Q00000X | 0.95 | PCP = Primary Care Physician; Family Medicine is the standard default for general primary care. |
+| 2 | OBGYN | Obstetrics & Gynecology Physician | 207V00000X | 1.00 | Standard abbreviation for OB/GYN. |
+| 3 | Ortho | Orthopaedic Surgery Physician | 207X00000X | 1.00 | Common shorthand for Orthopedic Surgery. |
+| 4 | ENT | Otolaryngology Physician | 207Y00000X | 1.00 | Standard abbreviation for Otolaryngology. |
+| 5 | Peds Card | Pediatric Cardiology Physician | 2080P0202X | 1.00 | Shorthand for Pediatric Cardiology. |
+| 6 | Peds Onc | Pediatric Hematology & Oncology Physician | 2080P0207X | 0.95 | Shorthand for Pediatric Oncology; grouped under Pediatric Hematology & Oncology in NUCC. |
+| 7 | Allergies | Allergy & Immunology Physician | 207K00000X | 0.90 | Refers to the Allergy & Immunology specialty. |
+| 8 | Infectious | Infectious Disease Physician | 207RI0200X | 0.95 | Shorthand for Infectious Disease. |
 
-**Results:** 8 of 8 resolved to NUCC taxonomy. 6 of 8 mapped directly to CA Medicaid categories. 1 dual-mapped. 1 flagged for human review.
+**Results:** 8 of 8 resolved to a real NUCC code. No item was unresolvable or required
+the review flag on this set.
+
+---
+
+### Edge Cases the Mapper Handles
+
+- **Abbreviation / colloquial** — `Peds Card`, `ENT`, `Ortho` → exact specialty codes.
+- **Subspecialty** — `Peds Card` → the pediatric subspecialty code, not the parent.
+- **Grouping** — `Peds Onc` → the combined Hematology & Oncology subspecialty.
+- **No match** — an input with essentially no medical connotation (e.g. `Gamer`, a
+  product name, a random word) is returned as `nucc_name: null`, confidence 0.0, and
+  flagged for review. A `null` name can never be auto-accepted.
+- **Unresolvable name** — if the LLM emits a display name not in the taxonomy, the code
+  resolves to `null` and the row is flagged `display name '…' not found in NUCC dataset —
+  needs review`, never guessed.
 
 ---
 
@@ -71,43 +89,48 @@ Every mapping traces a verifiable chain: **Input label** → **NUCC taxonomy cod
 
 | Score Range | Classification | Meaning |
 |---|---|---|
-| 1.00 | Exact | Input is a recognized abbreviation or matches state specialty name exactly |
-| 0.80–0.95 | High | Clear semantic match — synonym, standard abbreviation, or near-exact name |
-| 0.50–0.79 | Medium | Plausible match with ambiguity — subspecialty mapped to parent category, or multiple candidates |
+| 1.00 | Exact | Recognized abbreviation or exact display-name match |
+| 0.80–0.95 | High | Clear semantic match — synonym, standard abbreviation, near-exact name |
+| 0.50–0.79 | Medium | Plausible match with ambiguity — partial/loose overlap |
 | < 0.50 | Low | Speculative or no direct match — flagged for human review |
+
+> **Consumer policy is not part of the mapper.** The API is *policy-agnostic*: it
+> reports confidence, never an action. How to act on confidence (auto-accept / review /
+> reject thresholds) is a **consumer** decision. The web UI exposes tunable thresholds so
+> that boundary is visible; in production those thresholds live in the consumer pipeline.
 
 ---
 
 ### Underlying Reference Data
 
-**NUCC Taxonomy**
+**NUCC Provider Taxonomy**
 - Source: National Uniform Claim Committee, Health Care Provider Taxonomy Code Set
 - Version: 25.1 (July 2025)
 - Coverage: 883 taxonomy codes across all provider groups
-- Fields per code: Classification, Specialization, Definition, Board certification source
-
-**State Medicaid Crosswalks**
-- 9 states with collected specialty data: AZ, CA, FL, IL, NC, NY, OH, PA, TX
-- CA: 31 specialty categories across 5 tiers (Primary Care, Specialist, Behavioral Health, Ancillary, LTSS)
-- Crosswalk methodology: Official state crosswalk where published; NUCC name-matching fallback where not
+- Fields per code: Grouping, Classification, Specialization, Definition, Notes, Display Name, Section
+- Display name ↔ code is a **bijection** (883 display names, 883 codes, zero collisions) —
+  the basis for the deterministic code-lookup stage.
 
 ---
 
 ### Use Cases
 
-**Network Adequacy Analysis** — Ingest provider rosters with free-text specialties and automatically classify against state Medicaid specialty requirements for gap analysis
-
-**Provider Data Normalization** — Standardize specialty labels across multiple data sources (clearinghouses, payer feeds, direct provider submissions) into a single taxonomy
-
-**Recredentialing Workflows** — Map incoming specialty claims to board certification categories for automated validation
-
-**Market Analysis** — Aggregate provider supply by standardized specialty across counties, regardless of source data label quality
+- **Provider data normalization** — standardize specialty labels across clearinghouses,
+  payer feeds, and direct submissions into a single NUCC taxonomy.
+- **Credentialing / recredentialing** — map incoming specialty claims to board-
+  certification-aligned NUCC categories for automated validation.
+- **Market / network analysis** — aggregate provider supply by standardized NUCC specialty
+  across regions, regardless of source label quality.
 
 ---
 
 ### Technical Notes
 
-- Subspecialty handling is state-dependent — states with coarse taxonomies (e.g., CA, OH) require parent-category mapping with reduced confidence
-- Dual-mapped specialties (e.g., Peds Onc → Oncology + Hematology) are explicitly flagged rather than forced into a single category
-- The system preserves the original input alongside the mapped result for audit trails
-- Items below 0.50 confidence are surfaced for human review rather than auto-assigned
+- Two-stage model: LLM selects the **display name**; the **code** is resolved by dataset
+  lookup and is never LLM-generated.
+- Single direct LLM call per batch (reasoning disabled); local Qwen 27B endpoint.
+- The original input is preserved alongside each result for audit.
+- Unresolvable or no-medical-connotation inputs are surfaced for human review, never
+  auto-assigned.
+- **Latency:** a batch of 8 labels mapped in ~4.2s wall (~0.53s/label) on the local
+  endpoint, captured 2026-08-17.

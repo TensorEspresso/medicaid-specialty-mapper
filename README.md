@@ -4,9 +4,11 @@ Maps arbitrary provider specialty labels to **NUCC taxonomy codes** using an LLM
 A single direct LLM call (reasoning disabled) behind a small FastAPI server and web UI.
 
 This repo contains the **mapping tool** and the master NUCC reference it runs
-against. State-specific Medicaid specialty data (the ground-truth research output)
-lives in a companion repo, `medicaid-state-specialty-ref`, which this mapper
-consumes as evaluation data.
+against. The tool is **NUCC-only**: it maps free-text labels to NUCC display names
+and codes. The eval is seeded from the NUCC taxonomy itself (no state data). A
+companion repo, `medicaid-state-specialty-ref`, holds verified per-state Medicaid
+specialty data for a **parked** state-mapping extension — the tool and its eval do
+not read it.
 
 ## What It Does
 
@@ -85,9 +87,10 @@ production the thresholds live in the consumer pipeline, not in this mapper.
 ## Companion Data Repo
 
 `medicaid-state-specialty-ref` holds the verified per-state Medicaid specialty
-datasets (11 states) and the NUCC→state crosswalks used to evaluate this mapper.
-See that repo's `README.md` and `AGENTS.md` for the data contract and verification
-standard.
+datasets (11 states) and NUCC→state crosswalks. It is a **parked extension** for
+future state-specific mapping — **not** the substrate for this mapper's eval (which
+is NUCC-native). See that repo's `README.md` and `AGENTS.md` for its data contract
+and verification standard.
 
 ## References
 

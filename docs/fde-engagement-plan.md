@@ -106,18 +106,16 @@ build and are sequenced in §5.
 Sequenced so each step has a verifiable gate before the next. Step 0 corrects the
 inherited spec's scope; Steps 1–7 build the keystone.
 
-### Step 0 — De-MI the eval spec (scope correction)
-`EVAL_HARNESS_SPEC.md` currently seeds ground truth from the Michigan state crosswalk.
-Re-scope it to **NUCC-native** ground truth. This is the load-bearing correction for the
-NUCC-only mandate.
-- Ground-truth source: the **NUCC taxonomy itself** (883 display names → their own codes,
-  a verified bijection). *Rationale: the MI crosswalk rows are all `match_confidence:
-  best-effort` — an LLM-derived mapping, i.e. the same error class we measure. Using it as
-  the answer key contaminates the eval. The canonical taxonomy is the only clean answer key.*
-- **Keep (already NUCC-native):** two-link answer key, display-name↔code bijection,
+### Step 0 — De-MI the eval spec (scope correction) — ✅ DONE
+`EVAL_HARNESS_SPEC.md` v4 is **NUCC-native**. Ground truth is the NUCC taxonomy itself
+(883 display names → their own codes, a verified bijection). *Rationale: the MI crosswalk
+rows are all `match_confidence: best-effort` — an LLM-derived mapping, i.e. the same error
+class we measure. Using it as the answer key contaminates the eval. The canonical taxonomy
+is the only clean answer key.*
+- **Kept (already NUCC-native):** two-link answer key, display-name↔code bijection,
   `classify_ambiguity()` (pure NUCC hierarchy), the perturbation taxonomy,
   behavior-correct scoring on T-coequal, ECE/calibration, regression tracking.
-- **Drop:** `state_code`, `state_category`, `state_cat_acc`, `load_state_catalog()`,
+- **Dropped:** `state_code`, `state_category`, `state_cat_acc`, `load_state_catalog()`,
   `load_state_crosswalk()`, `mi_v1.jsonl` → replaced by `nucc_v1.jsonl`.
 - Dataset composition stays two-axis: **ambiguity tier** (from the NUCC hierarchy) ×
   **noise class** (from the label). Templated bulk = 883 display names × deterministic

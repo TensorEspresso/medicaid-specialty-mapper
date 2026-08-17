@@ -8,8 +8,8 @@ labels to **NUCC taxonomy codes**. Keep it runnable, self-contained, and NUCC-on
 
 - **This repo** = the tool (FastAPI demo + web UI) and the master NUCC reference it runs against.
 - **Companion data repo** = `medicaid-state-specialty-ref` (per-state Medicaid specialty
-  datasets + NUCC→state crosswalks). It is the **ground-truth data product** this tool
-  consumes for evaluation.
+  datasets + NUCC→state crosswalks). It is a **parked extension** for future state-specific
+  mapping. The tool and its eval are **NUCC-only** and do **not** read it.
 - **Do not** commit state data, research docs, or the state crosswalks here. They belong
   in the data repo.
 - **Do not** reintroduce state-specific code paths into the mapper. State mapping is a
@@ -34,7 +34,7 @@ specialty-mapper/
 │   └── static/index.html      # Web UI (single-page, no build step)
 ├── docs/
 │   ├── mapper-product.md      # Product spec + roadmap
-│   ├── pricing-research.md
+│   ├── fde-engagement-plan.md # FDE arc → skill → artifact map + NUCC-only build sequence
 │   └── startup-advice-validated.md
 ├── scripts/
 │   ├── run_server.py          # Foreground uvicorn runner

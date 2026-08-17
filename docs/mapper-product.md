@@ -141,5 +141,5 @@ Typical latency ~8s for a small batch; scales with label count and model load.
 - Integration API (webhook, API key auth)
 - Custom taxonomy profiles (non-NUCC target taxonomies)
 - Confidence threshold filtering for downstream automation
-- Evaluation harness — see `EVAL_HARNESS_SPEC.md` (benchmark against the state
-  reference crosswalks in `medicaid-state-specialty-ref`)
+- Evaluation harness — see `EVAL_HARNESS_SPEC.md` (NUCC-native: benchmark against the
+  NUCC taxonomy itself; no state data)

@@ -113,15 +113,18 @@ The initiative is a success when all four are true:
 
 ## 5. Open Questions (BLOCKING — resolve in Phase 0)
 
-- [ ] **Eval-set source (load-bearing):** build Number A's ground truth from the *public* state
-      catalogs (portable, citable, already in the personal repo). **Recommendation: yes — this is
-      the core**, and it hedges IP. Number B is then computed on Quest data only *if* access is
-      granted.
+- [x] **Eval-set source (load-bearing) — RESOLVED, NUCC-native.** Number A's ground truth is the
+      **NUCC taxonomy itself** (883 display names → their own codes, a verified bijection), not a
+      state crosswalk. *Rationale:* a state crosswalk row is itself an LLM-derived ("best-effort")
+      mapping — the same error class the eval measures — so it would contaminate the answer key.
+      The taxonomy is public, self-contained, and the only clean key. See `EVAL_HARNESS_SPEC.md` v4
+      (§3.3) and `docs/fde-engagement-plan.md` §5 Step 0. Number B is then computed on Quest data
+      only *if* access is granted.
 - [ ] **Access to Quest's real provider specialty data?** Needed only for Number B (the business
       metric). If denied, Number A still stands and the asset is still portable — flag the weaker
       business metric early in Phase 0, don't discover it in Phase 2.
-- [ ] **Which state(s) first for evals?** Pick one with a *complete* crosswalk — CA, FL, OH, or
-      MI are the strongest candidates.
+- [x] **Which state(s) first for evals? — N/A, NUCC-only.** The eval does not seed from any state.
+      The 11-state `medicaid-state-specialty-ref` data is a parked extension, not the eval substrate.
 - [ ] **What can a frozen budget actually grant right now?** (Named-lead / ownership on the
       initiative, defined scope, a documented record — all non-comp. The comp/title *event* is
       deferred, not dropped.)
@@ -146,9 +149,9 @@ comp event.
 ### Phase 1 — Keystone: Eval Harness (Weeks 2–5)  ← *highest leverage*
 Goal: turn the demo from "vibes" into a measured system. This is also the showcase for the
 agentic-eval skill, and it produces **Number A** (the portable arsenal number).
-- [ ] Build a **ground-truth eval set** from the **public state catalogs** (~100–200 real messy
-      labels with known-correct NUCC/state mappings). This is Number A's substrate — portable and
-      citable.
+- [ ] Build a **ground-truth eval set** seeded from the **NUCC taxonomy** (~100–200 labels with
+      known-correct NUCC display names/codes — the display-name↔code bijection is the answer key).
+      This is Number A's substrate — portable and citable, no state data.
 - [ ] Run the mapper against it. Report **accuracy overall and by confidence band**.
 - [ ] Build a **failure taxonomy** (e.g. dual-mapping subspecialties, subspecialty→parent collapse,
       no-match, abbreviation ambiguity).
