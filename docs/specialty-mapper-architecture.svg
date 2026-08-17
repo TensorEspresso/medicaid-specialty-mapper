@@ -1,0 +1,172 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1520 1500" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#4a5568"/>
+    </marker>
+    <marker id="arrow-llm" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#b7791f"/>
+    </marker>
+    <marker id="arrow-data" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2c5282"/>
+    </marker>
+    <style>
+      .title   { font-size: 30px; font-weight: bold; fill: #1a202c; }
+      .subtitle{ font-size: 15px; fill: #4a5568; }
+      .box-t   { font-size: 17px; font-weight: bold; fill: #1a202c; }
+      .box-s   { font-size: 13.5px; fill: #4a5568; }
+      .box-sb  { font-size: 13.5px; font-weight: bold; fill: #2d3748; }
+      .lbl     { font-size: 13.5px; fill: #2d3748; }
+      .lbl-b   { font-size: 14px; font-weight: bold; fill: #2d3748; }
+      .badge   { font-size: 12px; font-weight: bold; }
+      .mono    { font-family: "SF Mono", Menlo, monospace; font-size: 13px; fill: #2d3748; }
+      .codebox { font-family: "SF Mono", Menlo, monospace; font-size: 12.5px; fill: #1a202c; }
+      .note    { font-size: 12.5px; fill: #718096; font-style: italic; }
+    </style>
+  </defs>
+
+  <rect width="1520" height="1500" fill="#f7fafc"/>
+
+  <!-- Title -->
+  <text x="760" y="48" text-anchor="middle" class="title">Specialty Mapper — What Happens Under the Hood</text>
+  <text x="760" y="76" text-anchor="middle" class="subtitle">Free-text specialty label → NUCC code, in two stages: LLM picks the name, a deterministic lookup supplies the code</text>
+
+  <!-- ============ BROWSER ZONE ============ -->
+  <rect x="60" y="100" width="1400" height="330" rx="14" fill="#ebf8ff" stroke="#90cdf4" stroke-width="1.5" stroke-dasharray="7 5"/>
+  <text x="80" y="128" class="lbl-b">BROWSER — demo/static/index.html (single-page UI, no build step)</text>
+
+  <!-- Textarea -->
+  <rect x="100" y="150" width="300" height="105" rx="10" fill="#ffffff" stroke="#4299e1" stroke-width="2"/>
+  <text x="118" y="176" class="box-t">Input</text>
+  <text x="118" y="198" class="mono">Cardiologist</text>
+  <text x="118" y="218" class="mono">Family Med</text>
+  <text x="118" y="238" class="mono">Gamer</text>
+  <text x="335" y="242" text-anchor="end" class="note">one label per line</text>
+
+  <!-- Policy panel -->
+  <rect x="100" y="280" width="300" height="125" rx="10" fill="#fff5f5" stroke="#fc8181" stroke-width="2"/>
+  <text x="118" y="306" class="box-t" fill="#c53030">Consumer Policy (UI only)</text>
+  <text x="118" y="330" class="box-s">Auto-accept ≥ <tspan font-weight="bold">85%</tspan>   ·   Reject &lt; <tspan font-weight="bold">50%</tspan></text>
+  <text x="118" y="350" class="box-s">Sliders recompute actions live</text>
+  <text x="118" y="374" class="box-sb">nucc_code: null → always Reject</text>
+  <text x="118" y="392" class="note">policy lives in the browser, never in the API</text>
+
+  <!-- Request: input box → across → down into split box top edge -->
+  <path d="M 400 202 L 750 202 L 750 497" fill="none" stroke="#4a5568" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="575" y="190" text-anchor="middle" class="lbl-b">POST /api/map</text>
+  <text x="762" y="330" class="mono">{"text": "..."}</text>
+
+  <!-- Results table -->
+  <rect x="1060" y="150" width="360" height="255" rx="10" fill="#ffffff" stroke="#48bb78" stroke-width="2"/>
+  <text x="1078" y="176" class="box-t" fill="#276749">Results table + Recommended Action</text>
+  <line x1="1060" y1="188" x2="1420" y2="188" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="1078" y="212" class="mono">Cardiologist → 20-8K1X00X  95%  ✓ Accept</text>
+  <text x="1078" y="236" class="mono">Family Med → 20-8R1X00X  92%  ✓ Accept</text>
+  <text x="1078" y="260" class="mono">Gamer → null  0%  ✗ Reject</text>
+  <text x="1078" y="292" class="box-s">Confidence bars: green ≥80 · amber 50–79</text>
+  <text x="1078" y="312" class="box-s">red &lt;50 — banded client-side</text>
+  <text x="1078" y="338" class="box-s">Action = f(confidence, sliders), computed</text>
+  <text x="1078" y="358" class="box-s">in JS after each response</text>
+  <text x="1078" y="388" class="note">mapper only reports confidence; it never</text>
+  <text x="1078" y="404" class="note">tells you what to do with it</text>
+
+  <!-- HTTP response: server's JSON returned to browser, populates the results table (routed up the right side) -->
+  <path d="M 1420 1305 L 1478 1305 L 1478 278 L 1421 278" fill="none" stroke="#2c5282" stroke-width="2" marker-end="url(#arrow-data)"/>
+  <text x="1490" y="1418" text-anchor="end" class="lbl">HTTP response → results table</text>
+
+  <!-- ============ SERVER ZONE ============ -->
+  <rect x="60" y="450" width="1400" height="700" rx="14" fill="#f0fff4" stroke="#9ae6b4" stroke-width="1.5" stroke-dasharray="7 5"/>
+  <text x="80" y="478" class="lbl-b">SERVER — demo/main.py (FastAPI, port 8645, single LLM call per request)</text>
+
+  <!-- Split inputs -->
+  <rect x="580" y="500" width="340" height="90" rx="10" fill="#ffffff" stroke="#4a5568" stroke-width="2"/>
+  <text x="598" y="528" class="box-t">1 · Split input</text>
+  <text x="598" y="550" class="box-s">Split on newlines, trim, drop empties</text>
+  <text x="598" y="570" class="mono">["Cardiologist", "Family Med", "Gamer"]</text>
+
+  <line x1="750" y1="590" x2="750" y2="620" stroke="#4a5568" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Stage 1 box: LLM -->
+  <rect x="380" y="620" width="740" height="200" rx="12" fill="#fffaf0" stroke="#dd6b20" stroke-width="2.5"/>
+  <rect x="380" y="620" width="740" height="34" rx="12" fill="#dd6b20"/>
+  <rect x="380" y="637" width="740" height="17" fill="#dd6b20"/>
+  <text x="400" y="643" class="box-t" fill="#ffffff">STAGE 1 · LLM: input → NUCC Display Name (the only LLM step)</text>
+
+  <text x="400" y="678" class="box-sb">Local LLM · OpenAI-compatible · http://10.0.0.228:8080/v1</text>
+  <text x="400" y="700" class="box-s">temperature 0.1 · max_tokens 8192 · reasoning disabled (enable_thinking: false)</text>
+  <text x="400" y="724" class="box-sb">System prompt = all 883 display names (codes deliberately withheld)</text>
+  <text x="400" y="744" class="box-s">Rules: match most specific name · exact name string only · bias TOWARD mapping</text>
+  <text x="400" y="762" class="box-s">(loose overlap → 0.5–0.79 band) · null only for no-medical-connotation inputs</text>
+  <text x="400" y="782" class="box-sb">Output contract: JSON array — {"input", "nucc_name"|null, "confidence", "notes"}</text>
+  <text x="400" y="806" class="note">Codes are never in the prompt and never generated — the LLM can only name, not code.</text>
+
+  <line x1="750" y1="820" x2="750" y2="850" stroke="#4a5568" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Parse -->
+  <rect x="520" y="850" width="460" height="78" rx="10" fill="#ffffff" stroke="#4a5568" stroke-width="2"/>
+  <text x="538" y="876" class="box-t">2 · Parse LLM response (defensive)</text>
+  <text x="538" y="898" class="box-s">```json fences → raw JSON → bracket-balanced scan →</text>
+  <text x="538" y="916" class="box-s">trailing-comma fix → per-object regex. Fail = HTTP 500.</text>
+
+  <line x1="750" y1="928" x2="750" y2="958" stroke="#4a5568" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Stage 2 box: lookup -->
+  <rect x="380" y="958" width="740" height="170" rx="12" fill="#ebf4ff" stroke="#2b6cb0" stroke-width="2.5"/>
+  <rect x="380" y="958" width="740" height="34" rx="12" fill="#2b6cb0"/>
+  <rect x="380" y="975" width="740" height="17" fill="#2b6cb0"/>
+  <text x="400" y="981" class="box-t" fill="#ffffff">STAGE 2 · resolve_code(): Display Name → NUCC Code (100% deterministic, no LLM)</text>
+
+  <text x="400" y="1016" class="box-sb">1. Normalized exact match</text>
+  <text x="580" y="1016" class="box-s">lowercase + collapse whitespace → in-memory index (built once)</text>
+  <text x="400" y="1044" class="box-sb">2. Fuzzy fallback (difflib, cutoff 0.97)</text>
+  <text x="700" y="1044" class="box-s">absorbs minor spelling / wording drift only</text>
+  <text x="400" y="1072" class="box-sb">Hit → code taken from the CSV row (authoritative, never model output)</text>
+  <text x="400" y="1100" class="box-sb">Miss → nucc_code: null, confidence 0.0, flagged "needs review" — never guessed</text>
+
+  <!-- NUCC CSV (data source) -->
+  <rect x="1180" y="958" width="240" height="170" rx="12" fill="#edf2f7" stroke="#2c5282" stroke-width="2.5"/>
+  <text x="1198" y="986" class="box-t" fill="#2c5282">data/nucc/</text>
+  <text x="1198" y="1006" class="mono">nucc_taxonomy_251.csv</text>
+  <text x="1198" y="1032" class="box-s">Master NUCC reference v25.1</text>
+  <text x="1198" y="1052" class="box-s">883 rows: Code, Display Name,</text>
+  <text x="1198" y="1070" class="box-s">Classification, …</text>
+  <text x="1198" y="1098" class="note">loaded once, cached in memory</text>
+  <line x1="1120" y1="1043" x2="1180" y2="1043" stroke="#2c5282" stroke-width="2.5" marker-end="url(#arrow-data)" marker-start="url(#arrow-data)"/>
+  <text x="1150" y="1030" text-anchor="middle" class="lbl">lookup</text>
+
+  <!-- LLM endpoint (remote box) -->
+  <rect x="1180" y="620" width="240" height="200" rx="12" fill="#fffaf0" stroke="#b7791f" stroke-width="2.5"/>
+  <text x="1198" y="650" class="box-t" fill="#975a16">Local GPU inference</text>
+  <text x="1198" y="674" class="mono">10.0.0.228:8080</text>
+  <text x="1198" y="696" class="mono">/v1/chat/completions</text>
+  <text x="1198" y="722" class="box-s">27B model · llama.cpp</text>
+  <text x="1198" y="742" class="box-s">OpenAI-compatible API</text>
+  <text x="1198" y="766" class="box-s">timeout 60s</text>
+  <text x="1198" y="790" class="note">one call per request —</text>
+  <text x="1198" y="806" class="note">batch of lines in one prompt</text>
+  <line x1="1120" y1="720" x2="1180" y2="720" stroke="#b7791f" stroke-width="2.5" marker-end="url(#arrow-llm)" marker-start="url(#arrow-llm)"/>
+  <text x="1150" y="708" text-anchor="middle" class="lbl">chat</text>
+
+  <!-- ============ OUTPUT ZONE ============ -->
+  <rect x="60" y="1180" width="1400" height="220" rx="14" fill="#faf5ff" stroke="#d6bcfa" stroke-width="1.5" stroke-dasharray="7 5"/>
+  <text x="80" y="1208" class="lbl-b">RESPONSE — policy-agnostic JSON (confidence only, no action fields)</text>
+
+  <rect x="400" y="1230" width="1020" height="150" rx="10" fill="#ffffff" stroke="#805ad5" stroke-width="2"/>
+  <text x="418" y="1258" class="codebox">[
+  <tspan x="446" dy="22">{"input": "Cardiologist", "nucc_code": "20-8K1X00X", "nucc_name": "Cardiologist", "confidence": 0.95},</tspan>
+  <tspan x="446" dy="22">{"input": "Gamer",        "nucc_code": null,          "nucc_name": null,          "confidence": 0.0,</tspan>
+  <tspan x="464" dy="22">"notes": "not a medical specialty — needs review"}</tspan>
+  <tspan x="446" dy="22">]  +  input_count: 3</tspan></text>
+
+  <line x1="750" y1="1128" x2="750" y2="1230" stroke="#4a5568" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="766" y="1166" class="lbl">each row: code + canonical name from CSV, confidence from LLM</text>
+
+  <!-- Legend (single row below the response zone) -->
+  <g>
+    <rect x="100" y="1440" width="18" height="18" fill="#fffaf0" stroke="#dd6b20" stroke-width="2"/>
+    <text x="128" y="1454" class="lbl">Stage 1 — LLM: name + confidence (probabilistic)</text>
+    <rect x="520" y="1440" width="18" height="18" fill="#ebf4ff" stroke="#2b6cb0" stroke-width="2"/>
+    <text x="548" y="1454" class="lbl">Stage 2 — deterministic lookup: authoritative code</text>
+    <rect x="960" y="1440" width="18" height="18" fill="#fff5f5" stroke="#fc8181" stroke-width="2"/>
+    <text x="988" y="1454" class="lbl">Consumer policy — browser-side only</text>
+  </g>
+</svg>

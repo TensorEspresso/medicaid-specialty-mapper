@@ -101,6 +101,10 @@ the UI:
 
 ## Architecture
 
+![Specialty Mapper — What Happens Under the Hood](specialty-mapper-architecture.svg)
+
+*Full diagram: [`specialty-mapper-architecture.svg`](specialty-mapper-architecture.svg)* (source in this directory; rendered PNG alongside).
+
 ```
 Browser (single-page)
     │
