@@ -1,9 +1,17 @@
 # Specialty Mapper — Leverage & Growth Initiative Plan
 
-> Status: **Draft v2** (created 2026-08-14, updated 2026-08-14 — leverage framing, not an immediate comp ask)
+> Status: **Draft v3** (created 2026-08-14, updated 2026-08-14 — leverage framing; resynced against repo HEAD `28af0c4` on 2026-08-18)
 > Owner: Andy
 > Sponsor: CDO (verbal endorsement — "had some teeth to it")
 > Type: **60–90 day internal initiative** — NOT side work
+
+**v3 resync (2026-08-18):** repo has moved since v2 — SQLite mapping store is built and
+shipped (`demo/cache.py`, per-input cache keyed `(input_key, nucc_version)`, nulls cached
+for determinism, operator override endpoint), an architecture diagram exists
+(`docs/specialty-mapper-architecture.svg`), and `PITCH.md` now carries the
+"we already have a Claude license" objection response. All three are folded into §3
+"Has teeth." No other phase changed: eval harness still unbuilt, no `src/` package,
+NY/TX crosswalks still `Missing`.
 
 ---
 
@@ -82,13 +90,21 @@ deterministically checkable against the taxonomy file.
   (direct lookup in the NUCC dataset, never LLM-generated)** → state crosswalk,
   semantic fallback, confidence + review-flag.
 - Working demo (FastAPI, single direct LLM call ~8s, Qwen3.6-27B local on 5090).
+- **SQLite mapping store** (`demo/cache.py`) — per-input cache keyed `(input_key, nucc_version)`;
+  nulls are cached as valid answers for determinism; recurring labels served from the store,
+  only misses hit the LLM; operator override via `DELETE /api/cache/{input}`.
+- **Architecture diagram** (`docs/specialty-mapper-architecture.svg`) — two-stage pipeline
+  (LLM display-name pick → deterministic code lookup) + store + UI; ready for the CDO one-pager.
+- **PITCH.md** — the "we already have a Claude license" objection, answered point-by-point
+  (codes never LLM-generated; it's a service not a task; deterministic + measurable).
 - Real, specific problem: provider specialty data is messy, manual, expensive.
 
 ### Thin (the gap to close)
 - **No evals / ground-truth / accuracy number.** The output "confidence" is the LLM's
   *self-reported* claim, not a measurement. This is the #1 issue.
-- **Fragile parser.** `parse_response` has 7 JSON-extraction fallbacks — a symptom of prompt
-  fragility, not robustness.
+- **Fragile parser.** `parse_response` has 5 JSON-extraction fallback strategies (fenced-block
+  parts, raw parse, bracket-balanced candidate scan, trailing-comma fix, per-object regex) —
+  a symptom of prompt fragility, not robustness.
 - **Demo + scripts, not a package.** (Contrast: `qhp-specialty-framework` already has proper
   `src/` layout, `pyproject.toml`, 33 passing tests.)
 - **NY and TX crosswalks `Missing`** in the manifest.
@@ -156,7 +172,7 @@ agentic-eval skill, and it produces **Number A** (the portable arsenal number).
 - [ ] Build a **failure taxonomy** (e.g. dual-mapping subspecialties, subspecialty→parent collapse,
       no-match, abbreviation ambiguity).
 - [ ] Track **cost/latency** (LLM calls per batch, p50/p95 latency, tokens).
-- [ ] Replace the 7-fallback parser with **constrained/structured output** + one clean failure mode.
+- [ ] Replace the multi-fallback parser (5 strategies in `parse_response`) with **constrained/structured output** + one clean failure mode.
 - [ ] Output: a standalone eval report that leads with the number ("Here's the number, here's the
       6% failure, here's why").
 - [ ] *(If Quest data access is granted)* compute **Number B** against Quest's data as a parallel
