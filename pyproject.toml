@@ -1,0 +1,24 @@
+[project]
+name = "specialty-mapper"
+version = "0.1.0"
+description = "LLM-powered service mapping free-text provider specialty labels to NUCC taxonomy codes (NUCC-only; the code is always a deterministic lookup, never LLM-generated)."
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi>=0.100.0",
+    "uvicorn>=0.23.0",
+    "pydantic>=2.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["demo"]
+
+# NOTE: this repo is still a demo + scripts layout (demo/, scripts/). The
+# productionized `src/specialty_mapper/` package + `pip install -e .` is the
+# next build step (see docs/fde-engagement-plan.md). This pyproject is the
+# first step: it wires up the test suite so `pytest` runs green today.

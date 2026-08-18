@@ -24,7 +24,13 @@ specialty-mapper/
 ├── AGENTS.md                  # This file — agent guidelines
 ├── .gitignore
 ├── PROMOTION_PLAN.md          # GTM / business model (not code)
+├── PITCH.md                   # The "we already have a Claude license" objection (not code)
 ├── EVAL_HARNESS_SPEC.md       # Evaluation harness design (spec, not yet built)
+├── pyproject.toml             # Project + pytest config (pythonpath=["demo"], testpaths=["tests"])
+├── conftest.py                # Pytest path bootstrap (demo/ on sys.path)
+├── tests/                     # Test suite — NUCC bijection invariants + mapping store
+│   ├── test_nucc_bijection.py # 883 display names ↔ codes bijection (the eval's answer key)
+│   └── test_cache.py          # cache.py rules (key/normalize/upsert/null/delete) — non-destructive
 ├── data/
 │   └── nucc/
 │       └── nucc_taxonomy_251.csv   # Master NUCC reference (v25.1, 883 rows) — DO NOT MODIFY
@@ -36,7 +42,8 @@ specialty-mapper/
 ├── docs/
 │   ├── mapper-product.md      # Product spec + roadmap
 │   ├── fde-engagement-plan.md # FDE arc → skill → artifact map + NUCC-only build sequence
-│   └── startup-advice-validated.md
+│   ├── startup-advice-validated.md
+│   └── specialty-mapper-architecture.{svg,png}
 ├── scripts/
 │   ├── run_server.py          # Foreground uvicorn runner
 │   ├── start_demo.sh

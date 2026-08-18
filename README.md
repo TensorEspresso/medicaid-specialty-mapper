@@ -35,16 +35,26 @@ too.
 specialty-mapper/
 ├── README.md
 ├── PROMOTION_PLAN.md          # GTM / business model
-├── EVAL_HARNESS_SPEC.md       # Evaluation harness design
+├── PITCH.md                   # The "we already have a Claude license" objection
+├── EVAL_HARNESS_SPEC.md       # Evaluation harness design (spec, not yet built)
+├── pyproject.toml             # Project + pytest config (test suite wired up)
+├── conftest.py                # Pytest path bootstrap (demo/ on sys.path)
+├── tests/                     # Test suite: NUCC bijection + mapping store
+│   ├── test_nucc_bijection.py
+│   └── test_cache.py
 ├── data/
 │   └── nucc/
 │       └── nucc_taxonomy_251.csv   # Master NUCC reference (v25.1, 883 codes)
 ├── demo/
 │   ├── main.py                # FastAPI backend (LLM call + cache)
 │   ├── cache.py               # SQLite mapping store (lookup/store/override)
+│   ├── requirements.txt
 │   └── static/index.html      # Web UI
 ├── docs/
-│   └── mapper-product.md      # Mapper product spec
+│   ├── mapper-product.md      # Mapper product spec
+│   ├── fde-engagement-plan.md # FDE arc → skill → artifact map
+│   ├── startup-advice-validated.md
+│   └── specialty-mapper-architecture.svg
 ├── scripts/
 │   ├── run_server.py          # uvicorn runner
 │   ├── start_demo.sh
@@ -55,14 +65,22 @@ specialty-mapper/
 ## Quick Start
 
 ```bash
-cd demo
-python -m uvicorn main:app --host 0.0.0.0 --port 8645
+python3 -m uvicorn demo.main:app --host 0.0.0.0 --port 8645
 ```
 
-Then open `http://localhost:8645`.
+Then open `http://localhost:8645`. (Equivalent script: `python3 scripts/run_server.py`.)
 
 The backend expects an LLM endpoint at `http://10.0.0.228:8080/v1` (Qwen 27B) and
 nothing else. Adjust `LLM_BASE_URL` / `LLM_MODEL` in `demo/main.py` to reconfigure.
+
+## Tests
+
+```bash
+python3 -m pytest            # run the suite (NUCC bijection + mapping store)
+```
+
+The suite is dependency-light (pytest only) and non-destructive: it runs against the
+read-only NUCC CSV and touches only throwaway cache keys.
 
 ## API
 
