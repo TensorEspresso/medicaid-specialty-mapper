@@ -4,12 +4,18 @@ Specialty Mapper — FastAPI backend.
 Mapping model: the LLM matches free-text input to a **NUCC Display Name** only.
 The NUCC **code is never produced by the LLM** — it is resolved by direct lookup
 in the NUCC dataset (display name → code).
+
+Caching: every mapping is stored in a local SQLite cache (see cache.py). On a
+request, recurring inputs are served from the cache and only the *misses* are
+sent to the LLM. This gives deterministic output (the LLM is non-deterministic),
+a compounding/auditable data asset, and ~1ms lookups vs ~1-2s LLM calls.
 """
 
 import csv
 import json
 import difflib
 import re
+import sys
 from pathlib import Path
 
 import urllib.request
@@ -19,6 +25,20 @@ from fastapi import FastAPI, HTTPException
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 from pydantic import BaseModel
+
+# Make the sibling `cache` module importable regardless of launch method
+# (uvicorn demo.main:app, direct demo/main.py, or run_server.py).
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+from cache import (
+    batch_lookup,
+    store,
+    delete as cache_delete,
+    stats as cache_stats,
+    normalize_input,
+    init_cache,
+    NUCC_TAXONOMY_VERSION,
+)
 
 app = FastAPI(title="Specialty Mapper")
 
@@ -30,6 +50,9 @@ NUCC_CSV = PROJECT_DIR.parent / "data" / "nucc" / "nucc_taxonomy_251.csv"
 LLM_BASE_URL = "http://10.0.0.228:8080/v1"
 LLM_MODEL = "qwen-3.6-27b-mtp"
 LLM_API_KEY = "***"
+
+# Initialize the mapping cache (idempotent).
+init_cache()
 
 # Cache
 _nucc_cache = None
@@ -185,7 +208,7 @@ def parse_response(text: str) -> list:
     except json.JSONDecodeError:
         pass
 
-    object_pattern = r'\{[^{}]*\"input\"[^{}]*\}'
+    object_pattern = r'\{[^{}]*"input"[^{}]*\}'
     objects = re.findall(object_pattern, text, re.DOTALL)
     if objects:
         results = []
@@ -209,24 +232,12 @@ class MapRequest(BaseModel):
 class MapResponse(BaseModel):
     results: list
     input_count: int
+    cache_hits: int = 0
+    cache_misses: int = 0
 
 
-@app.get("/")
-async def serve_frontend():
-    return FileResponse(PROJECT_DIR / "static" / "index.html")
-
-
-@app.post("/api/map")
-async def map_specialty(req: MapRequest):
-    inputs = [line.strip() for line in req.text.strip().split("\n") if line.strip()]
-    if not inputs:
-        raise HTTPException(status_code=400, detail="No input text provided")
-
-    input_text = "\n".join(f"- {inp}" for inp in inputs)
-
-    reference = build_reference_context()
-
-    system_prompt = f"""You are a specialty mapping expert. Map provider specialty labels to NUCC taxonomy display names.
+def _system_prompt(reference: str) -> str:
+    return f"""You are a specialty mapping expert. Map provider specialty labels to NUCC taxonomy display names.
 
 {reference}
 
@@ -248,7 +259,9 @@ Rules:
 
 Return ONLY a JSON array, no markdown, no explanation."""
 
-    user_prompt = f"""Map these specialty labels to NUCC taxonomy display names:
+
+def _user_prompt(input_text: str) -> str:
+    return f"""Map these specialty labels to NUCC taxonomy display names:
 
 {input_text}
 
@@ -258,44 +271,182 @@ Return a JSON array:
   ...
 ]"""
 
-    try:
-        response = call_llm(system_prompt, user_prompt)
-        raw_results = parse_response(response)
 
-        # Resolve codes via direct dataset lookup — the LLM never supplies codes.
-        results = []
-        for r in raw_results:
+@app.get("/")
+async def serve_frontend():
+    return FileResponse(PROJECT_DIR / "static" / "index.html")
+
+
+@app.post("/api/map")
+async def map_specialty(req: MapRequest):
+    inputs = [line.strip() for line in req.text.strip().split("\n") if line.strip()]
+    if not inputs:
+        raise HTTPException(status_code=400, detail="No input text provided")
+
+    # --- Cache pass: serve recurring inputs from the store -----------------
+    cached = batch_lookup(inputs)
+    hits = cached["hits"]          # normalized key -> cached row
+    misses = cached["misses"]      # unique inputs not in cache (first-seen order)
+
+    reference = build_reference_context()
+    system_prompt = _system_prompt(reference)
+
+    # --- LLM pass: only the misses go to the model -------------------------
+    llm_map = {}                   # normalized key -> result dict
+    if misses:
+        input_text = "\n".join(f"- {inp}" for inp in misses)
+        user_prompt = _user_prompt(input_text)
+        try:
+            response = call_llm(system_prompt, user_prompt)
+            raw_results = parse_response(response)
+        except HTTPException:
+            raise
+        except Exception as e:
+            raise HTTPException(status_code=500, detail=str(e))
+
+        # Align each raw result to a normalized key: by echoed input first,
+        # then by position in the miss list.
+        miss_keys = [normalize_input(m) for m in misses]
+        used_keys = set()
+        for idx, r in enumerate(raw_results):
+            echoed = normalize_input((r.get("input") or "").strip())
+            if echoed in miss_keys and echoed not in used_keys:
+                key = echoed
+            elif idx < len(miss_keys) and miss_keys[idx] not in used_keys:
+                key = miss_keys[idx]
+            else:
+                continue
+            used_keys.add(key)
+            original = next(
+                (m for m in misses if normalize_input(m) == key), key
+            )
+
+            # Resolve code via direct dataset lookup — the LLM never supplies codes.
             nucc_name = (r.get("nucc_name") or "").strip()
             row = resolve_code(nucc_name)
             notes = r.get("notes") or ""
             if row:
-                results.append({
-                    "input": r.get("input", ""),
+                res = {
+                    "input": original,
                     "nucc_code": row.get("Code", ""),
                     "nucc_name": row.get("Display Name", ""),
                     "confidence": r.get("confidence", 0.0),
                     "notes": notes,
-                })
+                }
             else:
-                # Unresolvable display name — flag for review.
-                flag = "no match found — needs review" if not nucc_name else \
-                    f"display name '{nucc_name}' not found in NUCC dataset — needs review"
-                results.append({
-                    "input": r.get("input", ""),
+                flag = ("no match found — needs review" if not nucc_name
+                        else f"display name '{nucc_name}' not found in NUCC "
+                             f"dataset — needs review")
+                res = {
+                    "input": original,
                     "nucc_code": None,
                     "nucc_name": nucc_name or None,
                     "confidence": 0.0,
                     "notes": f"{notes}; {flag}" if notes else flag,
-                })
+                }
 
-        return MapResponse(
-            results=results,
-            input_count=len(inputs),
+            # Persist the mapping so the next identical input is a cache hit.
+            store(original, res["nucc_code"], res["nucc_name"],
+                  res["confidence"], res["notes"])
+            llm_map[key] = res
+
+    # --- Merge: cache hits + LLM results, in original input order ----------
+    results = []
+    hit_count = 0
+    miss_count = 0
+    for orig in inputs:
+        key = normalize_input(orig)
+        if key in hits:
+            h = hits[key]
+            results.append({
+                "input": orig,
+                "nucc_code": h["nucc_code"],
+                "nucc_name": h["nucc_name"],
+                "confidence": h["confidence"],
+                "notes": h["notes"],
+                "source": "cache",
+            })
+            hit_count += 1
+        elif key in llm_map:
+            res = dict(llm_map[key])
+            res["input"] = orig
+            res["source"] = "llm"
+            results.append(res)
+            miss_count += 1
+        else:
+            # LLM did not return a row for this input — flag for review.
+            results.append({
+                "input": orig,
+                "nucc_code": None,
+                "nucc_name": None,
+                "confidence": 0.0,
+                "notes": "no result returned by mapper — needs review",
+                "source": "llm",
+            })
+            miss_count += 1
+
+    return MapResponse(
+        results=results,
+        input_count=len(inputs),
+        cache_hits=hit_count,
+        cache_misses=miss_count,
+    )
+
+
+# --- Cache observability / override (additive; not part of the map contract) -
+
+@app.get("/api/cache/stats")
+async def get_cache_stats():
+    return cache_stats()
+
+
+@app.get("/api/cache")
+async def list_cache(limit: int = 100, offset: int = 0):
+    """List cached mappings for the current taxonomy version (most recent first)."""
+    import sqlite3
+    from cache import _connect
+    limit = max(0, min(limit, 1000))
+    offset = max(0, offset)
+    conn = _connect()
+    try:
+        rows = conn.execute(
+            """
+            SELECT input_key, nucc_code, nucc_name, confidence, notes,
+                   nucc_version, created_at, updated_at
+            FROM mapping_cache
+            WHERE nucc_version = ?
+            ORDER BY updated_at DESC, input_key ASC
+            LIMIT ? OFFSET ?
+            """,
+            (NUCC_TAXONOMY_VERSION, limit, offset),
+        ).fetchall()
+    finally:
+        conn.close()
+    return {
+        "entries": [
+            {
+                "input": r[0], "nucc_code": r[1], "nucc_name": r[2],
+                "confidence": r[3], "notes": r[4], "nucc_version": r[5],
+                "created_at": r[6], "updated_at": r[7],
+            }
+            for r in rows
+        ],
+        "limit": limit,
+        "offset": offset,
+    }
+
+
+@app.delete("/api/cache/{input_key}")
+async def remove_cache_entry(input_key: str):
+    """Override: remove a cached entry so the next request re-maps via the LLM."""
+    removed = cache_delete(normalize_input(input_key))
+    if not removed:
+        raise HTTPException(
+            status_code=404,
+            detail=f"No cached entry for {input_key!r} in taxonomy "
+                   f"v{NUCC_TAXONOMY_VERSION}",
         )
-    except HTTPException:
-        raise
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+    return {"deleted": True, "input": input_key, "nucc_version": NUCC_TAXONOMY_VERSION}
 
 
 app.mount("/static", StaticFiles(directory=str(PROJECT_DIR / "static")), name="static")

@@ -21,6 +21,14 @@ review / reject thresholds, tunable live in the UI).
 are withheld from the prompt). The **code is then resolved by direct lookup in the
 NUCC dataset** — never LLM-generated. Names that don't resolve are flagged for review.
 
+**Mapping store:** every result is persisted to a local SQLite cache
+(`demo/mapping_cache.sqlite3`). Recurring inputs are served from the store and only
+*misses* go to the LLM. This gives deterministic output (the LLM is
+non-deterministic), a compounding/auditable data asset, and ~1ms lookups vs ~1-2s LLM
+calls. Entries are tagged with the taxonomy version they were produced under, so a
+NUCC version bump invalidates prior-version entries cleanly. Null results are cached
+too.
+
 ## Repo Layout
 
 ```
@@ -32,7 +40,8 @@ specialty-mapper/
 │   └── nucc/
 │       └── nucc_taxonomy_251.csv   # Master NUCC reference (v25.1, 883 codes)
 ├── demo/
-│   ├── main.py                # FastAPI backend (single LLM call)
+│   ├── main.py                # FastAPI backend (LLM call + cache)
+│   ├── cache.py               # SQLite mapping store (lookup/store/override)
 │   └── static/index.html      # Web UI
 ├── docs/
 │   └── mapper-product.md      # Mapper product spec
@@ -61,6 +70,10 @@ nothing else. Adjust `LLM_BASE_URL` / `LLM_MODEL` in `demo/main.py` to reconfigu
 |--------|------|-------------|
 | `GET`  | `/`            | Web UI |
 | `POST` | `/api/map`     | Map specialties (body: `{"text": "...\n..."}`) |
+..."}`) |
+| `GET`  | `/api/cache/stats` | Cache stats for the current taxonomy version |
+| `GET`  | `/api/cache`   | List cached mappings (`?limit=` / `?offset=`) |
+| `DELETE` | `/api/cache/{input_key}` | Override: remove an entry to force re-map |
 
 Response:
 ```json

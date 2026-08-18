@@ -30,3 +30,8 @@ Thumbs.db
 # Temporary files
 *.tmp
 *.bak
+
+# Mapping cache (runtime data asset — local, not versioned)
+demo/mapping_cache.sqlite3
+demo/mapping_cache.sqlite3-wal
+demo/mapping_cache.sqlite3-shm

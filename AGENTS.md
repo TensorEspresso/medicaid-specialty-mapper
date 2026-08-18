@@ -29,7 +29,8 @@ specialty-mapper/
 │   └── nucc/
 │       └── nucc_taxonomy_251.csv   # Master NUCC reference (v25.1, 883 rows) — DO NOT MODIFY
 ├── demo/
-│   ├── main.py                # FastAPI backend (single LLM call)
+│   ├── main.py                # FastAPI backend (LLM call + cache)
+│   ├── cache.py               # SQLite mapping store (demo/mapping_cache.sqlite3)
 │   ├── requirements.txt
 │   └── static/index.html      # Web UI (single-page, no build step)
 ├── docs/
@@ -73,8 +74,37 @@ The system prompt encodes the mapping-bias rule, which is **deliberate** — do 
   generic match — that was the explicit reason the rule exists.
 
 The JSON response shape (`results[]` with `input`, `nucc_code`, `nucc_name`,
-`confidence`, `notes`; plus `input_count`) is consumed by the web UI in
-`demo/static/index.html`. Changing the shape requires updating both.
+`confidence`, `notes`, `source` — plus `input_count`, `cache_hits`, `cache_misses`)
+is consumed by the web UI in `demo/static/index.html`. Changing the shape requires
+updating both. `source` is `cache` or `llm` (informational; the UI does not require
+it).
+
+## Mapping Store (SQLite cache)
+
+`demo/cache.py` persists every mapping in `demo/mapping_cache.sqlite3` (gitignored).
+On `POST /api/map`, recurring inputs are served from the store and only *misses* are
+sent to the LLM. Design rules:
+
+- **Key = normalized input** (lowercase, collapsed whitespace). `normalize_input()` is
+  the only normalization; `lookup()`/`delete()` normalize internally (idempotent), so
+  callers may pass raw or normalized input.
+- **Version tag.** Each row is keyed by `(input_key, nucc_version)` where
+  `nucc_version` comes from `NUCC_TAXONOMY_VERSION` in `demo/cache.py` (currently
+  `25.1`). Bump that constant on a formal NUCC version upgrade and re-point `NUCC_CSV`
+  in `demo/main.py`. Prior-version rows become soft-invalidated (a miss) and are
+  retained for audit — do not delete them.
+- **Nulls are cached.** `nucc_code: null` is a valid, deliberate answer and must stay
+  reproducible.
+- **All confidences are cached** for determinism; routing on confidence is the
+  consumer's job. Override = `DELETE /api/cache/{input}` (operator escape hatch), which
+  forces a fresh LLM re-map on the next request.
+- **Per-input caching, not per-request.** The LLM is called once per request with all
+  misses batched; the store is keyed per input so a label cached in one request is a
+  hit in the next, regardless of how it is batched.
+- `main.py` imports `cache` as a sibling module; `sys.path.insert(0, <demo dir>)` near
+  the top of `main.py` is load-bearing for every launch method — do not remove it.
+- The cache DB is **runtime data, not source**: it is gitignored and safe to delete
+  (the store rebuilds itself; only the determinism/asset value is reset).
 
 ## Consumer Policy (UI only)
 

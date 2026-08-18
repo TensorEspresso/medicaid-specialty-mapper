@@ -333,6 +333,20 @@
     .action-accept { background: rgba(52, 211, 153, 0.15); color: var(--success); }
     .action-review { background: rgba(251, 191, 36, 0.15); color: var(--warning); }
     .action-reject { background: rgba(248, 113, 113, 0.15); color: var(--danger); }
+
+    .store-cell { white-space: nowrap; }
+
+    .store-pill {
+      display: inline-block;
+      font-size: 0.6875rem;
+      font-weight: 500;
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      padding: 0.125rem 0.5rem;
+      border-radius: 999px;
+    }
+
+    .store-cache { background: rgba(79, 143, 247, 0.15); color: var(--accent); }
+    .store-llm   { background: var(--border); color: var(--muted); }
   </style>
 </head>
 <body>
@@ -492,7 +506,7 @@
 
     function renderResults(data) {
       const resultsDiv = document.getElementById('results');
-      const { results, input_count } = data;
+      const { results, input_count, cache_hits, cache_misses } = data;
 
       if (!results || !results.length) {
         resultsDiv.innerHTML = '<div class="empty-state">No results returned.</div>';
@@ -504,11 +518,15 @@
       lastResults = results;
       results.forEach((r, i) => { r._idx = i; });
 
+      const hits = cache_hits ?? 0;
+      const misses = cache_misses ?? 0;
+      const storeBadge = `${input_count} input → NUCC · ${hits} store · ${misses} llm`;
+
       let html = `
         <div class="results">
           <div class="results-header">
             <h2>Mapping Results</h2>
-            <span class="badge">${input_count} input → NUCC</span>
+            <span class="badge">${storeBadge}</span>
           </div>
           <table>
             <thead>
@@ -519,6 +537,7 @@
                 <th>NUCC Name</th>
                 <th>Confidence</th>
                 <th>Action</th>
+                <th>Store</th>
                 <th>Notes</th>
               </tr>
             </thead>
@@ -529,6 +548,9 @@
         const confClass = conf >= 0.8 ? 'confidence-high' : conf >= 0.5 ? 'confidence-med' : 'confidence-low';
         const confPct = Math.round(conf * 100);
         const action = recommendedAction(r);
+        const fromStore = r.source === 'cache';
+        const storeClass = fromStore ? 'store-cache' : 'store-llm';
+        const storeLabel = fromStore ? 'STORE' : 'LLM';
 
         html += `
               <tr>
@@ -543,6 +565,7 @@
                   </span>
                 </td>
                 <td class="action-cell"><span class="action-pill action-${action}" id="action-${i}">${ACTION_LABELS[action]}</span></td>
+                <td class="store-cell"><span class="store-pill ${storeClass}">${storeLabel}</span></td>
                 <td class="notes">${escapeHtml(r.notes || '')}</td>
               </tr>`;
       });
