@@ -218,7 +218,8 @@ These are the resume/promotion lines almost nobody has. The initiative should vi
 3. **State management / context strategy** — how the pipeline tracks done/tried/failed and decides
    the next step; context-window strategy.
 4. **Cost & latency awareness** — calls per task, p95 latency, small-model-vs-large-model routing.
-5. **A specific, real workflow** — "maps provider specialty codes to state Medicaid + NUCC," not
+5. **A specific, real workflow** — "maps free-text provider specialty labels to canonical NUCC
+   codes with measured accuracy and a documented failure taxonomy," not
    "an AI assistant." Specificity *is* the credibility.
 
 ---
