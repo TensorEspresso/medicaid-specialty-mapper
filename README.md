@@ -70,7 +70,6 @@ nothing else. Adjust `LLM_BASE_URL` / `LLM_MODEL` in `demo/main.py` to reconfigu
 |--------|------|-------------|
 | `GET`  | `/`            | Web UI |
 | `POST` | `/api/map`     | Map specialties (body: `{"text": "...\n..."}`) |
-..."}`) |
 | `GET`  | `/api/cache/stats` | Cache stats for the current taxonomy version |
 | `GET`  | `/api/cache`   | List cached mappings (`?limit=` / `?offset=`) |
 | `DELETE` | `/api/cache/{input_key}` | Override: remove an entry to force re-map |

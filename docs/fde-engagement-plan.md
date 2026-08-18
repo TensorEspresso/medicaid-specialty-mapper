@@ -68,7 +68,7 @@ end *is* learning the progression — on a real engagement, not toy problems.
 
 | FDE stage | Project milestone (this repo) | FDE skill proven | Curriculum phase | What you can show at the end |
 |---|---|---|---|---|
-| **3. Build** | Extract `src/specialty_mapper/`; kill the 7-fallback parser; thin `demo/main.py` to a wrapper; `pyproject.toml` + tests | **Production code, not demo.** Correctness > performance; one clean failure mode | Ph 1 (Python depth) + Ph 2 | `pip install -e .`; `pytest` green; demo output regression-identical |
+| **3. Build** | Extract `src/specialty_mapper/`; kill the 5-fallback parser; thin `demo/main.py` to a wrapper; `pyproject.toml` + tests | **Production code, not demo.** Correctness > performance; one clean failure mode | Ph 1 (Python depth) + Ph 2 | `pip install -e .`; `pytest` green; demo output regression-identical |
 | **4. Evaluate** | NUCC-native eval: `classify_ambiguity()`, `perturb.py`, `nucc_v1.jsonl`, `run.py`, `score.py`, `report.py` → **Number A** | **Evals — the #1 differentiator.** Converting a self-reported "confidence" claim into a *measured* number + failure taxonomy + calibration (ECE) | Ph 2 (Evals & Monitoring) — critical gap | Standalone `report.md`: "99% clean / 92% noisy / 61% behavior-correct on ambiguous," overconfident-error rate, failure table |
 | **5. Productionize** | CI (evals on PR), Docker, structured logging, cost/latency (tokens, p50/p95) | **MLOps, serving, deployment, cost discipline** | Ph 2 + 3 + 4 | Green CI pipeline; a latency/cost row in the report; a reproducible container |
 | **6. Business value** | A business metric on a client-like feed: error rate, manual-review load, $ value | **Tying tech to a $ metric** — what gets you hired over a generic AI eng | Ph 5 + 6 (FDE layer) | One line in the memo: "cuts review load X% / saves ~$Y/yr" |
@@ -128,7 +128,7 @@ is the only clean answer key.*
 - `nucc.py` — `load_nucc()`, `resolve_code(name)` (link-B lookup), bijection helper.
 - `client.py` — single clean LLM call, structured output requested.
 - `mapper.py` — `map_specialty(labels) -> list[MappingResult]` (the core; demo + eval call this).
-- `parse.py` — one clean parser (replaces the 7-fallback).
+- `parse.py` — one clean parser (replaces the 5-fallback).
 - `demo/main.py` becomes a thin wrapper importing from `src/`. Add `pyproject.toml` + `tests/`.
 - **Gate:** `pip install -e .`; `pytest` green; demo returns semantically-identical results
   on the same smoke inputs (regression-verified) before the eval touches anything.
@@ -140,9 +140,9 @@ is the only clean answer key.*
   table of other roots prints correctly.
 
 ### Step 3 — Single clean parser + structured output
-- Kill the 7-fallback in `parse.py`; request structured output in `client.py`.
+- Kill the 5-fallback in `parse.py`; request structured output in `client.py`.
 - Add `candidates` (display names) + `name_unresolvable` to `MappingResult`.
-- **Gate:** `parse_success_rate` is a real number; the 7-fallback code is deleted.
+- **Gate:** `parse_success_rate` is a real number; the 5-fallback code is deleted.
 
 ### Step 4 — `perturb.py` + `dataset.py` → `nucc_v1.jsonl`
 - Seed from the 883 display names + curated set; deterministic, seed-pinned.

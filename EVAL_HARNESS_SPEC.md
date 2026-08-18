@@ -106,7 +106,7 @@ src/specialty_mapper/
 ├── client.py        # llm_call() — fast mode, structured-output enabled
 ├── mapper.py        # map_specialty(labels) -> list[MappingResult]
 │                    #   THE core. Demo and eval both call this.
-└── parse.py         # parse_json() — single clean parser (replaces the 7-fallback)
+└── parse.py         # parse_json() — single clean parser (replaces the 5-fallback)
 ```
 
 - `demo/main.py` becomes a thin wrapper that imports from `src/specialty_mapper`.
@@ -122,8 +122,8 @@ src/specialty_mapper/
   the model. This is what makes link B a pure lookup and removes it from the scored
   dimensions.
 
-### 2b. Kill the 7-fallback parser
-`parse_response` in `demo/main.py` has **seven** JSON-extraction fallbacks — a symptom of
+### 2b. Kill the 5-fallback parser
+`parse_response` in `demo/main.py` has **five** JSON-extraction fallback strategies — a symptom of
 prompt fragility. Replace with one clean path:
 1. `client.llm_call()` requests **structured output**
    (`response_format: {"type":"json_object"}` — llama.cpp supports JSON mode).
@@ -297,7 +297,7 @@ Each case carries **both** `ambiguity_tier` and `noise_class`, plus `seed_lineag
 | `no_match_recall` | on the no-match class, % correctly flagged (`confidence<0.5` or needs-review). |
 | `name_unresolvable_rate` | % where the model emitted a display name **not** in the taxonomy (a link-A failure, distinct from a clean no-match). |
 | `false_confident` | % cases with `confidence≥0.8` that are **wrong**. The dangerous failure. |
-| `parse_success_rate` | % responses parsed cleanly by the single parser. Measures the 7-fallback fix. |
+| `parse_success_rate` | % responses parsed cleanly by the single parser. Measures the 5-fallback fix. |
 | **Calibration / ECE** | Expected Calibration Error across bands; confidence-vs-accuracy curve. |
 | **Cost/latency** | total tokens, p50/p95 per-label latency, calls per batch. |
 
@@ -382,7 +382,7 @@ screenshot.
    `neuro`→T-coequal, and a small audit table of other roots prints correctly.*
 3. **Single clean parser** + structured output in `client.py`; add `candidates`
    (display names) + `name_unresolvable` to `MappingResult`. *Gate: `parse_success_rate`
-   is a real number; 7-fallback deleted.*
+   is a real number; 5-fallback deleted.*
 4. **`perturb.py`** — generator + noise taxonomy, seeded, deterministic.
 5. **`dataset.py`** → generate + self-verify `evals/datasets/nucc_v1.jsonl`
    (display-name existence, `resolve_code` bijection sanity, tier matches classifier);
@@ -433,7 +433,7 @@ a parked extension (`docs/fde-engagement-plan.md` §7).
 - [ ] `resolve_code(name)` + display-name↔code bijection proven (test_resolve).
 - [ ] `classify_ambiguity()` (display-name-based, NUCC hierarchy) built + tested
       (gastro/cardio/neuro + sibling-vs-ancestor fixture).
-- [ ] Single clean parser; 7-fallback removed; `parse_success_rate` measured;
+- [ ] Single clean parser; 5-fallback removed; `parse_success_rate` measured;
       `candidates` (display names) + `name_unresolvable` fields.
 - [ ] `nucc_v1.jsonl` generated, self-verified (incl. bijection sanity + tier↔classifier
       agreement), committed, seed-pinned (~180 cases).
