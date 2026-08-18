@@ -10,8 +10,11 @@ shipped (`demo/cache.py`, per-input cache keyed `(input_key, nucc_version)`, nul
 for determinism, operator override endpoint), an architecture diagram exists
 (`docs/specialty-mapper-architecture.svg`), and `PITCH.md` now carries the
 "we already have a Claude license" objection response. All three are folded into §3
-"Has teeth." No other phase changed: eval harness still unbuilt, no `src/` package,
-NY/TX crosswalks still `Missing`.
+"Has teeth." Two more corrections from this resync: pre-split residue removed — Number A's
+ground truth restated as NUCC-native (the 2026-08-17 scope decision, commit `59964d6`),
+and state-crosswalk work struck from the mapper's deliverables (it's a parked extension in the
+companion data repo). No phase changed: eval harness still unbuilt, no `src/` package,
+NY/TX crosswalks still `Missing` in the data repo.
 
 ---
 
@@ -35,8 +38,9 @@ specialty / network for health plans). That means:
 **The one line that frames everything:** the initiative produces a **durable leverage asset**, not
 a one-shot comp event. Concretely, two numbers that do different jobs:
 
-- **Number A — portable (the arsenal number).** Measured accuracy on a ground-truth set built from
-  the *public* state Medicaid catalogs (already in the personal repo, on personal hardware).
+- **Number A — portable (the arsenal number).** Measured accuracy on **NUCC-native ground truth**
+  (the NUCC taxonomy itself: 883 display names → their own codes, a verified bijection — public,
+  self-contained, the only clean answer key).
   Stated at a level that reproduces **no proprietary mapping or company code**, this is the citable,
   resume-traveling proof: "built and shipped a provider-specialty classification pipeline with a
   ground-truth eval harness, X% measured accuracy, documented failure taxonomy."
@@ -87,8 +91,10 @@ deterministically checkable against the taxonomy file.
   PA, TX) — each with source documentation + provenance. Rare, hard-to-get asset.
 - **NUCC v25.1 spine** (883 codes).
 - Sound concept: free-text label → **NUCC display name (LLM)** → **NUCC code
-  (direct lookup in the NUCC dataset, never LLM-generated)** → state crosswalk,
-  semantic fallback, confidence + review-flag.
+  (direct lookup in the NUCC dataset, never LLM-generated)** → confidence + review-flag.
+  (State crosswalks are a **parked extension** living in the companion data repo
+  `medicaid-state-specialty-ref`, not part of the mapper or its eval — see `AGENTS.md` scope
+  boundary.)
 - Working demo (FastAPI, single direct LLM call ~8s, Qwen3.6-27B local on 5090).
 - **SQLite mapping store** (`demo/cache.py`) — per-input cache keyed `(input_key, nucc_version)`;
   nulls are cached as valid answers for determinism; recurring labels served from the store,
@@ -107,7 +113,6 @@ deterministically checkable against the taxonomy file.
   a symptom of prompt fragility, not robustness.
 - **Demo + scripts, not a package.** (Contrast: `qhp-specialty-framework` already has proper
   `src/` layout, `pyproject.toml`, 33 passing tests.)
-- **NY and TX crosswalks `Missing`** in the manifest.
 
 ---
 
@@ -115,9 +120,9 @@ deterministically checkable against the taxonomy file.
 
 The initiative is a success when all four are true:
 
-1. **Number A (portable) exists** — measured accuracy on public-catalog ground truth, overall and
-   by confidence band (e.g. "94% correct where confidence ≥ 0.8"), in a standalone report that
-   cites no proprietary data.
+1. **Number A (portable) exists** — measured accuracy on **NUCC-native ground truth** (the
+   taxonomy's own display-name↔code bijection), overall and by confidence band (e.g.
+   "94% correct where confidence ≥ 0.8"), in a standalone report that cites no proprietary data.
 2. **Number B (Quest) exists** — a defensible business metric on Quest's data (error rate,
    manual-review hours saved, $ value).
 3. **It's scoped and named** — a 60–90 day initiative with a stated deliverable, Andy as named
@@ -184,7 +189,8 @@ Goal: tie Number B to a Quest dollar problem and make the code production-grade.
       manual-review hours saved, $ value).
 - [ ] **Package it** — proper `src/` layout, `pyproject.toml`, test suite (match the
       `qhp-specialty-framework` standard, not the demo standard).
-- [ ] Complete **NY and TX crosswalks** (currently Missing).
+- *(Parked, not a mapper deliverable: NY + TX state crosswalks remain `Missing` in the companion
+      data repo `medicaid-state-specialty-ref` — a data-repo concern, out of this repo's scope.)*
 - [ ] A short **README/one-pager** that leads with the measured accuracy (Number A), not the
       architecture.
 
@@ -242,6 +248,5 @@ These are the resume/promotion lines almost nobody has. The initiative should vi
 - [ ] **Number B** (business metric on Quest's data), in the one-pager — or a documented note that
       data access wasn't granted and Number A is the standing result.
 - [ ] Production-grade package (src layout, pyproject, tests passing) — not a demo.
-- [ ] NY + TX crosswalks complete.
 - [ ] Named lead in writing; the leverage asset banked (record + ownership) and the later
       deployment path defined — no immediate comp ask.
