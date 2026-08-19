@@ -48,7 +48,7 @@ NUCC_CSV = PROJECT_DIR.parent / "data" / "nucc" / "nucc_taxonomy_251.csv"
 
 # LLM config
 LLM_BASE_URL = "http://10.0.0.228:8080/v1"
-LLM_MODEL = "qwen-3.6-27b-mtp"
+LLM_MODEL = "qwen-27B"
 LLM_API_KEY = "***"
 
 # Initialize the mapping cache (idempotent).
