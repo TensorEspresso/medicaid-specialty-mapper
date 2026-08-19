@@ -57,7 +57,7 @@ specialty-mapper/
 |------------------|-----------------------------------|-------|
 | `NUCC_CSV`       | `data/nucc/nucc_taxonomy_251.csv` | Resolved relative to `demo/` (parent dir). Do not move the file without updating this. |
 | `LLM_BASE_URL`   | `http://10.0.0.228:8080/v1`       | Local Qwen 27B OpenAI-compatible endpoint. |
-| `LLM_MODEL`      | `qwen-3.6-27b-mtp`                | |
+| `LLM_MODEL`      | `qwen-27B`                        | |
 | `LLM_API_KEY`    | `***`                | Placeholder; the local server accepts any non-empty key. |
 | **Port**         | **8645**                          | Single port across `run_server.py`, `start_demo.sh`, `start_bg.sh`, and the `__main__` block. Change everywhere if it changes. |
 
