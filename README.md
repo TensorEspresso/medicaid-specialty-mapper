@@ -70,8 +70,10 @@ python3 -m uvicorn demo.main:app --host 0.0.0.0 --port 8645
 
 Then open `http://localhost:8645`. (Equivalent script: `python3 scripts/run_server.py`.)
 
-The backend expects an LLM endpoint at `http://10.0.0.228:8080/v1` (Qwen 27B) and
-nothing else. Adjust `LLM_BASE_URL` / `LLM_MODEL` in `demo/main.py` to reconfigure.
+The backend expects an LLM endpoint at `http://localhost:8080/v1` (Qwen 27B via
+the LaunchAgent TCP relay, which auto-discovers the Windows llama-server — its
+DHCP IP changes) and nothing else. Adjust `LLM_BASE_URL` / `LLM_MODEL` in
+`demo/main.py` to reconfigure.
 
 ## Tests
 

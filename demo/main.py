@@ -46,8 +46,9 @@ app = FastAPI(title="Specialty Mapper")
 PROJECT_DIR = Path(__file__).parent
 NUCC_CSV = PROJECT_DIR.parent / "data" / "nucc" / "nucc_taxonomy_251.csv"
 
-# LLM config
-LLM_BASE_URL = "http://10.0.0.228:8080/v1"
+# LLM config (localhost:8080 = LaunchAgent TCP relay that auto-discovers the
+# Windows llama-server — its DHCP IP changes, so never hardcode the box IP here)
+LLM_BASE_URL = "http://localhost:8080/v1"
 LLM_MODEL = "qwen-27B"
 LLM_API_KEY = "***"
 
